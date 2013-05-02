@@ -149,8 +149,7 @@ $content .= "
 				<br />
 				<a class=\"btn\" href=\"/panel/app/add_url?id={$app['id']}\">{$lang['add_url']}</a>
 			</div>
-			<div style=\"float: left; width: 450px;\">
-			
+			<div style=\"float: left; width: 450px;\">	
 				<h3 class=\"colored\">{$lang['services']}</h3>
 				<br />
 				<table>
@@ -179,6 +178,47 @@ $content .= "
 				<br />
 				<a class=\"btn\" href=\"/panel/app/add_service?id={$app['id']}\">{$lang['add_service']}</a>
 			</div>
+			<div class=\"clearfix\"></div>
+			<br />
+			<div>
+				<h3 class=\"colored\">{$lang['envs']}</h3>
+				<br />
+				<table>
+					<tr>
+						<th>{$lang['name']}</th>
+						<th>{$lang['domain']}</th>
+						<th>{$lang['actions']}</th>
+					</tr>
+		";
+		if( $app['envs'] )
+		{
+			foreach( $app['envs'] as $e )
+			{
+				$domain = array_reverse(explode('/', $app['homeDirectory']));
+				$domain = str_replace(array("{$app['name']}/Apps/", "/dns/", "/"), array("", "", "."), implode('/', $domain));
+				
+				$content .= "
+						<tr>
+							<td>{$e}</td>
+							<td>{$e}.{$domain}</td>
+							<td align=\"center\">
+								<a href=\"/panel/app/del_env_action?id={$app['id']}&env={$e}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+							</td>
+						</tr>
+				";
+			}
+		}
+		$content .= "
+				</table>
+				<br />
+				<a class=\"btn\" href=\"/panel/app/add_env?id={$app['id']}\">{$lang['add_env']}</a>
+			</div>
+				<div class=\"clearfix\"></div>
+			<br />		
+			<h3 class=\"colored\">{$lang['infos']}</h3>
+			<br />
+			<pre>{$lang['git']} ssh://anotherservice.com{$app['homeDirectory']}.git
+			</pre>
 		</div>
 		<div class=\"clearfix\"></div>
 	</div>

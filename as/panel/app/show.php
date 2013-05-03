@@ -187,22 +187,21 @@ $content .= "
 					<tr>
 						<th>{$lang['name']}</th>
 						<th>{$lang['domain']}</th>
+						<th>{$lang['type']}</th>
 						<th>{$lang['actions']}</th>
 					</tr>
 		";
-		if( $app['envs'] )
+		if( count($app['envs']) > 0 )
 		{
-			foreach( $app['envs'] as $e )
+			foreach( $app['envs'] as $k => $v )
 			{
-				$domain = array_reverse(explode('/', $app['homeDirectory']));
-				$domain = str_replace(array("{$app['name']}/Apps/", "/dns/", "/"), array("", "", "."), implode('/', $domain));
-				
 				$content .= "
 						<tr>
-							<td>{$e}</td>
-							<td>{$e}.{$domain}</td>
+							<td>{$k}</td>
+							<td>{$v['domain']}</td>
+							<td>{$v['type']}</td>
 							<td align=\"center\">
-								<a href=\"/panel/app/del_env_action?id={$app['id']}&env={$e}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+								<a href=\"/panel/app/del_env_action?id={$app['id']}&env={$k}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 							</td>
 						</tr>
 				";

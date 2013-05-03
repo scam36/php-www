@@ -8,7 +8,9 @@ if( !defined('PROPER_START') )
 
 $app = api::send('self/app/list', array('id'=>$_GET['id']));
 $app = $app[0];
-	
+
+$domains = api::send('self/domain/list');
+
 $content = "
 	<div class=\"box rightcol\">
 		<div class=\"left\">
@@ -21,6 +23,22 @@ $content = "
 						<label for=\"env\">{$lang['env']}</label>
 						<input type=\"text\" name=\"env\" />
 					</fieldset>
+					<fieldset>
+						<label for=\"name\">{$lang['domain']}</label>
+						<select name=\"domain\">
+							<option value=\"anotherservice.net\">anotherservice.net</option>";
+foreach( $domains as $d )
+	$content .= "			<option value=\"{$d['hostname']}\">{$d['hostname']}</option>";
+
+$content .= "
+						</select>
+					</fieldset>
+					<fieldset>
+						<label for=\"name\">{$lang['type']}</label>
+						<select name=\"type\">
+							<option value=\"standalone\">standalone</option>
+						</select>
+					</fieldset>				
 					<fieldset>
 						<label for=\"submit\">&nbsp;</label>
 						<input type=\"submit\" value=\"{$lang['add']}\" />

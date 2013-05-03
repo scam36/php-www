@@ -2,7 +2,11 @@
 
 [FR]
 title = "Ajouter un environnement"
-intro = "Merci de renseigner le nom de l'environnement (minuscules et lettres)."
+intro = "Pour créer l'environnement, il vous faut le lier à un nom de domaine existant.<br /><br />
+Exemple : si vous avez un domaine <i>toto.com</i>, vous pouvez associer un environnement <i>testing</i> sur un domaine <i>testing.toto.com</i>
+que vous avez préalablement créé."
 env = "Environnement"
+domain = "Nom de domaine"
+type = "Type"
 add = "Ajouter"
 

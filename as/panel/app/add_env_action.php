@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-api::send('self/app/update', array('app'=>$_POST['id'], 'env' => $_POST['env'], 'mode'=>'add'));
+api::send('self/app/update', array('app'=>$_POST['id'], 'env' => $_POST['env'], 'env_domain' => $_POST['domain'], 'env_type' => $_POST['type'], 'mode'=>'add'));
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);

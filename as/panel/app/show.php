@@ -187,6 +187,7 @@ $content .= "
 					<tr>
 						<th>{$lang['name']}</th>
 						<th>{$lang['domain']}</th>
+						<th>{$lang['addresses']}</th>
 						<th>{$lang['type']}</th>
 						<th>{$lang['actions']}</th>
 					</tr>
@@ -199,6 +200,17 @@ $content .= "
 						<tr>
 							<td>{$k}</td>
 							<td>{$v['domain']}</td>
+							<td>
+				";
+				
+				foreach( $app['uris'] as $url )
+				{
+					$parts = explode('.', $url);
+					$subdomain = $parts[0];
+					$content .= "<a href=\"http://{$subdomain}.{$v['domain']}\">{$subdomain}.{$v['domain']}</a><br />";
+				}
+				
+				$content .= " </td>
 							<td>{$v['type']}</td>
 							<td align=\"center\">
 								<a href=\"/panel/app/del_env_action?id={$app['id']}&env={$k}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>

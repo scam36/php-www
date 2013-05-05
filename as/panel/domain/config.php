@@ -85,7 +85,6 @@ if( security::hasGrant('SELF_SUBDOMAIN_SELECT') )
 				<tr>
 					<th>{$lang['address']}</th>
 					<th>{$lang['record']}</th>
-					<th>{$lang['home']}</th>
 					<th>{$lang['actions']}</th>
 				</tr>
 	";
@@ -98,7 +97,6 @@ if( security::hasGrant('SELF_SUBDOMAIN_SELECT') )
 				<tr>
 					<td><a href=\"http://{$s['hostname']}\"><strong>{$s['hostname']}</strong></a></td>
 					<td>{$s['aRecord']}{$s['cNAMERecord']}</td>
-					<td>{$s['homeDirectory']}</td>
 					<td align=\"center\">";
 
 			if( security::hasGrant('SELF_SUBDOMAIN_UPDATE') )

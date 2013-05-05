@@ -60,15 +60,31 @@ $content .= "
 				<table>
 					<tr>
 						<th>{$lang['domain']}</th>
+						<th>{$lang['record']}</th>
 						<th>{$lang['actions']}</th>
 					</tr>
+";
+
+$aliases = api::send('self/alias/list', array('source'=>$domain['hostname']));
+
+	if( count($aliases) > 0 )
+	{
+		foreach( $aliases as $a )
+		{
+				$content .= "
 					<tr>
-						<td>{$lang['building']}</td>
-						<td></td>
+						<td>{$a['hostname']}</td>
+						<td>{$a['aRecord']}{$a['cNAMERecord']}</td>
+						<td><a href=\"/panel/domain/del_alias_action?id={$a['id']}&source={$domain['hostname']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a></td>
 					</tr>
+				";
+		}
+	}
+	
+$content .= "
 				</table>
 				<br />
-				<a class=\"btn\" href=\"/panel/domain/add_alias?id={$domain['id']}\">{$lang['add_alias']}</a>			
+				<a class=\"btn\" href=\"/panel/domain/add_alias?domain={$domain['id']}\">{$lang['add_alias']}</a>			
 			</div>
 			<div class=\"clearfix\"></div>
 			<br />

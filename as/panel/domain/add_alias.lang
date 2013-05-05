@@ -10,3 +10,4 @@ doc = "Informations"
 doc_text = "N'hésitez pas à consulter la documentation concernant la création de noms de domaine, elle contient notamment les paramètres DNS à entrer
 chez votre registrar."
 go = "Documentation"
+type = "Type de redirection"

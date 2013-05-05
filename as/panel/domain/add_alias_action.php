@@ -8,7 +8,7 @@ if( !defined('PROPER_START') )
 
 try
 {
-	api::send('self/alias/add', array('domain'=>$_POST['domain'], 'source'=>$_POST['id']));
+	api::send('self/alias/add', array('domain'=>$_POST['domain'], 'type'=>$_POST['type'], 'source'=>$_POST['id']));
 }
 catch(Exception $e)
 {

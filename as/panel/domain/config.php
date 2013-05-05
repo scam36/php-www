@@ -60,7 +60,8 @@ $content .= "
 				<table>
 					<tr>
 						<th>{$lang['domain']}</th>
-						<th>{$lang['record']}</th>
+						<th>{$lang['record2']}</th>
+						<th>{$lang['type']}</th>
 						<th>{$lang['actions']}</th>
 					</tr>
 ";
@@ -75,6 +76,7 @@ $aliases = api::send('self/alias/list', array('source'=>$domain['hostname']));
 					<tr>
 						<td>{$a['hostname']}</td>
 						<td>{$a['aRecord']}{$a['cNAMERecord']}</td>
+						<td>{$a['type']}</td>
 						<td><a href=\"/panel/domain/del_alias_action?id={$a['id']}&source={$domain['hostname']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a></td>
 					</tr>
 				";

@@ -20,6 +20,13 @@ $content = "
 						".(isset($_GET['e'])?"<span class=\"help-block\" style=\"color: #bc0000;\">{$lang['error']}</span>":"")."
 					</fieldset>
 					<fieldset>
+						<label>{$lang['type']}</label>
+						<select name=\"type\">
+							<option value=\"permanent\">Permanente</option>
+							<option value=\"transparent\">Transparente</option>
+						</select>
+					</fieldset>
+					<fieldset>
 						<label></label>
 						<input type=\"submit\" value=\"{$lang['create']}\" />
 					</fieldset>

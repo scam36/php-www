@@ -92,6 +92,13 @@ $content = "
 					<br />					
 				</div>
 			</a>
+			<a href=\"/panel/app/add2?runtime=java7&framework=java_web&app=java\">
+				<div class=\"app\">
+					<p><img class=\"icon\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-java.png\" alt=\"Java\"><span class=\"large\">Java</span></p>
+					<div class=\"overline\">1.7.0</div>
+					<br />
+				</div>
+			</a>
 			<a href=\"/panel/app/add2?runtime=ruby193&framework=standalone&app=ruby\">
 				<div class=\"app\">
 					<p><img class=\"icon\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-ruby.png\" alt=\"Ruby\"><span class=\"large\">Ruby</span></p>

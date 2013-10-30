@@ -12,31 +12,6 @@ $content = "
 			<h2>{$lang['title']}</h2>
 			<p class=\"large\">{$lang['intro']}</p>
 			<br />
-			<h3 class=\"colored\">{$lang['apps']}</h3>
-			<br />	
-			<a href=\"/panel/app/add2?runtime=php&framework=php&app=wordpress&service=mysql&version=5.1\">
-				<div class=\"app\">
-					<p><img class=\"icon\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-wordpress.png\" alt=\"Wordpress\"><span class=\"large\">Wordpress</span></p>
-					<div class=\"overline\">3.4.2</div>
-					<br />					
-				</div>
-			</a>
-			<a href=\"#\">
-				<div class=\"app\">
-					<p><img class=\"icon\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-drupal.png\" alt=\"PHP\"><span class=\"large\">Drupal</span></p>
-					<div class=\"overline\">NON DISPONIBLE</div>
-					<br />					
-				</div>
-			</a>
-			<a href=\"#\">
-				<div class=\"app\">
-					<p><img class=\"icon\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-redmine.png\" alt=\"PHP\"><span class=\"large\">Redmine</span></p>
-					<div class=\"overline\">NON DISPONIBLE</div>
-					<br />					
-				</div>
-			</a>	
-			<div class=\"clearfix\"></div>
-			<br />
 			<h3 class=\"colored\">{$lang['frameworks']}</h3>
 			<br />			
 			<a href=\"/panel/app/add2?runtime=ruby193&framework=rails3&app=rails\">

@@ -7,8 +7,8 @@
 }
 
 #clouds {
-	background-image: url('../images/bg-clouds-top-repeating.png');
-	background-repeat: repeat-x;
+	//background-image: url('../images/bg-clouds-top-repeating.png');
+	//background-repeat: repeat-x;
 	padding-top: 90px;
 }
 

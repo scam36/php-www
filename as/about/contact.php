@@ -65,7 +65,7 @@ $content = "
 				<br />
 				<p class=\"large\">
 					<span class=\"large\">Another Service</span><br />
-					40 Bis Rue du Faubourg Poissonni&egrave;re<br />
+					40bis rue du Faubourg Poissonni&egrave;re<br />
 					75010 Paris
 				</p>
 				

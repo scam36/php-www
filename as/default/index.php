@@ -22,6 +22,7 @@ $content = "
 				<div class=\"wrapper\" style=\"padding-top: 40px;\">
 					<div style=\"float: left;  width: 550px;\">
 						<h2>{$lang['services']}</h2>
+						<br />
 						<p>{$lang['services_text']}</p>
 					</div>
 					<div style=\"float: left; margin-left: 50px; width: 450px;\">
@@ -32,13 +33,13 @@ $content = "
 								<span class=\"circle\"></span>
 							</div>
 							<div class=\"terminal-text\">
-								<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/screen1.png\" alt=\"map\" style=\"display: block; padding: 23px 0 0 50px;\" />
+								<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/screen1.png\" alt=\"map\" style=\"display: block; padding: 10px 0 0 10px;\" />
 							</div>
 						</div>
 					</div>
 					<div class=\"clearfix\"></div>
 					<br /><br />
-					<div style=\"float: left;  width: 450px;\">
+					<div style=\"float: left;  width: 430px;\">
 						<div class=\"terminal\">
 							<div class=\"indicators\">
 								<span class=\"circle\"></span>
@@ -46,16 +47,18 @@ $content = "
 								<span class=\"circle\"></span>
 							</div>
 							<div class=\"terminal-text\">
-								<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/screen2.png\" alt=\"map\" style=\"display: block; padding: 23px 0 0 50px;\" />
+								<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/screen2.png\" alt=\"map\" style=\"display: block; padding: 30px 0 0 10px;\" />
 							</div>
 						</div>
 					</div>
-					<div style=\"float: left; margin-left: 100px; width: 550px;\">
+					<div style=\"float: left; margin-left: 120px; width: 550px;\">
 						<h2>{$lang['apps']}</h2>
+						<br />
 						<p>{$lang['apps_text']}</p>
 					</div>
 				</div>
 				<div class=\"clearfix\"></div>
+				<br />
 				<div class=\"separator light\"></div>		
 				<br />
 				<div style=\"text-align: center;\">

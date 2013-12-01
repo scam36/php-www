@@ -24,7 +24,18 @@ $content = "
 		</div>
 		<div class=\"right\">
 			<div class=\"container\">
-				yrdy
+				<h1>{$lang['info']}</h1>
+				<p>
+					<span class=\"lightlarge\">{$lang['owner']}</span> :<br /><span class=\"large\">Samuel Hassine</span>
+				</p>
+				<br />
+				<p class=\"large\">
+					<i>SIRET</i> : 52174593500010<br />
+					<i>RCS</i> : Marseille B 521 745 935<br />
+					<i>Capital social</i> : 10.000 euros
+				</p>
+				<br />
+				<p class=\"large\">{$lang['legal2_text']}</p>
 			</div>
 		</div>
 		<div class=\"clearfix\"></div>

@@ -2,9 +2,8 @@
 
 
 [FR]
-intro = "Cloud, hébergement applicatif, services et conseils."
-intro_text = "PHP, Ruby, Java, Python, NodeJS, MySQL, CouchDB, PostgreSQL et bien plus...<br />
-Des infrastructures et une équipe 100% françaises."
+intro = "Hébergement applicatif haute disponibilité "
+intro_text = "Services cloud et conseils en infrastructure."
 learn = "En savoir plus"
 contact = "Contact"
 register = "Commencer"

@@ -5,10 +5,10 @@ if( isset($GLOBALS['lang']) && is_object($GLOBALS['lang']) )
 
 // initialize the menu
 $menu = array(
-	array('text'=>"nservice", 'anonymous'=>false, 'link'=>"/service"),
-	array('text'=>"nservice", 'anonymous'=>true, 'link'=>"/service"),
-	array('text'=>"nabout", 'anonymous'=>false, 'link'=>"/about"),
-	array('text'=>"nabout", 'anonymous'=>true, 'link'=>"/about"),
+	array('text'=>"nhosting", 'anonymous'=>false, 'link'=>"/service/hosting"),
+	array('text'=>"nhosting", 'anonymous'=>true, 'link'=>"/service/hosting"),
+	array('text'=>"nconsulting", 'anonymous'=>false, 'link'=>"/service/consulting"),
+	array('text'=>"nconsulting", 'anonymous'=>true, 'link'=>"/service/consulting"),
 	array('text'=>"ncontact", 'anonymous'=>false, 'link'=>"/about/contact"),
 	array('text'=>"ncontact", 'anonymous'=>true, 'link'=>"/about/contact"),
 	array('text'=>"nhelp", 'anonymous'=>false, 'link'=>"https://projets.anotherservice.com/projects/as-panel/wiki"),

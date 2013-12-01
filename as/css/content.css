@@ -3,23 +3,23 @@
 	margin-top: 30px;
 	margin-bottom: 30px;
 	padding: 0;
-	width: 980px;
+	width: 1100px;
 }
 
 #clouds {
 	//background-image: url('../images/bg-clouds-top-repeating.png');
 	//background-repeat: repeat-x;
-	padding-top: 90px;
+	padding-top: 30px;
 }
 
 #clouds .container {
-	background-color: #daeaf4;
+	background-color: #ffffff;
 	padding-bottom: 30px;
 }
 
 #clouds .container .wrapper {
 	margin: 0 auto;
-	width: 980px;
+	width: 1100px;
 }
 
 div.col-3-1 {
@@ -53,7 +53,6 @@ a.learn {
 	padding: 10px;
 	margin-right: 10px;
 	color: #b2c0cA;
-	text-transform: uppercase;
 	-webkit-transition: 0.2s all;
 	-moz-transition: 0.2s all;
 	-ms-transition: 0.2s all;
@@ -70,14 +69,12 @@ a.learn {
 a.learn:hover {
 	background: #2b789e;
 	color: #ffffff;
-	text-shadow: 0 -2px 0 rgba(0, 0, 0, 0.15);	
 }
 
 a.contact {
 	height: 10px;
 	padding: 10px;
 	color: #b2c0cA;
-	text-transform: uppercase;
 	-webkit-transition: 0.2s all;
 	-moz-transition: 0.2s all;
 	-ms-transition: 0.2s all;
@@ -94,7 +91,6 @@ a.contact {
 a.contact:hover {
 	background: #8edc2f;
 	color: #ffffff;
-	text-shadow: 0 -2px 0 rgba(0, 0, 0, 0.15);	
 }
 
 a.button {

@@ -11,10 +11,11 @@ $content = "
 			<br /><br /><br />
 			<div class=\"title\">{$lang['intro']}</div>
 			<div class=\"subtitle\">{$lang['intro_text']}</div>
+			<br />
 			<div class=\"buttons\">
 				<a class=\"learn\" href=\"/service\">{$lang['learn']}</a>
 				<a class=\"contact\" href=\"/join\">{$lang['register']}</a>
-			</div>			
+			</div>
 		</div>
 		<div id=\"clouds\">
 			<div class=\"container\">
@@ -61,6 +62,26 @@ $content = "
 					</div>
 				</div>
 				<div class=\"clearfix\"></div>
+				<div class=\"separator light\"></div>		
+				<br />
+				<div style=\"text-align: center;\">
+					<div style=\"display: inline-block; margin-right: 50px; opacity: 0.6;\">
+							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/references/google.png\" alt=\"\" />
+						</div>
+						<div style=\"display: inline-block; margin-right: 50px; opacity: 0.6;\">
+							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/references/bnpparibas.png\" alt=\"\" />
+						</div>
+						<div style=\"display: inline-block; margin-right: 50px; opacity: 0.6;\">
+							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/references/bpce.png\" alt=\"\" />
+						</div>
+						<div style=\"display: inline-block; margin-right: 50px; opacity: 0.6;\">
+							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/references/orlane.png\" alt=\"\" />
+						</div>
+						<div style=\"display: inline-block; opacity: 0.6;\">
+							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/references/github.png\" alt=\"\" />
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 ";

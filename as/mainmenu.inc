@@ -11,6 +11,8 @@ $menu = array(
 	array('text'=>"nconsulting", 'anonymous'=>true, 'link'=>"/service/consulting"),
 	array('text'=>"ncontact", 'anonymous'=>false, 'link'=>"/about/contact"),
 	array('text'=>"ncontact", 'anonymous'=>true, 'link'=>"/about/contact"),
+	array('text'=>"nblog", 'anonymous'=>false, 'link'=>"/blog"),
+	array('text'=>"nblog", 'anonymous'=>true, 'link'=>"/blog"),
 	array('text'=>"nhelp", 'anonymous'=>false, 'link'=>"/doc"),
 	array('text'=>"nhelp", 'anonymous'=>true, 'link'=>"/doc"),
 	array('text'=>"npanel", 'anonymous'=>false, 'link'=>"/panel"),

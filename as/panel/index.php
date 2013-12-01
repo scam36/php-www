@@ -108,8 +108,8 @@ if( count($apps) > 0 )
 			$memory_use = $memory_use+$i['memory']['usage'];
 			$disk = $disk+$i['disk']['quota'];
 		}
-		$memory = round($memory/1024/1024);
-		$memory_use = round($memory_use/1024);
+		$memory = $memory;
+		$memory_use = $memory_use;
 		$instances = count($a['instances']);
 
 		$content .= "
@@ -124,7 +124,7 @@ if( count($apps) > 0 )
 		
 		$content .= "
 						</td>
-						<td><span class=\"lightlarge\">{$memory_use} / {$memory}Mo</span><br /><i>{$instances} {$lang['instances']}</i></td>
+						<td><span class=\"lightlarge\">{$memory_use} / {$memory}Mo</span><br /><span style=\"font-size: 12px;\">{$instances} {$lang['instances']}</span></td>
 						<td><span class=\"large\">{$a['size']}Mo</span></td>
 						<td>".($running?"<div class=\"state running\"><div class=\"state-content\">{$lang['running']}</div></div>":"<div class=\"state stopped\"><div class=\"state-content\">{$lang['stopped']}")."</div></div></td>					
 						<td align=\"center\">

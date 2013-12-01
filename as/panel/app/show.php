@@ -11,30 +11,22 @@ $app = $app[0];
 
 $running = false;
 $memory = 0;
-$disk = 0;
 $memoryu = 0;
-$disku = 0;
+
 foreach( $app['instances'] as $i )
 {
 	if( $i['state'] == 'RUNNING' )
 		$running = true;
 	$memory = $memory+$i['memory']['quota'];
 	$memoryu = $memoryu+$i['memory']['usage'];
-	$disk = $disk+$i['disk']['quota'];
-	$disku = $disku+$i['disk']['usage'];
 }
-$memory = round($memory/1024/1024);
-$memoryu = round($memoryu/1024);
-$disk = round($disk/1024/1024);
-$disku = round($disku/1024/1024);
 $instances = count($app['instances']);
-	
+
 $content = "
 	<div class=\"box nocol\">
 		<div class=\"container\">
-			<div style=\"float: left; width: 450px; margin-right: 40px;\">
+			<div style=\"float: left; width: 550px; margin-right: 40px;\">
 				<h2>{$lang['title']} :: {$app['name']}</h2>
-				<span class=\"lightlarge\"><strong>{$lang['pers']}</strong> {$app['homeDirectory']}/files</span>
 				<br />
 				<br />
 				<h3 class=\"colored\">{$lang['infos']}</h3>
@@ -62,12 +54,6 @@ $content = "
 						</td>
 					</tr>
 					<tr>
-						<td>{$lang['disk_eph']}</td>
-						<td><span class=\"large\">{$disku}Mo</span> / {$disk}Mo</td>
-						<td align=\"center\">
-						</td>
-					</tr>
-					<tr>
 						<td>{$lang['disk_persistant']}</td>
 						<td><span class=\"large\">{$app['size']}Mo</span></td>
 						<td align=\"center\">
@@ -75,7 +61,7 @@ $content = "
 					</tr>
 				</table>
 			</div>
-			<div style=\"float: left; width: 450px;\">
+			<div style=\"float: left; width: 470px;\">
 				<div style=\"text-align: right;\">
 					<a href=\"/panel/app/start_action?id={$app['id']}\" class=\"btn pill-left ".($running?"active":"")."\">{$lang['start']}</a><a href=\"/panel/app/stop_action?id={$app['id']}\" class=\"btn pill-right ".($running?"":"active")."\">{$lang['stop']}</a>
 					<a href=\"/panel/app/restart_action?id={$app['id']}\" class=\"btn icon\">{$lang['restart']}</a>
@@ -89,17 +75,12 @@ $content = "
 						<th>{$lang['id']}</th>
 						<th>{$lang['cpu']}</th>
 						<th>{$lang['mem']}</th>
-						<th>{$lang['disk']}</th>
 						<th >{$lang['status']}</th>
 					</tr>
 ";
 $j = 0;
 foreach( $app['instances'] as $i )
 {
-	$mem = round($i['memory']['quota']/1024/1024);
-	$memu = round($i['memory']['usage']/1024);
-	$dsk = round($i['disk']['quota']/1024/1024);
-	$dsku = round($i['disk']['usage']/1024/1024);
 	if( $i['state'] == 'RUNNING' )
 		$running = true;
 	else
@@ -108,9 +89,8 @@ foreach( $app['instances'] as $i )
 	$content .= "
 					<tr>
 						<td><span class=\"large\">#{$j}</span></td>
-						<td>{$i['cpu']['usage']}% / {$i['cpu']['quota']} cores</td>
-						<td>{$memu}Mo / {$mem}Mo</td>
-						<td>{$dsku}Mo / {$dsk}Mo</td>
+						<td>{$i['cpu']['usage']}% / {$i['cpu']['quota']} core</td>
+						<td>{$i['memory']['usage']}Mo / {$i['memory']['quota']}Mo</td>
 						<td>".($running?"<div class=\"state running\"><div class=\"state-content\">{$lang['running']}</div></div>":"<div class=\"state stopped\"><div class=\"state-content\">{$lang['stopped']}")."</div></div></td>
 					</tr>
 	";

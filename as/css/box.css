@@ -20,7 +20,7 @@
 }
 
 .nocol .container {
-	padding: 20px 15px 15px 15px;
+	padding: 20px 20px 15px 20px;
 }
 
 .box .header {
@@ -35,14 +35,16 @@
 }
 
 .box .header .container {
-	padding: 40px 0 0 30px;
+	padding: 40px 0 0 20px;
 }
 
 .box .header .container .head {
 	font-family: Cuprum;
-	font-size: 50px;
+	font-size: 40px;
 	color: #ddedf7;
 	height: 50px;
+	font-weight: 200;
+	margin-top: 12px;
 }
 
 .box .header .container .subhead {

@@ -13,7 +13,7 @@ $content = "
 			<div class=\"subtitle\">{$lang['intro_text']}</div>
 			<br />
 			<div class=\"buttons\">
-				<a class=\"learn\" href=\"/service\">{$lang['learn']}</a>
+				<a class=\"learn\" href=\"/service/hosting\">{$lang['learn']}</a>
 				<a class=\"contact\" href=\"/join\">{$lang['register']}</a>
 			</div>
 		</div>

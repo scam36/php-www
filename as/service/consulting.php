@@ -14,21 +14,21 @@ $content = "
 			</div>
 		</div>
 		<div class=\"container\">
-			<table class=\"offer\">
+			<h1>{$lang['governance']}</h1>
+			<p class=\"large\">{$lang['governance_text']}</p>
+			<br />
+			<table class=\"offer\" style=\"margin: 0 auto; width: 900px;\">
 				<tr>
-					<td style=\"width: 50%;\">
+					<td style=\"width: 50%; background-color: #f9f9f9;\">
 						<h2>{$lang['offer_1_title']}</h2>
 						<p>{$lang['offer_1_desc']}</p>
 					</td>
-					<td style=\"width: 50%;\">
+					<td style=\"width: 50%; background-color: #f9f9f9;\">
 						<h2>{$lang['offer_2_title']}</h2>
 						<p>{$lang['offer_2_desc']}</p>
 					</td>
 				</tr>
 			</table>
-			<br />
-			<h1>{$lang['governance']}</h1>
-			<p class=\"large\">{$lang['governance_text']}</p>
 			<br />
 			<h1>{$lang['manage']}</h1>
 			<p class=\"large\">{$lang['manage_text']}</p>

@@ -10,7 +10,6 @@ $content = "
 	<div class=\"box nocol\">
 		<div class=\"container\">
 			<h2>{$lang['title']}</h2>
-			<p class=\"large\">{$lang['intro']}</p>
 			<br />	
 			<a href=\"/panel/service/add2?vendor=mysql&version=5.1\">
 				<div class=\"app\">

@@ -47,6 +47,7 @@
 	-ms-transition: 0.2s all;
 	-o-transition: 0.2s all;
 	transition: 0.2s all;
+	font-size: 14px;
 }
 
 #header .container .menu li a:hover {
@@ -57,7 +58,7 @@
 	height: 10px;
 	margin: 0 0 0 20px;
 	padding: 12px;
-	font-size: 13px;
+	font-size: 14px;
 	color: #ffffff;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -74,7 +75,7 @@
 	height: 10px;
 	margin: 0 0 0 20px;
 	padding: 12px;
-	font-size: 13px;
+	font-size: 14px;
 	color: #ffffff;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;

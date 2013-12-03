@@ -27,6 +27,7 @@ $content = "
 		<div class=\"container\">
 			<div style=\"float: left; width: 550px; margin-right: 40px;\">
 				<h2>{$lang['title']} :: {$app['name']}</h2>
+				<span class=\"lightlarge\"><strong>{$lang['git']}</strong> ".str_replace("Apps/{$app['name']}", "", $app['homeDirectory'])."var/git/{$app['name']}</span>
 				<br />
 				<br />
 				<h3 class=\"colored\">{$lang['infos']}</h3>
@@ -64,7 +65,6 @@ $content = "
 			<div style=\"float: left; width: 470px;\">
 				<div style=\"text-align: right;\">
 					<a href=\"/panel/app/start_action?id={$app['id']}\" class=\"btn pill-left ".($running?"active":"")."\">{$lang['start']}</a><a href=\"/panel/app/stop_action?id={$app['id']}\" class=\"btn pill-right ".($running?"":"active")."\">{$lang['stop']}</a>
-					<a href=\"/panel/app/restart_action?id={$app['id']}\" class=\"btn icon\">{$lang['restart']}</a>
 				</div>
 				<br />
 				<br />
@@ -101,32 +101,62 @@ $content .= "
 			</div>
 			<div class=\"clearfix\"></div>
 			<br />
-			<h3 class=\"colored\">{$lang['uris']}</h3>
-			<br />
-			<table>
-				<tr>
-					<th>{$lang['url']}</th>
-					<th>{$lang['actions']}</th>
-				</tr>
+			<div style=\"float: left; width: 550px; margin-right: 40px;\">
+				<h3 class=\"colored\">{$lang['uris']}</h3>
+				<br />
+				<table>
+					<tr>
+						<th>{$lang['url']}</th>
+						<th>{$lang['actions']}</th>
+					</tr>
 		";
 		if( $app['uris'] )
 		{
 			foreach( $app['uris'] as $url )
 			{		
 				$content .= "
-				<tr>
-					<td><a href=\"http://{$url}\">{$url}</a></td>
-					<td align=\"center\">
-						<a href=\"/panel/app/del_url_action?id={$app['id']}&url={$url}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
-					</td>
-				</tr>
+					<tr>
+						<td><a href=\"http://{$url}\">{$url}</a></td>
+						<td align=\"center\">
+							<a href=\"/panel/app/del_url_action?id={$app['id']}&url={$url}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+						</td>
+					</tr>
 				";
 			}
 		}
 		$content .= "
-			</table>
-			<br />
-			<a class=\"btn\" href=\"/panel/app/add_url?id={$app['id']}\">{$lang['add_url']}</a>
+				</table>
+				<br />
+				<a class=\"btn\" href=\"/panel/app/add_url?id={$app['id']}\">{$lang['add_url']}</a>
+			</div>
+			<div style=\"float: left; width: 470px;\">
+				<h3 class=\"colored\">{$lang['envs']}</h3>
+				<br />
+				<table>
+					<tr>
+						<th>{$lang['branch']}</th>
+						<th>{$lang['actions']}</th>
+					</tr>
+		";
+		if( $app['branches'] )
+		{
+			foreach( $app['branches'] as $b )
+			{		
+				$content .= "
+					<tr>
+						<td>{$b}</a></td>
+						<td align=\"center\">
+							<a href=\"/panel/app/del_env_action?id={$app['id']}&env={$b}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+						</td>
+					</tr>
+				";
+			}
+		}
+		$content .= "
+				</table>
+				<br />
+				<a class=\"btn\" href=\"/panel/app/add_env?id={$app['id']}\">{$lang['add_env']}</a>				
+			</div>
 		</div>
 		<div class=\"clearfix\"></div>
 	</div>

@@ -57,7 +57,7 @@
 #header .container .menu #nlogin a {
 	height: 10px;
 	margin: 0 0 0 20px;
-	padding: 12px;
+	padding: 10px 12px 12px 12px;
 	font-size: 14px;
 	color: #ffffff;
 	-webkit-border-radius: 4px;
@@ -74,7 +74,7 @@
 #header .container .menu #nregister a {
 	height: 10px;
 	margin: 0 0 0 20px;
-	padding: 12px;
+	padding: 10px 12px 12px 12px;
 	font-size: 14px;
 	color: #ffffff;
 	-webkit-border-radius: 4px;

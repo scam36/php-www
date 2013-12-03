@@ -27,7 +27,6 @@ $content = "
 		<div class=\"container\">
 			<div style=\"float: left; width: 550px; margin-right: 40px;\">
 				<h2>{$lang['title']} :: {$app['name']}</h2>
-				<span class=\"lightlarge\"><strong>{$lang['git']}</strong> ".str_replace("Apps/{$app['name']}", "", $app['homeDirectory'])."var/git/{$app['name']}</span>
 				<br />
 				<br />
 				<h3 class=\"colored\">{$lang['infos']}</h3>

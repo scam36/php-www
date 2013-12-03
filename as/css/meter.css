@@ -1,12 +1,12 @@
 .details {
 	float: left;
 	margin-left: 15px;
-	font-size: 16px;
+	font-size: 15px;
 }
 
 .usage {
 	font-weight: bold;
-	font-size: 19px;
+	font-size: 18px;
 }
 
 .ui-meter-holder .ui-meter {

@@ -8,7 +8,6 @@ if( !defined('PROPER_START') )
 
 $repo = api::send('self/repo/list', array('id'=>$_GET['id']));
 $repo = $repo[0];
-print_r($repo);
 
 $content .= "
 	<div class=\"box nocol\">

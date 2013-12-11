@@ -106,18 +106,20 @@ $content .= "
 				<table>
 					<tr>
 						<th>{$lang['url']}</th>
+						<th>{$lang['branch']}</th>
 						<th>{$lang['actions']}</th>
 					</tr>
 		";
 		if( $app['uris'] )
 		{
-			foreach( $app['uris'] as $url )
+			foreach( $app['uris'] as $key => $value )
 			{		
 				$content .= "
 					<tr>
-						<td><a href=\"http://{$url}\">{$url}</a></td>
+						<td><a href=\"http://{$key}\">{$key}</a></td>
+						<td>{$value}</a></td>
 						<td align=\"center\">
-							<a href=\"/panel/app/del_url_action?id={$app['id']}&url={$url}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+							<a href=\"/panel/app/del_url_action?id={$app['id']}&url={$key}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 						</td>
 					</tr>
 				";

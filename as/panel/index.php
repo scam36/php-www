@@ -117,8 +117,8 @@ if( count($apps) > 0 )
 						<td>";
 		if( $a['uris'] )
 		{
-			foreach( $a['uris'] as $url )
-				$content .= "				<a href=\"http://{$url}\">{$url}</a><br />";
+			foreach( $a['uris'] as $key => $value )
+				$content .= "				<a href=\"http://{$key}\">{$key}</a> => {$value}<br />";
 		}
 		
 		$content .= "

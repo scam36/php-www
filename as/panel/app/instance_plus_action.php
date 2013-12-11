@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$app = api::send('self/app/list', array('id'=>$_GET['id']));
+$app = api::send('self/app/list', array('id'=>$_GET['id'], 'extended'=>1));
 $app = $app[0];
 
 api::send('self/app/update', array('app'=>$_GET['id'], 'instances' => count($app['instances'])+1));

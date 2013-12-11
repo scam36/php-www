@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$app = api::send('self/app/list', array('id'=>$_GET['id']));
+$app = api::send('self/app/list', array('id'=>$_GET['id'], 'extended'=>1));
 $app = $app[0];
 
 $running = false;

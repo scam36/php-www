@@ -85,7 +85,6 @@ $content = "
 					<th>{$lang['uris']}</th>
 					<th>{$lang['memory']}</th>
 					<th>{$lang['size']}</th>
-					<th style=\"width: 80px;\">{$lang['status']}</th>
 					<th>{$lang['actions']}</th>
 				</tr>
 ";
@@ -124,9 +123,8 @@ if( count($apps) > 0 )
 		
 		$content .= "
 						</td>
-						<td><span class=\"lightlarge\">{$memory_use} / {$memory}Mo</span><br /><span style=\"font-size: 12px;\">{$instances} {$lang['instances']}</span></td>
+						<td><span class=\"lightlarge\">{$memory}Mo</span><br /><span style=\"font-size: 12px;\">{$instances} {$lang['instances']}</span></td>
 						<td><span class=\"large\">{$a['size']}Mo</span></td>
-						<td>".($running?"<div class=\"state running\"><div class=\"state-content\">{$lang['running']}</div></div>":"<div class=\"state stopped\"><div class=\"state-content\">{$lang['stopped']}")."</div></div></td>					
 						<td align=\"center\">
 							<a href=\"/panel/app/show?id={$a['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"\" /></a>
 							<a href=\"/panel/app/del_action?id={$a['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>

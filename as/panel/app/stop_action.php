@@ -7,6 +7,7 @@ if( !defined('PROPER_START') )
 }
 
 api::send('self/app/update', array('app'=>$_GET['id'], 'stop' => 1));
+sleep(3);
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);

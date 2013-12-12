@@ -97,7 +97,6 @@ if( count($apps) > 0 )
 
 		$running = false;
 		$memory = 0;
-		$memory_use = 0;
 		$disk = 0;
 		$count = 0;
 		if( $a['branches'] )
@@ -109,7 +108,6 @@ if( count($apps) > 0 )
 					if( $i['state'] == 'RUNNING' )
 						$running = true;
 					$memory = $memory+$i['memory']['quota'];
-					$memory_use = $memory_use+$i['memory']['usage'];
 					$disk = $disk+$i['disk']['quota'];
 					
 					$count++;
@@ -117,7 +115,6 @@ if( count($apps) > 0 )
 			}
 		}
 		$memory = $memory;
-		$memory_use = $memory_use;
 		$instances = $count;
 
 		$content .= "

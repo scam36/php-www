@@ -7,7 +7,6 @@ if( !defined('PROPER_START') )
 }
 
 api::send('self/app/update', array('app'=>$_GET['id'], 'branch'=>$_GET['branch'], 'rebuild' => 1));
-sleep(3);
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);

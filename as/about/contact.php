@@ -53,7 +53,7 @@ $content = "
 				<h1>{$lang['contact']}</h1>
 				<br />
 				<p>
-					<span class=\"large\">Paris, France</span>
+					<span class=\"large\">Another Service, France</span>
 				</p>
 				<p>
 					<span class=\"large\"><a href=\"mailto: contact@notherservice.com\">contact@anotherservice.com</a></span>
@@ -64,9 +64,13 @@ $content = "
 				</p>
 				<br />
 				<p class=\"large\">
-					<span class=\"large\">Another Service</span><br />
-					40bis rue du Faubourg Poissonni&egrave;re<br />
+					<span class=\"large\">Paris</span><br />
+					40 bis rue du Faubourg Poissonni&egrave;re<br />
 					75010 Paris
+					<br /><br />
+					<span class=\"large\">Marseille</span><br />
+					45 rue Fr&eacute;d&eacute;ric Joliot Curie<br />
+					13382 Marseille Cedex 13
 				</p>
 				
 			</div>

@@ -201,14 +201,20 @@ $content .= "
 				<tr>
 					<th>{$lang['type']}</th>
 					<th>{$lang['info']}</th>
+					<th>{$lang['user']}</th>
+					<th>{$lang['port']}</th>
 				</tr>
 				<tr>
 					<td><span class=\"large\">Git</span></td>
-					<td>ssh+git://{$app['name']}@git.as".str_replace('Apps/' . $app['name'], 'var/git/' . $app['name'], $app['homeDirectory'])."</td>
+					<td>ssh://git.as/~{$app['name']}/git</td>
+					<td>{$app['name']}</td>
+					<td>22</td>
 				</tr>
 				<tr>
 					<td><span class=\"large\">FTP</span></td>
-					<td>ftp://{$app['name']}@ftp.anotherservice.com</td>
+					<td>ftp://ftp.anotherservice.com</td>
+					<td>{$app['name']}</td>
+					<td>21</td>
 				</tr>
 			</table>
 		</div>

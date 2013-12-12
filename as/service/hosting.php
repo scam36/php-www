@@ -19,6 +19,23 @@ $content = "
 			<table class=\"offer\">
 				<tr>
 					<td colspan=\"2\">
+						<h2>{$lang['langserv']}</h2>
+					</td>
+				</tr>
+				<tr>
+					<td style=\"width:50%\">
+						<p>{$lang['languages']}</p>
+					</td>
+				</td>
+					<td style=\"width:50%\">
+						<p>{$lang['services']}</p>
+					</td>
+				</tr>
+			</table>
+			<br />
+			<table class=\"offer\">
+				<tr>
+					<td colspan=\"2\">
 						<h2>{$lang['illimited']}</h2>
 					</td>
 				</tr>
@@ -53,8 +70,6 @@ $content = "
 					</td>
 				</tr>
 			</table>
-			<br />
-			<p class=\"large\">{$lang['explain']}</p>
 			<br />
 			<h2>{$lang['addons']}</h2>
 			<br />

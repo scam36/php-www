@@ -128,7 +128,7 @@ if( count($apps) > 0 )
 				if(  $value['urls'] )
 				{
 					foreach( $value['urls'] as $u )
-						$content .= "				<a href=\"http://{$u}\">{$u}</a> => {$key}<br />";
+						$content .= "				<a href=\"http://{$u}\">{$u}</a><br />";
 				}
 			}
 		}

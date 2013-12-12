@@ -122,16 +122,16 @@ $content .= "
 						<td>{$lang['memory']}</td>
 						<td><span class=\"large\">{$memoryu}Mo</span> / {$memory}Mo</td>
 						<td align=\"center\">
-							<a href=\"/panel/app/memory_less_action?id={$app['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/arrowDown.png\" alt=\"\" /></a>
-							<a href=\"/panel/app/memory_plus_action?id={$app['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/arrowUp.png\" alt=\"\" /></a>
+							<a href=\"/panel/app/memory_less_action?id={$app['id']}&branch=".security::encode($_SESSION['DATA'][$app['id']]['branch'])."\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/arrowDown.png\" alt=\"\" /></a>
+							<a href=\"/panel/app/memory_plus_action?id={$app['id']}&branch=".security::encode($_SESSION['DATA'][$app['id']]['branch'])."\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/arrowUp.png\" alt=\"\" /></a>
 						</td>
 					</tr>
 					<tr>
 						<td>{$lang['number']}</td>
 						<td><span class=\"large\">{$instances}</span> {$lang['instance']}</td>
 						<td align=\"center\">
-							<a href=\"/panel/app/instance_less_action?id={$app['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/arrowDown.png\" alt=\"\" /></a>
-							<a href=\"/panel/app/instance_plus_action?id={$app['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/arrowUp.png\" alt=\"\" /></a>
+							<a href=\"/panel/app/instance_less_action?id={$app['id']}&branch=".security::encode($_SESSION['DATA'][$app['id']]['branch'])."\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/arrowDown.png\" alt=\"\" /></a>
+							<a href=\"/panel/app/instance_plus_action?id={$app['id']}&branch=".security::encode($_SESSION['DATA'][$app['id']]['branch'])."\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/arrowUp.png\" alt=\"\" /></a>
 						</td>
 					</tr>
 					<tr>
@@ -144,7 +144,7 @@ $content .= "
 			</div>
 			<div style=\"float: left; width: 470px;\">
 				<div style=\"text-align: right;\">
-					<a href=\"/panel/app/rebuild_action?id={$app['id']}\" class=\"btn\">{$lang['rebuild']}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=\"/panel/app/start_action?id={$app['id']}\" class=\"btn pill-left ".($running?"active":"")."\">{$lang['start']}</a><a href=\"/panel/app/stop_action?id={$app['id']}\" class=\"btn pill-right ".($running?"":"active")."\">{$lang['stop']}</a>
+					<a href=\"/panel/app/rebuild_action?id={$app['id']}&branch=".security::encode($_SESSION['DATA'][$app['id']]['branch'])."\" class=\"btn\">{$lang['rebuild']}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=\"/panel/app/start_action?id={$app['id']}&branch=".security::encode($_SESSION['DATA'][$app['id']]['branch'])."\" class=\"btn pill-left ".($running?"active":"")."\">{$lang['start']}</a><a href=\"/panel/app/stop_action?id={$app['id']}&branch=".security::encode($_SESSION['DATA'][$app['id']]['branch'])."\" class=\"btn pill-right ".($running?"":"active")."\">{$lang['stop']}</a>
 				</div>
 				<br />
 				<table>

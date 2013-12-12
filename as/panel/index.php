@@ -99,26 +99,41 @@ if( count($apps) > 0 )
 		$memory = 0;
 		$memory_use = 0;
 		$disk = 0;
-		foreach( $a['instances'] as $i )
+		$count = 0;
+		if( $a['branches'] )
 		{
-			if( $i['state'] == 'RUNNING' )
-				$running = true;
-			$memory = $memory+$i['memory']['quota'];
-			$memory_use = $memory_use+$i['memory']['usage'];
-			$disk = $disk+$i['disk']['quota'];
+			foreach( $a['branches'] as $key => $value )
+			{
+				foreach( $value['instances'] as $i )
+				{
+					if( $i['state'] == 'RUNNING' )
+						$running = true;
+					$memory = $memory+$i['memory']['quota'];
+					$memory_use = $memory_use+$i['memory']['usage'];
+					$disk = $disk+$i['disk']['quota'];
+					
+					$count++;
+				}
+			}
 		}
 		$memory = $memory;
 		$memory_use = $memory_use;
-		$instances = count($a['instances']);
+		$instances = $count;
 
 		$content .= "
 					<tr>
 						<td><img class=\"language\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-{$language}.png\" alt=\"\" /><a href=\"/panel/app/show?id={$a['id']}\"><strong>{$a['name']}</strong></a></td>
 						<td>";
-		if( $a['uris'] )
+		if( $a['branches'] )
 		{
-			foreach( $a['uris'] as $key => $value )
-				$content .= "				<a href=\"http://{$key}\">{$key}</a> => {$value}<br />";
+			foreach( $a['branches'] as $key => $value )
+			{
+				if(  $value['urls'] )
+				{
+					foreach( $value['urls'] as $u )
+						$content .= "				<a href=\"http://{$u}\">{$u}</a> => {$key}<br />";
+				}
+			}
 		}
 		
 		$content .= "

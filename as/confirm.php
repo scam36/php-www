@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-if( !isset($_GET['code']) || !isset($_GET['user']) || !isset($_GET['email']) )
+if( strlen($_GET['code']) < 2 || !isset($_GET['user']) || !isset($_GET['email']) )
 	throw new SiteException('Invalid or missing arguments', 400, 'Parameter code or user is not present');
 	
 // CONNECT TO THE API AS ADMIN TO CHECK REGISTRATION
@@ -43,27 +43,18 @@ api::send('quota/user/update', array('user'=>$uid, 'quota'=>'DISK', 'max'=>1000)
 
 // OUTPUT USER INFO
 $content .= "
-	<div class=\"box rightcol\">
+	<div class=\"box nocol\">
 		<div class=\"header\">
 			<div class=\"container\">
 				<div class=\"head\">{$lang['title']}</div>
-				<div class=\"subhead\">{$lang['subtitle']}</div>
 			</div>
 		</div>
-		<div class=\"left\">
-			<div class=\"container\">
-				<p class=\"large\">{$lang['success']}</p>
-				<p class=\"large\">".str_replace(array('{USER}','{TOKEN}','{PASS}'), array($_GET['user'], $token, $pass), $lang['user'])."</p>
-				<br />
-				<a class=\"btn\" href=\"/login\">{$lang['login']}</a>
-			</div>
+		<div class=\"container\">
+			<p class=\"large\">{$lang['success']}</p>
+			<p class=\"large\">".str_replace(array('{USER}','{TOKEN}','{PASS}'), array($_GET['user'], $token, $pass), $lang['user'])."</p>
+			<br />
+			<a class=\"btn\" href=\"/login\">{$lang['login']}</a>
 		</div>
-		<div class=\"right\">
-			<div class=\"container\">
-				
-			</div>
-		</div>
-		<div class=\"clearfix\"></div>
 	</div>
 <!-- Google Code for Nouveau compte Conversion Page -->
 <script type=\"text/javascript\">

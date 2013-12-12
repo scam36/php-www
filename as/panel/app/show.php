@@ -178,7 +178,7 @@ $content .= "
 			<div style=\"float: left; width: 470px;\">
 				<h3 class=\"colored\">{$lang['change']}</h3>
 				<br />
-				<form action=\"/panel/app/action_update_password\" method=\"post\">
+				<form action=\"/panel/app/update_password_action\" method=\"post\">
 					<input type=\"hidden\" name=\"id\" value=\"{$app['id']}\" />
 					<fieldset>
 						<label>{$lang['password']}</label>

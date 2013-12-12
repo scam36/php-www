@@ -55,6 +55,14 @@ h3 {
 	-moz-font-smoothing: antialiased;
 }
 
+h4 {
+	font-family: Cuprum;
+	font-size: 18px;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-weight: bold;
+}
+
 h3.colored {
 	color: #2e9fff;
 }

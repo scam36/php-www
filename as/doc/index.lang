@@ -2,20 +2,21 @@
 
 
 [FR]
-title = "Experts en infrastructure cloud"
-subtitle = "Hébergement et conseils."
-intro_1 = "Another Service est une société fondée avec un seul coeur de métier : <strong>l'infrastructure cloud</strong>."
-intro_2 = "Nous fournissons des services d'<strong>hébergement applicatif</strong>
-(SaaS et PaaS) et accompagnons les entreprises dans le <strong>déploiement de clouds privés</strong>."
-more = "En savoir plus"
-offer = "Découvrez nos offres d'hébergement"
-hosting = "Grâce au cloud Another Service, réduisez les activités opérationnelles et optimisez le coût de votre infrastructure d'hébergement applicatif."
-saas = "Une infrastructure unique"
-saas_text = "Après plus de trois ans de recherche et développement, nous avons mis en place une architecture entièrement redondante, affranchie des contraintes
-matérielles et énergétiques des datacenters traditionnels."
-consulting = "Conseils et maîtrise d'oeuvre"
-consulting_text = "L'expérience acquise dans la gestion de notre plateforme nous permet d'accompagner et d'aider les décideurs IT dans une vision à long terme
-du système d'information."
-consulting2 = "Nous pouvons vous aider"
-consulting2_text = "Si vous hésitez à opter pour une solution de type cloud, qu'elle soit interne ou externe, ou que vous avez déjà choisi de migrer
-progressivement, nous pouvons apporter des éléments de réponse et assister l'ensemble du processus."
+title = "Centre d'aide"
+intro = "Débuter sur Another Service"
+intro_text = "Bienvenue sur notre plateforme d'hébergement applicatif. Vous trouverez ici toutes les informations utiles au service."
+
+
+top = "Question très fréquentes"
+first = "Publication d'une première application"
+first_text = "Une application simple en PHP pour comprendre le fonctionnement de la plateforme."
+concepts = "Concepts de la plateforme"
+concepts_text = "Nos services sont centrés autour de la haute disponibilité et des environnements de développement."
+languages = "Explications par langage"
+languages_text = "PHP, Python, Ruby, JAVA et NodeJS, un exemple dans chacun des langages disponibles."
+services = "Services disponibles"
+services_text = "Nous proposons de nombreux outils et bases de données permettant d'enrichir votre application."
+
+question_1 = "Comment transférer les données de mon application ?"
+question_2 = "Quelles sont les adresses des serveurs DNS ?"
+question_3 = "Que signifie le bouton <i>rebuild</i> ?"

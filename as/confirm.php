@@ -38,7 +38,7 @@ api::send('quota/user/add', array('user'=>$uid, 'quotas'=>'APPS,DOMAINS,SERVICES
 api::send('quota/user/update', array('user'=>$uid, 'quota'=>'APPS', 'max'=>200), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 api::send('quota/user/update', array('user'=>$uid, 'quota'=>'DOMAINS', 'max'=>50), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 api::send('quota/user/update', array('user'=>$uid, 'quota'=>'SERVICES', 'max'=>4), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-api::send('quota/user/update', array('user'=>$uid, 'quota'=>'MEMORY', 'max'=>256), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+api::send('quota/user/update', array('user'=>$uid, 'quota'=>'MEMORY', 'max'=>1024), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 api::send('quota/user/update', array('user'=>$uid, 'quota'=>'DISK', 'max'=>1000), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 
 // OUTPUT USER INFO

@@ -27,6 +27,9 @@ foreach( $app['branches'][$_SESSION['DATA'][$app['id']]['branch']]['instances'] 
 	$instances++;
 }
 
+$expl = explode('-', $app['name']);
+$language = $expl[0];
+
 $content = "
 	<div class=\"box nocol\">
 		<div class=\"container\">
@@ -152,6 +155,61 @@ foreach( $app['branches'][$_SESSION['DATA'][$app['id']]['branch']]['instances'] 
 	$j++;
 }
 $content .= "
+			</table>
+			<hr>
+			<div style=\"float: left; width: 550px; margin-right: 40px;\">
+				<h3 class=\"colored\">{$lang['infosapp']}</h3>
+				<br />
+				<table>
+					<tr>
+						<th>{$lang['info']}</th>
+						<th>{$lang['data']}</th>
+					</tr>
+					<tr>
+						<td>{$lang['language']}</td>
+						<td><span class=\"large\">{$lang[$language]}</span></td>
+					</tr>			
+						<tr>
+						<td>{$lang['framework']}</td>
+						<td><span class=\"large\">".$lang['framework_' . $language]."</span></td>
+					</tr>	
+				</table>
+			</div>
+			<div style=\"float: left; width: 470px;\">
+				<h3 class=\"colored\">{$lang['change']}</h3>
+				<br />
+				<form action=\"/panel/app/action_update_password\" method=\"post\">
+					<input type=\"hidden\" name=\"id\" value=\"{$app['id']}\" />
+					<fieldset>
+						<label>{$lang['password']}</label>
+						<input type=\"password\" name=\"pass\" />
+					</fieldset>
+					<fieldset>
+						<label>{$lang['password2']}</label>
+						<input type=\"password\" name=\"confirm\" />
+					</fieldset>
+					<fieldset>
+						<label></label>
+						<input type=\"submit\" value=\"{$lang['update']}\" />
+					</fieldset>
+				</form>
+			</div>
+			<div class=\"clearfix\"></div>
+			<h3 class=\"colored\">{$lang['access']}</h3>
+			<br />
+			<table>
+				<tr>
+					<th>{$lang['type']}</th>
+					<th>{$lang['info']}</th>
+				</tr>
+				<tr>
+					<td><span class=\"large\">Git</span></td>
+					<td>ssh+git://{$app['name']}@git.as".str_replace('Apps/' . $app['name'], 'var/git/' . $app['name'], $app['homeDirectory'])."</td>
+				</tr>
+				<tr>
+					<td><span class=\"large\">FTP</span></td>
+					<td>ftp://{$app['name']}@ftp.anotherservice.com</td>
+				</tr>
 			</table>
 		</div>
 		<div class=\"clearfix\"></div>

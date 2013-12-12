@@ -12,7 +12,7 @@ $app = $app[0];
 if( count($app['instances'])-1 == 0 )
 	$template->redirect('/panel/app/show?id=' . $_GET['id']);
 
-api::send('self/app/update', array('app'=>$_GET['id'], 'branch'=>$_GET['branch'], 'instances' => count($app['instances'])-1));
+api::send('self/app/update', array('app'=>$_GET['id'], 'branch'=>$_GET['branch'], 'instances' => count($app['branches'][$_GET['branch']]['instances'])-1));
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);

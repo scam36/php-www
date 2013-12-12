@@ -26,12 +26,12 @@ $content = "
 			<div style=\"float: left; width: 330px; text-align: center;\">
 				<h3 class=\"colored\">{$lang['paypal']}</h3>
 				<br />
-				<form action=\"https://sandbox.paypal.com/cgi-bin/webscr\" method=\"post\" id=\"paypal\">
+				<form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\" id=\"paypal\">
 					<input type=\"hidden\" name=\"cmd\" value=\"_xclick\" />
 					<input type=\"hidden\" name=\"business\" value=\"contact@anotherservice.com\" />  
 					<input type=\"hidden\" name=\"currency_code\" value=\"EUR\">  
 					<input type=\"hidden\" name=\"item_name\" value=\"".$lang['offer_' . security::encode($_POST['plan']) . '_title']."\" />
-					<input type=\"hidden\" name=\"amount\" value=\"".$lang['offer_' . security::encode($_POST['plan']) . '_price']."\" />
+					<input type=\"hidden\" name=\"amount\" value=\"1\" />
 					<input type=\"hidden\" name=\"return\" value=\"https://www.anotherservice.com/join/landing\" />
 					<input type=\"hidden\" name=\"cancel_return\" value=\"https://www.anotherservice.com/join/landing\" />
 					<input type=\"hidden\" name=\"notify_url\" value=\"https://www.anotherservice.com/ipn_paypal\" />

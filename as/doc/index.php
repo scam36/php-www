@@ -43,21 +43,22 @@ $content = "
 			<ul style=\"list-style-type: none; margin: 0; padding: 0;\">
 				<div style=\"float: left; width: 500px;\">
 					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_1']}</a></li>
-					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_2']}</a></li>
+					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/domains\">{$lang['question_2']}</a></li>
 					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_3']}</a></li>
 					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_4']}</a></li>
 					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_5']}</a></li>
 				</div>
 				<div style=\"float: left; width: 500px; margin-left: 50px;\">
-					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_1']}</a></li>
-					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_2']}</a></li>
-					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_3']}</a></li>
-					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_4']}</a></li>
-					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_5']}</a></li>
+					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_6']}</a></li>
+					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_7']}</a></li>
+					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_8']}</a></li>
+					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_9']}</a></li>
+					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_10']}</a></li>
 				</div>				
 			</ul>
 		</div>
 		<div class=\"clearfix\"></div>
+		<br />
 	</div>
 ";
 

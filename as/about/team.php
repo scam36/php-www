@@ -7,33 +7,36 @@ if( !defined('PROPER_START') )
 }
 
 $content = "
-	<div class=\"box rightcol\">
+	<div class=\"box nocol\">
 		<div class=\"header\">
 			<div class=\"container\">
 				<div class=\"head\">{$lang['title']}</div>
 			</div>
 		</div>
-		<div class=\"left\">
-			<div class=\"container\">
-				<h1>{$lang['team']}</h1>
-				<p class=\"large\">{$lang['team_text']}</p>
-				<br />
-				<p>
-					<a href=\"https://twitter.com/SamuelHassine\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/sam.png\" /></a>
-					<a href=\"https://twitter.com/suytt\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/simon.png\" /></a>
-					<a href=\"#\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/yann.png\" /></a>
-				</p>
-			</div>
+		<div class=\"container\">
+			<img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/yann.png\" />
+			<h3 class=\"colored\">Yann Autissier</h3>
+			<br />
+			<p class=\"large\">{$lang['yann']}</p>
+			<div class=\"clearfix\"></div>
+			<br />
+			<img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/sam.png\" />
+			<h3 class=\"colored\">Samuel Hassine</h3>
+			<br />
+			<p class=\"large\">{$lang['sam']}</p>
+			<div class=\"clearfix\"></div>
+			<br />
+			<img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/simon.png\" />
+			<h3 class=\"colored\">Simon Uyttendaele</h3>
+			<br />
+			<p class=\"large\">{$lang['simon']}</p>
+			<div class=\"clearfix\"></div>
+			<br />
+			<h2>{$lang['job']}</h2>
+			<p class=\"large\">{$lang['job_text']}</p>
+			<br />
+			<a class=\"btn\" href=\"/about/contact\">{$lang['apply']}</a>
 		</div>
-		<div class=\"right\">
-			<div class=\"container\">
-				<h1>{$lang['job']}</h1>
-				<p class=\"large\">{$lang['job_text']}</p>
-				<br />
-				<a class=\"btn\" href=\"/about/contact\">{$lang['apply']}</a>
-			</div>
-		</div>
-		<div class=\"clearfix\"></div>
 	</div>
 ";
 

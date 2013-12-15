@@ -58,6 +58,10 @@ $content = "
 						<th>{$lang['address']}</th>
 					</tr>
 					<tr>
+						<td>{$lang['status']}</td>
+						<td><a href=\"https://www.anotherservice.com/status\">https://www.anotherservice.com/status</a></td>
+					</tr>
+					<tr>
 						<td>{$lang['support']}</td>
 						<td><a href=\"https://support.anotherservice.com/projects/support\">https://support.anotherservice.com</a></td>
 					</tr>

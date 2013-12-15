@@ -15,6 +15,7 @@ $content = "
 	<div class=\"box nocol\">
 		<div class=\"container\">
 			<h2>{$lang['title']} :: <i>{$app['name']}</i></h2>
+			<br />
 			<form action=\"/panel/app/add_url_action\" method=\"post\">
 				<input type=\"hidden\" name=\"id\" value=\"{$_GET['id']}\" />
 				<fieldset>

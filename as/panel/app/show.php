@@ -223,7 +223,13 @@ $content .= "
 					<td>ssh://git.as/~".security::get('USER')."/{$app['name']}.git</td>
 					<td>".security::get('USER')."</td>
 					<td>22</td>
-				</tr>										
+				</tr>
+				<tr>
+					<td><span class=\"large\">SFTP</span></td>
+					<td>sftp://ftp.anotherservice.com</td>
+					<td>{$app['name']}</td>
+					<td>22</td>
+				</tr>				
 				<tr>
 					<td><span class=\"large\">FTP</span></td>
 					<td>ftp://ftp.anotherservice.com</td>

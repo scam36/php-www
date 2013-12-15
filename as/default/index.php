@@ -33,7 +33,7 @@ $content = "
 								<span class=\"circle\"></span>
 							</div>
 							<div class=\"terminal-text\">
-								<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/screen1.png\" alt=\"map\" style=\"display: block; padding: 10px 0 0 10px;\" />
+								<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/screen1.png\" alt=\"map\" style=\"display: block; padding: 5px 0 0 10px;\" />
 							</div>
 						</div>
 					</div>
@@ -47,7 +47,7 @@ $content = "
 								<span class=\"circle\"></span>
 							</div>
 							<div class=\"terminal-text\">
-								<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/screen2.png\" alt=\"map\" style=\"display: block; padding: 30px 0 0 10px;\" />
+								<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/screen2.png\" alt=\"map\" style=\"display: block; padding: 10px 0 0 10px;\" />
 							</div>
 						</div>
 					</div>

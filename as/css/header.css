@@ -1,7 +1,7 @@
 #header {
 	margin: 0;
 	height: 80px;
-	padding: 30px 0 0 0;
+	padding: 20px 0 0 0;
 	width: 100%;
 	border-bottom: 1px solid #207fbc;
 	background-color: #1c1c1c;
@@ -17,7 +17,7 @@
 }
 
 #header .container .menu {
-	padding-top: 5px;
+	padding-top: 16px;
 	font-family: Cuprum;
 	font-size: 17px;
 	float: right;
@@ -39,7 +39,7 @@
 
 #header .container .menu li a {
 	display: block;
-	margin-left: 20px;
+	margin-left: 10px;
 	padding: 10px;
 	color: #b2c0cA;
 	-webkit-transition: 0.2s all;

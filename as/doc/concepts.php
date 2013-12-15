@@ -14,7 +14,13 @@ $content = "
 			</div>
 		</div>
 		<div class=\"container\">		
-			<a href=\"/doc/apps\"><h2>{$lang['intro']}</h2></a>
+			<div style=\"float: left; width: 500px;\">
+				<h2>{$lang['intro']}</h2>
+			</div>
+			<div style=\"float: right; text-align: right; width: 300px;\">
+				<a class=\"btn\" href=\"/doc\">{$lang['back']}</a>		
+			</div>
+			<div class=\"clearfix\"></div>
 			<p class=\"large\">{$lang['intro_text']}</p>
 			<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/4.png\" alt=\"1\" />
 			<br />

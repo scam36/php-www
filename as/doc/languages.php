@@ -14,11 +14,14 @@ $content = "
 			</div>
 		</div>
 		<div class=\"container\">		
-			<h2>{$lang['intro']}</h2>
-			<br />
+			<div style=\"float: left; width: 500px;\">
+				<h2>{$lang['intro']}</h2>
+			</div>
+			<div style=\"float: right; text-align: right; width: 300px;\">
+				<a class=\"btn\" href=\"/doc\">{$lang['back']}</a>		
+			</div>
+			<div class=\"clearfix\"></div>
 			<p class=\"large\">{$lang['intro_text']}</p>
-			<br />
-			<h3 class=\"colored\">{$lang['available']}</h3>
 			<br />
 			<div style=\"width: 500px; float: left;\">
 				<table>
@@ -125,6 +128,10 @@ $content = "
 			</div>
 		</div>
 		<div class=\"clearfix\"></div>
+		<p class=\"large\" style=\"text-align: center;\">
+			<a class=\"btn\" style=\"margin: 0 auto;\" href=\"/doc\">{$lang['back']}</a>
+		</p>
+		<br />
 	</div>
 ";
 

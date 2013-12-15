@@ -2,7 +2,7 @@
 
 [FR]
 mailerror = "L'email n'a pas pu être envoyé."
-success = "Un email vous a été envoyé avec un lien pour change votre mot de passe."
+success = "Un email contenant un lien permettant de changer votre mot de passe vous a été envoyé."
 nouser = "Cet utilisateur n'existe pas."
 
 subject = "Récupération du compte"

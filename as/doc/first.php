@@ -14,7 +14,13 @@ $content = "
 			</div>
 		</div>
 		<div class=\"container\">		
-			<h2>{$lang['intro']}</h2>
+			<div style=\"float: left; width: 500px;\">
+				<h2>{$lang['intro']}</h2>
+			</div>
+			<div style=\"float: right; text-align: right; width: 300px;\">
+				<a class=\"btn\" href=\"/doc\">{$lang['back']}</a>		
+			</div>
+			<div class=\"clearfix\"></div>
 			<p class=\"large\">{$lang['intro_text']}</p>
 			<br />
 			<blockquote style=\"width: 500px; margin: 0 auto;\">

@@ -37,28 +37,28 @@ $content = "
 			</a>
 			<a href=\"#\">
 				<div class=\"app\">
-					<p><img class=\"icon\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-sinatra.png\" alt=\"Ruby\"><span class=\"large\">Ruby Sinatra</span></p>
+					<p><img class=\"icon\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-rubysinatra.png\" alt=\"Ruby\"><span class=\"large\">Ruby Sinatra</span></p>
 					<div class=\"overline\">{$lang['soon']}</div>
 					<br />					
 				</div>
 			</a>
 			<a href=\"#\">
 				<div class=\"app\">
-					<p><img class=\"icon\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-django.png\" alt=\"Ruby\"><span class=\"large\">Python Django</span></p>
+					<p><img class=\"icon\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-pythondjango.png\" alt=\"Ruby\"><span class=\"large\">Python Django</span></p>
 					<div class=\"overline\">{$lang['soon']}</div>
 					<br />					
 				</div>			
 			</a>
 			<a href=\"/panel/app/add2?runtime=pythonwsgi\">
 				<div class=\"app\">
-					<p><img class=\"icon\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-wsgi.png\" alt=\"Ruby\"><span class=\"large\">Python WSGI</span></p>
+					<p><img class=\"icon\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-pythonwsgi.png\" alt=\"Ruby\"><span class=\"large\">Python WSGI</span></p>
 					<div class=\"overline\">2.7.4</div>
 					<br />					
 				</div>
 			</a>
 			<a href=\"/panel/app/add2?runtime=php\">
 				<div class=\"app\">
-					<p><img class=\"icon\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-tomcat.png\" alt=\"PHP\"><span class=\"large\">Java Tomcat</span></p>
+					<p><img class=\"icon\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-javatomcat.png\" alt=\"PHP\"><span class=\"large\">Java Tomcat</span></p>
 					<div class=\"overline\">7.0.47</div>
 					<br />					
 				</div>
@@ -69,14 +69,14 @@ $content = "
 			<br />
 			<a href=\"/panel/app/add2?runtime=php&standalone\">
 				<div class=\"app\">
-					<p><img class=\"icon\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-php.png\" alt=\"PHP\"><span class=\"large\">PHP (Worker)</span></p>
+					<p><img class=\"icon\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-phpworker.png\" alt=\"PHP\"><span class=\"large\">PHP (Worker)</span></p>
 					<div class=\"overline\">5.4.9</div>
 					<br />					
 				</div>
 			</a>
 			<a href=\"#\">
 				<div class=\"app\">
-					<p><img class=\"icon\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-python2.png\" alt=\"Python\"><span class=\"large\">Python</span></p>
+					<p><img class=\"icon\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-python.png\" alt=\"Python\"><span class=\"large\">Python</span></p>
 					<div class=\"overline\">2.7.4</div>
 					<br />					
 				</div>
@@ -97,7 +97,7 @@ $content = "
 			</a>
 			<a href=\"#\">
 				<div class=\"app\">
-					<p><img class=\"icon\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-node.png\" alt=\"NodeJS\"><span class=\"large\">NodeJS</span></p>
+					<p><img class=\"icon\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-nodejs.png\" alt=\"NodeJS\"><span class=\"large\">NodeJS</span></p>
 					<div class=\"overline\">{$lang['soon']}</div>
 					<br />					
 				</div>

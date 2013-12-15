@@ -36,7 +36,7 @@ $content = "
 					</tr>
 					<tr>
 						<td>{$lang['cloud']}</td>
-						<td><a href=\"https://mail.anotherservice.com\">https://cloud.anotherservice.com</a></td>
+						<td><a href=\"https://cloud.anotherservice.com\">https://cloud.anotherservice.com</a></td>
 					</tr>
 					<tr>
 						<td>{$lang['pma']}</td>

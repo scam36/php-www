@@ -52,7 +52,7 @@ $content = "
 			<h3>{$lang['access']}</h3>			
 			<p class=\"large\">{$lang['access_text']}</p>
 			<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/11.png\" alt=\"11\" />
-			<p class=\"large\">{$lang['access_text']}</p>
+			<p class=\"large\">{$lang['access2_text']}</p>
 			<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/12.png\" alt=\"12\" />
 			<br />
 			<p class=\"large\" style=\"text-align: center;\">

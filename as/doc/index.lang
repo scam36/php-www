@@ -5,7 +5,7 @@
 title = "Centre d'aide"
 intro = "Débuter sur Another Service"
 intro_text = "Bienvenue sur notre plateforme d'hébergement applicatif. Vous trouverez ici toutes les informations utiles au service."
-
+info = "Informations utiles"
 
 top = "Question très fréquentes"
 first = "Publication d'une première application"

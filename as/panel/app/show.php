@@ -169,20 +169,28 @@ $content .= "
 						<td>{$lang['language']}</td>
 						<td><span class=\"large\">{$lang[$language]}</span></td>
 					</tr>			
-						<tr>
+					<tr>
 						<td>{$lang['framework']}</td>
 						<td><span class=\"large\">".$lang['framework_' . $language]."</span></td>
-					</tr>	
+					</tr>
+					<tr>
+						<td>{$lang['binary']}</td>
+						<td><span class=\"small\">".($app['binary']?"{$lang['command']} {$app['binary']}":str_replace('{BRANCH}', security::encode($_SESSION['DATA'][$app['id']]['branch']), $lang['binary_' . $language]))."</span></td>
+					</tr>
 				</table>
 			</div>
 			<div style=\"float: left; width: 470px;\">
 				<h3 class=\"colored\">{$lang['change']}</h3>
 				<br />
-				<form action=\"/panel/app/update_password_action\" method=\"post\">
+				<form action=\"/panel/app/update_action\" method=\"post\">
 					<input type=\"hidden\" name=\"id\" value=\"{$app['id']}\" />
 					<fieldset>
+						<label>{$lang['tag']}</label>
+						<input type=\"text\" name=\"tag\" value=\"{$app['tag']}\" />
+					</fieldset>
+					<fieldset>
 						<label>{$lang['password']}</label>
-						<input type=\"password\" name=\"pass\" />
+						<input type=\"password\" name=\"newpassword\" />
 					</fieldset>
 					<fieldset>
 						<label>{$lang['password2']}</label>
@@ -205,11 +213,17 @@ $content .= "
 					<th>{$lang['port']}</th>
 				</tr>
 				<tr>
-					<td><span class=\"large\">Git</span></td>
+					<td><span class=\"large\">GIT</span></td>
 					<td>ssh://git.as/~{$app['name']}/git</td>
 					<td>{$app['name']}</td>
 					<td>22</td>
 				</tr>
+				<tr>
+					<td><span class=\"large\">GIT</span></td>
+					<td>ssh://git.as/~".security::get('USER')."/{$app['name']}.git</td>
+					<td>".security::get('USER')."</td>
+					<td>22</td>
+				</tr>										
 				<tr>
 					<td><span class=\"large\">FTP</span></td>
 					<td>ftp://ftp.anotherservice.com</td>

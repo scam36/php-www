@@ -45,7 +45,7 @@ $content = "
 		<div class=\"container\">
 			<h2>{$lang['title']}</h2>
 			<br />
-			<div style=\"float: left; width: 475px;\">
+			<div style=\"float: left; width: 550px;\">
 				<h3>{$lang['memory']}</h3>
 				<div class=\"ui-meter-holder\">
 					<div class=\"ui-meter\">
@@ -82,6 +82,7 @@ $content = "
 			<table>
 				<tr>
 					<th>{$lang['name']}</th>
+					<th>{$lang['tag']}</th>
 					<th>{$lang['uris']}</th>
 					<th>{$lang['memory']}</th>
 					<th>{$lang['size']}</th>
@@ -120,6 +121,7 @@ if( count($apps) > 0 )
 		$content .= "
 					<tr>
 						<td><img class=\"language\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/languages/icon-{$language}.png\" alt=\"\" /><a href=\"/panel/app/show?id={$a['id']}\"><strong>{$a['name']}</strong></a></td>
+						<td>{$a['tag']}</td>
 						<td>";
 		if( $a['branches'] )
 		{

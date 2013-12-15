@@ -3,7 +3,7 @@
 [FR]
 title = "Inscription à la plateforme"
 payment = "Finalisation"
-payment_text = "Merci de choisir votre mode de paiement. En vous inscrivant sur la plateforme, vous acceptez pleinement nos <a href='/as/documents/SYS-ConditionsGeneralesService-20131210.pdf'>conditions générales de services</a>."
+payment_text = "Merci de choisir votre mode de paiement. En vous inscrivant sur la plateforme, vous acceptez pleinement nos <a target=_blank href='/as/documents/SYS-ConditionsGeneralesService-20131210.pdf'>conditions générales de services</a>."
 paypal = "Paypal / Carte"
 card = "Cartes de crédit"
 transfer = "Prélèvement bancaire"

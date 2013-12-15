@@ -75,7 +75,7 @@ $content .= "
 						</tbody>
 					</table>
 					<br />
-					<a class=\"btn\" href=\"/panel/domain/add\">{$lang['add']}</a> <a class=\"btn\" href=\"https://projets.anotherservice.com/projects/as-panel/wiki/Gerer_vos_noms_de_domaines\">{$lang['doc']}</a>
+					<a class=\"btn\" href=\"/panel/domain/add\">{$lang['add']}</a> <a class=\"btn\" href=\"/doc/domains\">{$lang['doc']}</a>
 				</div>
 			</div>
 ";

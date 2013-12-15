@@ -72,6 +72,43 @@ if( security::hasGrant('SELF_SELECT') )
 
 $content .= "
 			</div>
+			<br />
+			<h2>{$lang['bills']}</h2>
+			<br />
+			<table>
+				<tr>
+					<th>{$lang['id']}</th>
+					<th>{$lang['date']}</th>
+					<th>{$lang['total']}</th>
+					<th>{$lang['status']}</th>
+				</tr>
+";
+
+foreach( $bills as $b )
+{
+	$content .= "
+				<tr>
+					<td><img class=\"language\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-{$s['vendor']}.png\" alt=\"\" /><strong>{$s['name']}</strong></td>
+					<td>{$s['vendor']}</td>
+					<td>{$s['version']}</td>
+					<td align=\"center\">
+		";
+		
+		if( security::hasGrant('SELF_SERVICE_DELETE') )
+		{
+			$content .= "
+									<a href=\"/panel/service/del_action?name={$s['name']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>";
+		}
+		
+		$content .= "
+								</td>
+							</tr>
+		";
+}
+
+$content .= "
+				</tr>
+			</table>
 			<div class=\"clearfix\"></div>
 		</div>
 	</div>";

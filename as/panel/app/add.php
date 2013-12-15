@@ -10,7 +10,6 @@ $content = "
 	<div class=\"box nocol\">
 		<div class=\"container\">
 			<h2>{$lang['title']}</h2>
-			<p class=\"large\">{$lang['intro']}</p>
 			<br />
 			<h3 class=\"colored\">{$lang['frameworks']}</h3>
 			<br />

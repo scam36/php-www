@@ -61,7 +61,6 @@ $content = "
 			<div class=\"clearfix\"></div>
 			<br />
 			<h2>{$lang['list']}</h2>
-			<br />
 			<table>
 				<tr>
 					<th>{$lang['name']}</th>
@@ -99,7 +98,7 @@ $content .= "
 				</tr>
 			</table>
 			<br />
-			<a class=\"btn\" href=\"/panel/service/add\">{$lang['add']}</a> <a class=\"btn\" href=\"https://projets.anotherservice.com/projects/as-panel/wiki/Start_services\">{$lang['doc']}</a>
+			<a class=\"btn\" href=\"/panel/service/add\">{$lang['add']}</a> <a class=\"btn\" href=\"/doc/services\">{$lang['doc']}</a>
 		</div>
 	</div>
 ";

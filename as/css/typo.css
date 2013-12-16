@@ -432,3 +432,8 @@ span.smalldate.yellow {
 span.smalldate.blue {
 	background-color: #448cdd;
 }
+
+div.social {
+	float: left;
+	margin: 15px 15px 0 0;
+}

@@ -29,7 +29,12 @@ if( count($news) > 0 )
 				<br />
 				<p class=\"large\">{$n['description']}</p>
 				<div style=\"float: left;\">
-					
+					<div class=\"social\">
+						<div class=\"fb-like\" data-href=\"https://www.anotherservice.com/blog/view?id=32\" data-width=\"\" data-height=\"\" data-colorscheme=\"light\" data-layout=\"button_count\" data-action=\"like\" data-show-faces=\"true\" data-send=\"false\"></div>
+					</div>
+					<div class=\"social\">
+						<div class=\"g-plusone\" data-size=\"medium\"></div>
+					</div>
 				</div>
 				<a class=\"btn\" style=\"float: right;\" href=\"/blog/view?id={$n['id']}\">{$lang['read']}</a>
 				<div class=\"clearfix\"></div>
@@ -38,6 +43,15 @@ if( count($news) > 0 )
 }
 
 $content .= "
+			<script type=\"text/javascript\">
+				window.___gcfg = {lang: 'fr'};
+			
+				(function() {
+					var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+					po.src = 'https://apis.google.com/js/plusone.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+				})();
+			</script>
 		</div>
 	</div>
 ";

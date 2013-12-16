@@ -20,7 +20,7 @@ $memoryu = 0;
 $instances = 0;
 foreach( $app['branches'][$_SESSION['DATA'][$app['id']]['branch']]['instances'] as $i )
 {
-	if( $i['state'] == 'RUNNING' )
+	if( $i['status'] == 'run' )
 		$running = true;
 	$memory = $memory+$i['memory']['quota'];
 	$memoryu = $memoryu+$i['memory']['usage'];
@@ -131,17 +131,20 @@ $content .= "
 					<th>{$lang['port']}</th>
 					<th>{$lang['cpu']}</th>
 					<th>{$lang['mem']}</th>
+					<th>{$lang['uptime']}</th>
 					<th >{$lang['status']}</th>
 				</tr>
 ";
 $j = 0;
 foreach( $app['branches'][$_SESSION['DATA'][$app['id']]['branch']]['instances'] as $i )
 {
-	if( $i['state'] == 'RUNNING' )
+	if( $i['status'] == 'run' )
 		$running = true;
 	else
 		$running = false;
 		
+	$info = secondsToTime($i['uptime']);
+	
 	$content .= "
 				<tr>
 					<td><span class=\"large\">{$app['name']}-".security::encode($_SESSION['DATA'][$app['id']]['branch'])."-{$j}</span></td>
@@ -149,6 +152,7 @@ foreach( $app['branches'][$_SESSION['DATA'][$app['id']]['branch']]['instances'] 
 					<td>{$i['port']}</td>
 					<td>{$i['cpu']['usage']}% / {$i['cpu']['quota']} core</td>
 					<td>{$i['memory']['usage']}Mo / {$i['memory']['quota']}Mo</td>
+					<td>{$info['d']} {$lang['days']} {$info['h']} {$lang['hours']} {$info['m']} {$lang['minutes']} {$info['s']} {$lang['seconds']} </td>
 					<td>".($running?"<div class=\"state running\"><div class=\"state-content\">{$lang['running']}</div></div>":"<div class=\"state stopped\"><div class=\"state-content\">{$lang['stopped']}")."</div></div></td>
 				</tr>
 	";
@@ -241,6 +245,45 @@ $content .= "
 		<div class=\"clearfix\"></div>
 	</div>
 ";
+
+/** 
+ * Convert number of seconds into hours, minutes and seconds 
+ * and return an array containing those values 
+ * 
+ * @param integer $inputSeconds Number of seconds to parse 
+ * @return array 
+ */ 
+
+function secondsToTime($inputSeconds) {
+
+    $secondsInAMinute = 60;
+    $secondsInAnHour  = 60 * $secondsInAMinute;
+    $secondsInADay    = 24 * $secondsInAnHour;
+
+    // extract days
+    $days = floor($inputSeconds / $secondsInADay);
+
+    // extract hours
+    $hourSeconds = $inputSeconds % $secondsInADay;
+    $hours = floor($hourSeconds / $secondsInAnHour);
+
+    // extract minutes
+    $minuteSeconds = $hourSeconds % $secondsInAnHour;
+    $minutes = floor($minuteSeconds / $secondsInAMinute);
+
+    // extract the remaining seconds
+    $remainingSeconds = $minuteSeconds % $secondsInAMinute;
+    $seconds = ceil($remainingSeconds);
+
+    // return the final array
+    $obj = array(
+        'd' => (int) $days,
+        'h' => (int) $hours,
+        'm' => (int) $minutes,
+        's' => (int) $seconds,
+    );
+    return $obj;
+}
 
 /* ========================== OUTPUT PAGE ========================== */
 $template->output($content);

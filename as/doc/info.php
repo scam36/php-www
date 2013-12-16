@@ -127,7 +127,7 @@ $content = "
 					<tr>
 						<td>{$lang['pgsql']}</td>
 						<td>sql.anotherservice.com</td>
-						<td>5431</td>
+						<td>5432</td>
 					</tr>
 					<tr>
 						<td>{$lang['smtp']}</td>

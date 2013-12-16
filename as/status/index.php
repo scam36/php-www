@@ -14,7 +14,7 @@ $response = json_decode(str_replace(array('jsonUptimeRobotApi(', ')'), array('',
 
 foreach( $response['monitors'] as $m )
 {
-	if( $m[0]['id'] == '775901517' )
+	if( $m[0]['id'] == '775978448' )
 	{
 		$expl = explode('-', $m[0]['customuptimeratio']);
 		$up7 = $expl[0];

@@ -32,10 +32,6 @@ $content = "
 			<p class=\"large\">{$lang['simon']}</p>
 			<div class=\"clearfix\"></div>
 			<br />
-			<h2>{$lang['job']}</h2>
-			<p class=\"large\">{$lang['job_text']}</p>
-			<br />
-			<a class=\"btn\" href=\"/about/contact\">{$lang['apply']}</a>
 		</div>
 	</div>
 ";

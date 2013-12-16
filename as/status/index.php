@@ -12,16 +12,16 @@ fclose($fh);
 
 $response = json_decode(str_replace(array('jsonUptimeRobotApi(', ')'), array('', ''), $response), true);
 
-foreach( $response['monitors'] as $m )
+foreach( $response['monitors']['monitor'] as $m )
 {
-	if( $m[0]['id'] == '775978448' )
+	if( $m['id'] == '775978448' )
 	{
-		$expl = explode('-', $m[0]['customuptimeratio']);
+		$expl = explode('-', $m['customuptimeratio']);
 		$up7 = $expl[0];
 		$up30 = $expl[1];
 		$up365 = $expl[2];
 		
-		$logs = $m[0]['log'];
+		$logs = $m['log'];
 	}
 }
 
@@ -63,36 +63,51 @@ for( $i = 0; $i < 7; $i++ )
 	
 	$dated = date('d', strtotime(date('Y-m-d',strtotime('-' . $i . ' days')).' 00:00:00'));
 	$datem = date('M', strtotime(date('Y-m-d',strtotime('-' . $i . ' days')).' 00:00:00'));
+	$datey = date('Y', strtotime(date('Y-m-d',strtotime('-' . $i . ' days')).' 00:00:00'));
 	
 	$problems = array();
-	foreach( $logs as $l )
+	if( count($logs) > 0 )
 	{
-		$time = strtotime($l['datetime']);
-		if( $time > $current && $time < $currentend )
-			$problems[] = array('type'=>$l['type'], 'timestamp'=>$time);
+		foreach( $logs as $l )
+		{
+			$time = strtotime($l['datetime']);
+			if( $time > $current && $time < $currentend )
+				$problems[] = array('type'=>$l['type'], 'timestamp'=>$time);
+		}
 	}
-		
+
+	$color = '';
+	if( count($problems) > 0 )
+	{
+		foreach( $problems as $p )
+		{
+			if( $p['type'] == 2 )
+				$color = 'yellow';
+			else if( $p['type'] == 98 )
+				$color = 'blue';
+		}
+	}
+	
 	$content .= "
 						<div style=\"clear: left; padding: 10px 15px 0px 15px; margin: 0; background-color: #ffffff; \">
-							<span class=\"smalldate ".(count($problems)>0?"yellow":"")."\">{$dated}<br />{$datem}</span>
+							<span class=\"smalldate {$color}\">{$dated}<br />{$datem}<br />{$datey}</span>
 							<span style=\"display: block; float: left; padding: 0 0px 0px 20px; width: 300px;\">
 	";
 
-if( count($problems) > 0 )
-{
-	foreach( $problems as $p )
+	if( count($problems) > 0 )
 	{
-		$content .= "
+		foreach( $problems as $p )
+		{
+			$content .= "
 								<span style=\"font-size: 13px; display: block;\">".date('H:i', $p['timestamp'])." CET</span>
 								<span style=\"font-size: 11px; display: block; margin: 5px 0 10px 0;\">".$lang['status_' . $p['type']]."</span>
-		";
-	}
-}	
-else
-	$content .= "{$lang['24up']}<span style=\"font-size: 12px; margin-top: 8px; display: block;\">{$lang['allrunning']}</span>";
+			";
+		}
+	}	
+	else
+		$content .= "{$lang['24up']}<span style=\"font-size: 12px; margin-top: 8px; display: block;\">{$lang['allrunning']}</span>";
 
-$content .= "
-							
+	$content .= "			
 							</span>
 							<div class=\"clearfix\"></div>
 						</div>
@@ -102,6 +117,20 @@ $content .= "
 }
 
 $content .= "
+						<div style=\"clear: left; padding: 10px 15px 0px 15px; margin: 0; background-color: #ffffff; \">
+							<span class=\"smalldate blue\">16<br />Dec<br />2013</span>
+							<span style=\"display: block; float: left; padding: 0 0px 0px 20px; width: 300px;\">
+	
+								<span style=\"font-size: 13px; display: block;\">04:46 CET</span>
+								<span style=\"font-size: 11px; display: block; margin: 5px 0 10px 0;\">{$lang['status_2']}</span>
+			
+								<span style=\"font-size: 13px; display: block;\">04:46 CET</span>
+								<span style=\"font-size: 11px; display: block; margin: 5px 0 10px 0;\">{$lang['status_98']}</span>
+							
+							</span>
+							<div class=\"clearfix\"></div>
+						</div>
+						<div class=\"clearfix\"></div>
 					</div>
 					<div style=\"float: right; width: 500px;\">
 						<h3>{$lang['paasstats']}</h3>
@@ -109,9 +138,9 @@ $content .= "
 						<div style=\"text-align: center;\">
 							<img src=\"http://munin.anotherservice.com/AS-Nodes/anotherservice.com/traffic-day.png\">
 							<br /><br />
-							<img src=\"http://munin.anotherservice.com/AS-Nodes/anotherservice.com/cpu-day.png\">
-							<br /><br />
 							<img src=\"http://munin.anotherservice.com/AS-Nodes/anotherservice.com/memory-day.png\">
+							<br /><br />
+							<img src=\"http://munin.anotherservice.com/AS-Nodes/anotherservice.com/cpu-day.png\">
 						</div>
 					</div>
 				</div>			

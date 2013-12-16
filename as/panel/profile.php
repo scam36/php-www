@@ -84,9 +84,11 @@ $content .= "
 				</tr>
 ";
 
-foreach( $bills as $b )
+if( count($bills) > 0 )
 {
-	$content .= "
+	foreach( $bills as $b )
+	{
+		$content .= "
 				<tr>
 					<td><img class=\"language\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-{$s['vendor']}.png\" alt=\"\" /><strong>{$s['name']}</strong></td>
 					<td>{$s['vendor']}</td>
@@ -104,6 +106,7 @@ foreach( $bills as $b )
 								</td>
 							</tr>
 		";
+	}
 }
 
 $content .= "

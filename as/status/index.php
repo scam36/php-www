@@ -49,10 +49,11 @@ $content = "
 			</div>
 		</div>
 		<div id=\"clouds\">
-			<div class=\"container\" style=\"background-color: #eeeeee;\">
+			<div class=\"container\" style=\"background-color: #f0f0f0;\">
 				<div class=\"wrapper\" style=\"padding-top: 40px;\">
-					<div style=\"float: left; width: 550px;\">
-						<h2>{$lang['last7days']}</h2>
+					<div style=\"float: left; width: 500px;\">
+						<h3>{$lang['last7days']}</h3>
+						<br />
 ";
 
 for( $i = 0; $i < 7; $i++ )
@@ -102,11 +103,16 @@ $content .= "
 
 $content .= "
 					</div>
-					<div style=\"float: left; width: 550px;\">
-						<h2>{$lang['paasstats']}</h2>
-						
-						<img src=\"http://munin.anotherservice.com/AS-Nodes/anotherservice.com/traffic-day.png\">
-					
+					<div style=\"float: right; width: 500px;\">
+						<h3>{$lang['paasstats']}</h3>
+						<br />
+						<div style=\"text-align: center;\">
+							<img src=\"http://munin.anotherservice.com/AS-Nodes/anotherservice.com/traffic-day.png\">
+							<br /><br />
+							<img src=\"http://munin.anotherservice.com/AS-Nodes/anotherservice.com/cpu-day.png\">
+							<br /><br />
+							<img src=\"http://munin.anotherservice.com/AS-Nodes/anotherservice.com/memory-day.png\">
+						</div>
 					</div>
 				</div>			
 				<div class=\"clearfix\"></div>

@@ -17,7 +17,7 @@ if( $result[0]['date'] < (time() - 864000) ) // 10 days
 	throw new SiteException('Outdated registration', 400, 'The registration is outdated : ' . date('Y-n-j', $result[0]['date']));
 
 $_SESSION['REGISTER']['STATUS'] = true;
-$_SESSION['REGISTER']['ID'] = security::encode($_GET['id']);
+$_SESSION['REGISTER']['CODE'] = security::encode($_GET['code']);
 $_SESSION['REGISTER']['EMAIL'] = security::encode($_GET['email']);
 
 template::redirect('/');

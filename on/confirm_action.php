@@ -15,7 +15,7 @@ try
 		throw new SiteException("User creation failed", 500, "Generated uid : {$uid}");
 
 	// REGISTRATION IS OK -> DELETE REGISTRATION
-	api::send('registration/delete', array('user'=>$_POST['username']), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+	api::send('registration/delete', array('code'=>$_POST['code']), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 
 	// INSERT THE USER IN THE USERS GROUP
 	api::send('group/user/add', array('user'=>$uid, 'group'=>'USERS'), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);

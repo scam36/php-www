@@ -6,10 +6,10 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-if( !isset($_GET['code']) || !isset($_GET['id']) || !isset($_GET['email']) )
+if( !isset($_GET['code']) || !isset($_GET['email']) )
 	throw new SiteException('Invalid or missing arguments', 400, 'Parameter code or email is not present');
 	
-$result = api::send('registration/select', array('id'=>$_GET['id'], 'code'=>$_GET['code']), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+$result = api::send('registration/select', array('code'=>$_GET['code']), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 
 if( count($result) == 0 )
 	throw new SiteException('Invalid user/code', 400, 'No registration matches for this user/code');

@@ -13,7 +13,7 @@ $result = api::send('registration/select', array('id'=>$_GET['id'], 'code'=>$_GE
 
 if( count($result) == 0 )
 	throw new SiteException('Invalid user/code', 400, 'No registration matches for this user/code');
-if( $result[0]['confirm_date'] < (time() - 864000) ) // 10 days
+if( $result[0]['date'] < (time() - 864000) ) // 10 days
 	throw new SiteException('Outdated registration', 400, 'The registration is outdated : ' . date('Y-n-j', $result[0]['date']));
 
 $_SESSION['REGISTER']['STATUS'] = true;

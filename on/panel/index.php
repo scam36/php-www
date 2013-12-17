@@ -41,17 +41,21 @@ $content = "
 			<div class=\"sitescontent\">
 				<div class=\"site newsite\" id=\"newsite\">
 					<div id=\"addsite\">
-						<a href=\"#\" onclick=\"showForm(); return false;\" class=\"button classic\" style=\"margin: 0 auto; margin-top: 85px; padding: 10px 0 0 0; height: 40px; width: 50px; text-align: center;\">
+						<a href=\"#\" onclick=\"showForm(); return false;\" class=\"button classic\" style=\"margin: 0 auto; margin-top: 97px; padding: 10px 0 0 0; height: 40px; width: 50px; text-align: center;\">
 							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white-big.png\" />
 						</a>
 					</div>
-					<div id=\"formsite\" style=\"display: none; position: relative; padding: 45px 10px 10px 10px;\">
+					<div id=\"formsite\" style=\"display: none; position: relative; padding: 30px 10px 10px 10px;\">
 						<a href=\"#\" style=\"display: block; position: absolute; top: 5px; left: 5px;\" onclick=\"showNew(); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/arrowLeft.png\" alt=\"\" /></a>
 						<div class=\"form-small\">		
 							<form action=\"/panel/site/add_action\" method=\"post\" class=\"center\">
 								<fieldset>
-									<input class=\"auto\" type=\"text\" value=\"{$lang['name']}\" name=\"name\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+									<input class=\"auto\" type=\"text\" value=\"{$lang['name']}\" name=\"subdomain\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
 									<span class=\"help-block\">{$lang['tipsite']}</span>
+								</fieldset>
+								<fieldset>
+									<input class=\"auto\" type=\"password\" value=\"{$lang['password']}\" name=\"password\" onfocus=\"this.value = this.value=='{$lang['password']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['password']}' : this.value; this.value=='{$lang['password']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+									<span class=\"help-block\">{$lang['tippassword']}</span>
 								</fieldset>
 								<fieldset>	
 									<input autofocus type=\"submit\" value=\"{$lang['create']}\" style=\"width: 120px;\" />

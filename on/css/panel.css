@@ -84,7 +84,7 @@ div.panel div.sites div.sitescontent {
 
 div.panel div.sites div.site {
 	width: 248px;
-	height: 210px;
+	height: 250px;
 	float: left;
 	background-color: #ffffff;
 	margin-right: 25px;
@@ -109,14 +109,15 @@ div.panel div.sites div.site div.normal {
 div.panel div.sites div.site div.thumbshot {
 	padding: 10px;
 	border: 1px solid #d3d3d3;
-	height: 100px;
+	height: 145px;
 	border-radius: 3px;
 	width: 195px;
 	text-align: center;
 }
 
 div.panel div.sites div.site div.thumbshot img {
-	height: 100px;
+	width: 189px;
+	height: 142px;
 }
 
 div.panel div.sites div.site img.smallconnector {
@@ -146,13 +147,13 @@ div.panel div.sites div.new div.bullet {
 	background: #fff url('../images/new.png') 50% 20px no-repeat;
 	position: absolute;
 	left: 20px;
-	top: 74px;
+	top: 86px;
 	border-radius: 4px;
 }
 
 div.panel div.sites div.new div.text {
 	float: left;
-	margin: 74px 0 0 120px;
+	margin: 86px 0 0 120px;
 	font-size: 17px;
 }
 

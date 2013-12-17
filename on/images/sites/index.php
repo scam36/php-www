@@ -10,14 +10,22 @@ if( file_exists($file) )
 	
 	if( $mod <= $current-(3600*2) )
 	{
-		$url = 'http://api.snapito.com/?delay=0&freshness=0&size=sc&fast=false&timestamp=false&type=PNG&url=' . $url;
-		file_put_contents($file, file_get_contents($url));
-	}	
+		$address = 'http://api.snapito.com/?delay=0&freshness=0&size=sc&fast=false&timestamp=false&type=PNG&url=' . $url;
+		$content = file_get_contents($address);
+		if( $content )
+			file_put_contents($file, $content);
+		else
+			file_put_contents($file, file_get_contents('site.png'));
+	}
 }
 else
 {
-	$url = 'http://api.snapito.com/?delay=0&freshness=0&size=sc&fast=false&timestamp=false&type=PNG&url=' . $url;
-	file_put_contents($file, file_get_contents($url));
+	$address = 'http://api.snapito.com/?delay=0&freshness=0&size=sc&fast=false&timestamp=false&type=PNG&url=' . $url;
+	$content = file_get_contents($address);
+	if( $content )
+		file_put_contents($file, $content);
+	else
+		file_put_contents($file, file_get_contents('site.png'));
 }
 
 header("content-type: image/png");

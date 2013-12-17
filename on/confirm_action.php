@@ -7,7 +7,7 @@ if( !defined('PROPER_START') )
 }
 
 
-	$result = api::send('user/add', array('user'=>$_GET['username'], 'ip'=>$_SERVER['HTTP_X_REAL_IP'], 'pass'=>$_POST['password'], 'email'=>$_GET['email'], 'firstname'=>'', 'lastname'=>'', 'language'=>translator::getLanguage()), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+	$result = api::send('user/add', array('user'=>$_POST['username'], 'ip'=>$_SERVER['HTTP_X_REAL_IP'], 'pass'=>$_POST['password'], 'email'=>$_POST['email'], 'firstname'=>'', 'lastname'=>'', 'language'=>translator::getLanguage()), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 	$uid = $result['id'];
 
 	if( !is_numeric($uid) || $uid <= 0 )

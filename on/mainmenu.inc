@@ -1,0 +1,25 @@
+<?php
+
+if( isset($GLOBALS['lang']) && is_object($GLOBALS['lang']) )
+	$GLOBALS['lang']->import(__DIR__ . '/mainmenu.lang');
+
+// initialize the menu
+$menu = array(
+	array('text'=>"mhosting", 'anonymous'=>true, 'link'=>"/hosting"),
+	array('text'=>"mcommunity", 'anonymous'=>true, 'link'=>"https://community.olympe.in"),
+	array('text'=>"mblog", 'anonymous'=>true, 'link'=>"/blog"),
+	array('text'=>"mdoc", 'anonymous'=>true, 'link'=>"/doc"),
+	array('text'=>"mlogin", 'anonymous'=>true, 'link'=>"#", 'onclick'=>"$('#login').dialog('open'); return false;"),
+	array('text'=>"msignup", 'anonymous'=>true, 'link'=>"#", 'onclick'=>"$('#signup').dialog('open'); return false;"),
+	
+	array('text'=>"mhosting", 'anonymous'=>false, 'link'=>"/hosting"),
+	array('text'=>"mcommunity", 'anonymous'=>false, 'link'=>"https://community.olympe.in"),
+	array('text'=>"mblog", 'anonymous'=>false, 'link'=>"/blog"),
+	array('text'=>"mdoc", 'anonymous'=>false, 'link'=>"/doc"),
+	array('text'=>"mpanel", 'anonymous'=>false, 'link'=>"/panel"),
+	array('text'=>"mlogout", 'anonymous'=>false, 'link'=>"/logout")
+);
+
+return $menu;
+
+?>

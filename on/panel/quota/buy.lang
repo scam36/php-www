@@ -1,0 +1,19 @@
+[EN]
+title = "Buy new credits"
+subtitle = "Which number of credits do you need?"
+service = "Package"
+pack_1 = "2,000 BIC"
+pack_2 = "5,000 BIC"
+pack_3 = "10,000 BIC"
+number = "Number"
+buy = "Process"
+
+[FR]
+title = "Acheter des crédits"
+subtitle = "De combien de crédits avec vous besoin ?"
+service = "Pack"
+pack_1 = "2.000 BIC"
+pack_2 = "5.000 BIC"
+pack_3 = "10.000 BIC"
+number = "Nombre"
+buy = "Procéder"

@@ -1,0 +1,38 @@
+<?php
+
+if( !defined('PROPER_START') )
+{
+	header("HTTP/1.0 403 Forbidden");
+	exit;
+}
+	
+if( isset($_POST['antispam']) && $_POST['antispam'] == $_SESSION['ANTISPAM'] )
+{
+	try
+	{
+		unset($_SESSION['ANTISPAM']);
+		$_SESSION['JOIN_EMAIL'] = $_POST['email'];
+		
+		$result = api::send('confirm/add', array(), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+
+		$email = str_replace(array('{EMAIL}', '{CODE}', '{ID}', '{DOMAIN}'), array(urlencode($_POST['email']), $result['code'], $result['id'], $_SERVER["HTTP_HOST"]), $lang['content']);
+		$result = mail($_POST['email'], $lang['subject'], str_replace('{CONTENT}', $email, $GLOBALS['CONFIG']['MAIL_TEMPLATE']), "MIME-Version: 1.0\r\nContent-type: text/html; charset=utf-8\r\nFrom: Olympe <no-reply@olympe.in>\r\n");
+		
+		$_SESSION['MESSAGE']['TYPE'] = 'success';
+		$_SESSION['MESSAGE']['TEXT']= $lang['success'];
+	}
+	catch(Exception $e)
+	{
+		$_SESSION['MESSAGE']['TYPE'] = 'error';
+		$_SESSION['MESSAGE']['TEXT']= $lang['error_api'];
+	}
+}
+else
+{
+	$_SESSION['MESSAGE']['TYPE'] = 'error';
+	$_SESSION['MESSAGE']['TEXT']= $lang['error_api'];
+}
+
+$template->redirect($_SERVER['HTTP_REFERER']);
+
+?>

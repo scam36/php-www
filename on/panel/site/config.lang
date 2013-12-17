@@ -1,0 +1,11 @@
+[EN]
+title = "Config a website"
+subtitle = "Modify"
+password = "FTP password"
+update = "Update"
+
+[FR]
+title = "Configurer un site"
+subtitle = "Modifier"
+password = "Mot de passe FTP"
+update = "Mettre à jour"

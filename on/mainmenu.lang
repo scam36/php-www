@@ -1,0 +1,19 @@
+[EN]
+mhosting = "Hosting"
+mcommunity = "Community"
+mblog = "Blog"
+mdoc = "Documentation"
+mlogin = "Login"
+msignup = "Sign up"
+mpanel = "Panel"
+mlogout = "Logout"
+
+[FR]
+mhosting = "Hébergement"
+mcommunity = "Communauté"
+mblog = "Blog"
+mdoc = "Documentation"
+mlogin = "Connexion"
+msignup = "Inscription"
+mpanel = "Panel"
+mlogout = "Déconnexion"

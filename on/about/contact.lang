@@ -1,0 +1,17 @@
+[EN]
+
+[FR]
+
+title = "Contactez nous"
+send = "Envoyez-nous un message"
+send_text = "Si vous avez besoin de plus d'informations à propos de nos services ou que vous désirez simplement entrer en contact avec nous, remplissez le formulaire suivant."
+infos = "Informations"
+meet = "Nous rencontrer"
+meet_text = "Olympe est une association à but non lucratif, son siège est situé à Paris, France."
+name = "Nom"
+email = "Email"
+subject = "Sujet"
+message = "Message"
+send_now = "Envoyer"
+follow = "Nous suivre"
+news = "Actualité"

@@ -1,0 +1,13 @@
+[EN]
+title = "Add a subdomain"
+subtitle = "Creation form"
+subdomain = "Subdomain"
+create = "Create"
+folder = "Folder"
+
+[FR]
+title = "Ajouter un sous-domaine"
+subtitle = "Formulaire de création"
+subdomain = "Sous-domaine"
+create = "Créer"
+folder = "Dossier"

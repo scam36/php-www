@@ -1,0 +1,11 @@
+[EN]
+
+[FR]
+databases = "Bases de données"
+subtitle = "Relationnelles, clé/valeur, big data."
+add = "Créer une base"
+newdatabase = "Créer une nouvelle base de données"
+desc = "Description"
+desc_help = "Exemples : Perso Jack, Pro Paul, Social, Blogger..."
+create = "Créer"
+dateformat = "d M Y"

@@ -1,0 +1,34 @@
+[EN]
+
+[FR]
+title = "Solidarité et innovation"
+subtitle = "Hébergement gratuit, sans publicité et services associés."
+signup = "S'inscrire"
+login_now = "ou se connecter"
+username = "Utilisateur"
+password = "Mot de passe"
+login = "Connexion"
+email = "Email"
+free = "Gratuit"
+free_text = "Nous sommes une association à but non lucratif, nos <a href='/hosting'>services</a> sont ouverts à tous et sans aucune publicité."
+open = "Ouvert"
+open_text = "Nous publions nos <a href='https://github.com/OlympeNetwork'>codes sources</a> et nos <a href='https://projets.olympe.in'>travaux</a>. Des outils et une API 
+sont disponibles pour les <a href='/developers'>développeurs</a>."
+innovation = "Innovant"
+innovation_text = "Nous utilisons les dernières <a href='/hosting'>technologies</a> et nous concentrons avant tout sur la <a href='/status'>disponibilité</a> des services."
+app = "Applications PHP et services"
+app_text = "Nous offrons un service d'hébergement gratuit et sans publicité permettant de déployer des applications PHP 5.5. Nous proposons des bases de données MySQL 5.5 et PostgreSQL 9.1. 
+Notre plateforme est entièrement autofinancée et maintenue par une équipe de bénévoles passionnés.<br /><br />
+
+"
+
+manage = "Fonctionnalités étendues"
+manage_text = "En plus de l'espace d'hébergement, nous fournissons la gestion complète des noms de domaines (sous-domaines, enregistrements DNS...), des comptes mails POP/IMAP (redirections, alias...), des calendriers et agendas partagés.
+<br /><br />
+Nous propulsons une application cloud permettant la synchronisation, le stockage et le partage de fichiers. Cette solution comprend une interface de visualisation des fichiers (téléchargement, édition, galeries de photos...), 
+ainsi qu'une fonction de récuparation des fichiers supprimés."
+signup_now = "S'inscrire maintenant"
+
+help = "Une question? N'hésitez pas à nous <a href='/about/contact'>contacter</a>."
+panel = "Panel"
+logged = "Identifié en tant que"

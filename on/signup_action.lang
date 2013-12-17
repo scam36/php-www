@@ -1,0 +1,12 @@
+[EN]
+
+[FR]
+
+subject = "Confirmation de votre compte sur Olympe"
+content = "<p style='margin: 20px 0'>Merci de votre inscription sur Olympe ! Vous devez cliquer sur le lien suivant pour activer votre compte :</p>
+<p style='margin: 20px 0;'><a href='https://{DOMAIN}/confirm?id={ID}&email={EMAIL}&code={CODE}' style='color: #2b6fab;'>https://{DOMAIN}/confirm?id={ID}&email={EMAIL}&code={CODE}</a>
+<p style='margin: 20px 0;'>Bonne publication, et n'hésitez pas à nous contacter pour nous transmettre votre retour d'expérience.</p>"
+
+success = "Votre requête a bien été acceptée.<br />Vous allez recevoir un email contenant le lien de confirmation."
+error_mail = "Une erreur est survenue, le mail ne peut être envoyé.<br />Merci de réessayer plus tard."
+error_api = "Une erreur est survenue, l'API est indisponible.<br /> Merci de réessayer plus tard."

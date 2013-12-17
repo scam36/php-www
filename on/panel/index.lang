@@ -1,0 +1,21 @@
+[EN]
+
+[FR]
+new = "Nouvel espace"
+welcome = "Bienvenue sur Olympe !"
+welcome_text = "Créez votre premier site pour démarrer.<br />
+Après la création, il apparaîtra ici."
+of = "de"
+tipsite = "Sera accessible sur <i>nom</i>.olympe.in. <br />Uniquement minuscules et chiffres."
+newsite = "Créer un nouveau site"
+newsite_text = "Un site est un espace d'hébergement pour votre application."
+created = "créé le"
+nolastname = "Sans information."
+disk_intro = "Vous utilisez"
+mb = "Mo"
+request = "Demander plus"
+DATEFORMAT = "d M, Y"
+create = "Créer"
+name = "nom"
+size = "Taille :"
+mb = "Mo"

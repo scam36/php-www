@@ -1,0 +1,15 @@
+[EN]
+title = "Add a domain"
+subtitle = "Creation form"
+domain = "Domain name"
+site = "Linked site"
+folder = "Folder"
+create = "Create"
+
+[FR]
+title = "Ajouter un domaine"
+subtitle = "Formulaire de création"
+domain = "Nom de domaine"
+site = "Site lié"
+folder = "Dossier"
+create = "Créer"

@@ -1,0 +1,17 @@
+[EN]
+title = "Add a website"
+subtitle = "Creation form"
+desc = "The <strong>subdomain</strong> is <strong>your-site</strong> if you want something like <i>your-site.olympe.in</i>"
+subdomain = "Subdomain"
+password = "FTP/SCP pass"
+create = "Create"
+v4 = "This site already exists on the Olympe V4, please enter the password."
+
+[FR]
+title = "Ajouter un site"
+subtitle = "Formulaire de création"
+desc = "Le <strong>sous-domaine</strong> est <strong>votre-site</strong> si vous souhaitez quelque chose comme <i>votre-site.olympe.in</i>"
+subdomain = "Sous-domaine"
+password = "Pass FTP/SCP"
+create = "Créer"
+v4 = "Ce site existe déjà sur Olympe V4, merci d'entrer le mot de passe."

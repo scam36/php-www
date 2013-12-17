@@ -5,14 +5,14 @@ if( isset($GLOBALS['lang']) && is_object($GLOBALS['lang']) )
 
 // initialize the menu
 $menu = array(
-	array('text'=>"mhosting", 'anonymous'=>true, 'link'=>"/hosting"),
+	array('text'=>"mhosting", 'anonymous'=>true, 'link'=>"/service/hosting"),
 	array('text'=>"mcommunity", 'anonymous'=>true, 'link'=>"https://community.olympe.in"),
 	array('text'=>"mblog", 'anonymous'=>true, 'link'=>"/blog"),
 	array('text'=>"mdoc", 'anonymous'=>true, 'link'=>"/doc"),
 	array('text'=>"mlogin", 'anonymous'=>true, 'link'=>"#", 'onclick'=>"$('#login').dialog('open'); return false;"),
 	array('text'=>"msignup", 'anonymous'=>true, 'link'=>"#", 'onclick'=>"$('#signup').dialog('open'); return false;"),
 	
-	array('text'=>"mhosting", 'anonymous'=>false, 'link'=>"/hosting"),
+	array('text'=>"mhosting", 'anonymous'=>false, 'link'=>"/service/hosting"),
 	array('text'=>"mcommunity", 'anonymous'=>false, 'link'=>"https://community.olympe.in"),
 	array('text'=>"mblog", 'anonymous'=>false, 'link'=>"/blog"),
 	array('text'=>"mdoc", 'anonymous'=>false, 'link'=>"/doc"),

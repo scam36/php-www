@@ -92,8 +92,8 @@ else
 		$content .= "
 				<div class=\"site\" {$last} onclick=\"window.location.href='/panel/site/config?id={$s['id']}'; return false;\">
 					<div class=\"normal\">
-						<span style=\"font-size: 16px; font-weight: bold; display: block; margin-bottom: 5px;\">{$s['hostname']}</span>
-						<span style=\"color: #38b700; font-size: 12px;\">{$lang['size']} {$s['size']} {$lang['mb']}</span><br /><br />
+						<span style=\"font-size: 16px; font-weight: bold; display: block; margin-bottom: 5px;\">{$s['hostname']} <span style=\"color: #38b700; font-size: 12px;\">({$s['size']} {$lang['mb']})</span></span>
+						<span style=\"color: #a3a3a3; font-size: 12px; display: block; margin-bottom: 20px;\">Description du site</span>
 						<div class=\"thumbshot\">
 							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$s['hostname']}\" />
 						</div>

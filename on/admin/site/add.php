@@ -15,7 +15,7 @@ $content = "
 					<fieldset>
 						<div class=\"widget first\">
 							<div class=\"head\"><h5 class=\"iList\">{$lang['subtitle']}</h5></div>
-							<div class=\"rowElem noborder\"><label>{$lang['domain']}</label><div class=\"formRight\"><strong>http://www. </strong><input type=\"text\" name=\"domain\" style=\"width: 200px;\" /></div><div class=\"fix\"></div></div>
+							<div class=\"rowElem noborder\"><label>{$lang['domain']}</label><div class=\"formRight\"><input type=\"text\" name=\"domain\" /></div><div class=\"fix\"></div></div>
 							<div class=\"rowElem\">
 								<label>{$lang['site']}</label>
 								<div class=\"formRight\">
@@ -32,7 +32,7 @@ $content .= "
 									</select>
 								</div>
 							</div>
-							<div class=\"rowElem\"><label>{$lang['folder']}</label><div class=\"formRight\"><strong>/dns/in/olympe/<i>site_name</i>/ </strong><input type=\"text\" name=\"dir\" style=\"width: 200px;\" /></div><div class=\"fix\"></div></div>
+							<div class=\"rowElem\"><label>{$lang['folder']}</label><div class=\"formRight\"><input type=\"text\" name=\"dir\" /></div><div class=\"fix\"></div></div>
 							<input type=\"submit\" value=\"{$lang['create']}\" class=\"greyishBtn submitForm\" />
 							<div class=\"fix\"></div>
 						</div>

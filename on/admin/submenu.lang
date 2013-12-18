@@ -1,0 +1,21 @@
+[EN]
+menu_home = "Admin home"
+menu_user = "Users"
+menu_stat = "Statistics"
+menu_group = "Groups"
+menu_quota = "Quotas"
+menu_grant = "Grants"
+menu_site = "Sites"
+menu_domain = "Domains"
+menu_overquota = "Overquota"
+
+[FR]
+menu_home = "Accueil admin"
+menu_user = "Utilisateurs"
+menu_stat = "Statistiques"
+menu_group = "Groupes"
+menu_quota = "Quotas"
+menu_grant = "Privilèges"
+menu_site = "Sites"
+menu_domain = "Domaines"
+menu_overquota = "Overquota"

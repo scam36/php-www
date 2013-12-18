@@ -1,19 +1,11 @@
 [EN]
 
-success = "Congratulations! Your registration is now complete. <br />You can now login to your <a href=\"#\" onclick=\"('#login').dialog('open');\">management panel</a>."
-
-subject = "Welcome on the Bus IT platform"
-content = "<p style='margin: 20px 0'>Your account on Bus IT is now ready! Here are the parameters of identification you chose:</p>
-<p style='margin: 20px 0'>Login: <strong>{USER}</strong><br />
-Password: <strong>{PASS}</strong></p>
-<p style='margin: 20px 0;'>Enjoy your paths and if you need a connector that is not available yet, feel free to <a style='color: #2b6fab;' href='http://www.bus-it.com/about/contact'>contact us</a>.</p>"
-
 [FR]
 
-success = "Félicitations ! Votre inscription est maintenant terminée. <br />Vous pouvez vous rendre sur votre <a class='link-login' href='#'>panel de gestion</a>."
+success = "Félicitations ! Votre inscription est maintenant terminée. <br />Vous pouvez vous rendre sur votre <a href=\"#\" onclick=\"('#login').dialog('open');\">panel de gestion</a>."
 
-subject = "Bienvenue sur la plateforme Bus IT"
-content = "<p style='margin: 20px 0'>Votre compte Bus IT est maintenant prêt ! Voici les paramètres d'identification que vous avez choisis:</p>
+subject = "Bienvenue sur la plateforme Olympe"
+content = "<p style='margin: 20px 0'>Votre compte Olympe est maintenant prêt ! Voici les paramètres d'identification que vous avez choisis:</p>
 <p style='margin: 20px 0'>Utilisateur : <strong>{USER}</strong><br />
 Mot de passe : <strong>{PASS}</strong></p>
-<p style='margin: 20px 0;'>Profitez de vos interconnexions et si vous avez besoin d'un connecteur qui n'est pas disponible, n'hésitez pas à <a style='color: #2b6fab;' href='http://www.bus-it.com/about/contact'>nous contacter</a>.</p>"
+<p style='margin: 20px 0;'>Profitez de votre espace d'hébergement gratuit, et si vous avez des besoins spécifiques, <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>nous contacter</a>.</p>"

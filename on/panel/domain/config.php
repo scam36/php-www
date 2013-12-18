@@ -12,97 +12,111 @@ $domain = $domain[0];
 if( is_array($domain['aRecord']) )
         $domain['aRecord'] = $domain['aRecord'][0];
 
+$subdomains = api::send('self/subdomain/list', array('domain'=>$domain['hostname']));
+		
 $content = "
-			<div class=\"content\">
-				<div class=\"title\"><h5>{$lang['title']}</h5></div>";
+			<div class=\"panel\">
+				<div class=\"top\">
+					<div class=\"left\" style=\"width: 500px; padding-top: 5px;\"\">
+						<h1 class=\"dark\">{$lang['title']} {$domain['hostname']}</h1>
+					</div>
+					<div class=\"right\">
+						<a class=\"button classic\" href=\"#\" onclick=\"$('#new').dialog('open');\" style=\"width: 200px; height: 22px; float: right;\">
+							<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white.png\" />
+							<span style=\"display: block; padding-top: 3px;\">{$lang['add']}</span>
+						</a>
+					</div>
+				</div>
+				<div class=\"clear\"></div><br /><br />
+				<div class=\"container\">
+					<table>
+						<tr>
+							<th>{$lang['address']}</th>
+							<th>{$lang['record']}</th>
+							<th>{$lang['actions']}</th>
+						</tr>
+";
 
-if( security::hasGrant('SELF_SUBDOMAIN_SELECT') )
+if( count($subdomains) > 0 )
 {
-	$subdomains = api::send('self/subdomain/list', array('domain'=>$domain['hostname']));
-
-	$content .= "
-				<div class=\"widget first\">
-					<div class=\"head\"><h5 class=\"iFrames\">{$lang['subtitle']} {$domain['hostname']}</h5>";
-
-	if( security::hasGrant('SELF_SUBDOMAIN_INSERT') )
+	foreach( $subdomains as $s )
 	{
 		$content .= "
-						<div class=\"icon\"><a href=\"/panel/domain/add_subdomain?id={$_GET['id']}\" title=\"\" class=\"btn14 mr5\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/dark/add.png\" alt=\"\" /></a></div>";
+						<tr class=\"gradeA\">
+							<td>{$s['hostname']}</td>
+							<td>{$s['aRecord']}{$s['cNAMERecord']}</td>
+							<td style=\"width: 65px;\">
+								<a href=\"#\" onclick=\"$('#record').val('{$s['aRecord']}{$s['cNAMERecord']}'); $('#subdomainid').val('{$s['id']}'); $('#config').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"\" /></a>
+								<a href=\"/panel/domain/del_subdomain_action?domain={$domain['hostname']}&id={$s['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+							</td>
+						</tr>
+			";
 	}
-
-	$content .= "
-					</div>
-					<table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" class=\"display\" id=\"subdomainList\">
-						<thead>
-							<tr>
-								<th>{$lang['address']}</th>
-								<th>{$lang['record']}</th>
-								<th>{$lang['actions']}</th>
-							</tr>
-						</thead>
-						<tbody>";
-
-	if( count($subdomains) > 0 )
-	{
-		foreach( $subdomains as $s )
-		{
-			$content .= "
-							<tr class=\"gradeA\">
-								<td>{$s['hostname']}</td>
-								<td>{$s['aRecord']}{$s['cNAMERecord']}</td>
-								<td align=\"center\">";
-
-			if( security::hasGrant('SELF_SUBDOMAIN_UPDATE') )
-			{
-				$content .= "
-									<a href=\"/panel/domain/config_subdomain?domain_id={$domain['id']}&domain={$domain['hostname']}&id={$s['id']}\" title=\"\" class=\"btn14 mr5\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/dark/settings.png\" alt=\"\" /></a>";
-			}
-		
-			if( security::hasGrant('SELF_SUBDOMAIN_DELETE') )
-			{
-				$content .= "
-									<a href=\"javascript:void(0);\" onclick=\"confirmDelete('{$domain['hostname']}',{$s['id']});\" title=\"\" class=\"btn14 mr5\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/dark/close.png\" alt=\"\" /></a>";
-			}
-		
-			$content .= "
-								</td>
-							</tr>";
-		}
-	}
-
-	$content .= "
-						</tbody>
-					</table>
-				</div>";
 }
 
-if( security::hasGrant('SELF_DOMAIN_UPDATE') )
-	$disabled = '';
-else
-	$disabled = 'disabled';
-
 $content .= "
-				<form action=\"/panel/domain/config_action\" method=\"post\" class=\"mainForm\">
-					<input type=\"hidden\" name=\"id\" value=\"{$_GET['id']}\" />
-					<input type=\"hidden\" name=\"domain\" value=\"{$domain['hostname']}\" />
-					<fieldset>
-						<div class=\"widget first\">
-							<div class=\"head\"><h5 class=\"iList\">{$lang['dns']}</h5></div>
-							<div class=\"rowElem noborder\"><label>{$lang['mx1']}</label><div class=\"formRight\"><input type=\"text\" value=\"".str_replace('10 ', '', $domain['mxRecord'][0])."\" name=\"mx1\" {$disabled} /></div><div class=\"fix\"></div></div>
-							<div class=\"rowElem\"><label>{$lang['mx2']}</label><div class=\"formRight\"><input type=\"text\" value=\"".str_replace('20 ', '', $domain['mxRecord'][1])."\" name=\"mx2\" {$disabled} /></div><div class=\"fix\"></div></div>
-							<div class=\"rowElem\"><label>{$domain['hostname']}</label><div class=\"formRight\"><input type=\"text\" value=\"{$domain['aRecord']}\" name=\"domain_arecord\" {$disabled} /></div><div class=\"fix\"></div></div>
-							<input type=\"submit\" value=\"{$lang['update']}\" class=\"greyishBtn submitForm\" {$disabled} />
-							<div class=\"fix\"></div>
-						</div>
-					</fieldset>
-				</form>
+					</table>
+					<br /><br />
+					<h2 class=\"dark\">{$lang['dns']}</h2>
+					<form action=\"/panel/domain/config_action\" method=\"post\">
+						<input type=\"hidden\" name=\"id\" value=\"{$domain['id']}\" />
+						<input type=\"hidden\" name=\"domain\" value=\"{$domain['hostname']}\" />
+						<fieldset>
+							<input type=\"text\" value=\"".str_replace('10 ', '', $domain['mxRecord'][0])."\" name=\"mx1\" />
+							<span class=\"help-block\">{$lang['mx1']}</span>
+						</fieldset>
+						<fieldset>
+							<input type=\"text\" value=\"".str_replace('20 ', '', $domain['mxRecord'][1])."\" name=\"mx2\" />
+							<span class=\"help-block\">{$lang['mx2']}</span>
+						</fieldset>
+						<fieldset>
+							<input type=\"text\" value=\"{$domain['aRecord']}\" name=\"domain_arecord\" />
+							<span class=\"help-block\">{$domain['hostname']}</span>
+						</fieldset>
+						<fieldset>				
+							<input type=\"submit\" value=\"{$lang['update']}\" />
+						</fieldset>
+					</form>
+				</div>
 			</div>
-<script type=\"text/javascript\">
-	function postInit()
-	{
-		tablepaging1();
-	}
-</script>
+			<div id=\"new\" style=\"display: none;\" class=\"floatingdialog\">
+				<h3 class=\"center\">{$lang['new']}</h3>
+				<p style=\"text-align: center;\">{$lang['new_text']}</p>
+				<div class=\"form-small\">
+					<form action=\"/panel/domain/add_subdomain_action\" method=\"post\" class=\"center\">
+						<input type=\"hidden\" name=\"id\" value=\"{$domain['id']}\" />
+						<input type=\"hidden\" name=\"domain\" value=\"{$domain['hostname']}\" />
+						<fieldset>
+							<input class=\"auto\" type=\"text\" value=\"{$lang['subdomain']}\" name=\"subdomain\" onfocus=\"this.value = this.value=='{$lang['subdomain']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['subdomain']}' : this.value; this.value=='{$lang['subdomain']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+							<span class=\"help-block\">".str_replace('{DOMAIN}', $domain['hostname'], $lang['tipsubdomain'])."</span>
+						</fieldset>
+						<fieldset autofocus>	
+							<input type=\"submit\" value=\"{$lang['create']}\" />
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<div id=\"config\" style=\"display: none;\" class=\"floatingdialog\">
+				<h3 class=\"center\">{$lang['config']}</h3>
+				<p style=\"text-align: center;\">{$lang['config_text']}</p>
+				<div class=\"form-small\">
+					<form action=\"/panel/domain/config_subdomain_action\" method=\"post\" class=\"center\">
+						<input id=\"subdomainid\" type=\"hidden\" name=\"id\" value=\"\" />
+						<input type=\"hidden\" name=\"domain\" value=\"{$domain['hostname']}\" />
+						<input type=\"hidden\" name=\"domain_id\" value=\"{$domain['id']}\" />
+						<fieldset>
+							<input id=\"record\" type=\"text\" value=\"\" name=\"record\" />
+							<span class=\"help-block\">{$lang['tiprecord']}</span>
+						</fieldset>
+						<fieldset autofocus>	
+							<input type=\"submit\" value=\"{$lang['update']}\" />
+						</fieldset>
+					</form>
+				</div>
+			<script>
+				newDialog('new', 550, 280);
+				newDialog('config', 550, 290);
+			</script>
 ";
 
 /* ========================== OUTPUT PAGE ========================== */

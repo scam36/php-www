@@ -1,0 +1,32 @@
+[EN]
+delete = "Illegal = delete"
+delete_it = "This site is illegal? Delete it!"
+now = "Delete now"
+reason = "Reason"
+explain = "Explain why this site is invalid"
+message = "Message"
+post = "Post"
+subject = "[Olympe] Validation alert on your account"
+core = "Hello,<br /><br />
+	An Olympe team member posted an alert on one of your website. You must reply as soon as possible.<br /><br />
+	Your alerts : <a href='https://hosting.olympe.in/panel/alert'>https://hosting.olympe.in/panel/alert</a>.
+	<br /><br />
+	Best regards,<br />
+	The Olympe team"
+
+
+[FR]
+delete = "Illégal = suppression"
+delete_it = "Ce site est illégal ? Supprimez-le !"
+now = "Supprimer maintenant"
+reason = "Raison"
+explain = "Expliquer pourquoi ce site est invalide"
+message = "Message"
+post = "Poster"
+subject = "[Olympe] Alerte de validation sur votre compte"
+core = "Bonjour,<br /><br />
+	Un membre de l'équipe Olympe a posé une alerte sur l'un de vos sites Internet. Vous devez répondre le plus rapidement possible.<br /><br />
+	Vos alertes : <a href='https://hosting.olympe.in/panel/alert'>https://hosting.olympe.in/panel/alert</a>.
+	<br /><br />
+	Cordialement,<br />
+	L'équipe Olympe"

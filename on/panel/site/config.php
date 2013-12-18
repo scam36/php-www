@@ -10,20 +10,27 @@ $site = api::send('self/site/list', array('id'=>$_GET['id']));
 $site = $site[0];
 
 $content .= "
-			<div class=\"content\">
-				<div class=\"title\"><h5>{$lang['title']}</h5></div>
-				<form action=\"/panel/site/config_action\" method=\"post\" class=\"mainForm\">
-					<input type=\"hidden\" name=\"id\" value=\"{$_GET['id']}\" />
-					<fieldset>
-						<div class=\"widget first\">
-							<div class=\"head\"><h5 class=\"iList\">{$lang['subtitle']} {$site['name']}</h5></div>
-							<div class=\"rowElem\"><label>{$lang['password']}</label><div class=\"formRight\"><input type=\"password\" name=\"password\" /></div><div class=\"fix\"></div></div>
-							<input type=\"submit\" value=\"{$lang['update']}\" class=\"greyishBtn submitForm\" />
-							<div class=\"fix\"></div>
-						</div>
-					</fieldset>
-				</form>
-			</div>
+	<div class=\"panel\">
+		<div class=\"container\">
+			<h1 class=\"dark\">{$site['hostname']}</h1>
+			<img style=\"border: 1px solid #cecece; padding: 10px; border-radius: 3px; float: left; margin-right: 20px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$site['hostname']}\" />
+			<span class=\"\"></span>
+			<div class=\"clear\"></div>
+			<form action=\"/panel/settings/update_action\" method=\"post\">
+				<fieldset>
+					<input type=\"password\" name=\"pass\" />
+					<span class=\"help-block\">{$lang['pass_help']}</span>
+				</fieldset>
+				<fieldset>
+					<input type=\"password\" name=\"confirm\" />
+					<span class=\"help-block\">{$lang['confirm_help']}</span>
+				</fieldset>
+				<fieldset>	
+					<input autofocus type=\"submit\" value=\"{$lang['update']}\" />
+				</fieldset>
+			</form>	
+		</div>
+	</div>
 	";
 
 /* ========================== OUTPUT PAGE ========================== */

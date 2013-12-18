@@ -11,7 +11,7 @@ $domains = api::send('self/domain/list');
 $content = "
 			<div class=\"panel\">
 				<div class=\"top\">
-					<div class=\"left\">
+					<div class=\"left\" style=\"padding-top: 5px;\">
 						<h1 class=\"dark\">{$lang['title']}</h1>
 					</div>
 					<div class=\"right\">
@@ -21,7 +21,7 @@ $content = "
 						</a>
 					</div>
 				</div>
-				<div class=\"clear\"></div><br />
+				<div class=\"clear\"></div><br /><br />
 				<div class=\"container\">
 					<table>
 						<tr>
@@ -62,23 +62,10 @@ if( count($domains) > 0 )
 					<td><span class=\"lightlarge\">{$arecord}</a></td>
 					<td>{$d['homeDirectory']}</td>
 					<td style=\"width: 65px;\">
-		";
-		
-		if( security::hasGrant('SELF_DOMAIN_UPDATE') )
-		{
-			$content .= "
-									<a href=\"/panel/domain/config?id={$d['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"\" /></a>";
-		}
-		
-		if( security::hasGrant('SELF_DOMAIN_DELETE') )
-		{
-			$content .= "
-									<a href=\"/panel/domain/del_action?id={$d['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>";
-		}
-		
-		$content .= "
-								</td>
-							</tr>
+						<a href=\"/panel/domain/config?id={$d['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"\" /></a>
+						<a href=\"/panel/domain/del_action?id={$d['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+					</td>
+				</tr>
 		";
 	}
 }
@@ -88,7 +75,7 @@ $content .= "
 					</table>
 				</div>
 			</div>
-			<div id=\"new\" style=\"height: 300px;\">
+			<div id=\"new\" style=\"display: none;\" class=\"floatingdialog\">
 					<h3 class=\"center\">{$lang['new']}</h3>
 					<p style=\"text-align: center;\">{$lang['new_text']}</p>
 					<div class=\"form-small\">		

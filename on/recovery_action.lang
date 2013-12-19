@@ -1,19 +1,10 @@
 [EN]
 
-subject = "Bus IT account recovery"
-content = "<p style='margin: 20px 0'>You have entered a new account recovery request on the <a href='https://www.bus-it.com'>Bus IT</a> platform.</p>
-	<p style='margin: 20px 0'>We have created a new temporary token which will allow you to complete your recovery process.</p>
-	<p style='margin: 20px 0'>This token is only valid for the next <strong>6 hours after your recovery request</strong> !</p>
-	<p style='margin: 20px 0'>Username : <strong>{USER}</strong><br />
-	Token : <strong>{TOKEN}</strong>.</p>"
-
-success = "You will soon receive an email with a temporary token. By using it to login you will be able to change your password."
-
 [FR]
 
-subject = "Bus IT account recovery"
-content = "<p style='margin: 20px 0'>You have entered a new account recovery request on the <a href='https://www.bus-it.com'>Bus IT</a> platform.</p>
-	<p style='margin: 20px 0'>We have created a new temporary token which will allow you to complete your recovery process.</p>
+subject = "Récupération de compte Olympe"
+content = "<p style='margin: 20px 0'>Vous avez effectué une demande de récupération sur la <a href='https://www.olympe.in'>plateforme Olympe</a>.</p>
+	<p style='margin: 20px 0'>Afin de choisir un nouveau mot de passe, merci de bien vouloir cliquer sur le lien suivant :</p>
 	<p style='margin: 20px 0'>This token is only valid for the next <strong>6 hours after your recovery request</strong> !</p>
 	<p style='margin: 20px 0'>Username : <strong>{USER}</strong><br />
 	Token : <strong>{TOKEN}</strong>.</p>"

@@ -1,13 +1,12 @@
 [EN]
 
 [FR]
-title = "Utilisateurs et groupes"
-intro = "Voici la liste de vos domaines. Pour gérer les utilisateurs et les groupes d'un domaine en particulier, il suffit de le sélectionner."
+title = "Comptes mails"
 domain = "Domaine"
 arecord = "Enregistrement A"
 home = "Dossier"
-users = "Utilisateurs"
+users = "Comptes mails"
 groups = "Groupes"
-user = "utilisateurs"
+user = "comptes"
 group = "groupes"
 actions = "Actions"

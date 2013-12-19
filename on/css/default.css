@@ -413,7 +413,8 @@ img.illustration {
 }
 
 img.link {
-	float: left; 
+	display: inline-block;
+	text-align: center;
 	margin-right: 5px;
 }
 

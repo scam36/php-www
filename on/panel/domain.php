@@ -56,58 +56,57 @@ if( count($domains) > 0 )
 			$arecord = $d['aRecord'];
 		
 		$content .= "
-				<tr>
-					<td style=\"text-align: center; width: 40px;\"><a href=\"/panel/domain/config?id={$d['id']}\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/domain.png\" /></td>
-					<td><span style=\"font-weight: bold;\">{$d['hostname']}</span></td>
-					<td><span class=\"lightlarge\">{$arecord}</a></td>
-					<td>{$d['homeDirectory']}</td>
-					<td style=\"width: 65px;\">
-						<a href=\"/panel/domain/config?id={$d['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"\" /></a>
-						<a href=\"/panel/domain/del_action?id={$d['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
-					</td>
-				</tr>
+						<tr>
+							<td style=\"text-align: center; width: 40px;\"><a href=\"/panel/domain/config?id={$d['id']}\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/domain.png\" /></td>
+							<td><span style=\"font-weight: bold;\">{$d['hostname']}</span></td>
+							<td><span class=\"lightlarge\">{$arecord}</a></td>
+							<td>{$d['homeDirectory']}</td>
+							<td style=\"width: 70px; text-align: center;\">
+								<a href=\"/panel/domain/config?id={$d['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"\" /></a>
+								<a href=\"/panel/domain/del_action?id={$d['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+							</td>
+						</tr>
 		";
 	}
 }
 	
 $content .= "
-						</tbody>
 					</table>
 				</div>
 			</div>
 			<div id=\"new\" style=\"display: none;\" class=\"floatingdialog\">
-					<h3 class=\"center\">{$lang['new']}</h3>
-					<p style=\"text-align: center;\">{$lang['new_text']}</p>
-					<div class=\"form-small\">		
-						<form action=\"/panel/domain/add_action\" method=\"post\" class=\"center\">
-							<fieldset>
-								<input class=\"auto\" type=\"text\" value=\"{$lang['name']}\" name=\"domain\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
-								<span class=\"help-block\">{$lang['tipname']}</span>
-							</fieldset>
-							<fieldset>
-								<select name=\"subdomain\">";
+				<h3 class=\"center\">{$lang['new']}</h3>
+				<p style=\"text-align: center;\">{$lang['new_text']}</p>
+				<div class=\"form-small\">		
+					<form action=\"/panel/domain/add_action\" method=\"post\" class=\"center\">
+						<fieldset>
+							<input class=\"auto\" type=\"text\" value=\"{$lang['name']}\" name=\"domain\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+							<span class=\"help-block\">{$lang['tipname']}</span>
+						</fieldset>
+						<fieldset>
+							<select name=\"subdomain\">";
 $sites = api::send('self/site/list');
 
 foreach( $sites as $s )
 {
 	$content .= "
-									<option value=\"{$s['name']}\">{$s['hostname']}</option>";
+								<option value=\"{$s['name']}\">{$s['hostname']}</option>";
 }
 
 $content .= "							
-								</select>
-								<span class=\"help-block\">{$lang['tipsite']}</span>
-							</fieldset>
-							<fieldset>
-								<input class=\"auto\" type=\"text\" value=\"{$lang['folder']}\" name=\"subdomain\" onfocus=\"this.value = this.value=='{$lang['folder']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['folder']}' : this.value; this.value=='{$lang['folder']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
-								<span class=\"help-block\">{$lang['foldertip']}</span>
-							</fieldset>
-							<fieldset autofocus>	
-								<input type=\"submit\" value=\"{$lang['create']}\" />
-							</fieldset>
-						</form>
-					</div>
+							</select>
+							<span class=\"help-block\">{$lang['tipsite']}</span>
+						</fieldset>
+						<fieldset>
+							<input class=\"auto\" type=\"text\" value=\"{$lang['folder']}\" name=\"subdomain\" onfocus=\"this.value = this.value=='{$lang['folder']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['folder']}' : this.value; this.value=='{$lang['folder']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+							<span class=\"help-block\">{$lang['foldertip']}</span>
+						</fieldset>
+						<fieldset autofocus>	
+							<input type=\"submit\" value=\"{$lang['create']}\" />
+						</fieldset>
+					</form>
 				</div>
+			</div>
 			<script>
 				newDialog('new', 550, 420);
 			</script>

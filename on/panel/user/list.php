@@ -46,7 +46,7 @@ if( count($users) > 0 )
 					<td>{$u['firstname']}</td>
 					<td>{$u['lastname']}</td>
 					<td><span class=\"large\">{$u['size']}Mo</span></td>
-					<td align=\"center\">
+					<td style=\"width: 70px; text-align: center;\">
 						<a href=\"/panel/user/config?domain={$domain['hostname']}&id={$u['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"\" /></a>
 						<a href=\"/panel/user/del_action?id={$u['id']}&domain={$domain['hostname']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 					</td>

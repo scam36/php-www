@@ -58,7 +58,7 @@ if( count($domains) > 0 )
 					<td><span style=\"font-weight: bold;\">{$d['hostname']}</span></td>
 					<td><span class=\"lightlarge\">{$arecord}</a></td>
 					<td>{$d['homeDirectory']}</td>
-					<td style=\"width: 35px;\">
+					<td style=\"width: 35px; text-align: center;\">
 						<a href=\"/panel/user/list?domain={$d['hostname']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"\" /></a>
 					</td>
 				</tr>

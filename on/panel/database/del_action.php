@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-api::send('self/database/del', array('database'=>$_GET['database']));
+api::send('self/database/del', array('database'=>$_POST['database']));
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);

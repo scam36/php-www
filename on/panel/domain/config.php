@@ -45,7 +45,7 @@ if( count($subdomains) > 0 )
 						<tr class=\"gradeA\">
 							<td>{$s['hostname']}</td>
 							<td>{$s['aRecord']}{$s['cNAMERecord']}</td>
-							<td style=\"width: 65px;\">
+							<td style=\"width: 70px;\">
 								<a href=\"#\" onclick=\"$('#record').val('{$s['aRecord']}{$s['cNAMERecord']}'); $('#subdomainid').val('{$s['id']}'); $('#config').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"\" /></a>
 								<a href=\"/panel/domain/del_subdomain_action?domain={$domain['hostname']}&id={$s['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 							</td>

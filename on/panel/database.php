@@ -29,7 +29,7 @@ $j = 1;
 foreach( $databases as $d )
 {
 	$content .= "
-			<div class=\"database ".($j==1?"first":"")."\" onclick=\"$('#database').val('{$d['name']}'); $('#desc').val('{$d['desc']}'); $('#config').dialog('open'); return false;\">
+			<div class=\"database ".($j==1?"first":"")."\" onclick=\"$('#database').val('{$d['name']}'); $('#database2').val('{$d['name']}'); $('#desc').val('{$d['desc']}'); $('#config').dialog('open'); return false;\">
 				<img style=\"float: left; margin: 10px 15px 0 0;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-{$d['type']}.png\" />
 				<span class=\"name\" style=\"margin-top: 25px;\">{$d['name']}</span><br />
 				<span class=\"subname\">{$d['desc']}</span>
@@ -86,10 +86,16 @@ foreach( $databases as $d )
 					<span class=\"help-block\">{$lang['password_help']}</span>
 				</fieldset>
 				<fieldset>	
-					<input autofocus type=\"submit\" value=\"{$lang['update']}\" />
-					<input type=\"button\" value=\"{$lang['delete']}\" onclick=\"window.location.href='/panel/database/del_action?database={$d['name']}';\"/>
+					<input  type=\"submit\" value=\"{$lang['update']}\" />
 				</fieldset>
 			</form>
+			<form action=\"/panel/database/del_action\" method=\"post\" class=\"center\">
+				<input id=\"database2\" type=\"hidden\" name=\"database\" value=\"\" />
+				<fieldset>	
+					<input type=\"submit\" value=\"{$lang['delete']}\"/>
+				</fieldset>
+			</form>
+			
 		</div>
 	</div>	
 	<script>

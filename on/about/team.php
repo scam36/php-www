@@ -7,37 +7,33 @@ if( !defined('PROPER_START') )
 }
 
 $content = "
-	<div class=\"box rightcol\">
-		<div class=\"header\">
-			<div class=\"container\">
-				<div class=\"head\">{$lang['title']}</div>
-				<div class=\"subhead\">{$lang['subtitle']}</div>
-			</div>
-		</div>
-		<div class=\"left\">
-			<div class=\"container\">
-				<h1>{$lang['team']}</h1>
-				<p class=\"large\">{$lang['team_text']}</p>
+			<div class=\"head-light\">
+				<div class=\"container\">
+					<h1 class=\"dark\">{$lang['title']}</h1>
+				</div>
+			</div>	
+			<div class=\"content\">
+				<img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/yann.png\" />
+				<h3 class=\"colored\">Yann Autissier</h3>
 				<br />
-				<p>
-					<a href=\"https://twitter.com/SamuelHassine\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/sam.png\" /></a>
-					<a href=\"https://twitter.com/suytt\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/simon.png\" /></a>
-					<a href=\"#\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/yann.png\" /></a>
-					<a href=\"#\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/thomas.png\" /></a>
-					<a href=\"#\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/bruno.png\" /></a>
-				</p>
-			</div>
-		</div>
-		<div class=\"right\">
-			<div class=\"container\">
-				<h1>{$lang['job']}</h1>
-				<p class=\"large\">{$lang['job_text']}</p>
+				<p class=\"large\">{$lang['yann']}</p>
+				<div class=\"clear\"></div>
 				<br />
-				<a class=\"btn\" href=\"/about/contact\">{$lang['apply']}</a>
+				
+				<img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/sam.png\" />
+				<h3 class=\"colored\">Samuel Hassine</h3>
+				<br />
+				<p class=\"large\">{$lang['sam']}</p>
+				<div class=\"clear\"></div>
+				<br />
+				
+				<img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/simon.png\" />
+				<h3 class=\"colored\">Simon Uyttendaele</h3>
+				<br />
+				<p class=\"large\">{$lang['simon']}</p>
+				<div class=\"clear\"></div>
+				<br />
 			</div>
-		</div>
-		<div class=\"clearfix\"></div>
-	</div>
 ";
 
 /* ========================== OUTPUT PAGE ========================== */

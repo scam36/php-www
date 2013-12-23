@@ -2,15 +2,10 @@
 
 [FR]
 title = "Services"
-intro = "Voici la liste de vos services. Pour lier un service à une application, vous devez le faire depuis la page de gestion de l'application concernée."
-name = "Nom du service"
-vendor = "Editeur / type"
-version = "Version"
-actions = "Actions"
-add = "Créer un service"
-of = "de"
-list = "Liste des services"
-more = "Plus de services"
-services = "Services"
-desc = "Description"
-doc = "Documentation"
+stats = "Statistiques de visites"
+stats_text = "Le système de statistiques Olympe est basé sur Piwik, un équivalent libre de Google Analytics. Vos sites ont automatiquement été ajoutés lors de leur création cependant, 
+vous devez tout de même insérer le code fourni par Piwik sur vos pages.<br /><br /> Vous pouvez vous connecter à l'interface Piwik avec les mêmes identifiants que le panel et ainsi découvrir toutes les fonctionnalités 
+offertes par notre outil de statistiques."
+cloud = "Application clouds"
+cloud_text = "Olympe propulse une plateforme de type <i>OwnCloud</i> avec de nombreuses fonctionnalités : stockage de fichiers, calendendriers et contacts partagés, galeries photos, lecteurs de musique...<br /><br />
+Afin d'utiliser le service, vous devez vous connecter au moins une fois à l'interface avec les identifiants de votre compte Olympe."

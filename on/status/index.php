@@ -157,6 +157,7 @@ $content .= "
 		<div class=\"clear\"></div>
 		<br />
 		<script>
+			$(\"#mail\").text('loading...');
 			$(\"#http\").load(\"/status/status?port=80\");
 			$(\"#mysql\").load(\"/status/status?port=25\");
 			$(\"#ftp\").load(\"/status/status?port=21\");

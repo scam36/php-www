@@ -13,7 +13,7 @@ $content = "
 					<h1 class=\"dark\">{$lang['title']}</h1>
 				</div>
 				<div style=\"float: right; width: 500px;\">
-					<a class=\"button classic\" href=\"/doc\" style=\"float: right; height: 22px; width: 150px; margin: 0 auto;\">
+					<a class=\"button classic\" href=\"/doc/concepts\" style=\"float: right; height: 22px; width: 150px; margin: 0 auto;\">
 						<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['back']}</span>
 					</a>
 				</div>

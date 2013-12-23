@@ -24,4 +24,4 @@ create_text3 = "Une fois le domaine ajouté dans le panel, vous devez modifier l
 primary = "Serveur DNS primaire :"
 secondary = "Serveur DNS secondaire :"
 create_text4 = "Un exemple chez Gandi :"
-back = "Retour à l'accueil"
+back = "Retour"

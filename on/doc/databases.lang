@@ -2,9 +2,8 @@
 
 
 [FR]
-title = "Aide par service"
-intro = "Introduction"
-intro_text = "Another Service met à disposition des développeurs de nombreux services pour enrichir les applications."
+title = "Bases de données"
+intro_text = "Nous améliorons nos services quotidiennement, certains types de bases de données seront disponibles très bientôt."
 available = "Versions disponibles"
 service = "Service"
 name = "Nom"
@@ -15,4 +14,4 @@ tutorials = "Tutoriaux"
 db = "Base de données relationnelle"
 key = "Stockage clé/valeur"
 queue = "Gestionnaire de queues de messages"
-back = "Retour à l'accueil"
+back = "Retour"

@@ -33,7 +33,7 @@ $content = "
 					<p>{$lang['domains_text']}</p>			
 				</div>			
 				<div style=\"border-left: 3px solid #555555; padding-left: 10px; margin: 20px 0 30px 0;\">
-					<a href=\"/doc/languages\"><h4 class=\"colored\">{$lang['databases']}</h4></a>
+					<a href=\"/doc/databases\"><h4 class=\"colored\">{$lang['databases']}</h4></a>
 					<p>{$lang['databases_text']}</p>			
 				</div>
 			</div>

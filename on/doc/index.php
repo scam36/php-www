@@ -9,13 +9,22 @@ if( !defined('PROPER_START') )
 $content = "
 		<div class=\"head-light\">
 			<div class=\"container\">
-				<h1 class=\"dark\">{$lang['title']}</h1>
+				<div style=\"float: left; width: 500px;\">
+					<h1 class=\"dark\">{$lang['title']}</h1>
+				</div>
+				<div style=\"float: right; width: 500px;\">
+					<a class=\"button classic\" href=\"/doc/info\" style=\"float: right; height: 22px; width: 200px; margin: 0 auto;\">
+						<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['info']}</span>
+					</a>
+				</div>
+				<div class=\"clear\"></div>
 			</div>
 		</div>	
-		<div class=\"content\">		
+		<div class=\"content\">
+			<h3 class=\"grey\">{$lang['intro']}</h3>
+			<br />
 			<div style=\"float: left; width: 500px;\">
-				<h3>{$lang['intro']}</h3>
-				<div style=\"border-left: 3px solid #555555; padding-left: 10px; margin: 30px 0 30px 0;\">
+				<div style=\"border-left: 3px solid #555555; padding-left: 10px; margin: 0 0 30px 0;\">
 					<a href=\"/doc/first\"><h4 class=\"colored\">{$lang['first']}</h4></a>
 					<p>{$lang['first_text']}</p>			
 				</div>
@@ -29,26 +38,21 @@ $content = "
 				</div>
 			</div>
 			<div style=\"float: right; text-align: left; width: 500px;\">
-				<a class=\"button classic\" href=\"/doc/info\" style=\"float: right; height: 22px; width: 200px; margin: 0 auto;\">
-					<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['info']}</span>
-				</a>
-				<div class=\"clear\"></div><br />
-				<div style=\"border-left: 3px solid #555555; padding-left: 10px; margin: 0px 0 30px 0;\">
+				<div style=\"border-left: 3px solid #555555; padding-left: 10px; margin: 0 0 30px 0;\">
 					<a href=\"/doc/services\"><h4 class=\"colored\">{$lang['services']}</h4></a>
 					<p>{$lang['services_text']}</p>			
 				</div>
 				<div style=\"border-left: 3px solid #555555; padding-left: 10px; margin: 20px 0 30px 0;\">
-					<a href=\"/doc/first\"><h4 class=\"colored\">{$lang['developers']}</h4></a>
+					<a href=\"/developers\"><h4 class=\"colored\">{$lang['developers']}</h4></a>
 					<p>{$lang['developers_text']}</p>			
 				</div>
 				<div style=\"border-left: 3px solid #555555; padding-left: 10px; margin: 20px 0 30px 0;\">
-					<a href=\"https://support.anotherservice.com\"><h4 class=\"colored\">{$lang['support']}</h4></a>
-					<p>{$lang['support_text']}</p>			
+					<a href=\"https://community.olympe.in\"><h4 class=\"colored\">{$lang['community']}</h4></a>
+					<p>{$lang['community_text']}</p>			
 				</div>
 			</div>
-			<div class=\"clear\"></div>
-			<h3>{$lang['top']}</h3>
-			<br />
+			<div class=\"clear\"></div><br />
+			<h3 class=\"grey\">{$lang['top']}</h3>
 			<ul style=\"list-style-type: none; margin: 0; padding: 0;\">
 				<div style=\"float: left; width: 500px;\">
 					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_1']}</a></li>
@@ -66,7 +70,7 @@ $content = "
 				</div>				
 			</ul>
 		</div>
-		<div class=\"clearfix\"></div>
+		<div class=\"clear\"></div>
 		<br />
 	</div>
 ";

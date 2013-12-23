@@ -306,6 +306,15 @@ h4 {
 	padding: 0;
 }
 
+h4.colored {
+	font-size: 18px;
+	color: #de5711;
+}
+
+a h4.colored:hover {
+	color: #eb782b;
+}
+
 span.title {
 	display: block;
 	color: #999999;

@@ -17,8 +17,8 @@ $content = "
 					<h4>{$lang['intro']}</h4>
 					<p>{$lang['intro_text']}</p>
 					<br />
-					<h4>{$lang['philo']}</h4>
-					<p>{$lang['philo_text']}</p>
+					<h4>{$lang['data']}</h4>
+					<p>{$lang['data_text']}</p>
 				</div>
 				<div class=\"right small border\">
 					<h4>{$lang['follow']}</h4>
@@ -29,6 +29,9 @@ $content = "
 					<br />
 					<h4>{$lang['behind']}</h4>
 					<p>{$lang['behind_text']}</p>
+					<br />
+					<h4>{$lang['legal']}</h4>
+					<p>{$lang['legal_text']}</p>
 				</div>
 				<div class=\"clear\"></div>
 				<br /><br />

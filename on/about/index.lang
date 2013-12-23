@@ -4,7 +4,7 @@
 
 title = "A propos d'Olympe"
 
-intro = "Qu'est-ce que l'association Olympe ?"
+intro = "Qui sommes-nous ?"
 intro_text = "<span style='font-weight: bold;'>Olympe</span> est un organisme à but non lucratif dont le principal objectif est d'oeuvrer pour une meilleure <span style='font-weight: bold;'>accessibilité aux nouvelles 
 technologies de l'information</span> à travers le monde.<br /><br />
 Olympe tente de combler la fracture numérique en réduisant notamment le coût de la publication sur Internet grâce à la mise en place d'un <a href='/service/hosting'>service d’hébergement gratuit de qualité</a>.
@@ -13,20 +13,18 @@ Nous menons à la fois des projets (services, plateformes, développements innov
 sommes à l'écoute des besoins à la fois individuels et collectifs. N'hésitez pas à <a href='/about/contact'>nous contacter</a> si vous pensez que nous pouvons vous être utile dans notre domaine de 
 compétence ou si vous avez des propositions de travaux."
 
-philo = "Notre philosophie"
-philo_text = ""
-
-crew = "Notre équipe"
-crew_text = ""
+data = "Protection des données"
+data_text = "Les données recueillies sur notre site ne peuvent parvenir que de l'enregistrement volontaire de vos données à caractère personnel, p.ex. en souscrivant à nos services, 
+listes de diffusions, forums, en utilisant le formulaire de contact ou les autres systèmes automatisés de traitement des données.
+Elles ne sont cédées à aucune société commerciale ou autre organisation. Pour cela, le site Olympe Network fait l'objet des déclarations à la CNIL numéros <span style='font-weight:bold;'>1215047</span> et 
+<span style='font-weight:bold;'>1237057</span>."
 
 follow = "Suivez nous"
 news = "Actualité"
 behind = "A l'origine d'Olympe"
 behind_text = "L'association Olympe a vu le jour en 2007. Ses services sont développés et maintenus par une <a href='/about/team'>équipe</a> de bénévoles."
-stats = "Statistiques"
-stats_text = ""
-
-for = "Pour les statistiques"
-for_text = "Nous collectons des informations comme votre adresse IP, l'heure de vos visites et les pages accédées. Nous ne partageons pas ces informations et les utilisons seulement pour améliorer la qualité de nos services."
-your = "Votre contenu"
-your_text = "Vous êtes seul propriétaire de votre contenu. Bus IT ne réclame aucun droit ou licence sur celui-ci et garantie la confidentialité de toutes les données que vous postez sur la plateforme ou via les connecteurs."
+legal = "Informations légales"
+legal_text = "<i>Numéro de l'association</i> : 20070028<br />
+<i>Président</i> : Samuel Hassine<br />
+<i>Secrétaire</i> : Thomas Brugmans<br />
+<i>Trésorier</i> : Yann Autissier"

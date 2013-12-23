@@ -7,37 +7,39 @@ if( !defined('PROPER_START') )
 }
 
 $content = "
-	<div class=\"box nocol\">
-		<div class=\"header\">
+		<div class=\"head-light\">
 			<div class=\"container\">
-				<div class=\"head\">{$lang['title']}</div>
+				<div style=\"float: left; width: 500px;\">
+					<h1 class=\"dark\">{$lang['title']}</h1>
+				</div>
+				<div style=\"float: right; width: 500px;\">
+					<a class=\"button classic\" href=\"/doc\" style=\"float: right; height: 22px; width: 150px; margin: 0 auto;\">
+						<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['back']}</span>
+					</a>
+				</div>
+				<div class=\"clear\"></div>
 			</div>
 		</div>
-		<div class=\"container\">		
-			<div style=\"float: left; width: 500px;\">
-				<h2>{$lang['intro']}</h2>
-			</div>
-			<div style=\"float: right; text-align: right; width: 300px;\">
-				<a class=\"btn\" href=\"/doc\">{$lang['back']}</a>		
-			</div>
-			<div class=\"clearfix\"></div>
-			<p class=\"large\">{$lang['intro_text']}</p>
+		<div class=\"content\">		
+			<p>{$lang['intro_text']}</p>
 			<br />
+			<h3>{$lang['buy']}</h3>
+			<p>{$lang['buy_text']}</p>
+			<br />
+			<h3>{$lang['create']}</h3>
+			<p>{$lang['create_text']}</p>
+			<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/7.png\" alt=\"7\" />
+			<p>{$lang['create_text2']}</p>
+			<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/9.png\" alt=\"9\" />
+			<p>{$lang['create_text3']}</p>
 			<blockquote style=\"width: 500px; margin: 0 auto;\">
 				<p>
-					<span style=\"font-weight: bold;\">{$lang['primary']}</span> ns1.anotherservice.com - 178.32.167.250<br />
-					<span style=\"font-weight: bold;\">{$lang['secondary']}</span> ns2.anotherservice.com - 178.32.65.70
+					<span style=\"font-weight: bold;\">{$lang['primary']}</span> ns1.olympe.in - 178.32.167.243<br />
+					<span style=\"font-weight: bold;\">{$lang['secondary']}</span> ns2.olympe.in - 178.32.65.67
 				</p>
 			</blockquote>
-			<br />
-			<p class=\"large\">{$lang['intro2_text']}</p>
-			<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/1.png\" alt=\"1\" />
-			<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/2.png\" alt=\"2\" />
-			<br />
-			<h2>{$lang['manage']}</h2>
-			<p class=\"large\">{$lang['manage_text']}</p>
-			<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/18.png\" alt=\"1\" />
-			<br />
+			<p>{$lang['create_text4']}</p>
+			<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/10.png\" alt=\"10\" />
 		</div>
 		<div class=\"clearfix\"></div>
 	</div>

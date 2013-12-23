@@ -19,7 +19,7 @@ $content = "
 				</div>
 				<div class=\"clear\"></div>
 			</div>
-		</div>	
+		</div>
 		<div class=\"content\">		
 			<p>{$lang['intro']}</p>
 			<br />

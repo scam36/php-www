@@ -7,14 +7,14 @@ if( !defined('PROPER_START') )
 }
 
 $message = "
-Name: {$_POST['name']}
-Email: {$_POST['email']}
-Subjet: {$_POST['subject']}
+Name: ".security::encode($_POST['name'])."
+Email: ".security::encode($_POST['email'])."
+Subjet: ".security::encode($_POST['subject'])."
 
-Message: {$_POST['message']}
+Message: ".security::encode($_POST['message'])."
 ";
 
-mail("contact@bus-it.com", "[BI] {$_POST['subject']}", $message, "From: {$_POST['email']}");
+mail("contact@olympe.in", "[Olympe] {$_POST['subject']}", $message, "From: ".security::encode($_POST['email']));
 
 $_SESSION['MESSAGE']['TYPE'] = 'success';
 $_SESSION['MESSAGE']['TEXT']= $lang['success'];

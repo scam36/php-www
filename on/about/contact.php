@@ -39,7 +39,6 @@ $content = "
 					<h4>{$lang['infos']}</h4>
 					<p>Paris, France</p>
 					<p><a href=\"mailto: contact@olympe.in\">contact@olympe.in</a></p>
-					<p>+33.953.935.953</p>
 					<p>#olympe@irc.freenode.net</p>
 					<br />
 					<h4>{$lang['meet']}</h4>

@@ -61,7 +61,7 @@ if( count($domains) > 0 )
 							<td><span style=\"font-weight: bold;\">{$d['hostname']}</span></td>
 							<td><span class=\"lightlarge\">{$arecord}</a></td>
 							<td>{$d['homeDirectory']}</td>
-							<td style=\"width: 70px; text-align: center;\">
+							<td style=\"width: 80px; text-align: center;\">
 								<a href=\"/panel/domain/config?id={$d['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"\" /></a>
 								<a href=\"/panel/domain/del_action?id={$d['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 							</td>

@@ -1,61 +1,28 @@
 [EN]
-title = "About Bus IT"
-
-intro = "What is Bus IT?"
-intro_text = "Bus IT (the 'IT' is pronounced like in 'share it') is a platform which provides a generic bus of interconnection for services, applications and physical objects. Bus IT is composed by a 
-<a href='/panel'>user dashboard</a> (management of connectors and links), an <a href='http://api.bus-it.com'>API</a> (developers access) and a <a href='/tour/broker'>Broker</a> (routing of messages).
-<br />
-<br />We mainly focus on interoperability between different technologies. Bus IT introduces a new way to connect objects to each other by providing various <a href='/store'>connectors</a> and allowing users to build paths 
-- messages waypoints - between them.<br /><br />
-Developers can create their own connectors and propose them to the other users. Learn more about the <a href='/store'>connectors ecosystem</a> and the <a href='/developers'>developers</a> functions."
-
-philo = "Our philosophy"
-philo_text = "Bus IT aims not only to be a critical technological innovation, it also wants to be different from other services on two points: <span style='font-weight: bold;'>security</span> and 
-<span style='font-weight: bold;'>privacy</span>. Thus, Bus IT guarantees not resell or exploit users' personal data and ensures that data in transit are not monitored or stored and analyzed.<br /><br />
-Also, each identity created on Bus IT and able to send message has his own certificate and private key, which can be used to sign or crypt messages and ensure strict confidentiality safeguards."
-
-crew = "Our crew"
-crew_text = ""
-
-follow = "Follow us"
-news = "News"
-behind = "Behind Bus IT"
-behind_text = "Bus IT is a project of the french company <a href='http://www.anotherservice.com'>Another Service</a>.<br /><br />Bus IT is under heavy development since april, 2013."
-stats = "Statistics"
-stats_text = ""
-
-
-for = "For analytics only"
-for_text = "We collect information like your IP address, time of visits, and pages accessed. We do not share this information and only use it for analytics to improve our service."
-your = "Your content"
-your_text = "You are the only owner of your content. Bus IT does not claim any right or licence on it and guarantees the privacy of all the data you post on the platform or through the connectors."
 
 [FR]
 
-title = "A propos de Bus IT"
+title = "A propos d'Olympe"
 
-intro = "Qu'est-ce que Bus IT ?"
-intro_text = "Bus IT (le 'IT' se prononce comme dans 'share it') est une plateforme qui fournit un bus générique d'interconnexion pour des services, applications et objets physiques. Bus IT est composé par une 
-<a href='/panel'>interface utilisateur</a> (gestion des connecteurs et des liens), une <a href='http://api.bus-it.com'>API</a> (accès développeur) et un <a href='/tour/broker'>Broker</a> (routage des messages).
-<br />
-<br />Nous nous concentrons avant tout sur l'interopérabilité entre les différentes technologies. Bus IT introduit une nouvelle manière de connecter des objets avec d'autres en proposant de nombreux
-<a href='/store'>connecteurs</a> et en permettant aux utilisateur de construire des chemins - itinéraires des messages - entre eux.<br /><br />
-Les développeurs peuvent créer leurs propres connecteurs et les proposer aux autres utilisateurs. En savoir plus sur <a href='/store'>l'écosystème des connecteurs</a> et les fonctions pour les <a href='/developers'>développeurs</a> ."
+intro = "Qu'est-ce que l'association Olympe ?"
+intro_text = "<span style='font-weight: bold;'>Olympe</span> est un organisme à but non lucratif dont le principal objectif est d'oeuvrer pour une meilleure <span style='font-weight: bold;'>accessibilité aux nouvelles 
+technologies de l'information</span> à travers le monde.<br /><br />
+Olympe tente de combler la fracture numérique en réduisant notamment le coût de la publication sur Internet grâce à la mise en place d'un <a href='/service/hosting'>service d’hébergement gratuit de qualité</a>.
+<br /><br />
+Nous menons à la fois des projets (services, plateformes, développements innovants...) et des actions (formations, déploiement, aide...). Nous désirons fortement développer nos activités de terrain et 
+sommes à l'écoute des besoins à la fois individuels et collectifs. N'hésitez pas à <a href='/about/contact'>nous contacter</a> si vous pensez que nous pouvons vous être utile dans notre domaine de 
+compétence ou si vous avez des propositions de travaux."
 
 philo = "Notre philosophie"
-philo_text = "Bus IT n'est pas seulement une innovation technologique majeure, mais notre service se différencie des autres sur deux points notamment : <span style='font-weight: bold;'>sécurité</span> et 
-<span style='font-weight: bold;'>vie privée</span>. Ainsi, Bus IT garantit ne pas exploiter ou revendre les données personnelles des utilisateurs et assure que les données transitant par la plateforme 
-ne sont ni surveillées, ni stockées, ni analysées.<br /><br />
-Aussi, chaque identité créée sur Bus IT et capable d'envoyer des messages possède son propre certificat et sa clé privée, qui peut être alors utilisée pour signer ou crypter l'ensemble des messages et assurer des critères
-stricts de confidentialité."
+philo_text = ""
 
 crew = "Notre équipe"
 crew_text = ""
 
 follow = "Suivez nous"
 news = "Actualité"
-behind = "A l'origine de Bus IT"
-behind_text = "Bus IT est un projet de la société française <a href='http://www.anotherservice.com'>Another Service</a>.<br /><br />Bus IT est en développement intensif depuis avril 2013."
+behind = "A l'origine d'Olympe"
+behind_text = "L'association Olympe a vu le jour en 2007. Ses services sont développés et maintenus par une <a href='/about/team'>équipe</a> de bénévoles."
 stats = "Statistiques"
 stats_text = ""
 

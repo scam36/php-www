@@ -582,3 +582,15 @@ blockquote p {
 	background-image: url('../images/anim_loading_75x75.gif');
 	background-repeat: no-repeat;
 }
+
+div.fillgraph {
+	background-color: #3c4e5a;
+	height: 4px;
+	margin: 3px auto;
+	width: 400px;
+}
+
+div.fill {
+	background-color: #ffffff;
+	height: 100%;
+}

@@ -22,9 +22,9 @@ $content = "
 				</div>
 				<div class=\"right small border\">
 					<h4>{$lang['follow']}</h4>
-					<p><a href=\"http://twitter.com/Bus_IT\">Twitter</a></p>
-					<p><a href=\"http://www.facebook.com/BusIT.fr\">Facebook</a></p>
-					<p><a href=\"http://www.linkedin.com/bus_it\">LinkedIn</a></p>
+					<p><a href=\"http://twitter.com/olympe_fr\">Twitter</a></p>
+					<p><a href=\"http://www.facebook.com/olympe.fr\">Facebook</a></p>
+					<p><a href=\"http://www.linkedin.com/company/711968\">LinkedIn</a></p>
 					<p><a href=\"/blog\">{$lang['news']}</a></p>
 					<br />
 					<h4>{$lang['behind']}</h4>

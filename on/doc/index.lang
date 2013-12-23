@@ -3,15 +3,19 @@
 
 [FR]
 title = "Centre d'aide"
-intro = "Débuter sur Another Service"
-intro_text = "Bienvenue sur notre plateforme d'hébergement applicatif. Vous trouverez ici toutes les informations utiles au service."
+intro = "Débuter sur Olympe"
 info = "Informations utiles"
 
 top = "Question très fréquentes"
-first = "Publication d'une première application"
-first_text = "Une application simple en PHP pour comprendre le fonctionnement de la plateforme."
-concepts = "Concepts de la plateforme"
-concepts_text = "Nos services sont centrés autour de la haute disponibilité et des environnements de développement."
+first = "Publication d'un premier site"
+first_text = "Comment publier sa première page web sur Olympe."
+domains = "Domaines et comptes mails"
+domains_text = "Gestion des DNS, des sous-domaines et des emails."
+databases = "Bases de données"
+databases_text = "Créer des bases MySQL et PostgreSQL"
+
+
+
 languages = "Explications par langage"
 languages_text = "PHP, Python, Ruby, JAVA et NodeJS, un exemple dans chacun des langages disponibles."
 services = "Services disponibles"

@@ -20,18 +20,20 @@ $content = "
 					<p>{$lang['first_text']}</p>			
 				</div>
 				<div style=\"border-left: 3px solid #555555; padding-left: 10px; margin: 20px 0 30px 0;\">
-					<a href=\"/doc/concepts\"><h4 class=\"colored\">{$lang['concepts']}</h4></a>
-					<p>{$lang['concepts_text']}</p>			
+					<a href=\"/doc/concepts\"><h4 class=\"colored\">{$lang['domains']}</h4></a>
+					<p>{$lang['domains_text']}</p>			
 				</div>			
 				<div style=\"border-left: 3px solid #555555; padding-left: 10px; margin: 20px 0 30px 0;\">
-					<a href=\"/doc/languages\"><h4 class=\"colored\">{$lang['languages']}</h4></a>
-					<p>{$lang['languages_text']}</p>			
+					<a href=\"/doc/languages\"><h4 class=\"colored\">{$lang['databases']}</h4></a>
+					<p>{$lang['databases_text']}</p>			
 				</div>
 			</div>
 			<div style=\"float: right; text-align: left; width: 500px;\">
-				<a class=\"btn\" style=\"float: right;\" href=\"/doc/info\">{$lang['info']}</a>
-				<div class=\"clearfix\"></div>
-				<div style=\"border-left: 3px solid #555555; padding-left: 10px; margin: 10px 0 30px 0;\">
+				<a class=\"button classic\" href=\"/doc/info\" style=\"float: right; height: 22px; width: 200px; margin: 0 auto;\">
+					<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['info']}</span>
+				</a>
+				<div class=\"clear\"></div><br />
+				<div style=\"border-left: 3px solid #555555; padding-left: 10px; margin: 0px 0 30px 0;\">
 					<a href=\"/doc/services\"><h4 class=\"colored\">{$lang['services']}</h4></a>
 					<p>{$lang['services_text']}</p>			
 				</div>
@@ -44,7 +46,7 @@ $content = "
 					<p>{$lang['support_text']}</p>			
 				</div>
 			</div>
-			<div class=\"clearfix\"></div>
+			<div class=\"clear\"></div>
 			<h3>{$lang['top']}</h3>
 			<br />
 			<ul style=\"list-style-type: none; margin: 0; padding: 0;\">

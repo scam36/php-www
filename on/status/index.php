@@ -27,14 +27,21 @@ foreach( $response['monitors']['monitor'] as $m )
 
 $content = "
 		<div class=\"head\" style=\"background-color: #7bbb51; background-image: url('/on/images/dotgrid-black.png'); margin-bottom: 0;\">
-			<br /><br />
+			<br />
 			<h1>{$lang['online']}</h1>
 			<h2 style=\"margin: 15px 0 15px 0; color: #ffffff;\">".date('M d Y H:i')."</h2>
-			<br />
 			<div style=\"width: 800px; margin: 0 auto; color: #ffffff; text-align: center; font-size: 14px; line-height: 20px;\">
 				{$lang['monitor']}
 			</div>
-			<br /><br />
+			<div style=\"margin: 0 auto; margin-top: 20px; width: 1100px; text-align: center;\">
+				<div id=\"http\" style=\"display: inline-block; margin-right: 20px;\"></div>
+				<div id=\"mysql\" style=\"display: inline-block; margin-right: 20px;\"></div>
+				<div id=\"ftp\" style=\"display: inline-block; margin-right: 20px;\"></div>
+				<div id=\"sftp\" style=\"display: inline-block; margin-right: 20px;\"></div>
+				<div id=\"mail\" style=\"display: inline-block; margin-right: 0px;\"></div>
+			</div>
+			<div class=\"clear\"></div>
+			<br />
 			<div style=\"margin: 0 auto; width: 1100px;\">
 				<div style=\"float: left;\">
 					<div class=\"fillgraph\">
@@ -149,7 +156,13 @@ $content .= "
 		</div>
 		<div class=\"clear\"></div>
 		<br />
-		
+		<script>
+			$(\"#http\").load(\"/status/status?port=80\");
+			$(\"#mysql\").load(\"/status/status?port=25\");
+			$(\"#ftp\").load(\"/status/status?port=21\");
+			$(\"#sftp\").load(\"/status/status?port=22\");
+			$(\"#mail\").load(\"/status/status?port=143\");
+		</script>		
 ";
 
 /* ========================== OUTPUT PAGE ========================== */

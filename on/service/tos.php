@@ -13,8 +13,11 @@ $content = "
 			</div>
 		</div>	
 		<div class=\"content\">
-			
+			<p>{$lang['content']}</p>
+			<br />
+			<p style=\"text-align: center; color: #840000;\">{$lang['content_2']}</p>
 		</div>
+		<br />
 	</div>
 ";
 

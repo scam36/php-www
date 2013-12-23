@@ -4,7 +4,7 @@
 [FR]
 title = "Charge d'hébergement"
 content = "En vous inscrivant au service d'hébergement, vous vous engagez à :
-<ul>
+<ul class='classic'>
 	<li>endosser la responsabilité éditoriale (civile et pénale) des pages publiées, visibles ou non, sur votre site Internet.</li>
 	<li>respecter la réglementation en vigueur dans votre pays sur les contenus Internet ainsi que la loi Française en la matière.</li>
 	<li>ne pas créer plus d'un seul compte par personne physique et/ou morale (sauf dérogations explicites).</li>
@@ -13,15 +13,20 @@ content = "En vous inscrivant au service d'hébergement, vous vous engagez à :
 		<ol>
 			<li>le racisme, la xénophobie, la dégradation, l'humiliation, la rébellion, la menace, la délation, la diffamation, le prosélytisme, ou la vulgarité</li>
 			<li>la pornographie, la pédophilie, la torture, l'esclavagisme, la maltraitance des animaux ou des êtres humains, l'obscénité ou ayant des propos haineux.</li>
-			<li>l'illégalité, le piratage informatique, le spam, le phishing, l'usurpation d'identité, la contrefaçon, l'arnaque, l'exploitation de failles de toute sorte voire même les blagues de mauvais goût, les systèmes d'autosurf, de proxy et d'anonymat, le vol de données informatiques.</li>
+			<li>l'illégalité, le piratage informatique, le spam, le phishing, l'usurpation d'identité, la contrefaçon, l'arnaque, l'exploitation de failles de toute sorte voire même les blagues de mauvais goût, 
+			les systèmes d'autosurf, de proxy et d'anonymat, le vol de données informatiques.</li>
 			<li>des activités criminelles, terroristes, associations de malfaiteurs, ou portant atteinte à la sécurité, l'image ou à l'intégrité d'une personne physique ou morale.</li>
 			<li>des systèmes ou astuces permettant de contourner les règlements ou lois applicables selon la nature du site web en question.</li>
 		</ol>
 	</li>
-	<li>développer un site web terminé relatif à un sujet concret et accessible à tous, pouvant contenir une section privée dont l'existence se justifie par rapport au site web en question, et dont l'utilisation et la provenance ne se réduit pas à un contenu largement distribué (sauf dérogations explicites) (ex: les jeux de type XNova, OGSpy, ... ne sont pas autorisés).</li>
+	<li>développer un site web terminé relatif à un sujet concret et accessible à tous, pouvant contenir une section privée dont l'existence se justifie par rapport au site web en question, et dont l'utilisation et la 
+	provenance ne se réduit pas à un contenu largement distribué (sauf dérogations explicites) (ex: les jeux de type XNova, OGSpy, ... ne sont pas autorisés).</li>
 	<li>développer un site web à vocation définitive (pas de plateformes de test) dans un délais raisonnable en accord avec le processus de validation Olympe.</li>
 	<li>ne pas utiliser votre espace membre Olympe à des fins de stockage de fichiers (à usage propre ou public), et ce, en dépit de l'existence parallèle d'un site web valable.</li>
 	<li>veiller à l'utilisation responsable des ressources du réseau Olympe, en terme de bande passante, d'espace disque, d'utilisation de mémoire ou de temps de calcul.</li>
 	<li>respecter et veiller au respect de la présente charte, ainsi que vous maintenir à jour par rapport à l'évolution possible de celle-ci.</li>
-	Tout compte, ainsi que le(s) site(s) web associé(s), les bases de données et toutes les informations qu'elles contiennent, indépendamment de la valeur réelle ou estimée de celles-ci, contrevenant à l'une ou plusieurs de ces règles, ainsi qu'au bon sens, est passible de suppression immédiate et ce, sans avertissement préalable.
-Olympe Network se réserve le droit d'appliquer toutes les mesures, quelles qu'elles soient, nécessaires à la détection des sites en conflit avec la présente charte.
+</ul>"
+
+content_2 = "Tout compte, ainsi que le(s) site(s) web associé(s), les bases de données et toutes les informations qu'elles contiennent, indépendamment de la valeur réelle ou estimée de celles-ci, 
+contrevenant à l'une ou plusieurs de ces règles, ainsi qu'au bon sens, est passible de suppression immédiate et ce, sans avertissement préalable.
+Olympe Network se réserve le droit d'appliquer toutes les mesures, quelles qu'elles soient, nécessaires à la détection des sites en conflit avec la présente charte."

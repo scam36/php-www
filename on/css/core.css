@@ -299,12 +299,24 @@ img.blogimage {
 
 ul.classic {
 	list-style-type: disc;
-	margin: 0px 0 10px 40px;
+	margin: 10px 0 10px 40px;
 }
 
 ul.classic li {
 	padding: 5px;
-	font-size: 16px;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+ul.classic ol {
+	margin: 10px 0 10px 40px;
+	list-style-type: lower-roman;
+}
+
+ul.classic ol li {
+	padding: 5px;
+	line-height: 18px;
+	font-size: 12px;
 }
 
 div.faq {

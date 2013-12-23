@@ -17,16 +17,16 @@ sont disponibles pour les <a href='/developers'>développeurs</a>."
 innovation = "Innovant"
 innovation_text = "Nous utilisons les dernières <a href='/hosting'>technologies</a> et nous concentrons avant tout sur la <a href='/status'>disponibilité</a> des services."
 app = "Applications PHP et services"
-app_text = "Nous offrons un service d'hébergement gratuit et sans publicité permettant de déployer des applications PHP 5.5. Nous proposons des bases de données MySQL 5.5 et PostgreSQL 9.1. 
-Notre plateforme est entièrement autofinancée et maintenue par une équipe de bénévoles passionnés.<br /><br />
+app_text = "Depuis plus de 6 ans, l'association Olympe fournit un <a href='/service/hosting'>service d'hébergement</a> gratuit et sans publicité. Nous supportons les applications PHP et proposons des bases de données MySQL, PostgreSQL et MongoDB.<br />
+<br />Notre plateforme est entièrement autofinancée et maintenue par une <a href='/about/team'>équipe de bénévoles</a>. <br /><br />
 
 "
 
 manage = "Fonctionnalités étendues"
-manage_text = "En plus de l'espace d'hébergement, nous fournissons la gestion complète des noms de domaines (sous-domaines, enregistrements DNS...), des comptes mails POP/IMAP (redirections, alias...), des calendriers et agendas partagés.
-<br /><br />
-Nous propulsons une application cloud permettant la synchronisation, le stockage et le partage de fichiers. Cette solution comprend une interface de visualisation des fichiers (téléchargement, édition, galeries de photos...), 
-ainsi qu'une fonction de récuparation des fichiers supprimés."
+manage_text = "En plus de l'espace d'hébergement, nous fournissons la <a href='/service/offer'>gestion complète</a> des noms de domaines (sous-domaines, enregistrements DNS...), des comptes mails POP/IMAP (redirections, alias...), 
+des calendriers et agendas partagés.<br /><br />
+Nous propulsons une <a href='/doc/cloud'>application cloud</a> permettant la synchronisation, le stockage et le partage de fichiers. Cette solution comprend une interface de visualisation des fichiers
+(téléchargement, édition, galeries de photos...), ainsi qu'une fonction de récuparation des fichiers supprimés."
 signup_now = "S'inscrire maintenant"
 
 help = "Une question? N'hésitez pas à nous <a href='/about/contact'>contacter</a>."

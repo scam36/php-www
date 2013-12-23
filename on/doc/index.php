@@ -7,15 +7,14 @@ if( !defined('PROPER_START') )
 }
 
 $content = "
-	<div class=\"box nocol\">
-		<div class=\"header\">
+		<div class=\"head-light\">
 			<div class=\"container\">
-				<div class=\"head\">{$lang['title']}</div>
+				<h1 class=\"dark\">{$lang['title']}</h1>
 			</div>
-		</div>
-		<div class=\"container\">		
+		</div>	
+		<div class=\"content\">		
 			<div style=\"float: left; width: 500px;\">
-				<h2>{$lang['intro']}</h2>
+				<h3>{$lang['intro']}</h3>
 				<div style=\"border-left: 3px solid #555555; padding-left: 10px; margin: 30px 0 30px 0;\">
 					<a href=\"/doc/first\"><h4 class=\"colored\">{$lang['first']}</h4></a>
 					<p>{$lang['first_text']}</p>			
@@ -46,7 +45,7 @@ $content = "
 				</div>
 			</div>
 			<div class=\"clearfix\"></div>
-			<h2>{$lang['top']}</h2>
+			<h3>{$lang['top']}</h3>
 			<br />
 			<ul style=\"list-style-type: none; margin: 0; padding: 0;\">
 				<div style=\"float: left; width: 500px;\">

@@ -100,7 +100,7 @@ foreach( $databases as $d )
 	</div>	
 	<script>
 		newDialog('new', 550, 450);
-		newDialog('config', 550, 410);
+		newDialog('config', 550, 440);
 	</script>
 ";
 

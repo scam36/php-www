@@ -64,15 +64,15 @@ $content .= "
 			<div class=\"lines\">
 				<div class=\"lines-content\">
 					<div class=\"hfree\">
-						<a href=\"/hosting\" class=\"hfree\"><h3 class=\"red\" style=\"padding-top: 100px;\">{$lang['free']}</h3></a>
+						<a href=\"/service/hosting\" class=\"hfree\"><h3 class=\"red\" style=\"padding-top: 100px;\">{$lang['free']}</h3></a>
 						<p>{$lang['free_text']}</p>
 					</div>
 					<div class=\"hinnovation\">
-						<a href=\"/innovation\" class=\"hinnovation\"><h3 class=\"blue\"  style=\"padding-top: 100px;\">{$lang['innovation']}</h3></a>
+						<a href=\"/service/infrastructure\" class=\"hinnovation\"><h3 class=\"blue\"  style=\"padding-top: 100px;\">{$lang['innovation']}</h3></a>
 						<p>{$lang['innovation_text']}</p>
 					</div>
 					<div class=\"hopen\">
-						<a href=\"/open\" class=\"hopen\"><h3 class=\"green\"  style=\"padding-top: 100px;\">{$lang['open']}</h3></a>
+						<a href=\"/developers\" class=\"hopen\"><h3 class=\"green\"  style=\"padding-top: 100px;\">{$lang['open']}</h3></a>
 						<p>{$lang['open_text']}</p>
 					</div>
 				</div>
@@ -91,7 +91,7 @@ $content .= "
 							<span class=\"circle\"></span>
 						</div>
 						<div class=\"terminal-text\">
-							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/screen_space.png\" alt=\"map\" style=\"display: block; padding: 23px 0 0 50px;\" />
+							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/panel-1.png\" alt=\"map\" style=\"display: block; padding: 15px 0 0 50px;\" />
 						</div>
 					</div>
 				</div>

@@ -6,6 +6,11 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
+$users = api::send('user/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+$sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+$dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+$domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+
 $content = "
 			<div class=\"head\">
 				<br />
@@ -30,7 +35,7 @@ else
 }
 
 if( !isset($_SESSION['ANTISPAM']) )
-	$_SESSION['ANTISPAM'] = md5(time().'busit');
+	$_SESSION['ANTISPAM'] = md5(time().'anotherservice');
 
 $content .= "
 				<br />
@@ -104,7 +109,7 @@ $content .= "
 							<span class=\"circle\"></span>
 						</div>
 						<div class=\"terminal-text\">
-							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/screen_connect.png\" alt=\"map\" style=\"display: block; padding: 23px 0 0 50px;\" />
+							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/service.png\" alt=\"map\" style=\"display: block; padding: 10px 0 0 10px;\" />
 						</div>
 					</div>
 				</div>
@@ -112,32 +117,15 @@ $content .= "
 					<h3>{$lang['manage']}</h3>
 					<p>{$lang['manage_text']}</p>
 				</div>
-				<div class=\"clear\"><br /><br /><br /></div>
-				<div class=\"separator light\"></div>				
+				<div class=\"clear\"><br /><br /></div>
+				<div class=\"separator light\"></div>			
 				<div style=\"text-align: center;\">
-					<div style=\"display: inline-block; margin-right: 50px; opacity: 0.6;\">
-							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/references/google.png\" alt=\"\" />
-						</div>
-						<div style=\"display: inline-block; margin-right: 50px; opacity: 0.6;\">
-							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/references/bnpparibas.png\" alt=\"\" />
-						</div>
-						<div style=\"display: inline-block; margin-right: 50px; opacity: 0.6;\">
-							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/references/bpce.png\" alt=\"\" />
-						</div>
-						<div style=\"display: inline-block; margin-right: 50px; opacity: 0.6;\">
-							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/references/orlane.png\" alt=\"\" />
-						</div>
-						<div style=\"display: inline-block; opacity: 0.6;\">
-							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/references/github.png\" alt=\"\" />
-						</div>
-					</div>
-				</div>
-				<div class=\"clear\"></div>
-				<div class=\"customers\" style=\"margin-top: 30px;\">
-					<blockquote>
-						<p>{$lang['quote']}</p>
-						<p style=\"font-size: 18px; display: block; margin-top: 10px;\"><i>&mdash; {$lang['quote_author']}</i></p>
-					</blockquote>
+					<span style=\"display: block; font-size: 70px; margin: 0 auto;\">".number_format($users['count'])."</span>
+					<span style=\"display: block; font-size: 30px; color: #7bbb51; margin-top: 5px;\">{$lang['users']}</span>
+					<span style=\"display: block; font-size: 18px; margin-top: 20px;\">
+						<span style=\"color: #910000\">".number_format($sites['count'])."</span> {$lang['sites']}, 
+						<span style=\"color: #910000\">".number_format($dbs['count'])."</span> {$lang['databases']} 
+						<span style=\"color: #910000\">".number_format($domains['count'])."</span> {$lang['domains']}</span>
 				</div>
 				<div class=\"clear\"></div><br />
 				<div class=\"separator light\"></div>

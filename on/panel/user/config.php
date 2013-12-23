@@ -12,6 +12,8 @@ $account = $account[0];
 $content .= "
 	<div class=\"panel\">
 		<div class=\"container\">
+			<h1 class=\"dark\">{$account['mail']}</h1>
+			<br />
 			<div style=\"width: 500px; float: left;\">
 				<h3 class=\"colored\">{$lang['change_pass']}</h3>
 				<form action=\"/panel/user/config_action\" method=\"post\">

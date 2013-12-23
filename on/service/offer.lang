@@ -9,7 +9,7 @@ quota = "Limite"
 intro = "Nous n'avons qu'une seule offre d'hébergement qui inclut un maximum de services dans la limite des ressources disponibles. Cependant, <span style='color: #de5711;'>chacune des limites indiquées ici peut être augmentée</a>
 sur simple demande si le besoin est correctement justifié."
 script = "Scripts"
-script_text = "<a href='http://phpinfo.olympe.in'>PHP</a> 5.4.9"
+script_text = "<a href='http://phpinfo.olympe.in'>PHP</a> 5.5.3"
 databases = "Bases de données"
 databases_text = "MySQL 5.5 et PostgreSQL 9.1"
 databases_limit = "10"

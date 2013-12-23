@@ -13,14 +13,7 @@ $content = "
 			</div>
 		</div>	
 		<div class=\"content\">
-			<div style=\"float: left; width: 500px;\">
-				<a href=\"http://www.interxion.fr\"><img style=\"display: block; margin: 0 auto;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/partners/interxion.png\" alt=\"\" /></a>
-				<p>{$lang['interxion']}</p>
-			</div>
-			<div style=\"float: right; width: 500px;\">
 			
-			</div>
-			<div class=\"clear\"></div><br />
 		</div>
 	</div>
 ";

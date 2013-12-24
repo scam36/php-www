@@ -12,4 +12,5 @@ Vous devez sélectionner le site concerné, et cliquer sur \"Afficher le code\".
 cloud = "Stockage et applications OwnCloud"
 cloud_text = "Olympe propulse la version 6 d'OwnCloud, une suite complète comprenant : la synchronisation de fichiers (similaire à Dropbox, avec un client installé sur l'ordinateur ou le téléphone), les calendriers partagés,
 les carnets d'adresse etc..."
+cloud_text2 = "Pour accéder à <a href='https://cloud.olympe.in'>OwnCloud</a>, vous devez vous connecter avec vos identifiants Olympe."
 back = "Retour"

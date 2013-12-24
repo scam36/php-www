@@ -60,8 +60,9 @@ foreach( $databases as $d )
 				</fieldset>
 				<fieldset>
 					<select name=\"type\">
-						<option value=\"mysql\">MySQL 5.5</option>
-						<option value=\"postgresql\">PostgreSQL 9.1</option>
+						<option value=\"mysql\">MySQL</option>
+						<option value=\"postgresql\" disabled>PostgreSQL</option>
+						<option value=\"postgresql\" disabled>MongoDB </option>
 					</select>
 					<span class=\"help-block\">{$lang['type_help']}</span>
 				</fieldset>

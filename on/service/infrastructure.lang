@@ -1,0 +1,12 @@
+[EN]
+
+
+[FR]
+title = "Infrastructure"
+datacenters = "Datacenters et réseau"
+datacenters_text = "Olympe s'appuie sur ses partenaires <a href='http://www.anotherservice.com'>Another Service</a> et <a href='http://www.interxion.com'>Interxion</a> pour opérer les salles, le transit et la couche réseau
+de son infrastructure. Nous avons des serveurs situés en France, dans plusieurs centres de données."
+virt = "Stockage et virtualisation"
+virt_text = "L'infrastructure d'Olympe repose sur un cluster de serveurs physiques <a href='http://www.proxmox.com'>Proxmox</a>, un espace de stockage <a href='http://www.ceph.com'>Ceph</a> d'une capacité de 20To."
+
+soft = "Applicatifs"

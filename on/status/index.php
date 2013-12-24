@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$fh = fopen('http://api.uptimerobot.com/getMonitors?apiKey=u115486-54f126fc8291d883a582986f&format=json&customUptimeRatio=7-30-365&logs=1', 'r');
+$fh = fopen("http://api.uptimerobot.com/getMonitors?apiKey={$GLOBALS['CONFIG']['UPTIME_TOKEN']}&format=json&customUptimeRatio=7-30-365&logs=1", 'r');
 $response = stream_get_contents($fh);
 fclose($fh);
 

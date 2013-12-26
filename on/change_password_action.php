@@ -6,11 +6,11 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-if( isset($_POST['pass']) && (!isset($_POST['confirm']) || $_POST['pass'] != $_POST['confirm']) )
+if( isset($_POST['password']) && $_POST['password'] != $_POST['confirm']) )
 	throw new SiteException("Password mismatch", 400, "Password and confirmation do not match");
 
 $params = array();
-$params['pass'] = $_POST['pass'];
+$params['password'] = $_POST['password'];
 		
 api::send('self/update', $params, $_POST['user'] . ':' . $_POST['token']);
 

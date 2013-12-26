@@ -29,7 +29,7 @@ if( isset($_POST['antispam']) && $_POST['antispam'] == $_SESSION['ANTISPAM'] )
 				if( strlen($r['email']) < 5 )
 					throw new Exception("Bad email");
 
-				$tokenresult = api::send('token/insert', array('user'=>$r['id'], 'lease'=>time()+10800, 'name'=>'Recovery', 'grants'=>'SELF_ACCESS,SELF_UPDATE,SELF_SELECT,SELF_GRANT_SELECT,SELF_TOKEN_SELECT,SELF_TOKEN_UPDATE,SELF_TOKEN_GRANT_INSERT,SELF_TOKEN_GRANT_DELETE'), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+				$tokenresult = api::send('token/insert', array('user'=>$r['id'], 'lease'=>time()+10800, 'name'=>'Recovery', 'grants'=>'ACCESS,SELF_UPDATE,SELF_SELECT,SELF_GRANT_SELECT,SELF_TOKEN_SELECT,SELF_TOKEN_UPDATE,SELF_TOKEN_GRANT_INSERT,SELF_TOKEN_GRANT_DELETE'), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 				$token = $tokenresult['token'];
 				
 				$email = str_replace(array('{USER}', '{TOKEN}'), array($_POST['username'], $token), $lang['content']);

@@ -98,7 +98,7 @@ $content .= "
 							<span class=\"help-block\">{$lang['tipsite']}</span>
 						</fieldset>
 						<fieldset>
-							<input class=\"auto\" type=\"text\" value=\"{$lang['folder']}\" name=\"subdomain\" onfocus=\"this.value = this.value=='{$lang['folder']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['folder']}' : this.value; this.value=='{$lang['folder']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+							<input class=\"auto\" type=\"text\" value=\"{$lang['folder']}\" name=\"dir\" onfocus=\"this.value = this.value=='{$lang['folder']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['folder']}' : this.value; this.value=='{$lang['folder']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
 							<span class=\"help-block\">{$lang['foldertip']}</span>
 						</fieldset>
 						<fieldset autofocus>	

@@ -7,7 +7,7 @@ datacenters = "Datacenters et réseau"
 datacenters_text = "Olympe s'appuie sur ses partenaires <a href='http://www.anotherservice.com'>Another Service</a> et <a href='http://www.interxion.com'>Interxion</a> pour opérer les salles, le transit et la couche réseau
 de son infrastructure. Nos serveurs sont situés en France, dans plusieurs centres de données. <br /><br />Grâce aux emplacements géographiques distincts et à la flexibilité de nos fournisseurs notamment sur le routage
 et les annonces BGP, nous avons mis en place une infrastructure résistante aux pannes même en cas de coupure complète d'un site de production.<br /><br />
-Grâce au réseau Another Service situé dans les datacenters Interxion, Olympe dispose d'un port gigabit sur le point de peering <a href='https://www.franceix.net'>FranceIX</a>. Cela nous permet d'accroître nos capacités de transits vers 
+Grâce à l'aide d'Interxion, Olympe dispose d'un port gigabit sur le point de peering <a href='https://www.franceix.net'>FranceIX</a>. Cela nous permet d'accroître nos capacités de transits vers 
 les principaux opérateurs français et ainsi améliorer les performances globales de la plateforme."
 virt = "Stockage et virtualisation"
 virt_text = "L'infrastructure d'Olympe repose sur un cluster de serveurs physiques <a href='http://www.proxmox.com'>Proxmox</a> qui assure la gestion et la redondance des machines virtuelles. Nous avons développé nos 

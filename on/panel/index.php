@@ -24,7 +24,7 @@ $content = "
 	<div class=\"panel\">
 		<div class=\"top\">
 			<div class=\"left\">
-				<img style=\"width: 60px; height: 60px; float: left; margin: 5px 10px 0px 0px; display: block;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$userinfo['user_id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$userinfo['user_id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
+				<img style=\"width: 60px; height: 60px; float: left; margin: 5px 10px 0px 0px; display: block;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$userinfo['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$userinfo['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
 				<h1 class=\"dark title\">".security::get('USER')."</h1>
 				<h2 class=\"dark title\">".($userinfo['firstname']?"{$userinfo['firstname']} {$userinfo['lastname']}":"{$lang['nolastname']}")."</h2>
 			</div>

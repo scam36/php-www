@@ -4,7 +4,8 @@
 
 title = "Contactez nous"
 send = "Envoyez-nous un message"
-send_text = "Si vous avez besoin de plus d'informations à propos de nos services ou que vous désirez simplement entrer en contact avec nous, remplissez le formulaire suivant."
+send_text = "Vous rencontrez un problème avec l'utilisation de la plateforme ? Merci d'utiliser la <a href='https://community.olympe.in'>communauté</a>, nous ne répondons pas aux mails de support technique.
+<br /><br /> Si vous avez besoin de plus d'informations à propos de nos services ou que vous désirez simplement entrer en contact avec nous, remplissez le formulaire suivant."
 infos = "Informations"
 meet = "Nous rencontrer"
 meet_text = "Olympe est une association à but non lucratif, son siège est situé à Paris, France."

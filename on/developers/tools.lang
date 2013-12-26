@@ -1,0 +1,15 @@
+[EN]
+
+
+[FR]
+title = "Panel et outils développés"
+panel = "Le panel et l'API"
+panel_text = "Le <a href='/panel'>panel Olympe</a> est avant tout le vôtre, nous avons donc ouvert son code source afin que vous puissiez participer à son amélioration. 
+Il s'agit de pages HTML/PHP (Javascript) qui interrogent l'<a href='https://api.olympe.in'>API</a> dont le code est également ouvert si vous désirez proposer de nouvelles fonctionnalités."
+
+modules = "Modules PHP"
+modules_text = "Pour les besoins d'Olympe, notamment en terme de sécurité, nous avons eu besoin de développer deux nouvelles extensions PHP (suPHP et Override). Le premier permet de chowner le processus
+PHP à la volée (que ce soit en CGI ou en Fast-CGI) avec l'UID du propriétaire du script. Le second donne la possibilité d'écraser n'importe quelle fonction built-in de PHP avec une fonction personnalisée (quota sur <i>mail()</i>, 
+vérifications sur <i>shell_exec()</i> etc...)."
+
+access = "Accéder aux codes"

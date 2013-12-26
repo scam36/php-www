@@ -512,6 +512,22 @@ a.callout-light:hover {
 	cursor: pointer;
 }
 
+code {
+	display: block;
+	width: 100%;
+	background: #f9f9f9;
+	border-left: 4px solid #ccc;
+	margin: 5px 0 0 0;
+	padding: 10px 0px 10px 20px;
+	font-size: 12px;
+	letter-spacing: 1px;
+	line-height: 20px;
+}
+
+code span {
+	color: #81007f;
+}
+
 blockquote {
 	background: #f9f9f9;
 	border-left: 4px solid #ccc;
@@ -524,6 +540,8 @@ blockquote {
 blockquote p {
 	line-height: 20px;
 }
+
+
 
 .customers blockquote {
 	width: 800px;

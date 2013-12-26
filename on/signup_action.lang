@@ -9,4 +9,4 @@ content = "<p style='margin: 20px 0'>Merci de votre inscription sur Olympe ! Vou
 
 success = "Votre requête a bien été acceptée.<br />Vous allez recevoir un email contenant le lien de confirmation."
 error_mail = "Une erreur est survenue, le mail ne peut être envoyé.<br />Merci de réessayer plus tard."
-error_api = "Une erreur est survenue, l'API est indisponible.<br /> Merci de réessayer plus tard."
+error_api = "Le format de votre adresse email est incorrect.<br /> Merci de le corriger."

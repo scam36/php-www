@@ -6,6 +6,9 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
+if( $_POST['dir'] == $lang['folder'] )
+	$_POST['dir'] = '';
+
 api::send('self/domain/add', array('domain'=>$_POST['domain'], 'site'=>$_POST['subdomain'], 'dir'=>$_POST['dir']));
 
 if( isset($_GET['redirect']) )

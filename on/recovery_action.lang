@@ -2,9 +2,9 @@
 
 [FR]
 
-subject = "Récupération de compte Olympe"
-content = "<p style='margin: 20px 0'>Vous avez effectué une demande de récupération sur la <a href='https://www.olympe.in'>plateforme Olympe</a>.</p>
+subject = "RÃ©cupÃ©ration de compte Olympe"
+content = "<p style='margin: 20px 0'>Vous avez effectuÃ© une demande de rÃ©cupÃ©ration sur la <a href='https://www.olympe.in'>plateforme Olympe</a>.</p>
 	<p style='margin: 20px 0'>Afin de choisir un nouveau mot de passe, merci de bien vouloir cliquer sur le lien suivant. Attention, ce lien n'est valide que pendant <strong>6 heures</strong> !</p>
 	<p style='margin: 20px 0'>Changement de mot de passe : <a href='https://www.olympe.in/change_password?user={USER}&token={TOKEN}'>https://www.olympe.in/change_password?user={USER}&token={TOKEN}</a></p>"
 
-success = "Votre demande a bien été prise en compte, un email contenant un lien de récupération a bien été envoyé."
+success = "Votre demande a bien Ã©tÃ© prise en compte, un email contenant un lien de rÃ©cupÃ©ration a bien Ã©tÃ© envoyÃ©."

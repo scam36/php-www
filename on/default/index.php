@@ -30,7 +30,7 @@ else
 }
 
 if( !isset($_SESSION['ANTISPAM']) )
-	$_SESSION['ANTISPAM'] = md5(time().'anotherservice');
+	$_SESSION['ANTISPAM'] = md5(time().'olympe');
 
 $content .= "
 				<br />

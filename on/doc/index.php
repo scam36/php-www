@@ -58,7 +58,7 @@ $content = "
 					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_1']}</a></li>
 					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/info\">{$lang['question_2']}</a></li>
 					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_3']}</a></li>
-					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_4']}</a></li>
+					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/errors\">{$lang['question_4']}</a></li>
 					<li style=\"font-size: 18px; padding: 10px 10px 10px 0;\"><a href=\"/doc/faq/1\">{$lang['question_5']}</a></li>
 				</div>
 				<div style=\"float: left; width: 500px; margin-left: 50px;\">
@@ -70,7 +70,7 @@ $content = "
 				</div>				
 			</ul>
 		</div>
-		<div class=\"clear\"></div>
+		<div class=\"clear\"></div><br />
 		<br />
 	</div>
 ";

@@ -23,6 +23,16 @@ $content = "
 			</div>
 			<div class=\"clear\"></div>
 			<br /><br />
+			<div style=\"float: left; width: 520px;\">
+				<h2 class=\"dark\">{$lang['phpkiller']}</h2>
+				<p>{$lang['phpkiller_text']}</p>
+			</div>
+			<div style=\"float: right; width: 480px; text-align: left;\">
+				<h2 class=\"dark\">{$lang['ftpfilter']}</h2>
+				<p>{$lang['ftpfilter_text']}</p>
+			</div>
+			<div class=\"clear\"></div>
+			<br /><br />
 			<div style=\"text-align: center;\">
 				<a class=\"button classic\" href=\"https://github.com/OlympeNetwork\" style=\"height: 22px; width: 200px; margin: 0 auto;\">
 					<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['access']}</span>	

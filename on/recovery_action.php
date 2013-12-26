@@ -24,12 +24,12 @@ if( isset($_POST['antispam']) && $_POST['antispam'] == $_SESSION['ANTISPAM'] )
 
 		foreach( $result as $r )
 		{
-			if( $r['user_name'] == $_POST['username'] )
+			if( $r['name'] == $_POST['username'] )
 			{
-				if( strlen($r['user_mail']) < 5 )
+				if( strlen($r['email']) < 5 )
 					throw new Exception("Bad email");
 
-				$tokenresult = api::send('token/insert', array('user'=>$r['user_id'], 'lease'=>time()+10800, 'name'=>'Recovery', 'grants'=>'SELF_ACCESS,SELF_UPDATE,SELF_SELECT,SELF_GRANT_SELECT,SELF_TOKEN_SELECT,SELF_TOKEN_UPDATE,SELF_TOKEN_GRANT_INSERT,SELF_TOKEN_GRANT_DELETE'), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+				$tokenresult = api::send('token/insert', array('user'=>$r['id'], 'lease'=>time()+10800, 'name'=>'Recovery', 'grants'=>'SELF_ACCESS,SELF_UPDATE,SELF_SELECT,SELF_GRANT_SELECT,SELF_TOKEN_SELECT,SELF_TOKEN_UPDATE,SELF_TOKEN_GRANT_INSERT,SELF_TOKEN_GRANT_DELETE'), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 				$token = $tokenresult['value'];
 				
 				$email = str_replace(array('{USER}', '{TOKEN}'), array($_POST['username'], $token), $lang['content']);

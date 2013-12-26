@@ -16,7 +16,9 @@ api::send('self/update', $params, $_POST['user'] . ':' . $_POST['token']);
 
 $_SESSION['MESSAGE']['TYPE'] = 'success';
 $_SESSION['MESSAGE']['TEXT']= $lang['message'];
-			
+
+unset($_SESSION['CHANGEPASS']);
+
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else

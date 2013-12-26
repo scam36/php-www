@@ -33,7 +33,7 @@ if( isset($_POST['antispam']) && $_POST['antispam'] == $_SESSION['ANTISPAM'] )
 				$token = $tokenresult['value'];
 				
 				$email = str_replace(array('{USER}', '{TOKEN}'), array($_POST['username'], $token), $lang['content']);
-				mail($r['user_mail'], $lang['subject'], str_replace('{CONTENT}', $email, $GLOBALS['CONFIG']['MAIL_TEMPLATE']), "MIME-Version: 1.0\r\nContent-type: text/html; charset=utf-8\r\nFrom: Bus IT <no-reply@bus-it.com>\r\n");
+				mail($r['email'], $lang['subject'], str_replace('{CONTENT}', $email, $GLOBALS['CONFIG']['MAIL_TEMPLATE']), "MIME-Version: 1.0\r\nContent-type: text/html; charset=utf-8\r\nFrom: Olympe <no-reply@olympe.in>\r\n");
 				
 				if( isset($_SESSION['RECOVERY_ATTEMPTS']) )
 					unset($_SESSION['RECOVERY_ATTEMPTS']);

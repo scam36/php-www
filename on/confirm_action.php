@@ -6,6 +6,15 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
+if( !isset($_POST['code']) || !isset($_POST['email']) )
+	throw new SiteException('Invalid or missing arguments', 400, 'Parameter code or email is not present');
+	
+$result = api::send('registration/select', array('code'=>$_POST['code']), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+
+if( count($result) == 0 )
+	throw new SiteException('Invalid user/code', 400, 'No registration matches for this user/code');
+if( $result[0]['date'] < (time() - 864000) ) // 10 days
+	throw new SiteException('Outdated registration', 400, 'The registration is outdated : ' . date('Y-n-j', $result[0]['date']));
 
 $result = api::send('user/add', array('user'=>$_POST['username'], 'ip'=>$_SERVER['HTTP_X_REAL_IP'], 'pass'=>$_POST['password'], 'email'=>$_POST['email'], 'firstname'=>'', 'lastname'=>'', 'language'=>translator::getLanguage()), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 $uid = $result['id'];

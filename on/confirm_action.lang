@@ -8,4 +8,4 @@ subject = "Bienvenue sur la plateforme Olympe"
 content = "<p style='margin: 20px 0'>Votre compte Olympe est maintenant prêt ! Voici les paramètres d'identification que vous avez choisis:</p>
 <p style='margin: 20px 0'>Utilisateur : <strong>{USER}</strong><br />
 Mot de passe : <strong>{PASS}</strong></p>
-<p style='margin: 20px 0;'>Profitez de votre espace d'hébergement gratuit, et si vous avez des besoins spécifiques, <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>nous contacter</a>.</p>"
+<p style='margin: 20px 0;'>Profitez de votre espace d'hébergement gratuit, et si vous avez des besoins spécifiques, n'hésitez pas à nous <a style='color: #de5711;' href='https://www.olympe.in/about/contact'>nous contacter</a>.</p>"

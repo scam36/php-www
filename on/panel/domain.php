@@ -63,7 +63,7 @@ if( count($domains) > 0 )
 							<td>".($d['destination']?"{$d['destination']}":"{$d['homeDirectory']}")."</td>
 							<td style=\"width: 80px; text-align: center;\">
 								<a href=\"/panel/domain/config?id={$d['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"\" /></a>
-								<a href=\"/panel/domain/del_action?id={$d['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+								<a href=\"#\" onclick=\"$('#id').val('{$d['id']}'); $('#delete').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 							</td>
 						</tr>
 		";
@@ -74,7 +74,7 @@ $content .= "
 					</table>
 				</div>
 			</div>
-			<div id=\"new\" style=\"display: none;\" class=\"floatingdialog\">
+			<div id=\"new\" class=\"floatingdialog\">
 				<h3 class=\"center\">{$lang['new']}</h3>
 				<p style=\"text-align: center;\">{$lang['new_text']}</p>
 				<div class=\"form-small\">		
@@ -107,8 +107,21 @@ $content .= "
 					</form>
 				</div>
 			</div>
+			<div id=\"delete\" class=\"floatingdialog\">
+				<h3 class=\"center\">{$lang['delete']}</h3>
+				<p style=\"text-align: center;\">{$lang['delete_text']}</p>
+				<div class=\"form-small\">		
+					<form action=\"/panel/domain/del_action\" method=\"get\" class=\"center\">
+						<input id=\"id\" type=\"hidden\" value=\"\" name=\"id\" />
+						<fieldset autofocus>	
+							<input type=\"submit\" value=\"{$lang['delete_now']}\" />
+						</fieldset>
+					</form>
+				</div>
+			</div>
 			<script>
-				newDialog('new', 550, 420);
+				newFlexibleDialog('new', 550);
+				newFlexibleDialog('delete', 550);
 			</script>
 ";
 

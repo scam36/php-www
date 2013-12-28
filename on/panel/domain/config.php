@@ -119,8 +119,8 @@ $content .= "
 					</form>
 				</div>
 			<script>
-				newDialog('new', 550, 280);
-				newDialog('config', 550, 290);
+				newFlexibleDialog('new', 550);
+				newFlexibleDialog('config', 550);
 			</script>
 ";
 

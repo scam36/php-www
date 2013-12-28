@@ -6,7 +6,16 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-api::send('self/site/update', array('site'=>$_POST['id'], 'pass'=>$_POST['password']));
+$params = array('site'=>$_POST['id']);
+
+if( $_POST['passowrd'] )
+	$params['password'] = $_POST['password'];
+if( $_POST['description'] )
+	$params['description'] = $_POST['description'];
+if( $_POST['category'] )
+	$params['category'] = $_POST['category'];
+	
+api::send('self/site/update', $params);
 
 $_SESSION['MESSAGE']['TYPE'] = 'success';
 $_SESSION['MESSAGE']['TEXT']= $lang['success'];	

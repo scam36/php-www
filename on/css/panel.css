@@ -444,6 +444,15 @@ div.panel a.action.settings:hover {
 	background-image: url('../images/illu/settings_hover.png');
 }
 
+div.panel a.action.delete {
+	background-image: url('../images/illu/delete.png');
+}
+
+div.panel a.action.delete:hover {
+	color: #eb782b;
+	background-image: url('../images/illu/delete_hover.png');
+}
+
 div.panel a.action.buy {
 	background-image: url('../images/illu/buy.png');
 }
@@ -587,7 +596,7 @@ div.panel div.database span.type {
 }
 
 div.panel div.info {
-	width: 550px;
+	width: 638px;
 	height: 50px;
 	border-top: 1px solid #e5e5e5;
 	border-left: 1px solid #e5e5e5;

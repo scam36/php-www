@@ -29,12 +29,36 @@ $content = "
 				</div>
 				<div class=\"clear\"></div><br /><br />
 				<div class=\"container\">
-					<table>
-						<tr>
-							<th>{$lang['address']}</th>
-							<th>{$lang['record']}</th>
-							<th>{$lang['actions']}</th>
-						</tr>
+					<div style=\"float: left; width: 300px;\">
+						<h2 class=\"dark\">{$lang['dns']}</h2>
+						<form action=\"/panel/domain/config_action\" method=\"post\">
+							<input type=\"hidden\" name=\"id\" value=\"{$domain['id']}\" />
+							<input type=\"hidden\" name=\"domain\" value=\"{$domain['hostname']}\" />
+							<fieldset>
+								<input type=\"text\" value=\"".str_replace('10 ', '', $domain['mxRecord'][0])."\" name=\"mx1\" />
+								<span class=\"help-block\">{$lang['mx1']}</span>
+							</fieldset>
+							<fieldset>
+								<input type=\"text\" value=\"".str_replace('20 ', '', $domain['mxRecord'][1])."\" name=\"mx2\" />
+								<span class=\"help-block\">{$lang['mx2']}</span>
+							</fieldset>
+							<fieldset>
+								<input type=\"text\" value=\"{$domain['aRecord']}\" name=\"domain_arecord\" />
+								<span class=\"help-block\">{$domain['hostname']}</span>
+							</fieldset>
+							<fieldset>				
+								<input type=\"submit\" value=\"{$lang['update']}\" />
+							</fieldset>
+						</form>					
+					</div>
+					<div style=\"float: right; width: 800px;\">
+						<h2 class=\"dark\">{$lang['subdomains']}</h2>
+						<table>
+							<tr>
+								<th>{$lang['address']}</th>
+								<th>{$lang['record']}</th>
+								<th>{$lang['actions']}</th>
+							</tr>
 ";
 
 if( count($subdomains) > 0 )
@@ -42,41 +66,22 @@ if( count($subdomains) > 0 )
 	foreach( $subdomains as $s )
 	{
 		$content .= "
-						<tr class=\"gradeA\">
-							<td>{$s['hostname']}</td>
-							<td>{$s['aRecord']}{$s['cNAMERecord']}</td>
-							<td style=\"width: 70px;\">
-								<a href=\"#\" onclick=\"$('#record').val('{$s['aRecord']}{$s['cNAMERecord']}'); $('#subdomainid').val('{$s['id']}'); $('#config').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"\" /></a>
-								<a href=\"/panel/domain/del_subdomain_action?domain={$domain['hostname']}&id={$s['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
-							</td>
-						</tr>
+							<tr class=\"gradeA\">
+								<td>{$s['hostname']}</td>
+								<td>{$s['aRecord']}{$s['cNAMERecord']}</td>
+								<td style=\"width: 70px;\">
+									<a href=\"#\" onclick=\"$('#record').val('{$s['aRecord']}{$s['cNAMERecord']}'); $('#subdomainid').val('{$s['id']}'); $('#config').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"\" /></a>
+									<a href=\"/panel/domain/del_subdomain_action?domain={$domain['hostname']}&id={$s['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+								</td>
+							</tr>
 			";
 	}
 }
 
 $content .= "
-					</table>
-					<br /><br />
-					<h2 class=\"dark\">{$lang['dns']}</h2>
-					<form action=\"/panel/domain/config_action\" method=\"post\">
-						<input type=\"hidden\" name=\"id\" value=\"{$domain['id']}\" />
-						<input type=\"hidden\" name=\"domain\" value=\"{$domain['hostname']}\" />
-						<fieldset>
-							<input type=\"text\" value=\"".str_replace('10 ', '', $domain['mxRecord'][0])."\" name=\"mx1\" />
-							<span class=\"help-block\">{$lang['mx1']}</span>
-						</fieldset>
-						<fieldset>
-							<input type=\"text\" value=\"".str_replace('20 ', '', $domain['mxRecord'][1])."\" name=\"mx2\" />
-							<span class=\"help-block\">{$lang['mx2']}</span>
-						</fieldset>
-						<fieldset>
-							<input type=\"text\" value=\"{$domain['aRecord']}\" name=\"domain_arecord\" />
-							<span class=\"help-block\">{$domain['hostname']}</span>
-						</fieldset>
-						<fieldset>				
-							<input type=\"submit\" value=\"{$lang['update']}\" />
-						</fieldset>
-					</form>
+						</table>
+					</div>
+					<div class=\"clear\"></div>
 				</div>
 			</div>
 			<div id=\"new\" style=\"display: none;\" class=\"floatingdialog\">

@@ -20,19 +20,32 @@ foreach( $quotas as $q )
 
 $percent = $quota['used']*100/$quota['max'];
 
+if( $quota['used'] >= 1024 )
+	$quota['used'] = round($quota['used']/1024, 2) . " {$lang['gb']}";
+else
+	$quota['used'] = "{$quota['used']} {$lang['mb']}";
+
+if( $quota['max'] >= 1024 )
+	$quota['max'] = round($quota['max']/1024, 2) . " {$lang['gb']}";
+else
+	$quota['max'] = "{$quota['max']} {$lang['mb']}";
+	
 $content = "
 	<div class=\"panel\">
 		<div class=\"top\">
-			<div class=\"left\">
+			<div class=\"left\" style=\"width: 500px;\">
 				<img style=\"width: 60px; height: 60px; float: left; margin: 5px 10px 0px 0px; display: block;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$userinfo['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$userinfo['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
 				<h1 class=\"dark title\">".security::get('USER')."</h1>
 				<h2 class=\"dark title\">".($userinfo['firstname']?"{$userinfo['firstname']} {$userinfo['lastname']}":"{$lang['nolastname']}")."</h2>
 			</div>
-			<div class=\"right\">
-				<div class=\"fillgraph\" style=\"margin-top: 10px;\">
-					<small style=\"width: {$percent}%;\"></small>
+			<div class=\"right\" style=\"width: 460px;\">
+				<span style=\"block; float: left; padding-top: 7px; font-size: 18px; color: #878787;\">{$lang['disk2']}</span>
+				<div style=\"float: right;\">
+					<div class=\"fillgraph\" style=\"margin-top: 10px;\">
+						<small style=\"width: {$percent}%;\"></small>
+					</div>
+					<span class=\"quota\"><span style='font-weight: bold;'>{$quota['used']}</span> {$lang['of']} {$quota['max']}. <a href=\"https://community.olympe.in\">{$lang['request']}</a>.</span>
 				</div>
-				<span class=\"quota\"><span style='font-weight: bold;'>{$quota['used']} {$lang['mb']}</span> {$lang['of']} {$quota['max']} {$lang['mb']}. <a href=\"https://community.olympe.in\">{$lang['request']}</a>.</span>
 			</div>
 			<div class=\"clear\"></div>
 		</div>
@@ -49,7 +62,7 @@ $content = "
 						<a href=\"#\" style=\"display: block; position: absolute; top: 5px; left: 5px;\" onclick=\"showNew(); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/arrowLeft.png\" alt=\"\" /></a>
 						<div class=\"form-small\">		
 							<form action=\"/panel/site/add_action\" method=\"post\" class=\"center\">
-								<fieldset>
+								<fieldset style=\"padding-top: 10px;\">
 									<input class=\"auto\" type=\"text\" value=\"{$lang['name']}\" name=\"subdomain\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
 									<span class=\"help-block\">{$lang['tipsite']}</span>
 								</fieldset>
@@ -92,8 +105,8 @@ else
 		$content .= "
 				<div class=\"site\" {$last} onclick=\"window.location.href='/panel/site/config?id={$s['id']}'; return false;\">
 					<div class=\"normal\">
-						<span style=\"font-size: 16px; font-weight: bold; display: block; margin-bottom: 5px;\">{$s['hostname']} <span style=\"color: #38b700; font-size: 12px;\">({$s['size']} {$lang['mb']})</span></span>
-						<span style=\"color: #a3a3a3; font-size: 12px; display: block; margin-bottom: 20px;\">Description du site</span>
+						<span style=\"font-size: 16px; font-weight: bold; display: block; margin-bottom: 5px;\">{$s['hostname']}</span>
+						<span style=\"color: #38b700; font-size: 12px; display: block; margin-bottom: 20px;\">{$lang['disk']} {$s['size']} {$lang['mb']}</span></span>
 						<div class=\"thumbshot\">
 							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$s['hostname']}\" />
 						</div>

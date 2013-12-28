@@ -93,15 +93,15 @@ foreach( $databases as $d )
 			<form action=\"/panel/database/del_action\" method=\"post\" class=\"center\">
 				<input id=\"database2\" type=\"hidden\" name=\"database\" value=\"\" />
 				<fieldset>	
-					<input type=\"submit\" value=\"{$lang['delete']}\"/>
+					<input autofocus type=\"submit\" value=\"{$lang['delete']}\"/>
 				</fieldset>
 			</form>
 			
 		</div>
 	</div>	
 	<script>
-		newDialog('new', 550, 450);
-		newDialog('config', 550, 440);
+		newFlexibleDialog('new', 550);
+		newFlexibleDialog('config', 550);
 	</script>
 ";
 

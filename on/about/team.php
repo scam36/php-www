@@ -68,13 +68,6 @@ $content = "
 				<p class=\"large\">{$lang['gaetan']}</p>
 				<div class=\"clear\"></div>
 				<br />
-	
-				<img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/quentin.png\" />
-				<h3 class=\"colored\">Quentin Scoyer</h3>
-				<br />
-				<p class=\"large\">{$lang['quentin']}</p>
-				<div class=\"clear\"></div>
-				<br />
 				
 				<img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/simon.png\" />
 				<h3 class=\"colored\">Simon Uyttendaele</h3>

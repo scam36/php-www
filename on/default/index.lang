@@ -10,12 +10,12 @@ password = "Mot de passe"
 login = "Connexion"
 email = "Email"
 free = "Gratuit"
-free_text = "Nous sommes une association à but non lucratif, nos <a href='/hosting'>services</a> sont ouverts à tous et sans aucune publicité."
+free_text = "Nous sommes une association à but non lucratif, nos <a href='/service/hosting'>services</a> sont ouverts à tous et sans aucune publicité."
 open = "Ouvert"
 open_text = "Nous publions nos <a href='https://github.com/OlympeNetwork'>codes sources</a> et nos <a href='https://projets.olympe.in'>travaux</a>. Des outils et une API 
 sont disponibles pour les <a href='/developers'>développeurs</a>."
 innovation = "Innovant"
-innovation_text = "Nous utilisons les dernières <a href='/hosting'>technologies</a> et nous concentrons avant tout sur la <a href='/status'>disponibilité</a> des services."
+innovation_text = "Nous utilisons les dernières <a href='/service/infrastructure'>technologies</a> et nous concentrons avant tout sur la <a href='/status'>disponibilité</a> des services."
 app = "Applications PHP et services"
 app_text = "Depuis plus de 6 ans, l'association Olympe fournit un <a href='/service/hosting'>service d'hébergement</a> gratuit et sans publicité. D'une offre PHP/MySQL basique, nous avons progressivement
 développés la plateforme et proposons aujourd'hui d'autres types de <a href='/service/offer'>technologies</a>.<br />

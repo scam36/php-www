@@ -87,7 +87,7 @@ if( count($users) > 0 )
 		</div>
 	</div>
 	<script>
-		newDialog('new', 550, 530);
+		newFlexibleDialog('new', 550);
 	</script>	
 ";
 

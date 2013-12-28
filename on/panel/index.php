@@ -138,7 +138,7 @@ $content .= "
 
 
 /* ========================== OUTPUT PAGE ========================== */
-echo 't';
+echo 'test';
 $template->output($content);
 
 ?>

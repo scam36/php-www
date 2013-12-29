@@ -141,6 +141,7 @@ $content .= "
 
 
 /* ========================== OUTPUT PAGE ========================== */
+echo 'ONDEV test';
 $template->output($content);
 
 ?>

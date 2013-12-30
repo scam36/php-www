@@ -289,12 +289,22 @@ div.article {
 img.blogimage {
 	display: block;
 	margin: 0 auto;
-	width: 800px;
+	width: 700px;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	line-height: 25px;
 	padding: 10px;
 	vertical-align: middle;
 	background-color: rgba(0, 0, 0, 0.023);
+}
+
+span.legend {
+	font-size: 15px;
+	display: block;
+	margin: 0 auto;
+	color: #b0b0b0;
+	text-align: center;
+	margin-top: 10px;
+	font-style: italic;
 }
 
 ul.classic {

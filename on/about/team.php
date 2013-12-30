@@ -13,14 +13,14 @@ $content = "
 				</div>
 			</div>	
 			<div class=\"content\">
-				<img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/yann.png\" />
+				<img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/1.png\" />
 				<h3 class=\"colored\">Yann Autissier</h3>
 				<br />
 				<p class=\"large\">{$lang['yann']}</p>
 				<div class=\"clear\"></div>
 				<br />
 	
-				<img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/thomas.png\" />
+				<img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/5.png\" />
 				<h3 class=\"colored\">Thomas Brugmans</h3>
 				<br />
 				<p class=\"large\">{$lang['thomas']}</p>
@@ -41,14 +41,14 @@ $content = "
 				<div class=\"clear\"></div>
 				<br />
 				
-				<img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/sam.png\" />
-				<h3 class=\"colored\">Samuel Hassine</h3>
+				<a href=\"https://twitter.com/SamuelHassine\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/3.png\" /></a>
+				<h3 id=\"Samuel Hassine\" class=\"colored\">Samuel Hassine</h3>
 				<br />
 				<p class=\"large\">{$lang['sam']}</p>
 				<div class=\"clear\"></div>
 				<br />
 
-				<img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/bruno.png\" />
+				<img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/2.png\" />
 				<h3 class=\"colored\">Bruno Million</h3>
 				<br />
 				<p class=\"large\">{$lang['bruno']}</p>
@@ -69,7 +69,7 @@ $content = "
 				<div class=\"clear\"></div>
 				<br />
 				
-				<img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/simon.png\" />
+				<a href=\"https://twitter.com/suytt\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/4.png\" /></a>
 				<h3 class=\"colored\">Simon Uyttendaele</h3>
 				<br />
 				<p class=\"large\">{$lang['simon']}</p>

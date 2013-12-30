@@ -1,11 +1,4 @@
 [EN]
-title = "Team blog"
-
-rss = "Subscribe"
-follow = "Follow"
-read = "Read more"
-by = "by"
-DATEFORMAT = "M d, Y"
 
 [FR]
 title = "Blog de l'équipe"
@@ -14,4 +7,11 @@ rss = "S'abonner"
 follow = "Suivre"
 read = "Lire la suite"
 by = "par"
-DATEFORMAT = "d M, Y"
+DATEFORMAT = "d F Y"
+December = "décembre"
+January = "janvier"
+
+author_1 = "Yann Autissier"
+author_2 = "Bruno Million"
+author_3 = "Samuel Hassine"
+author_4 = "Simon Uyttendaele"

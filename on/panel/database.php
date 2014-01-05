@@ -15,12 +15,6 @@ $content = "
 				<h1 class=\"dark\">{$lang['databases']}</h1>
 			</div>
 			<div class=\"right\">
-				<a class=\"button classic\" href=\"https://pma.olympe.in\" style=\"width: 200px; height: 22px; float: right;\">
-					<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/pma.png\" />
-					<span style=\"display: block; padding-top: 3px;\">{$lang['pma']}</span>
-				</a>
-			</div>			
-			<div class=\"right\">
 				<a class=\"button classic\" href=\"#\" onclick=\"$('#new').dialog('open');\" style=\"width: 200px; height: 22px; float: right;\">
 					<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white.png\" />
 					<span style=\"display: block; padding-top: 3px;\">{$lang['add']}</span>

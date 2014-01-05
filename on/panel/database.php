@@ -108,9 +108,6 @@ foreach( $databases as $d )
 $content = "
 	<div class=\"panel\">
 		<div class=\"top\">
-			<div class=\"left\" style=\"width: 500px; padding-top: 5px;\">
-				<h1 class=\"dark\">{$lang['databases']}</h1>
-			</div>
 			<div class=\"right\">
 				<a class=\"button classic\" href=\"https://pma.olympe.in\" style=\"width: 200px; height: 22px; float: right;\">
 					<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/pma.png\" />

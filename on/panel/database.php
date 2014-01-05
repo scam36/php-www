@@ -105,8 +105,6 @@ foreach( $databases as $d )
 	</script>
 ";
 
-$content = "
-";
 
 /* ========================== OUTPUT PAGE ========================== */
 $template->output($content);

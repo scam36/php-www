@@ -106,7 +106,7 @@ foreach( $databases as $d )
 ";
 
 	$content .= "
-		<div class=\"bottom\">
+		<div class=\"top\">
 			<div class=\"left\">
 				<a class=\"button classic\" href=\"https://pma.olympe.in\" style=\"width: 200px; height: 55px; float: left;\">
 					<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/pma.png\" />

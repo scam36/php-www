@@ -105,6 +105,7 @@ foreach( $databases as $d )
 	</script>
 ";
 
+	$content .= "{$lang['pmap']}";
 
 /* ========================== OUTPUT PAGE ========================== */
 $template->output($content);

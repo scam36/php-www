@@ -6,8 +6,8 @@ title = "A propos d'Olympe"
 
 intro = "Qui sommes-nous ?"
 intro_text = "<span style='font-weight: bold;'>Olympe</span> est un organisme à but non lucratif dont le principal objectif est d'oeuvrer pour une meilleure <span style='font-weight: bold;'>accessibilité aux nouvelles 
-technologies de l'information</span> à travers le monde.<br /><br />
-Olympe tente de combler la fracture numérique en réduisant notamment le coût de la publication sur Internet grâce à la mise en place d'un <a href='/service/hosting'>service d’hébergement gratuit de qualité</a>.
+technologies de l'information</span>. Olympe réduit notamment le coût de la publication sur Internet grâce à la mise en place d'un <a href='/service/hosting'>service d'hébergement 
+gratuit de qualité</a>.
 <br /><br />
 Nous menons à la fois des projets (services, plateformes, développements innovants...) et des actions (formations, déploiement, aide...). Nous désirons fortement développer nos activités de terrain et 
 sommes à l'écoute des besoins à la fois individuels et collectifs. N'hésitez pas à <a href='/about/contact'>nous contacter</a> si vous pensez que nous pouvons vous être utile dans notre domaine de 

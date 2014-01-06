@@ -106,14 +106,11 @@ foreach( $databases as $d )
 ";
 
 	$content .= "
-			<div class=\"container\">
-			<div class=\"database\">
-				<a class=\"button classic\" href=\"https://pma.olympe.in\" style=\"width: 200px; height: 55px; float: left;\">			
+			<div class=\"database\" style=\"width: 200px; height: 55px; float: left; padding-left: 100px;\">
+				<a href=\"https://pma.olympe.in\" target=\"_blank\" style=\"width: 200px; height: 55px; float: left;\">			
 				<img style=\"float: left; margin: 10px 15px 0 0;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/pma.png\" />
 				<span class=\"name\" style=\"margin-top: 25px;\">{$lang['pma']}</span><br />
-				<span class=\"subname\"></span>
-			</a>
-			</div>
+				</a>
 			</div>
 	";
 

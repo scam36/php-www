@@ -114,6 +114,16 @@ foreach( $databases as $d )
 			</div>
 	";
 
+	$content .= "
+			<div class=\"database\" style=\"width: 200px; height: 55px; float: left; padding-left: 100px;\">
+				<a href=\"https://pga.olympe.in\" target=\"_blank\" style=\"width: 200px; height: 55px; float: left;\">			
+				<img style=\"float: left; margin: 10px 15px 0 0;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/phppgadmin.png\" />
+				<span class=\"name\" style=\"margin-top: 25px;\">{$lang['pga']}</span><br />
+				</a>
+			</div>
+	";	
+	
+	
 /* ========================== OUTPUT PAGE ========================== */
 $template->output($content);
 

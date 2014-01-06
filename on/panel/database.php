@@ -106,8 +106,8 @@ foreach( $databases as $d )
 ";
 
 	$content .= "
-			<div class=\"database\" style=\"width: 200px; height: 55px; float: left; padding-left: 100px;\">
-				<a href=\"https://pma.olympe.in\" target=\"_blank\" style=\"width: 200px; height: 55px; float: left;\">			
+			<div class=\"database\" style=\"width: 200px; height: 70px; float: left; padding-left: 100px;\">
+				<a href=\"https://pma.olympe.in\" target=\"_blank\" style=\"width: 200px; height: 70px; float: left;\">			
 				<img style=\"float: left; margin: 10px 15px 0 0;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/pma.png\" />
 				<span class=\"name\" style=\"margin-top: 25px;\">{$lang['pma']}</span><br />
 				</a>
@@ -115,10 +115,11 @@ foreach( $databases as $d )
 	";
 
 	$content .= "
-			<div class=\"database\" style=\"width: 200px; height: 55px; float: left; padding-left: 100px;\">
-				<a href=\"https://pga.olympe.in\" target=\"_blank\" style=\"width: 200px; height: 55px; float: left;\">			
+			<div class=\"database\" style=\"width: 200px; height: 70px; float: left; \">
+				<a href=\"#\" target=\"_blank\" style=\"width: 200px; height: 70px; float: left;\">			
 				<img style=\"float: left; margin: 10px 15px 0 0;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/phppgadmin.png\" />
 				<span class=\"name\" style=\"margin-top: 25px;\">{$lang['pga']}</span><br />
+				<span class=\"subname\">{$lang['coming_soon']}</span>
 				</a>
 			</div>
 	";	

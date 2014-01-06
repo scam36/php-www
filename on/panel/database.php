@@ -98,21 +98,23 @@ foreach( $databases as $d )
 			</form>
 			
 		</div>
-	</div>	
-	<script>
-		newFlexibleDialog('new', 550);
-		newFlexibleDialog('config', 550);
-	</script>
-";
 
-	$content .= "
+
 			<div class=\"container\">
 				<a class=\"button classic\" href=\"https://pma.olympe.in\" style=\"width: 200px; height: 55px; float: left;\">
 					<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/pma.png\" />
 					<span style=\"display: block; padding-top: 3px;\">{$lang['pma']}</span>
 				</a>
 			</div>
-	";
+
+	</div>
+
+	
+	<script>
+		newFlexibleDialog('new', 550);
+		newFlexibleDialog('config', 550);
+	</script>
+";
 
 /* ========================== OUTPUT PAGE ========================== */
 $template->output($content);

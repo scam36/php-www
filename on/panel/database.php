@@ -106,12 +106,12 @@ foreach( $databases as $d )
 ";
 
 	$content .= "
-	
+			<div class=\"container\">
 			<div class=\"database\">
 				<img style=\"float: left; margin: 10px 15px 0 0;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/pma.png\" />
 				<span class=\"name\" style=\"margin-top: 25px;\">{$lang['pma']}</span><br />
 				<span class=\"subname\"></span>
-			</div>	
+			</div></div>	
 	";
 
 /* ========================== OUTPUT PAGE ========================== */

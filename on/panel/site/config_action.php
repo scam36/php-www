@@ -8,8 +8,8 @@ if( !defined('PROPER_START') )
 
 $params = array('site'=>$_POST['id']);
 
-if( $_POST['passowrd'] )
-	$params['password'] = $_POST['password'];
+if( $_POST['pass'] && $_POST['confirm'] == $_POST['pass'] )
+	$params['pass'] = $_POST['pass'];
 if( $_POST['description'] )
 	$params['description'] = $_POST['description'];
 if( $_POST['category'] )

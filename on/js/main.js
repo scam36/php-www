@@ -5,7 +5,7 @@ $(function()
 	// DIALOGS //
 	newFlexibleDialog('login', 350);
 	newFlexibleDialog('signup', 350);
-	newFlexibleDialog('register', 350);
+	newFlexibleDialog('register', 500);
 	newFlexibleDialog('message', 250);
 	newFlexibleDialog('changepass', 350);
 	

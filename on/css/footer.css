@@ -1,9 +1,9 @@
 /* Footer CSS */
 
 div.footer {
-	height: 100px;
+	height: 130px;
 	margin: 0 0 0 0;
-	padding: 40px 0 0 0;
+	padding: 20px 0 0 0;
 	box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 1px 0px inset;
 	background-color: #f0f0f0;
 }
@@ -13,6 +13,25 @@ div.footer div.content  {
 	margin: 0 auto;
 	padding: 0;
 	color: #999999;
+}
+
+div.footer div.content div.social {
+	width: 170px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+div.footer div.content div.social a.link {
+	display: block;
+	float: left;
+	margin: 0 6px 0 0;
+	padding: 0;
+	opacity: 0.4;
+	transition: all 0.2s;
+}
+
+div.footer div.content div.social a.link:hover {
+	opacity: 1;
 }
 
 div.footer  div.content a {

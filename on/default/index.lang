@@ -1,8 +1,38 @@
 [EN]
+title = "Solidarity and innovation"
+subtitle = "Free hosting service without ads and web applications."
+signup = "Register"
+login_now = "or login"
+username = "Username"
+password = "Password"
+login = "Login"
+email = "Email"
+free = "Free"
+free_text = "We are a non-profit organization, our <a href='/service/hosting'>services</a> are open to everyone and without any ads."
+open = "Open"
+open_text = "We release all our <a href='https://github.com/OlympeNetwork'>source codes</a> and <a href='https://projets.olympe.in'>projects</a>. An API and many tools are available for <a href='/developers'>developers</a>."
+innovation = "Innovative"
+innovation_text = "We provide the last <a href='/service/infrastructure'>technologies</a>, focusing on quality and <a href='/status'>availability</a> of the services."
+app = "PHP applications and services"
+app_text = "Since more than 6 years, the Olympe organization provides a free <a href='/service/hosting'>web hosting service</a> without any ads. From a basic offer with PHP/MySQL, we developed the platform and now are able to propose many
+other <a href='/service/offer'>technologies</a>.<br />
+<br />Beyond the web hosting space, we also provide the <a href='/service/offer'>full management</a> of domain names (subdomains, DNS records...), POP/IMAP mail accounts (redirections, aliases...), shared calendars and more."
+
+manage = "Extended features"
+manage_text = "We provide a <a href='/doc/cloud'>cloud application</a> allowing file synchronization, sharing and folders storage. This tool includes a web interface for online file vizualisation (download, modification, image galleries...), and 
+function for recovery of deleted files .
+<br /><br />
+Our platform is fully self-financed and maintened by <a href='/about/team'>team of volunteers</a>, you can <a href='/about/help'>help us</a> to fund up the project and pay the charges of the services. If you
+have questions or if you wish to participate, do not hesitate to <a href='/about/contact'>contact us</a>."
+signup_now = "Register now"
+
+help = "A question? Do not hesitate to <a href='/about/contact'>contact us</a>."
+panel = "Panel"
+logged = "Login as"
 
 [FR]
 title = "Solidarité et innovation"
-subtitle = "Hébergement gratuit, sans publicité et services associés."
+subtitle = "Hébergement gratuit sans publicité et services associés."
 signup = "S'inscrire"
 login_now = "ou se connecter"
 username = "Utilisateur"
@@ -30,6 +60,6 @@ Notre plateforme est entièrement autofinancée et maintenue par une <a href='/a
 liées au service. Si vous avez des questions ou que vous désirez prendre part au projet, n'hésitez pas à <a href='/about/contact'>nous contacter</a>."
 signup_now = "S'inscrire maintenant"
 
-help = "Une question? N'hésitez pas à nous <a href='/about/contact'>contacter</a>."
+help = "Une question ? N'hésitez pas à nous <a href='/about/contact'>contacter</a>."
 panel = "Panel"
 logged = "Identifié en tant que"

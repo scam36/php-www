@@ -1,5 +1,8 @@
 [EN]
-
+users = "users"
+databases = "databases and"
+sites = "websites"
+domains = "domains."
 
 [FR]
 users = "utilisateurs"

@@ -23,14 +23,14 @@ if( isset($_POST['antispam']) && $_POST['antispam'] == $_SESSION['ANTISPAM'] )
 	}
 	catch(Exception $e)
 	{
-		$_SESSION['MESSAGE']['TYPE'] = 'error';
-		$_SESSION['MESSAGE']['TEXT']= $lang['error_api'];
+		$_SESSION['FORM']['OPEN'] = 'signup';
+		$template->redirect($_SERVER['HTTP_REFERER'] . (strstr($_SERVER['HTTP_REFERER'], 'esignup')===false?"?esignup":""));
 	}
 }
 else
 {
-	$_SESSION['MESSAGE']['TYPE'] = 'error';
-	$_SESSION['MESSAGE']['TEXT']= $lang['error_api'];
+	$_SESSION['FORM']['OPEN'] = 'signup';
+	$template->redirect($_SERVER['HTTP_REFERER'] . (strstr($_SERVER['HTTP_REFERER'], 'esignup')===false?"?esignup":""));
 }
 
 $template->redirect($_SERVER['HTTP_REFERER']);

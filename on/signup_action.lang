@@ -1,5 +1,14 @@
 [EN]
 
+subject = "Olympe account confirmation"
+content = "<p style='margin: 20px 0'>Thank your for your register! You have to click on the following link in order to activate your account:</p>
+<p style='margin: 20px 0;'><a href='https://{DOMAIN}/confirm?email={EMAIL}&code={CODE}' style='color: #de5711;'>https://{DOMAIN}/confirm?email={EMAIL}&code={CODE}</a>
+<p style='margin: 20px 0;'>Enjoy publishing content on Olympe, and do not hesitate to send us your feedback.</p>"
+
+success = "Your request has been accepted.<br />You will receive an email with the confirmation link."
+error_mail = "An error occured, the email can not be sent.<br />Please try later."
+error_api = "The email address format is not correct.<br />Please fix it."
+
 [FR]
 
 subject = "Confirmation de votre compte sur Olympe"

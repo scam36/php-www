@@ -18,7 +18,14 @@ if( isset($_POST['lastname']) && strlen($_POST['lastname']) > 0 )
 	$params['lastname'] = $_POST['lastname'];
 if( isset($_POST['pass']) && strlen($_POST['pass']) > 0 )
 	$params['pass'] = $_POST['pass'];
-	
+if( isset($_POST['iban']) && strlen($_POST['iban']) > 0 )
+	$params['iban'] = $_POST['iban'];
+if( isset($_POST['bic']) && strlen($_POST['bic']) > 0 )
+	$params['bic'] = $_POST['bic'];
+
+$address = array('company' => $_POST['company'], 'street' => $_POST['street'], 'code' => $_POST['code'], 'city' => $_POST['city'], 'country' => $_POST['country']);
+$params['address'] = json_encode($address);
+
 api::send('user/update', $params);
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);

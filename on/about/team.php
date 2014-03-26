@@ -70,7 +70,7 @@ $content = "
 				<br />
 				
 				<a href=\"https://twitter.com/suytt\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/4.png\" /></a>
-				<h3 class=\"colored\">Simon Uyttendaele</h3>
+				<h3 id=\"Simon Uyttendaele\" class=\"colored\">Simon Uyttendaele</h3>
 				<br />
 				<p class=\"large\">{$lang['simon']}</p>
 				<div class=\"clear\"></div>

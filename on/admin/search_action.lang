@@ -1,17 +1,10 @@
 [EN]
-title = "Search results"
-user = "Users"
-name = "Name"
-action = "Actions"
-manage = "Manage"
-ip = "IP"
-date = "Registered"
-
 [FR]
 title = "Résultats de recherche"
 user = "Utilisateurs"
 name = "Nom"
-action = "Actions"
+actions = "Actions"
+email = "Adresse email"
 manage = "Gérer"
 ip = "IP"
 date = "Inscrit"

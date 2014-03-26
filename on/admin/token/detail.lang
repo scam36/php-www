@@ -1,12 +1,4 @@
 [EN]
-title = "Token details"
-update = "Update"
-grants = "Grants"
-grantname = "Grant name"
-granted = "Granted"
-tokeninfo = "Token information"
-tokenname = "Name"
-tokenlease = "Expire"
 
 [FR]
 title = "Détails du token"
@@ -16,3 +8,4 @@ granted = "Accordé"
 tokeninfo = "Informations du token"
 tokenname = "Nom"
 tokenlease = "Expiration"
+update = "Modifier"

@@ -9,12 +9,15 @@ if( !defined('PROPER_START') )
 $userinfo = api::send('self/user/list');
 $userinfo = $userinfo[0];
 		
+$month = date('F', $userinfo['date']);
+$month_translate = $lang[$month];
+	
 $content = "
 	<div class=\"panel\">
 		<div class=\"top\">
 			<div class=\"left\" style=\"width: 650px;\">
 				<h1 class=\"dark\" style=\"padding-top: 7px;\">{$lang['settings']}</h1>
-				<blockquote style=\"width: 100%;\"><p>{$lang['registered']} <span style=\"font-weight: bold;\">".date($lang['dateformat'], $userinfo['date'])."</span>.</p></blockquote>
+				<blockquote style=\"width: 100%;\"><p>{$lang['registered']} <span style=\"font-weight: bold;\">".str_replace($month, $month_translate, date($lang['DATEFORMAT'], $userinfo['date']))."</span>.</p></blockquote>
 			</div>
 			<div class=\"right\" style=\"width: 400px; float: right; text-align: right;\">
 				<a class=\"action pass big\" href=\"#\" onclick=\"$('#new').dialog('open'); return false;\">

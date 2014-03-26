@@ -6,124 +6,138 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$sites = api::send('site/list', array('valid'=>2));
+$users = api::send('user/list', array('from'=>strtotime('-1 hour'), 'order'=>'user_date', 'order_type'=>'DESC'));
+$overquotas = api::send('quota/nearlimit', array('quota'=>'BYTES'));
+//$messages = api::send('message/list', array('unanswered'=>1));
+$messages = array();
 
 $content = "
-			<div class=\"content\">
-				<div class=\"title\"><h5>{$lang['title']}</h5></div>
-				<div class=\"widgets\">
-					<div class=\"left\">
-						<form action=\"/admin/search_action\" method=\"post\" class=\"mainForm\">
-							<fieldset>
-								<div class=\"widget first\">
-									<div class=\"head\"><h5 class=\"iPreview\">{$lang['search']}</h5></div>
-									<div class=\"rowElem\"><label>{$lang['name']}</label>
-										<div class=\"formRight\"><input type=\"text\" name=\"name\" /></div>
-										<div class=\"fix\"></div>
-									</div>
-									<div class=\"rowElem\"><label>{$lang['site']}</label>
-										<div class=\"formRight\"><input type=\"text\" name=\"site\" /></div>
-										<div class=\"fix\"></div>
-									</div>
-									<div class=\"rowElem\"><label>{$lang['domain']}</label>
-										<div class=\"formRight\"><input type=\"text\" name=\"domain\" /></div>
-										<div class=\"fix\"></div>
-									</div>
-									<input type=\"submit\" value=\"{$lang['go']}\" class=\"greyishBtn submitForm\" />
-									<div class=\"fix\"></div>
-								</div>
-							</fieldset>
-						</form>
-					</div>
-						<script type=\"text/javascript\">
-							function tablepaging()
-							{
-								oTable1 = \$('#siteList').dataTable({
-									\"bJQueryUI\": true,
-									\"sPaginationType\": \"full_numbers\",
-									\"sDom\": '<\"\"f>t<\"F\"lp>'
-								});
-							};
-						</script>";
-					
-if( security::hasGrant('SITE_SELECT') )
+	<div class=\"admin\">
+		<div class=\"top\">
+			<div class=\"left\" style=\"padding-top: 5px;\">
+				<h1 class=\"dark\">{$lang['title']}</h1>
+			</div>
+			<div class=\"right\">
+				<a class=\"button classic\" href=\"#\" onclick=\"$('#new').dialog('open');\" style=\"width: 180px; height: 22px; float: right;\">
+					<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white.png\" />
+					<span style=\"display: block; padding-top: 3px;\">{$lang['add']}</span>
+				</a>
+			</div>
+		</div>
+		<div class=\"clear\"></div><br /><br />
+		<div class=\"container\">
+			<div style=\"width: 350px; float: left;\">
+				<h3 class=\"colored\">{$lang['search']}</h3>
+				<br />
+				<form action=\"/admin/search_action\" method=\"post\">
+					<fieldset>
+						<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"name\" value=\"{$lang['name']}\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+					</fieldset>
+					<fieldset>
+						<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"site\" value=\"{$lang['site']}\" onfocus=\"this.value = this.value=='{$lang['site']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['site']}' : this.value; this.value=='{$lang['site']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+					</fieldset>
+					<fieldset>
+						<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"email\" value=\"{$lang['email']}\" onfocus=\"this.value = this.value=='{$lang['email']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['email']}' : this.value; this.value=='{$lang['email']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+					</fieldset>
+					<fieldset>
+						<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"domain\" value=\"{$lang['domain']}\" onfocus=\"this.value = this.value=='{$lang['domain']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['domain']}' : this.value; this.value=='{$lang['domain']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+					</fieldset>
+					<fieldset>
+						<input type=\"submit\" value=\"{$lang['go']}\" />
+					</fieldset>					
+				</form>
+			</div>
+			<div style=\"width: 700px; float: right;\">
+				<h3 class=\"colored\">{$lang['messages']}</h3>
+				<br />
+				<table>
+					<tr>
+						<th style=\"width: 40px; text-align: center;\">#</th>
+						<th>{$lang['desc']}</th>
+						<th>{$lang['date']}</th>						
+					</tr>
+";
+
+foreach( $messages as $m )
 {
 	$content .= "
-					<script type=\"text/javascript\">
-						function confirmDelete(id, user)
-						{
-							jConfirm(\"{$lang['confirm_text']}\", \"{$lang['confirm_title']}\", function(r)
-							{
-								if( r )
-									window.location.href = window.location.protocol+'//'+window.location.host+'/admin/site/del_action?id='+id+'&user='+user;
-							});
-							return false;
-						}
-					</script>
-					<div class=\"right\">
-						<div class=\"widget first\">
-							<div class=\"head\">
-								<h5 class=\"iPreview\">{$lang['invalids']}</h5>
-							</div>
-							<table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" class=\"display\" id=\"siteList\">
-								<thead>
-									<tr>
-										<th>{$lang['site']}</th>
-										<th>{$lang['status']}</th>
-										<th>{$lang['actions']}</th>
-									</tr>
-								</thead>
-								<tbody>";
-	foreach( $sites as $s )
-	{
-		$s['explain'] = unserialize($s['explain']);
-		if( count($s['explain']['replies'])%2 == 1)
-		{
-			$status = "replied";
-			$color = "green";
-		}
-		else
-		{
-			$status = "pending";
-			$color = "red";
-		}
-	
-		$content .= "
-									<tr class=\"gradeA\">
-										<td><a href=\"http://{$s['hostname']}\">{$s['name']}</a></td>
-										<td><strong class=\"{$color}\">[ {$lang[$status]} ]</strong></td>
-										<td align=\"center\">
-											<a href=\"/admin/site/alert?id={$s['id']}\" title=\"\" class=\"btn14 mr5\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/color/pencil.png\" alt=\"\" /></a>
-											<a href=\"/admin/site/valid_action?id={$s['id']}\" title=\"\" class=\"btn14 mr5\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/color/thumb-up.png\" alt=\"\" /></a>";
-
-		if( security::hasGrant('SITE_DELETE') )
-		{
-			$content .= "
-											<a href=\"javascript:void(0);\" onclick=\"confirmDelete({$s['id']}, {$s['user']['id']});\" title=\"\" class=\"btn14 mr5\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/color/cross.png\" alt=\"\" /></a>";
-		}
-			
-		$content .= "
-										</td>
-									</tr>";
-	}
-
-	$content .= "
-								</tbody>
-							</table>
-						</div>
-					</div>
+					<tr>
+						<td style=\"width: 40px; text-align: center;\"><img style=\"width: 30px; height: 30px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user_id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user_id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></td>
+						<td><a href=\"/admin/message/detail?id={$m['id']}\">{$m['title']}</a></td>
+						<td>".date('Y-m-d H:i', $m['date'])."</td>
+					</tr>
 	";
 }
 
 $content .= "
-				</div>
+				</table>
 			</div>
-<script type=\"text/javascript\">
-	function postInit()
-	{
-		try { tablepaging(); } catch ( e ) { }
-	}
-</script>";
+			<div class=\"clear\"></div>
+			<br />
+			<div style=\"width: 350px; float: left;\">
+				<h3 class=\"colored\">{$lang['overquota']}</h3>
+				<br />
+				<table>
+					<tr>
+						<th style=\"width: 40px; text-align: center;\">#</th>
+						<th>{$lang['username']}</th>
+						<th>{$lang['disk']}</th>
+						<th>{$lang['max']}</th>
+					</tr>
+";
+
+$i = 0;
+foreach( $overquotas as $o )
+{
+	$content .= "
+					<tr>
+						<td style=\"width: 40px; text-align: center;\"><a href=\"/admin/user/detail?id={$u['id']}\"><img style=\"width: 30px; height: 30px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$o['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$o['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a></td>
+						<td><a href=\"/admin/user/detail?id={$o['id']}\">{$o['name']}</a></td>
+						<td>{$o['quotas']['used']}</td>
+						<td>{$o['quotas']['max']}</td>
+					</tr>
+	";
+	$i++;
+	
+	if( $i > 9 )
+		break;
+}
+
+$content .= "
+				</table>
+			</div>
+			<div style=\"width: 700px; float: right;\">
+				<h3 class=\"colored\">{$lang['last']}</h3>
+				<br />
+				<table>
+					<tr>
+						<th style=\"width: 40px; text-align: center;\">#</th>
+						<th>{$lang['username']}</th>
+						<th>{$lang['email']}</th>
+						<th>{$lang['date']}</th>
+					</tr>
+";
+
+foreach( $users as $u )
+{
+	$content .= "
+					<tr>
+						<td style=\"width: 40px; text-align: center;\"><a href=\"/admin/user/detail?id={$u['id']}\"><img style=\"width: 30px; height: 30px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$u['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$u['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a></td>
+						<td><a href=\"/admin/user/detail?id={$u['id']}\">{$u['name']}</a></td>
+						<td>{$u['email']}</td>
+						<td>".date('Y-m-d H:i', $u['date'])."</td>
+					</tr>
+	";
+}
+
+$content .= "
+				</table>
+			</div>
+
+			<div class=\"clear\"></div>
+		</div>
+	</div>
+";
 
 /* ========================== OUTPUT PAGE ========================== */
 $template->output($content);

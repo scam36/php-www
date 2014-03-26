@@ -10,6 +10,8 @@ by = "par"
 DATEFORMAT = "d F Y"
 December = "décembre"
 January = "janvier"
+February = "dévrier"
+March = "mars"
 
 author_1 = "Yann Autissier"
 author_2 = "Bruno Million"

@@ -99,6 +99,7 @@ if( security::hasGrant('GRANT_GROUP_SELECT') )
 								<div class=\"widget\">
 									<div class=\"head\">
 										<h5 class=\"iKey\">{$lang['grants']}</h5>
+										<div class=\"icon\"><input type=\"checkbox\" name=\"foo\" value=\"bar\" /></div>
 									</div>
 									<div style=\"max-height: 350px; overflow-y: auto;\">
 									<table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" class=\"tableStatic\" id=\"grantList\">
@@ -146,16 +147,7 @@ if( security::hasGrant('GRANT_GROUP_SELECT') )
 									<div class=\"fix\"></div>
 								</div>
 							</fieldset>
-						</form>
-						<script type=\"text/javascript\">
-							\$(function() {
-								oTable2 = \$('#grantList').dataTable({
-									\"bJQueryUI\": true,
-									\"sPaginationType\": \"full_numbers\",
-									\"sDom\": '<\"\"f>t<\"F\"lp>'
-								});
-							});
-						</script>";
+						</form>";
 }
 
 $content .= "

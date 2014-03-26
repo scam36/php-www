@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-api::send('user/del', array('id'=>$_GET['id'], 'recursive'=>1));
+api::send('user/del', array('id'=>$_GET['id']));
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);

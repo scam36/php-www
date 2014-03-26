@@ -31,7 +31,7 @@ $content = "
 				<div class=\"container\">
 					<div style=\"float: left; width: 300px;\">
 						<h2 class=\"dark\">{$lang['dns']}</h2>
-						<form action=\"/panel/domain/config_action\" method=\"post\">
+						<form action=\"/panel/domains/config_action\" method=\"post\">
 							<input type=\"hidden\" name=\"id\" value=\"{$domain['id']}\" />
 							<input type=\"hidden\" name=\"domain\" value=\"{$domain['hostname']}\" />
 							<fieldset>
@@ -42,6 +42,14 @@ $content = "
 								<input type=\"text\" value=\"".str_replace('20 ', '', $domain['mxRecord'][1])."\" name=\"mx2\" />
 								<span class=\"help-block\">{$lang['mx2']}</span>
 							</fieldset>
+							<fieldset>
+								<input type=\"text\" value=\"".($domain['mxRecord'][2]?"":"mx3.olympe.in")."".str_replace('30 ', '', $domain['mxRecord'][2])."\" name=\"mx3\" />
+								<span class=\"help-block\">{$lang['mx3']}</span>
+							</fieldset>
+							<fieldset>
+								<input type=\"text\" value=\"".($domain['mxRecord'][3]?"":"mx4.olympe.in")."".str_replace('40 ', '', $domain['mxRecord'][3])."\" name=\"mx4\" />
+								<span class=\"help-block\">{$lang['mx4']}</span>
+							</fieldset>							
 							<fieldset>
 								<input type=\"text\" value=\"{$domain['aRecord']}\" name=\"domain_arecord\" />
 								<span class=\"help-block\">{$domain['hostname']}</span>
@@ -118,6 +126,7 @@ $content .= "
 						</fieldset>
 					</form>
 				</div>
+			</div>
 			<script>
 				newFlexibleDialog('new', 550);
 				newFlexibleDialog('config', 550);

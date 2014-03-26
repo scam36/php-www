@@ -19,13 +19,6 @@ $content = "
 				<div class=\"clear\"></div>
 				<br />
 	
-				<img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/5.png\" />
-				<h3 class=\"colored\">Thomas Brugmans</h3>
-				<br />
-				<p class=\"large\">{$lang['thomas']}</p>
-				<div class=\"clear\"></div>
-				<br />
-	
 				<img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/herve.png\" />
 				<h3 class=\"colored\">H&eacute;rv&eacute; Cognet</h3>
 				<br />

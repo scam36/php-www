@@ -91,8 +91,8 @@ foreach( $overquotas as $o )
 {
 	$content .= "
 					<tr>
-						<td style=\"width: 40px; text-align: center;\"><a href=\"/admin/user/detail?id={$u['id']}\"><img style=\"width: 30px; height: 30px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$o['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$o['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a></td>
-						<td><a href=\"/admin/user/detail?id={$o['id']}\">{$o['name']}</a></td>
+						<td style=\"width: 40px; text-align: center;\"><a href=\"/admin/users/detail?id={$u['id']}\"><img style=\"width: 30px; height: 30px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$o['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$o['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a></td>
+						<td><a href=\"/admin/users/detail?id={$o['id']}\">{$o['name']}</a></td>
 						<td>{$o['quotas']['used']}</td>
 						<td>{$o['quotas']['max']}</td>
 					</tr>
@@ -122,8 +122,8 @@ foreach( $users as $u )
 {
 	$content .= "
 					<tr>
-						<td style=\"width: 40px; text-align: center;\"><a href=\"/admin/user/detail?id={$u['id']}\"><img style=\"width: 30px; height: 30px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$u['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$u['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a></td>
-						<td><a href=\"/admin/user/detail?id={$u['id']}\">{$u['name']}</a></td>
+						<td style=\"width: 40px; text-align: center;\"><a href=\"/admin/users/detail?id={$u['id']}\"><img style=\"width: 30px; height: 30px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$u['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$u['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a></td>
+						<td><a href=\"/admin/users/detail?id={$u['id']}\">{$u['name']}</a></td>
 						<td>{$u['email']}</td>
 						<td>".date('Y-m-d H:i', $u['date'])."</td>
 					</tr>

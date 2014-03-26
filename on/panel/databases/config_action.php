@@ -6,18 +6,26 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$params = array();
-if( strlen($_POST['password']) > 0 )
-	$params['pass'] = $_POST['password'];
+try
+{
+	$params = array();
+	$params['database'] = $_POST['database'];
+	$params['desc'] = $_POST['description'];
 
-$params['database'] = $_POST['database'];
-$params['desc'] = $_POST['desc'];
+	api::send('self/database/update', $params);
 
-api::send('self/database/update', $params);
+	$_SESSION['MESSAGE']['TYPE'] = 'success';
+	$_SESSION['MESSAGE']['TEXT']= $lang['success'];	
+}
+catch( Exception $e )
+{
+	$_SESSION['MESSAGE']['TYPE'] = 'error';
+	$_SESSION['MESSAGE']['TEXT']= $lang['error'];	
+}
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	$template->redirect('/panel/databases');
+	$template->redirect('/panel/databases/config?database=' . security::encode($_POST['database']));
 
 ?>

@@ -16,6 +16,8 @@ if( isset($_POST['firstname']) && strlen($_POST['firstname']) > 0 )
 	$params['firstname'] = $_POST['firstname'];
 if( isset($_POST['lastname']) && strlen($_POST['lastname']) > 0 )
 	$params['lastname'] = $_POST['lastname'];
+if( isset($_POST['language']) && strlen($_POST['language']) > 0 )
+	$params['language'] = $_POST['language'];
 if( isset($_POST['pass']) && strlen($_POST['pass']) > 0 )
 	$params['pass'] = $_POST['pass'];
 	

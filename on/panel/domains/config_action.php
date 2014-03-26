@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-api::send('self/domain/update', array('id'=>$_POST['id'], 'arecord'=>$_POST['domain_arecord'], 'mx1'=>$_POST['mx1'], 'mx2'=>$_POST['mx2']));
+api::send('self/domain/update', array('id'=>$_POST['id'], 'arecord'=>$_POST['domain_arecord'], 'mx1'=>$_POST['mx1'], 'mx2'=>$_POST['mx2'], 'mx3'=>$_POST['mx3'], 'mx4'=>$_POST['mx4']));
 
 $_SESSION['MESSAGE']['TYPE'] = 'success';
 $_SESSION['MESSAGE']['TEXT']= $lang['success'];	

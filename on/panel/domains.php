@@ -25,11 +25,11 @@ $content = "
 				<div class=\"container\">
 					<table>
 						<tr>
-							<th></th>
+							<th style=\"text-align: center; width: 40px;\">#</th>
 							<th>{$lang['domain']}</th>
 							<th>{$lang['arecord']}</th>
 							<th>{$lang['home']}</th>
-							<th>{$lang['actions']}</th>
+							<th style=\"width: 100px; text-align: center;\">{$lang['actions']}</th>
 						</tr>
 ";
 
@@ -57,13 +57,13 @@ if( count($domains) > 0 )
 		
 		$content .= "
 						<tr>
-							<td style=\"text-align: center; width: 40px;\"><a href=\"/panel/domain/config?id={$d['id']}\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/domain.png\" /></td>
+							<td style=\"text-align: center; width: 40px;\"><a href=\"/panel/domains/config?id={$d['id']}\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/domain.png\" /></td>
 							<td><span style=\"font-weight: bold;\">{$d['hostname']}</span></td>
 							<td><span class=\"lightlarge\">{$arecord}</a></td>
 							<td>".($d['destination']?"{$d['destination']}":"{$d['homeDirectory']}")."</td>
-							<td style=\"width: 80px; text-align: center;\">
-								<a href=\"/panel/domains/config?id={$d['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"\" /></a>
-								<a href=\"#\" onclick=\"$('#id').val('{$d['id']}'); $('#delete').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+							<td style=\"width: 100px; text-align: center;\">
+								<a href=\"/panel/domains/config?id={$d['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
+								<a href=\"#\" onclick=\"$('#id').val('{$d['id']}'); $('#delete').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/close.png\" alt=\"\" /></a>
 							</td>
 						</tr>
 		";

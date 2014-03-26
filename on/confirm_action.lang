@@ -1,5 +1,5 @@
 [EN]
-success = "Congratulations! Your subscription is now complete.<br />You can enter to your <a href=\"#\" onclick=\"showLogin(); return false;\">control panel</a>."
+success = "Congratulations! Your subscription is now complete.<br />You can enter to your <a href=\"#\" onclick=\"$('#login').dialog('open'); return false;\">control panel</a>."
 
 subject = "Welcome to the Olympe platform"
 content = "<p style='margin: 20px 0'>Your Olympe account is now ready! Here are the authentification parameters you entered:</p>
@@ -9,7 +9,7 @@ Password: <strong>{PASS}</strong></p>
 
 [FR]
 
-success = "Félicitations ! Votre inscription est maintenant terminée. <br />Vous pouvez vous rendre sur votre <a href=\"#\" onclick=\"showLogin(); return false;\">panel de gestion</a>."
+success = "Félicitations ! Votre inscription est maintenant terminée. <br />Vous pouvez vous rendre sur votre <a href=\"#\" onclick=\"$('#login').dialog('open'); return false;\">panel de gestion</a>."
 
 subject = "Bienvenue sur la plateforme Olympe"
 content = "<p style='margin: 20px 0'>Votre compte Olympe est maintenant prêt ! Voici les paramètres d'identification que vous avez choisis:</p>

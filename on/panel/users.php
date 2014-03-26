@@ -22,11 +22,11 @@ $content = "
 				<div class=\"container\">
 					<table>
 						<tr>
-							<th></th>
+							<th style=\"text-align: center; width: 40px;\">#</th>
 							<th>{$lang['domain']}</th>
 							<th>{$lang['arecord']}</th>
 							<th>{$lang['home']}</th>
-							<th>{$lang['actions']}</th>
+							<th style=\"width: 50px; text-align: center;\">{$lang['actions']}</th>
 						</tr>
 ";
 
@@ -58,8 +58,8 @@ if( count($domains) > 0 )
 					<td><span style=\"font-weight: bold;\">{$d['hostname']}</span></td>
 					<td><span class=\"lightlarge\">{$arecord}</a></td>
 					<td>{$d['homeDirectory']}</td>
-					<td style=\"width: 35px; text-align: center;\">
-						<a href=\"/panel/users/list?domain={$d['hostname']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"\" /></a>
+					<td style=\"width: 50px; text-align: center;\">
+						<a href=\"/panel/users/list?domain={$d['hostname']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
 					</td>
 				</tr>
 		";

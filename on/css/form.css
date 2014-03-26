@@ -29,19 +29,23 @@ form.center label {
 }
 
 input, select, textarea {
-	margin: 0 0 10px 0;
+	margin: 0 0 5px 0;
 	display: block;
 	width: 210px;
 	padding: 5px 5px 5px 10px;
 	border-radius: 3px;
-	border: solid 1px #d3d3d3;
-	background-color: rgb(248, 248, 248);
+	border: solid 1px #ffffff;
+	background-color: rgb(240, 240, 240);
 	font-size: 16px;
 	transition: all 0.2s;
 }
 
 input:focus, select:focus, textarea:focus {
-	outline: #ee974a solid 1px;
+	outline: 0;
+}
+
+input:focus {
+	border-bottom: 1px solid #ee974a;
 }
 
 input[type=button]:focus, input[type=image]:focus, input[type=submit]:focus {

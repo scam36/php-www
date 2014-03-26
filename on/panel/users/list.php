@@ -26,11 +26,12 @@ $content = "
 		<div class=\"container\">
 			<table>
 				<tr>
+					<th style=\"text-align: center; width: 40px;\">#</th>
 					<th>{$lang['email']}</th>
 					<th>{$lang['firstname']}</th>
 					<th>{$lang['lastname']}</th>
 					<th>{$lang['size']}</th>
-					<th>{$lang['actions']}</th>
+					<th style=\"width: 100px; text-align: center;\">{$lang['actions']}</th>
 				</tr>
 ";
 
@@ -40,15 +41,19 @@ if( count($users) > 0 )
 {
 	foreach($users as $u)
 	{
+		if( !$u['size'] )
+			$u['size'] = 0;
+			
 		$content .= "
 				<tr>
+					<td style=\"text-align: center; width: 40px;\"><a href=\"/panel/users/config?domain={$domain['hostname']}&id={$u['id']}\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/user.png\" /></td>
 					<td>{$u['mail']}</td>
 					<td>{$u['firstname']}</td>
 					<td>{$u['lastname']}</td>
 					<td><span class=\"large\">{$u['size']}Mo</span></td>
-					<td style=\"width: 70px; text-align: center;\">
-						<a href=\"/panel/users/config?domain={$domain['hostname']}&id={$u['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"\" /></a>
-						<a href=\"/panel/users/del_action?id={$u['id']}&domain={$domain['hostname']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+					<td style=\"width: 100px; text-align: center;\">
+						<a href=\"/panel/users/config?domain={$domain['hostname']}&id={$u['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
+						<a href=\"/panel/users/del_action?id={$u['id']}&domain={$domain['hostname']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/close.png\" alt=\"\" /></a>
 					</td>
 				</tr>
 		";

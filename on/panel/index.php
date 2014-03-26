@@ -61,7 +61,7 @@ $content = "
 					<div id=\"formsite\" style=\"display: none; position: relative; padding: 30px 10px 10px 10px;\">
 						<a href=\"#\" style=\"display: block; position: absolute; top: 5px; left: 5px;\" onclick=\"showNew(); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/arrowLeft.png\" alt=\"\" /></a>
 						<div class=\"form-small\">		
-							<form action=\"/panel/site/add_action\" method=\"post\" class=\"center\">
+							<form action=\"/panel/sites/add_action\" method=\"post\" class=\"center\">
 								<fieldset style=\"padding-top: 10px;\">
 									<input class=\"auto\" type=\"text\" value=\"{$lang['name']}\" name=\"subdomain\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
 									<span class=\"help-block\">{$lang['tipsite']}</span>
@@ -103,7 +103,7 @@ else
 		$i++;
 		
 		$content .= "
-				<div class=\"site\" {$last} onclick=\"window.location.href='/panel/site/config?id={$s['id']}'; return false;\">
+				<div class=\"site\" {$last} onclick=\"window.location.href='/panel/sites/config?id={$s['id']}'; return false;\">
 					<div class=\"normal\">
 						<span style=\"font-size: 16px; font-weight: bold; display: block; margin-bottom: 5px;\">{$s['hostname']}</span>
 						<span style=\"color: #38b700; font-size: 12px; display: block; margin-bottom: 20px;\">{$lang['disk']} {$s['size']} {$lang['mb']}</span></span>

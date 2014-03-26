@@ -25,7 +25,7 @@ $content = "
 				</a>
 				<a class=\"action apps big\" href=\"#\">
 					{$lang['apps']}
-				</a>					
+				</a>	
 			</div>
 			<div class=\"clear\"></div>
 		</div>

@@ -15,13 +15,13 @@ $content = "
 					<h1 class=\"dark\">{$lang['title']}</h1>
 				</div>
 				<div class=\"right\">
-					<a class=\"button classic\" href=\"#\" onclick=\"$('#new').dialog('open');\" style=\"width: 180px; height: 22px; float: right;\">
+					<a class=\"button classic\" href=\"#\" onclick=\"$('#new').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
 						<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white.png\" />
 						<span style=\"display: block; padding-top: 3px;\">{$lang['add']}</span>
 					</a>
 				</div>
 			</div>
-			<div class=\"clear\"></div><br /><br />
+			<div class=\"clear\"></div><br />
 			<div class=\"content\">
 				<table>
 					<tr>
@@ -50,48 +50,33 @@ foreach( $groups as $g )
 
 $content .= "
 				</table>
-						</div>
-					</div>
-						<script type=\"text/javascript\">
-							function tablepaging()
-							{
-								oTable1 = \$('#groupList').dataTable({
-									\"bJQueryUI\": true,
-									\"sPaginationType\": \"full_numbers\",
-									\"sDom\": '<\"\"f>t<\"F\"lp>'
-								});
-							};
-						</script>";
+			</div>
+		</div>
+";
 					
 if( security::hasGrant('GROUP_INSERT') )
 {
 	$content .= "
-					<div class=\"right\">
-						<form action=\"/admin/group/add_action\" method=\"post\" class=\"mainForm\">
-							<fieldset>
-								<div class=\"widget first\">
-									<div class=\"head\"><h5 class=\"iAdd\">{$lang['add']}</h5></div>
-									<div class=\"rowElem\"><label>{$lang['name']}</label>
-										<div class=\"formRight\"><input type=\"text\" name=\"name\" /></div>
-										<div class=\"fix\"></div>
-									</div>
-									<input type=\"submit\" value=\"{$lang['add']}\" class=\"greyishBtn submitForm\" />
-									<div class=\"fix\"></div>
-								</div>
-							</fieldset>
-						</form>
-					</div>";
+		<div id=\"new\" class=\"floatingdialog\">
+			<h3 class=\"center\">{$lang['add']}</h3>
+			<p style=\"text-align: center;\">{$lang['add_text']}</p>
+			<div class=\"form-small\">		
+			<form action=\"/admin/grant/add_action\" method=\"post\" class=\"center\">
+				<fieldset>
+					<input class=\"auto\" type=\"text\" value=\"{$lang['name']}\" name=\"name\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+					<span class=\"help-block\">{$lang['name_help']}</span>
+				</fieldset>
+				<fieldset>	
+					<input autofocus type=\"submit\" value=\"{$lang['create']}\" />
+				</fieldset>
+			</form>
+		</div>";
 }
 
 $content .= "
-				</div>
-			</div>
-<script type=\"text/javascript\">
-	function postInit()
-	{
-		try { tablepaging(); } catch ( e ) { }
-	}
-</script>";
+		<script type=\"text/javascript\">
+			newFlexibleDialog('new', 550);
+		</script>";
 
 /* ========================== OUTPUT PAGE ========================== */
 $template->output($content);

@@ -1,6 +1,6 @@
 [EN]
 phome = "Home"
-pdomains = "Domain names"
+pdomains = "Domains"
 pdatabases = "Databases"
 pmails = "Mail accounts"
 pservices = "Services"
@@ -10,7 +10,7 @@ psettings = "Settings"
 
 [FR]
 phome = "Accueil"
-pdomains = "Noms de domaine"
+pdomains = "Domaines"
 pdatabases = "Bases de données"
 pmails = "Comptes mails"
 pservices = "Services"

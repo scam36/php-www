@@ -11,7 +11,7 @@ if( $_SERVER["HTTP_HOST"] != 'local.olympe.in' )
 		$size = filesize ($file);
 		$current = time();
 		
-		if( $mod <= $current-(3600*24*7) || $size < 10 )
+		if( $mod <= $current-(3600*24*30) || $size < 10 )
 		{
 			$address = 'http://api.snapito.com/?delay=0&freshness=0&size=sc&fast=false&timestamp=false&type=PNG&url=' . $url;
 			$content = file_get_contents($address);

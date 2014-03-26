@@ -15,13 +15,13 @@ $content = "
 					<h1 class=\"dark\">{$lang['title']}</h1>
 				</div>
 				<div class=\"right\">
-					<a class=\"button classic\" href=\"#\" onclick=\"$('#new').dialog('open');\" style=\"width: 180px; height: 22px; float: right;\">
+					<a class=\"button classic\" href=\"#\" onclick=\"$('#new').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
 						<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white.png\" />
 						<span style=\"display: block; padding-top: 3px;\">{$lang['add']}</span>
 					</a>
 				</div>
 			</div>
-			<div class=\"clear\"></div><br /><br />
+			<div class=\"clear\"></div><br />
 			<div class=\"content\">
 				<table>
 					<tr>

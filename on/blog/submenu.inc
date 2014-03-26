@@ -5,9 +5,10 @@ if( isset($GLOBALS['lang']) && is_object($GLOBALS['lang']) )
 
 // initialize the menu
 $menu = array(
-	array('text'=>"menu_last", 'default'=>true, 'link'=>"/blog"),
-	array('text'=>"menu_press", 'link'=>"/blog/press"),
-	array('text'=>"menu_archives", 'link'=>"/blog/archive")
+	array('text'=>"menu_actions", 'default'=>true, 'link'=>"/org"),
+	array('text'=>"menu_last", 'link'=>"/blog"),
+	array('text'=>"menu_press", 'link'=>"/org/press"),
+	array('text'=>"menu_help", 'link'=>"/org/help"),
 );
 
 return $menu;

@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$news = api::send('news/list', array(), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+$news = api::send('news/list', array('limit'=>20), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 
 $content = "
 			<div class=\"head-light\">
@@ -50,7 +50,6 @@ foreach( $news as $n )
 				</div>
 				<br />
 				<div class=\"separator\"></div>
-				<br />
 	";
 }
 

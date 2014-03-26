@@ -1,6 +1,7 @@
 [EN]
 
 [FR]
-menu_last = "Derniers articles"
+menu_actions = "Actions et projets"
+menu_last = "Actualités"
 menu_press = "Presse"
-menu_archives = "Archives"
+menu_help = "Aide et financement"

@@ -18,8 +18,13 @@ $content = "
 
 					</div>
 				</div>
-				<div class=\"clear\"></div><br /><br />
+				<div class=\"clear\"></div><br />
 				<div class=\"container\">
+";
+
+if( count($domains) > 0 )
+{
+	$content .= "
 					<table>
 						<tr>
 							<th style=\"text-align: center; width: 40px;\">#</th>
@@ -28,10 +33,8 @@ $content = "
 							<th>{$lang['home']}</th>
 							<th style=\"width: 50px; text-align: center;\">{$lang['actions']}</th>
 						</tr>
-";
-
-if( count($domains) > 0 )
-{
+	";
+	
 	foreach($domains as $d)
 	{
 		$arecord = "";
@@ -64,11 +67,20 @@ if( count($domains) > 0 )
 				</tr>
 		";
 	}
+	$content .= "
+			</table>";
+}
+else
+{
+	$content .= "
+					<span style=\"font-size: 16px;\">{$lang['nodomain']}</span><br /><br />
+					<a class=\"button classic\" href=\"/doc/domains\" style=\"width: 140px;\">
+						<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['doc']}</span>
+					</a>";
+	
 }
 	
 $content .= "
-						</tbody>
-					</table>
 				</div>
 			</div>
 ";

@@ -16,7 +16,7 @@ $content .= "
 				<h1 class=\"dark\">{$lang['database']} {$database['name']}</h1>
 			</div>
 			<div class=\"right\" style=\"width: 400px;\">
-				<a class=\"button classic\" href=\"#\" onclick=\"$('#name').val('{$database['name']}'); $('#delete').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
+				<a class=\"button classic\" href=\"#\" onclick=\"$('#database').val('{$database['name']}'); $('#delete').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
 					<span style=\"display: block; padding-top: 3px;\">{$lang['delete']}</span>
 				</a>
 			</div>
@@ -66,8 +66,8 @@ $content .= "
 		<h3 class=\"center\">{$lang['delete']}</h3>
 		<p style=\"text-align: center;\">{$lang['delete_text']}</p>
 		<div class=\"form-small\">		
-			<form action=\"/panel/databases/del_action\" method=\"get\" class=\"center\">
-				<input id=\"name\" type=\"hidden\" value=\"\" name=\"name\" />
+			<form action=\"/panel/databases/del_action\" method=\"post\" class=\"center\">
+				<input id=\"database\" type=\"hidden\" value=\"\" name=\"database\" />
 				<fieldset autofocus>	
 					<input type=\"submit\" value=\"{$lang['delete_now']}\" />
 				</fieldset>

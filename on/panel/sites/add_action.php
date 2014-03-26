@@ -6,9 +6,17 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-api::send('self/site/add', array('site'=>$_POST['subdomain'], 'pass'=>$_POST['password']));
+try
+{
+	api::send('self/site/add', array('site'=>$_POST['subdomain'], 'pass'=>$_POST['password']));
+	unset($_SESSION['subdomain']);
+}
+catch( Exception $e )
+{
+	$_SESSION['MESSAGE']['TYPE'] = 'error';
+	$_SESSION['MESSAGE']['TEXT']= $lang['error'];	
+}
 
-unset($_SESSION['subdomain']);
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);

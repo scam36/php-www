@@ -25,23 +25,46 @@ $content = "
 		<div class=\"container\">
 ";
 
-$j = 1;
-foreach( $databases as $d )
+if( count($databases) > 0 )
+{
+	$j = 1;
+	foreach( $databases as $d )
+	{
+		$content .= "
+				<div class=\"database ".($j==1?"first":"")."\" onclick=\"window.location.href='/panel/databases/config?database={$d['name']}'; return false;\">
+					<img style=\"float: left; margin: 10px 15px 0 0;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-{$d['type']}.png\" />
+					<span class=\"name\" style=\"margin-top: 25px;\">{$d['name']}</span><br />
+					<span class=\"subname\">{$d['desc']}</span>
+				</div>
+		";
+		
+		$j++;
+		
+		if( $j == 5 )
+			$j = 1;
+	}
+	
+	$content .= "
+					<div class=\"clear\"></div><br />
+					<a class=\"button classic\" href=\"https://pma.olympe.in\" style=\"width: 140px; float: left;\">
+						<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/pma-white.png\" />
+						<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['pma']}</span>
+					</a>
+					<a class=\"button classic\" href=\"https://ppa.olympe.in\" style=\"width: 180px; float: left; margin-left: 20px;\">
+						<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/ppa-white.png\" />
+						<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['ppa']}</span>
+					</a>
+	";
+}
+else
 {
 	$content .= "
-			<div class=\"database ".($j==1?"first":"")."\" onclick=\"window.location.href='/panel/databases/config?database={$d['name']}'; return false;\">
-				<img style=\"float: left; margin: 10px 15px 0 0;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-{$d['type']}.png\" />
-				<span class=\"name\" style=\"margin-top: 25px;\">{$d['name']}</span><br />
-				<span class=\"subname\">{$d['desc']}</span>
-			</div>
-	";
+					<span style=\"font-size: 16px;\">{$lang['nodatabase']}</span><br /><br />
+					<a class=\"button classic\" href=\"/doc/databases\" style=\"width: 140px;\">
+						<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['doc']}</span>
+					</a>";
 	
-	$j++;
-	
-	if( $j == 5 )
-		$j = 1;
 }
-
 	$content .= "
 		</div>		
 	</div>
@@ -76,24 +99,6 @@ foreach( $databases as $d )
 		newFlexibleDialog('new', 550);
 	</script>
 ";
-
-	$content .= "
-		<div class=\"database\" style=\"width: 200px; height: 70px; float: left; padding-left: 100px;\">
-				<a href=\"https://pma.olympe.in\" target=\"_blank\" style=\"width: 200px; height: 70px; float: left;\">			
-				<img style=\"float: left; margin: 10px 15px 0 0;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/pma.png\" />
-				<span class=\"name\" style=\"margin-top: 25px;\">{$lang['pma']}</span><br />
-				</a>
-			</div> 
-	";
-
-	$content .= "
-		<div class=\"database\" style=\"width: 200px; height: 70px; float: left; \">
-				<img style=\"float: left; margin: 10px 15px 0 0;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/phppgadmin.png\" />
-				<span class=\"name\" style=\"margin-top: 25px;\">{$lang['pga']}</span><br />
-				<span style=\"color:#929292;\">{$lang['coming_soon']}</span>
-				</a>
-			</div> 
-	";	
 	
 	
 /* ========================== OUTPUT PAGE ========================== */

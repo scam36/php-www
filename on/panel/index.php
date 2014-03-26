@@ -102,11 +102,14 @@ else
 			
 		$i++;
 		
+		if( !$s['size'] )
+			$s['size'] = 0;
+			
 		$content .= "
 				<div class=\"site\" {$last} onclick=\"window.location.href='/panel/sites/config?id={$s['id']}'; return false;\">
 					<div class=\"normal\">
 						<span style=\"font-size: 16px; font-weight: bold; display: block; margin-bottom: 5px;\">{$s['hostname']}</span>
-						<span style=\"color: #38b700; font-size: 12px; display: block; margin-bottom: 20px;\">{$lang['disk']} {$s['size']} {$lang['mb']}</span></span>
+						<span style=\"color: #9a9a9a; font-size: 12px; display: block; margin-bottom: 20px;\">{$lang['disk']} {$s['size']} {$lang['mb']}</span></span>
 						<div class=\"thumbshot\">
 							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$s['hostname']}\" />
 						</div>

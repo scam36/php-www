@@ -1,4 +1,4 @@
 [EN]
 
 [FR]
-folder = "dossier de destination"
+error = "Le format du nom de domaine ou de dossier est incorrect."

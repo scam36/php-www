@@ -8,6 +8,9 @@ if( !defined('PROPER_START') )
 
 try
 {
+	if( strpos($_POST['subdomain'], 'olympe.in') !== false )
+		throw new Exception("Invalid");
+	
 	api::send('self/site/add', array('site'=>$_POST['subdomain'], 'pass'=>$_POST['password']));
 	unset($_SESSION['subdomain']);
 }

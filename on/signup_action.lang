@@ -7,7 +7,7 @@ content = "<p style='margin: 20px 0'>Thank your for your register! You have to c
 
 success = "Your request has been accepted.<br />You will receive an email with the confirmation link."
 error_mail = "An error occured, the email can not be sent.<br />Please try later."
-error_api = "The email address format is not correct.<br />Please fix it."
+error_api = "The email address format is invalid or this email is already used."
 
 [FR]
 
@@ -18,4 +18,4 @@ content = "<p style='margin: 20px 0'>Merci de votre inscription sur Olympe ! Vou
 
 success = "Votre requête a bien été acceptée.<br />Vous allez recevoir un email contenant le lien de confirmation."
 error_mail = "Une erreur est survenue, le mail ne peut être envoyé.<br />Merci de réessayer plus tard."
-error_api = "Le format de votre adresse email est incorrect.<br /> Merci de le corriger."
+error_api = "Le format de votre adresse email est incorrect ou cette adresse est déjà utilisée."

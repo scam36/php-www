@@ -47,11 +47,9 @@ if( count($databases) > 0 )
 	$content .= "
 					<div class=\"clear\"></div><br />
 					<a class=\"button classic\" href=\"https://pma.olympe.in\" style=\"width: 140px; float: left;\">
-						<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/pma-white.png\" />
 						<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['pma']}</span>
 					</a>
 					<a class=\"button classic\" href=\"https://ppa.olympe.in\" style=\"width: 180px; float: left; margin-left: 20px;\">
-						<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/ppa-white.png\" />
 						<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['ppa']}</span>
 					</a>
 	";

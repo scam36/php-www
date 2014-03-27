@@ -53,7 +53,7 @@ if( count($users) > 0 )
 					<td><span class=\"large\">{$u['size']}Mo</span></td>
 					<td style=\"width: 100px; text-align: center;\">
 						<a href=\"/panel/users/config?domain={$domain['hostname']}&id={$u['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
-						<a href=\"/panel/users/del_action?id={$u['id']}&domain={$domain['hostname']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/close.png\" alt=\"\" /></a>
+						<a href=\"#\" onclick=\"$('#user').val('{$u['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/close.png\" alt=\"\" /></a>
 					</td>
 				</tr>
 		";
@@ -91,8 +91,21 @@ if( count($users) > 0 )
 			</form>
 		</div>
 	</div>
+	<div id=\"delete\" class=\"floatingdialog\">
+		<h3 class=\"center\">{$lang['delete']}</h3>
+		<p style=\"text-align: center;\">{$lang['delete_text']}</p>
+		<div class=\"form-small\">		
+			<form action=\"/panel/users/del_action?domain={$domain['hostname']}\" method=\"post\" class=\"center\">
+				<input id=\"user\" type=\"hidden\" value=\"\" name=\"user\" />
+				<fieldset autofocus>	
+					<input type=\"submit\" value=\"{$lang['delete_now']}\" />
+				</fieldset>
+			</form>
+		</div>
+	</div>
 	<script>
 		newFlexibleDialog('new', 550);
+		newFlexibleDialog('delete', 550);
 	</script>	
 ";
 

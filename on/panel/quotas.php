@@ -37,6 +37,9 @@ $percent_sites = $sites['used']*100/$sites['max'];
 $percent_databases = $databases['used']*100/$databases['max'];
 $percent_mails = $mails['used']*100/$mails['max'];
 
+if( $percent_disk > 100 )
+	$percent_disk = 100;
+			
 if( $disk['used'] >= 1024 )
 	$disk['used'] = round($disk['used']/1024, 2) . " {$lang['gb']}";
 else

@@ -24,11 +24,10 @@ $content = "
 				</a>
 			</div>
 		</div>
-		<div class=\"clear\"></div><br /><br />
+		<div class=\"clear\"></div><br />
 		<div class=\"container\">
 			<div style=\"width: 350px; float: left;\">
 				<h3 class=\"colored\">{$lang['search']}</h3>
-				<br />
 				<form action=\"/admin/search_action\" method=\"post\">
 					<fieldset>
 						<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"name\" value=\"{$lang['name']}\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
@@ -49,10 +48,10 @@ $content = "
 			</div>
 			<div style=\"width: 700px; float: right;\">
 				<h3 class=\"colored\">{$lang['messages']}</h3>
-				<br />
 				<table>
 					<tr>
 						<th style=\"width: 40px; text-align: center;\">#</th>
+						<th>{$lang['type']}</th>
 						<th>{$lang['desc']}</th>
 						<th>{$lang['date']}</th>						
 					</tr>
@@ -63,6 +62,7 @@ foreach( $messages as $m )
 	$content .= "
 					<tr>
 						<td style=\"width: 40px; text-align: center;\"><img style=\"width: 30px; height: 30px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user_id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user_id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></td>
+						<td>".$lang[$m['type']]."</td>
 						<td><a href=\"/admin/message/detail?id={$m['id']}\">{$m['title']}</a></td>
 						<td>".date('Y-m-d H:i', $m['date'])."</td>
 					</tr>
@@ -76,7 +76,6 @@ $content .= "
 			<br />
 			<div style=\"width: 350px; float: left;\">
 				<h3 class=\"colored\">{$lang['overquota']}</h3>
-				<br />
 				<table>
 					<tr>
 						<th style=\"width: 40px; text-align: center;\">#</th>
@@ -91,7 +90,7 @@ foreach( $overquotas as $o )
 {
 	$content .= "
 					<tr>
-						<td style=\"width: 40px; text-align: center;\"><a href=\"/admin/users/detail?id={$u['id']}\"><img style=\"width: 30px; height: 30px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$o['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$o['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a></td>
+						<td style=\"width: 40px; text-align: center;\"><a href=\"/admin/users/detail?id={$o['id']}\"><img style=\"width: 30px; height: 30px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$o['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$o['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a></td>
 						<td><a href=\"/admin/users/detail?id={$o['id']}\">{$o['name']}</a></td>
 						<td>{$o['quotas']['used']}</td>
 						<td>{$o['quotas']['max']}</td>
@@ -108,7 +107,6 @@ $content .= "
 			</div>
 			<div style=\"width: 700px; float: right;\">
 				<h3 class=\"colored\">{$lang['last']}</h3>
-				<br />
 				<table>
 					<tr>
 						<th style=\"width: 40px; text-align: center;\">#</th>

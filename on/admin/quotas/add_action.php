@@ -6,11 +6,10 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-api::send('self/account/del', array('domain'=>$_GET['domain'],'id'=>$_POST['user']));
-
+api::send('quota/add', array('name'=>$_POST['name']));
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-		$template->redirect('/panel/users/list?domain=' . $_GET['domain']);
+	template::redirect('/admin/quota');
 
 ?>

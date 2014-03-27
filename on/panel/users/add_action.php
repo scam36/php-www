@@ -6,11 +6,19 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-api::send('self/account/add', array('account'=>$_POST['mail'], 'domain'=>$_POST['domain'], 'pass'=>$_POST['password'], 'firstname'=>$_POST['firstname'], 'lastname'=>$_POST['lastname']));
+try
+{
+	api::send('self/account/add', array('account'=>$_POST['mail'], 'domain'=>$_POST['domain'], 'pass'=>$_POST['password'], 'firstname'=>$_POST['firstname'], 'lastname'=>$_POST['lastname']));
+}
+catch( Exception $e )
+{
+	$_SESSION['MESSAGE']['TYPE'] = 'error';
+	$_SESSION['MESSAGE']['TEXT']= $lang['error'];	
+}
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	$template->redirect('/panel/users/list?domain=' . $_POST['domain']);
+	$template->redirect('/panel/domains');
 
 ?>

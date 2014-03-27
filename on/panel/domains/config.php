@@ -79,7 +79,7 @@ if( count($subdomains) > 0 )
 								<td>{$s['aRecord']}{$s['cNAMERecord']}</td>
 								<td style=\"width: 70px;\">
 									<a href=\"#\" onclick=\"$('#record').val('{$s['aRecord']}{$s['cNAMERecord']}'); $('#subdomainid').val('{$s['id']}'); $('#config').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"\" /></a>
-									<a href=\"/panel/domains/del_subdomain_action?domain={$domain['hostname']}&id={$s['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+									<a href=\"#\" onclick=\"$('#subdomain').val('{$s['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 								</td>
 							</tr>
 			";
@@ -127,9 +127,22 @@ $content .= "
 					</form>
 				</div>
 			</div>
+			<div id=\"delete\" class=\"floatingdialog\">
+				<h3 class=\"center\">{$lang['delete']}</h3>
+				<p style=\"text-align: center;\">{$lang['delete_text']}</p>
+				<div class=\"form-small\">		
+					<form action=\"/panel/domains/del_subdomain_action?domain={$domain['hostname']}\" method=\"post\" class=\"center\">
+						<input id=\"subdomain\" type=\"hidden\" value=\"\" name=\"subdomain\" />
+						<fieldset autofocus>	
+							<input type=\"submit\" value=\"{$lang['delete_now']}\" />
+						</fieldset>
+					</form>
+				</div>
+			</div>
 			<script>
 				newFlexibleDialog('new', 550);
 				newFlexibleDialog('config', 550);
+				newFlexibleDialog('delete', 550);
 			</script>
 ";
 

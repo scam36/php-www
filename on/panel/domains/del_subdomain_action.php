@@ -9,7 +9,7 @@ if( !defined('PROPER_START') )
 $domain = api::send('self/domain/list', array('domain'=>$_GET['domain']));
 $domain = $domain[0];
 
-api::send('self/subdomain/del', array('id'=>$_GET['id'], 'domain'=>$_GET['domain']));
+api::send('self/subdomain/del', array('id'=>$_POST['subdomain'], 'domain'=>$_GET['domain']));
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);

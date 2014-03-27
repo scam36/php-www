@@ -530,7 +530,7 @@ div.panel div.database span.subname {
 	color: #929292;
 }
 
-div.panel div.database span.expiration {
+div.panel div.database span.disk {
 	display: block;
 	position: absolute;
 	right: 5px;

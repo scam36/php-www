@@ -50,7 +50,7 @@ if( count($users) > 0 )
 					<td>{$u['mail']}</td>
 					<td>{$u['firstname']}</td>
 					<td>{$u['lastname']}</td>
-					<td><span class=\"large\">{$u['size']}Mo</span></td>
+					<td><span class=\"large\">{$u['size']} {$lang['mb']}</span></td>
 					<td style=\"width: 100px; text-align: center;\">
 						<a href=\"/panel/users/config?domain={$domain['hostname']}&id={$u['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
 						<a href=\"#\" onclick=\"$('#user').val('{$u['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/close.png\" alt=\"\" /></a>

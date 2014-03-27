@@ -50,7 +50,36 @@ if( security::hasGrant('SITE_SELECT') )
 							<td><a href=\"http://{$s['hostname']}\">{$s['hostname']}</a></td>
 							<td>{$s['size']} {$lang['mb']}</td>
 							<td style=\"width: 50px; text-align: center;\">
-								<a href=\"/admin/site/delete?id={$s['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+								<a href=\"/admin/sites/delete?id={$s['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+							</td>
+						</tr>";
+	}
+}
+
+$content .= "
+					</table>
+					<br /><br />
+					<h2 class=\"dark\">{$lang['databases']}</h2>
+					<table>
+						<tr>
+							<th>{$lang['database']}</th>
+							<th>{$lang['size']}</th>
+							<th style=\"width: 50px; text-align: center;\">{$lang['actions']}</th>
+						</tr>
+";
+		
+if( security::hasGrant('DATABASE_SELECT') )
+{
+	$databases = api::send('database/list', array('user'=>$_GET['id']));
+	
+	foreach( $databases as $d )
+	{		
+		$content .= "
+						<tr>
+							<td>{$d['name']}</td>
+							<td>{$d['size']} {$lang['mb']}</td>
+							<td style=\"width: 50px; text-align: center;\">
+								<a href=\"/admin/databases/delete?id={$d['name']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 							</td>
 						</tr>";
 	}
@@ -60,7 +89,6 @@ $content .= "
 					</table>
 					<br /><br />
 ";
-		
 
 if( security::hasGrant('TOKEN_SELECT') )
 {

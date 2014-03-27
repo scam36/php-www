@@ -33,8 +33,9 @@ if( count($databases) > 0 )
 		$content .= "
 				<div class=\"database ".($j==1?"first":"")."\" onclick=\"window.location.href='/panel/databases/config?database={$d['name']}'; return false;\">
 					<img style=\"float: left; margin: 10px 15px 0 0;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-{$d['type']}.png\" />
-					<span class=\"name\" style=\"margin-top: 25px;\">{$d['name']}</span><br />
+					<span class=\"name\" style=\"margin-top: 10px;\">{$d['name']}</span><br />
 					<span class=\"subname\">{$d['desc']}</span>
+					<span class=\"disk\">{$lang['disk']} {$d['size']} {$lang['mb']}</span></span>
 				</div>
 		";
 		

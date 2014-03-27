@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$users = api::send('user/list', array('from'=>strtotime('-1 hour'), 'order'=>'user_date', 'order_type'=>'DESC'));
+$users = api::send('user/list', array('limit' => 10, 'order'=>'user_date', 'order_type'=>'DESC'));
 $overquotas = api::send('quota/nearlimit', array('quota'=>'BYTES'));
 //$messages = api::send('message/list', array('unanswered'=>1));
 $messages = array();

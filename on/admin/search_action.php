@@ -44,7 +44,7 @@ if( $_POST['name'] != $lang['name'] )
 						<td>".date('Y-m-d', $u['date'])."</td>
 						<td>{$u['ip']}</td>
 						<td style=\"width: 50px; text-align: center;\">
-							<a href=\"/admin/user/detail?id={$u['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
+							<a href=\"/admin/users/detail?id={$u['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
 						</td>
 					</tr>
 	";
@@ -102,7 +102,7 @@ else if( $_POST['email'] != $lang['email'] )
 						<td>".date('Y-m-d', $u['date'])."</td>
 						<td>{$u['ip']}</td>
 						<td style=\"width: 50px; text-align: center;\">
-							<a href=\"/admin/user/detail?id={$u['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
+							<a href=\"/admin/users/detail?id={$u['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
 						</td>
 					</tr>
 	";

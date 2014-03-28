@@ -51,7 +51,7 @@ $content = "
 				<div class=\"clear\"></div>
 				<br />
 
-				<img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/gaetan.png\" />
+				<a href=\"https://twitter.com/gparisse\"><img class=\"photo\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/5.png\" /></a>
 				<h3 class=\"colored\">Ga&euml;tan Parisse</h3>
 				<p class=\"large\">{$lang['gaetan']}</p>
 				<div class=\"clear\"></div>

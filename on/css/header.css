@@ -213,24 +213,11 @@ div.menu-fixed  div.container ul  li ul li a {
 }
 
 li.snew {
-	background-image: linear-gradient(rgb(255, 255, 255), rgb(150, 150, 150) 50%, rgb(150, 150, 150) 50%, rgb(255, 255, 255));
+	background-image: linear-gradient(rgb(222, 87, 17), rgb(255, 255, 255) 50%, rgb(255, 255, 255) 50%, rgb(222, 87, 17));
 	background-position: 100% 0%;
 	background-repeat: no-repeat;
 	background-size: 1px 100%;
 	margin-right: 20px;	
-}
-
-#credits {
-	display: block;
-	height: 32px;
-	margin: 0;
-	padding: 17px 20px 0 55px;
-	font-weight: 400;
-	font-size: 15px;
-	color: #919191;
-	background-image: url('../images/icons/suitcase.png');
-	background-repeat: no-repeat;
-	background-position: 8% center;
 }
 
 #scategory ul {

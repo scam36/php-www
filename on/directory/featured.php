@@ -28,7 +28,7 @@ foreach( $featured as $f )
 							<span class=\"name\">{$f['title']}</span>
 							<span class=\"editor\">{$f['user']}</span>
 							<br />
-							<div class=\"star\" data-score=\"{$f['rating']['rating']}}\" data-id=\"{$f['id']}\"></div>
+							<div class=\"star\" data-score=\"{$f['rating']['rating']}\" data-id=\"{$f['id']}\"></div>
 						</div>
 					</div>
 				</a>
@@ -54,7 +54,7 @@ foreach( $selection as $s )
 							<span class=\"name\">{$s['title']}</span>
 							<span class=\"editor\">{$s['user']}</span>
 							<br />
-							<div class=\"star\" data-score=\"{$s['score']}\" data-id=\"{$s['id']}\"></div>
+							<div class=\"star\" data-score=\"{$s['rating']['rating']}\" data-id=\"{$s['id']}\"></div>
 						</div>
 					</div>
 				</a>

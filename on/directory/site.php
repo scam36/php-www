@@ -23,7 +23,7 @@ $content .= "
 				<div class=\"container\">
 					<div class=\"left\">
 						<div class=\"logo\">
-						<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$site['url']}\" />
+							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$site['url']}\" />
 						</div>
 						<div style=\"float: left; width: 400px;\">
 							<h1 class=\"dark\">{$site['title']}</h1>

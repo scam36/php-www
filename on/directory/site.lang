@@ -15,6 +15,7 @@ content_help = "Expliquez ici les détails de l'abus"
 submit = "Envoyer"
 rating = "Scores"
 total = "votes au total"
+description = "Description du site"
 
 CAT_1 = "Actualité"
 CAT_2 = "Art"

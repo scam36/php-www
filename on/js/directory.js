@@ -25,23 +25,23 @@ function loadDirectoryPart(part, data)
 	switch( part )
 	{
 		case 'featured':
-			$("#link-shome").addClass('active');
+			$("#shome").addClass('active');
 			$("#directorycontainer").load("/directory/" + part);
 		break;
 		case 'top':
-			$("#link-stop").addClass('active');
+			$("#stop").addClass('active');
 			$("#directorycontainer").load("/directory/" + part);
 		break;
 		case 'last':
-			$("#link-snew").addClass('active');
+			$("#snew").addClass('active');
 			$("#directorycontainer").load("/directory/" + part);
 		break;
 		case 'category':
-			$("#link-scategory").addClass('active');
+			$("#scategory").addClass('active');
 			$("#directorycontainer").load("/directory/" + part + "?id=" + data);
 		break;
 		case 'search':
-			$("#link-shome").addClass('active');
+			$("#shome").addClass('active');
 			$("#directorycontainer").load("/directory/" + part + "?keyword=" + data);
 		break;
 	}
@@ -49,8 +49,8 @@ function loadDirectoryPart(part, data)
 
 function disableAllDirectoryMenu()
 {
-	$("#link-shome").removeClass('active');
-	$("#link-stop").removeClass('active');
-	$("#link-snew").removeClass('active');
-	$("#link-scategory").removeClass('active');
+	$("#shome").removeClass('active');
+	$("#stop").removeClass('active');
+	$("#snew").removeClass('active');
+	$("#scategory").removeClass('active');
 }

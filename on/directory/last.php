@@ -27,7 +27,7 @@ foreach( $sites as $s )
 							<span class=\"name\">{$s['title']}</span>
 							<span class=\"editor\">{$s['user']}</span>
 							<br />
-							<div class=\"star\" data-score=\"{$s['rating']['rating']}}\" data-id=\"{$s['id']}\"></div>
+							<div class=\"star\" data-score=\"{$s['rating']['rating']}\" data-id=\"{$s['id']}\"></div>
 						</div>
 					</div>
 				</a>

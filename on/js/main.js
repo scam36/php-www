@@ -14,7 +14,7 @@ $(function()
 	{
 		numberMax: 5,
 		number: 500,
-		path: '/busit/images/icons',
+		path: '/on/images/icons',
 		score: function() {
 			return $(this).attr('data-score');
 		},
@@ -47,6 +47,30 @@ $(function()
     });
 	
 	$(".ui-dialog-titlebar").hide();
+	
+	// CATEGORIES MENU //
+	$('.scategory').hover(
+		function () {
+			$('ul', this).fadeIn(200);
+		}, 
+		function () {
+			$('ul', this).fadeOut(200);			
+		}
+	);
+	
+	// FIXED STORE MENU //
+	var num = 140;
+	$(window).bind('scroll', function ()
+	{
+		if( $(window).scrollTop() > num )
+		{
+			$('.menu-fixed').addClass('fixed');
+		}
+		else
+		{
+			$('.menu-fixed').removeClass('fixed');
+		}
+	});
 });
 
 function success()

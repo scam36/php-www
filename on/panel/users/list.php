@@ -61,6 +61,10 @@ if( count($users) > 0 )
 }
 	$content .= "
 			</table>
+			<br />
+			<a class=\"button classic\" href=\"https://mail.olympe.in\" style=\"width: 140px; float: left;\">
+				<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['webmail']}</span>
+			</a>
 		</div>		
 	</div>
 	<div id=\"new\" class=\"floatingdialog\">

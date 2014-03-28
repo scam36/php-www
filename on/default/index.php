@@ -82,6 +82,8 @@ $content .= "
 				</div>
 			</div>
 			<div class=\"separator light\"></div>
+			<div id=\"stats\" style=\"text-align: center;\"></div>
+			<div class=\"separator light\"></div>
 			<div class=\"content\">
 				<div class=\"left\">
 					<h3>{$lang['app']}</h3>
@@ -116,12 +118,14 @@ $content .= "
 					<h3>{$lang['manage']}</h3>
 					<p>{$lang['manage_text']}</p>
 				</div>
-				<div class=\"clear\"><br /><br /></div>
-				<div class=\"separator light\"></div>			
-				<div id=\"stats\" style=\"text-align: center;\">
-					
+				<div class=\"clear\"><br /></div>
+				<div class=\"separator light\"></div>
+				<div class=\"customers\">
+					<blockquote>
+						<p>{$lang['hosted']}</p>
+						<p style=\"font-size: 18px; display: block; margin-top: 10px;\"><a href=\"/directory\">{$lang['directory']}</a></p>
+					</blockquote>
 				</div>
-				<div class=\"clear\"></div><br />
 				<div class=\"separator light\"></div>
 				<div style=\"text-align: center;\">
 					<a class=\"button classic\" href=\"#\" onclick=\"$('#signup').dialog('open'); return false;\" style=\"height: 22px; width: 200px; margin: 0 auto;\">

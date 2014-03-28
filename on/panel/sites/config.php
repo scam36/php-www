@@ -68,12 +68,12 @@ for( $i = 1; $i <= 12; $i++ )
 $content .= "
 	<div class=\"panel\">
 		<div class=\"top\">
-			<div class=\"left\" style=\"width: 500px;\">
+			<div class=\"left\" style=\"width: 600px;\">
 				<img style=\"width: 100px; border: 1px solid #cecece; padding: 5px; border-radius: 3px; text-align: right; float: left; margin-right: 20px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$site['hostname']}\" />
 				<span style=\"font-size: 38px; display: block; margin-bottom: 15px;\">{$site['hostname']}</span>
 				<span style=\"font-size: 18px; color: #9a9a9a; display: block; margin-bottom: 10px;\">{$lang['disk']} {$site['size']} {$lang['mb']}</span>
 			</div>
-			<div class=\"right\" style=\"width: 600px; float: right; text-align: right;\">
+			<div class=\"right\" style=\"width: 400px; float: right; text-align: right;\">
 				<a class=\"action pass big\" href=\"#\" onclick=\"$('#changepassword').dialog('open'); return false;\">
 					{$lang['password']}
 				</a>

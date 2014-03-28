@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$lang['TITLE'] = $lang['olympe'] . $site['title'];
+$lang['TITLE'] = $lang['olympe'] . $lang['title'];
 
 $content .= "
 		<div id=\"directorycontainer\">

@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 	
-if( isset($_POST['antispam']) && $_POST['antispam'] == $_SESSION['ANTISPAM'] )
+if( isset($_POST['antispam']) && $_POST['antispam'] == $_SESSION['ANTISPAM'] && $_POST['conditions'] == 1 )
 {
 	try
 	{

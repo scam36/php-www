@@ -1,0 +1,35 @@
+[EN]
+
+
+[FR]
+title = "Olympe en action"
+conferences = "Conférences"
+conferences_text = "L'association Olympe développe progressivement ses travaux de recherche, à la fois dans le domaine des nouvelles technologies mais également en science sociale appliquée aux nouveaux modes de communication. Certains de nos membres ont la 
+possibilité d'intervenir lors de salons ou dans le cadre de séminaires/débats, sur les thématiques suivantes :"
+conferences_text2 = "
+<span style='font-weight: bold;'>Généraliste</span>
+<br />
+<ul class='styled'>
+	<li>L'hébergement de sites web (enjeux, contrôle des données, liberté...)</li>
+	<li>La fracture numérique (disparité, accessibilité, infrastructure...)</li>
+	<li>Les réseaux sociaux (notion de communauté, partage...)</li>
+</ul><br />
+<span style='font-weight: bold;'>Technique</span>
+<br />
+<ul class='styled'>
+	<li>Sécurité de l’hébergement de données</li>
+	<li>Infrastructures « cloud » Open Source</li>
+	<li>Le stockage dans les architectures de masse</li>
+</ul>"
+formations = "Formations"
+formations_text = "Fort de son expérience dans le domaine des technologies de l’information, Olympe propose des formations à destination des associations et des organisations à but non lucratif. 
+Ces formations sont assurées par des professionnels reconnus et couvrent les domaines suivants :"
+formations_text2 = "
+<ul class='styled'>
+	<li>Suites bureautiques et rédactionnelles</li>
+	<li>Création de sites et outils de publication</li>
+	<li>Community management et utilisation des réseaux sociaux</li>
+	<li>Infrastructures systèmes, réseaux et télécoms</li>
+	<li>Sécurité informatique</li>
+</ul>"
+contact = "Contactez-nous"

@@ -29,6 +29,7 @@ signup_now = "Register now"
 help = "A question? Do not hesitate to <a href='/about/contact'>contact us</a>."
 panel = "Panel"
 logged = "Login as"
+conditions = "I agree to the <a href='/on/documents/Olympe-CGS-FR.pdf'>Terms of Use</a>."
 
 [FR]
 title = "Solidarité et innovation"
@@ -63,3 +64,4 @@ signup_now = "S'inscrire maintenant"
 help = "Une question ? N'hésitez pas à nous <a href='/about/contact'>contacter</a>."
 panel = "Panel"
 logged = "Identifié en tant que"
+conditions = "J'accepte les <a href='/on/documents/Olympe-CGS-FR.pdf'>conditions d'utilisation</a>."

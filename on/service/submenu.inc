@@ -8,7 +8,7 @@ $menu = array(
 	array('text'=>"menu_hosting", 'default'=>true, 'link'=>"/service/hosting"),
 	array('text'=>"menu_offer", 'link'=>"/service/offer"),
 	array('text'=>"menu_infrastructure", 'link'=>"/service/infrastructure"),
-	array('text'=>"menu_tos", 'link'=>"/service/tos")
+	array('text'=>"menu_tos", 'link'=>"/on/documents/Olympe-CGS-FR.pdf")
 );
 
 return $menu;

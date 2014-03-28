@@ -37,14 +37,14 @@ $content = "
 			<br /><br /><br />
 			<div style=\"margin: 0 auto; width: 1100px;\">
 				<div style=\"float: left;\">
-					<div class=\"fillgraph\">
-						<div class=\"fill\" style=\"width: {$up30}%;\"></div>
+					<div class=\"filluptimeout\">
+						<div class=\"filluptime\" style=\"width: {$up30}%;\"></div>
 					</div>
 					<span style=\"color: #ffffff; text-align: center; display: block; margin: 0 auto; margin-top: 5px; font-size: 14px;\">{$lang['30days']} <span style=\"font-weight: bold;\">{$up30}%</span></span>
 				</div>
 				<div style=\"float: right;\">
-					<div class=\"fillgraph\">
-						<div class=\"fill\" style=\"width: {$up365}%;\"></div>
+					<div class=\"filluptimeout\">
+						<div class=\"filluptime\" style=\"width: {$up365}%;\"></div>
 					</div>
 					<span style=\"color: #ffffff; text-align: center; display: block; margin: 0 auto; margin-top: 5px; font-size: 14px;\">{$lang['365days']} <span style=\"font-weight: bold;\">{$up365}%</span></span>
 				</div>

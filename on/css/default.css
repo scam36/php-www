@@ -609,14 +609,14 @@ blockquote p {
 	background-repeat: no-repeat;
 }
 
-div.fillgraph {
+div.filluptimeout {
 	background-color: #3c4e5a;
 	height: 4px;
 	margin: 3px auto;
 	width: 400px;
 }
 
-div.fill {
+div.filluptime {
 	background-color: #ffffff;
 	height: 100%;
 }
@@ -674,4 +674,16 @@ div.fillgraph small {
 span.quota {
 	color: #969696;
 	font-size: 15px;
+}
+
+ul.styled {
+	list-style-type: square;
+	margin-left: 20px;
+	font-size: 14px;
+}
+
+ul.styled li {
+	margin: 5px 0 5px 0;
+	padding: 0 0 0 5px;
+	line-height: 20px;
 }

@@ -6,29 +6,28 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$connectors = api::send('busit/connector/list', array('start'=>0, 'limit'=>24), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+$sites = api::send('site/list', array('directory'=>1, 'ordered'=>'site_date', 'start'=>0, 'limit'=>24), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 
 $content = "
-		<div class=\"store\">
+		<div class=\"directory\">
 			<div class=\"container\">
 				<h1 class=\"dark\">{$lang['last']}</h1>
 				<br />
 ";
 
-foreach( $connectors as $c )
+foreach( $sites as $s )
 {
 	$content .= "
-				<a href=\"/store/connector?id={$c['connector_id']}\">
-					<div class=\"connector\" >
-						<div class=\"image\" style=\"background: url('/{$GLOBALS['CONFIG']['SITE']}/images/connectors/{$c['connector_id']}_100.png') no-repeat center center;\">
-							<div class=\"hover\"></div>
+				<a href=\"/directory/site?id={$s['id']}\">
+					<div class=\"site\" >
+						<div class=\"thumbshot\">
+							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$s['url']}\" />
 						</div>
 						<div class=\"text\">
-							<span class=\"name\">{$c['connector_name']}</span>
-							<span class=\"editor\">{$c['user_firstname']} {$c['user_lastname']}</span>
+							<span class=\"name\">{$s['title']}</span>
+							<span class=\"editor\">{$s['user']}</span>
 							<br />
-							<span class=\"users\"><span class=\"number\">{$c['users']['count']}</span> {$lang['users']}</span>
-							<span class=\"price\">".($c['connector_use_price']==0?"{$lang['free']}":"{$c['connector_use_price']} BIC")."</span>
+							<div class=\"star\" data-score=\"{$s['rating']['rating']}}\" data-id=\"{$s['id']}\"></div>
 						</div>
 					</div>
 				</a>
@@ -38,7 +37,22 @@ foreach( $connectors as $c )
 $content .= "
 				<div class=\"clear\"></div>
 			</div>
-		</div>";
+		</div>
+		<script>
+			$('.star').raty(
+			{
+				numberMax: 5,
+				number: 500,
+				readOnly: true,
+				path: '/on/images/icons',
+				score: function() {
+					return $(this).attr('data-score');
+				},
+				click: function() {
+					rate($(this).attr('data-id'), $('.star').raty('score'));
+				}
+			});
+		</script>";
 
 
 /* ========================== OUTPUT PAGE ========================== */

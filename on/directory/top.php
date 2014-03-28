@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$connectors = api::send('site/list', array('directory'=>1, 'ordered'=>'site_score', 'start'=>0, 'limit'=>24), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+$sites = api::send('site/list', array('directory'=>1, 'ordered'=>'site_score', 'start'=>0, 'limit'=>24), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 
 $content = "
 		<div class=\"directory\">
@@ -15,19 +15,19 @@ $content = "
 				<br />
 ";
 
-foreach( $connectors as $c )
+foreach( $sites as $s )
 {
 	$content .= "
-				<a href=\"/directory/site?id={$c['id']}\">
+				<a href=\"/directory/site?id={$s['id']}\">
 					<div class=\"site\" >
 						<div class=\"thumbshot\">
-							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$c['url']}\" />
+							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$s['url']}\" />
 						</div>
 						<div class=\"text\">
-							<span class=\"name\">{$c['title']}</span>
-							<span class=\"editor\">{$c['user']}</span>
+							<span class=\"name\">{$s['title']}</span>
+							<span class=\"editor\">{$s['user']}</span>
 							<br />
-							<div class=\"star\" data-score=\"{$c['rating']['rating']}}\" data-id=\"{$c['id']}\"></div>
+							<div class=\"star\" data-score=\"{$s['rating']['rating']}}\" data-id=\"{$s['id']}\"></div>
 						</div>
 					</div>
 				</a>
@@ -37,7 +37,22 @@ foreach( $connectors as $c )
 $content .= "
 				<div class=\"clear\"></div>
 			</div>
-		</div>";
+		</div>
+		<script>
+			$('.star').raty(
+			{
+				numberMax: 5,
+				number: 500,
+				readOnly: true,
+				path: '/on/images/icons',
+				score: function() {
+					return $(this).attr('data-score');
+				},
+				click: function() {
+					rate($(this).attr('data-id'), $('.star').raty('score'));
+				}
+			});
+		</script>";
 
 /* ========================== OUTPUT PAGE ========================== */
 echo $content;

@@ -177,7 +177,7 @@ div.menu-fixed  div.container ul  li.sub {
 }
 
 div.menu-fixed  div.container ul  li.sub:hover {
-	background-color: #f2f2f2;
+	background-color: #eb782b;
 }
 
 div.menu-fixed  div.container ul  li ul {
@@ -200,10 +200,16 @@ div.menu-fixed  div.container ul  li ul li {
 	height: 30px;
 }
 
+div.menu-fixed  div.container ul  li ul li:hover {
+	text-decoration: none;
+	background-color: #f2f2f2;
+}
+
 div.menu-fixed  div.container ul  li ul li a {
 	font-size: 12px;
 	padding: 8px;
 	margin: 0;
+	color: #616161;
 }
 
 li.snew {

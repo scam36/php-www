@@ -8,7 +8,6 @@ $sub = array();
 for( $i = 1; $i <= 20; $i++ )
 {
 	$sites = api::send('site/list', array('directory'=>1, 'category'=>$i, 'count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
-	$sites = $sites[0];
 	$sub[] = array('text'=> $GLOBALS['lang']['CAT_' . $i] . " (<span style='color: #ff8827;'>{$sites['count']}</span>)", 'link'=>"#", 'onclick'=>"loadDirectoryPart('category', {$i}); return false;");
 }
 

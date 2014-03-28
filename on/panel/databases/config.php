@@ -50,8 +50,8 @@ $content .= "
 					</fieldset>
 					<fieldset>
 						<select disabled name=\"\" style=\"width: 415px;\">
-							<option value=\"\">MySQL</option>
-							<option value=\"\">PostgreSQL</option>
+							<option value=\"\" ".($database['type']=='mysql'?"selected":"")." >MySQL</option>
+							<option value=\"\" ".($database['type']=='pgsql'?"selected":"")." >PostgreSQL</option>
 						</select>
 						<span class=\"help-block\">{$lang['type_help']}</span>
 					</fieldset>

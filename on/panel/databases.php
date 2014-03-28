@@ -83,7 +83,7 @@ else
 				<fieldset>
 					<select name=\"type\">
 						<option value=\"mysql\">MySQL</option>
-						<option value=\"postgresql\" disabled>PostgreSQL</option>
+						<option value=\"pgsql\">PostgreSQL</option>
 						<option value=\"mongodb\" disabled>MongoDB </option>
 					</select>
 					<span class=\"help-block\">{$lang['type_help']}</span>

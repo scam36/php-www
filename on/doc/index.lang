@@ -1,0 +1,31 @@
+[EN]
+
+
+[FR]
+title = "Centre d'aide"
+intro = "Débuter sur Olympe"
+info = "Informations utiles"
+
+top = "Question très fréquentes"
+first = "Publication d'un premier site"
+first_text = "Créer un site, transférer des données et comprendre le fonctionnement de la plateforme."
+domains = "Sites, domaines et comptes mails"
+domains_text = "Gestion complète des DNS, des sous-domaines et des emails (comptes POP/IMAP, redirections...)."
+databases = "Bases de données"
+databases_text = "Vous pouvez créer des bases de données MySQL, PostgreSQL ou MongoDB."
+services = "Services associés"
+services_text = "Nous proposons de nombreux outils complémentaires permettant d'enrichir votre expérience."
+developers = "Développeurs"
+developers_text = "Nous mettons à disposition des développeurs une API et des outils pour la gestion de l'hébergement."
+community = "Communauté"
+community_text = "Accès à la communauté pour obtenir de l'aide et partager ses connaissances."
+question_1 = "Comment transférer les données de mon site ?"
+question_2 = "Quelles sont les adresses des serveurs DNS ?"
+question_3 = "Comment choisir le dossier d'un nom de domaine ?"
+question_4 = "Comment afficher les erreurs PHP ?"
+question_5 = "Quelles sont les accès à ma base de données ?"
+question_6 = "Comment administrer mes bases de données ?"
+question_7 = "Où sont les statistiques de mon site ?"
+question_8 = "Pourquoi la capture d'écran du panel n'est pas à jour ?"
+question_9 = "Comment Olympe est-il financé ?"
+question_10 = "En quoi Olympe est-il Open Source ?"

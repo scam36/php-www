@@ -1,0 +1,17 @@
+[EN]
+
+[FR]
+title = "Paramètres de la base de données"
+database = "Base de données"
+change_pass = "Modifier le mot de passe"
+password = "Mot de passe"
+password2 = "Confirmation"
+update = "Mettre à jour"
+change_info = "Modifier les informations"
+description = "Description"
+description_help = "Description de cette base de données"
+type_help = "Type de base de données"
+
+delete = "Supprimer la base"
+delete_text = "Êtes-vous sûr de vouloir supprimer cette base de données ?"
+delete_now = "Supprimer"

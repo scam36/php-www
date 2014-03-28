@@ -1,0 +1,14 @@
+[EN]
+
+
+[FR]
+title = "Olympe pour les développeurs"
+api = "API de management"
+api_text = "Dans notre démarche d'ouverture, nous avons développé une <a href='/developers/api'>API REST</a> (réponses en JSON, XML ou HTML). Cette API permet de gérer intégralement les comptes Olympe, 
+de créer des bases de données, des sites, des noms de domaine... <br /><br />Vous pouvez ainsi automatiser certaines tâches de créations ou d'informations (comme par exemple afficher les quotas en temps réel). 
+N'hésitez pas à poser vos questions sur la <a href='https://community.olympe.in'>communauté</a> pour en savoir plus sur le fonctionnement de l'API."
+
+sources = "Outils, panel et codes sources"
+sources_text = "Olympe est une association à but non lucratif investie dans le monde de l'Open Source. Les <a href='/developers/tools'>outils</a> que nous avons développés (modules PHP, API, scripts...) 
+sont ouverts et librement accessibles. Vous pouvez par ailleurs contribuer à leur amélioration.<br /><br />Mais ce n'est pas tout, le présent site Internet, et notamment le panel Olympe, sont également publiés sur notre 
+<a href='https://github.com/OlympeNetwork'>Github</a> afin de permettre à chacun d'entre vous de l'améliorer si vous le désirez et de développer les fonctionnalités dont vous avez besoin."

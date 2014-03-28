@@ -1,0 +1,18 @@
+[EN]
+
+
+[FR]
+title = "Premiers pas"
+back = "Retour"
+intro = "Vous venez de terminer votre inscription sur Olympe ? Suivez le guide...<br /><br />
+Pour rappel, votre compte Olympe vous permet d'accéder à un service proposant d'héberger, de base, un site internet et des documents dans le cloud (en savoir plus sur les <a href='/doc/quotas'>quotas et 
+limitations</a>). Ce petit guide à pour but de vous donner toutes les informations essentielles pour bien commencer."
+panel = "Votre panel de gestion"
+panel_text = "Vous êtes maintenant connecté sur votre <a href='/panel'>panel de gestion</a> dont l'accueil ressemble à la capture ci-dessous."
+site = "Création du premier site"
+site_text = "Pour créer votre site, vous devez vous trouver sur l'accueil de votre panel, et cliquer sur le <i>plus</i> à gauche."
+site_text2 = "Une fois le site créé, vous pouvez vous rendre sur l'aperçu afin d'obtenir les détails des accès pour les mises à jour."
+publish = "Publication des données"
+publish_text = "Pour vous connecter à notre plateforme et transférer vos données, vous avez de nombreuses possibilités à votre disposition. Nous verrons ici la méthode classique (SFTP), avec le logiciel WinSCP."
+publish_text2 = "La liste des dossiers apparaît, vous pouvez uploader vos fichiers."
+end = "Vous pouvez accéder à vos pages !"

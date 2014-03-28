@@ -1,0 +1,56 @@
+[EN]
+
+title = "About Olympe"
+
+intro = "Who are we?"
+intro_text = "<span style='font-weight: bold;'>Olympe</span> is a non-profit organization whose main purpose is to improve <span style='font-weight: bold;'>accessibility to Information and communications technology</span>. 
+Olympe is reducing the cost of content publication by providing a <a href='/service/hosting'>quality free web hosting service</a>.
+<br /><br />
+Nous menons à la fois des projets (services, plateformes, développements innovants...) et des actions (formations, déploiement, aide...). Nous désirons fortement développer nos activités de terrain et 
+sommes à l'écoute des besoins à la fois individuels et collectifs. N'hésitez pas à <a href='/about/contact'>nous contacter</a> si vous pensez que nous pouvons vous être utile dans notre domaine de 
+compétence ou si vous avez des propositions de travaux."
+
+data = "Protection des données"
+data_text = "Les données recueillies sur notre site ne peuvent parvenir que de l'enregistrement volontaire de vos données à caractère personnel, p.ex. en souscrivant à nos services, 
+listes de diffusions, forums, en utilisant le formulaire de contact ou les autres systèmes automatisés de traitement des données.
+Elles ne sont cédées à aucune société commerciale ou autre organisation. Pour cela, le site Olympe Network fait l'objet des déclarations à la CNIL numéros <span style='font-weight:bold;'>1215047</span> et 
+<span style='font-weight:bold;'>1237057</span>."
+
+follow = "Follow us"
+news = "News"
+behind = "Olympe history's"
+behind_text = "The Olympe organization was fouded in 2007. Its services are developed and maintened by a <a href='/about/team'>team</a> of volunteers."
+legal = "Legal information"
+legal_text = "<i>Organization number (France)</i>: 20070028<br />
+<i>President</i>: Samuel Hassine<br />
+<i>Secretary</i>: Thomas Brugmans<br />
+<i>Treasurer</i>: Yann Autissier"
+
+[FR]
+
+title = "A propos d'Olympe"
+
+intro = "Qui sommes-nous ?"
+intro_text = "<span style='font-weight: bold;'>Olympe</span> est un organisme à but non lucratif dont le principal objectif est d'oeuvrer pour une meilleure <span style='font-weight: bold;'>accessibilité aux nouvelles 
+technologies de l'information</span>. Olympe réduit notamment le coût de la publication sur Internet grâce à la mise en place d'un <a href='/service/hosting'>service d'hébergement 
+gratuit de qualité</a>.
+<br /><br />
+Nous menons à la fois des projets (services, plateformes, développements innovants...) et des actions (formations, déploiement, aide...). Nous désirons fortement développer nos activités de terrain et 
+sommes à l'écoute des besoins à la fois individuels et collectifs. N'hésitez pas à <a href='/about/contact'>nous contacter</a> si vous pensez que nous pouvons vous être utile dans notre domaine de 
+compétence ou si vous avez des propositions de travaux."
+
+data = "Protection des données"
+data_text = "Les données recueillies sur notre site ne peuvent parvenir que de l'enregistrement volontaire de vos données à caractère personnel, p.ex. en souscrivant à nos services, 
+listes de diffusions, forums, en utilisant le formulaire de contact ou les autres systèmes automatisés de traitement des données.
+Elles ne sont cédées à aucune société commerciale ou autre organisation. Pour cela, le site Olympe Network fait l'objet des déclarations à la CNIL numéros <span style='font-weight:bold;'>1215047</span> et 
+<span style='font-weight:bold;'>1237057</span>."
+
+follow = "Suivez nous"
+news = "Actualité"
+behind = "A l'origine d'Olympe"
+behind_text = "L'association Olympe a vu le jour en 2007. Ses services sont développés et maintenus par une <a href='/about/team'>équipe</a> de bénévoles."
+legal = "Informations légales"
+legal_text = "<i>Numéro de l'association</i> : 20070028<br />
+<i>Président</i> : Samuel Hassine<br />
+<i>Secrétaire</i> : Thomas Brugmans<br />
+<i>Trésorier</i> : Yann Autissier"

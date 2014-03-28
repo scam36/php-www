@@ -1,0 +1,14 @@
+[EN]
+
+[FR]
+title = "Comptes mails"
+domain = "Domaine"
+arecord = "Enregistrement A"
+home = "Dossier"
+users = "Comptes mails"
+groups = "Groupes"
+user = "comptes"
+group = "groupes"
+actions = "Actions"
+nodomain = "Vous n'avez actuellement aucun nom de domaine."
+doc = "Documentation"

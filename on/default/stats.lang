@@ -1,0 +1,11 @@
+[EN]
+users = "users"
+databases = "databases and"
+sites = "websites"
+domains = "domains."
+
+[FR]
+users = "utilisateurs"
+databases = "bases de données et"
+sites = "sites Internet"
+domains = "noms de domaine."

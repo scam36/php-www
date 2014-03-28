@@ -1,0 +1,21 @@
+[EN]
+
+
+[FR]
+title = "Olympe Admin Dashboard"
+search = "Rechercher un utilisateur"
+name = "Utilisateur"
+email = "Adresse email"
+site = "Nom du site"
+domain = "Nom de domaine"
+go = "Rechercher"
+username = "Utilisateur"
+last = "10 dernières inscriptions"
+date = "Date"
+overquota = "Overquota"
+disk = "Utilisé"
+max = "Max"
+messages = "Messages non répondus"
+add = "Créer un utilisateur"
+desc = "Sujet"
+type = "Type"

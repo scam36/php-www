@@ -1,0 +1,20 @@
+[EN]
+
+[FR]
+title = "Blog de l'équipe"
+
+rss = "S'abonner"
+follow = "Suivre"
+read = "Lire la suite"
+by = "par"
+DATEFORMAT = "d F Y"
+January = "janvier"
+February = "février"
+March = "mars"
+April = "avril"
+December = "décembre"
+
+author_1 = "Yann Autissier"
+author_2 = "Bruno Million"
+author_3 = "Samuel Hassine"
+author_4 = "Simon Uyttendaele"

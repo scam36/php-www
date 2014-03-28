@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 [submodule "_LIB"]
 	path = _LIB
 	url = https://github.com/anotherservice/php-libwww.git
+=======
+[submodule "_LIB"]
+	path = _LIB
+	url = ssh://anotherservice.com/com/anotherservice/var/git/git-GYlRjJHg
+>>>>>>> d2156f17706079956bc447694b582622f604f519

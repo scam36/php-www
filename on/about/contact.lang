@@ -1,0 +1,33 @@
+[EN]
+
+title = "Contact us"
+send = "Send us a message"
+send_text = "You have a problem with the usage of our services? Please use the <a href='https://community.olympe.in'>community</a> to ask your question, we do not answer to technical support requests.
+<br /><br /> If you need more information about our services or simply want be in touch with us, you can fill the following form."
+infos = "Informations"
+meet = "Meet us"
+meet_text = "Olympe is a non-profit organization, its head office is located in Paris, France."
+name = "Name"
+email = "Email"
+subject = "Subject"
+message = "Message"
+send_now = "Send"
+follow = "Follow us"
+news = "News"
+
+[FR]
+
+title = "Contactez nous"
+send = "Envoyez-nous un message"
+send_text = "Vous rencontrez un problème avec l'utilisation de la plateforme ? Merci d'utiliser la <a href='https://community.olympe.in'>communauté</a>, nous ne répondons pas aux mails de support technique.
+<br /><br /> Si vous avez besoin de plus d'informations à propos de nos services ou que vous désirez simplement entrer en contact avec nous, remplissez le formulaire suivant."
+infos = "Informations"
+meet = "Nous rencontrer"
+meet_text = "Olympe est une association à but non lucratif, son siège est situé à Paris, France."
+name = "Nom"
+email = "Email"
+subject = "Sujet"
+message = "Message"
+send_now = "Envoyer"
+follow = "Nous suivre"
+news = "Actualité"

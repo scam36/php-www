@@ -1,0 +1,71 @@
+[EN]
+title = "Solidarity and innovation"
+subtitle = "Free hosting service without ads and web applications."
+signup = "Register"
+login_now = "or login"
+username = "Username"
+password = "Password"
+login = "Login"
+email = "Email"
+free = "Free"
+free_text = "We are a non-profit organization, our <a href='/service/hosting'>services</a> are open to everyone and without any ads."
+open = "Open"
+open_text = "We release all our <a href='https://github.com/OlympeNetwork'>source codes</a> and <a href='https://projets.olympe.in'>projects</a>. An API and many tools are available for <a href='/developers'>developers</a>."
+innovation = "Innovative"
+innovation_text = "We provide the last <a href='/service/infrastructure'>technologies</a>, focusing on quality and <a href='/status'>availability</a> of the services."
+app = "PHP applications and services"
+app_text = "Since more than 6 years, the Olympe organization provides a free <a href='/service/hosting'>web hosting service</a> without any ads. From a basic offer with PHP/MySQL, we developed the platform and now are able to propose many
+other <a href='/service/offer'>technologies</a>.<br />
+<br />Beyond the web hosting space, we also provide the <a href='/service/offer'>full management</a> of domain names (subdomains, DNS records...), POP/IMAP mail accounts (redirections, aliases...), shared calendars and more."
+
+manage = "Extended features"
+manage_text = "We provide a <a href='/doc/cloud'>cloud application</a> allowing file synchronization, sharing and folders storage. This tool includes a web interface for online file vizualisation (download, modification, image galleries...), and 
+function for recovery of deleted files .
+<br /><br />
+Our platform is fully self-financed and maintened by <a href='/about/team'>team of volunteers</a>, you can <a href='/about/help'>help us</a> to fund up the project and pay the charges of the services. If you
+have questions or if you wish to participate, do not hesitate to <a href='/about/contact'>contact us</a>."
+signup_now = "Register now"
+
+help = "A question? Do not hesitate to <a href='/about/contact'>contact us</a>."
+panel = "Panel"
+logged = "Login as"
+conditions = "I agree to the <a href='/on/documents/Olympe-CGS-FR.pdf'>Terms of Use</a>."
+hosted = "Who are the people and the organizations hosted on Olympe?"
+directory = "Check out our directory"
+
+[FR]
+title = "Solidarité et innovation"
+subtitle = "Hébergement gratuit sans publicité et services associés."
+signup = "S'inscrire"
+login_now = "ou se connecter"
+username = "Utilisateur"
+password = "Mot de passe"
+login = "Connexion"
+email = "Email"
+free = "Gratuit"
+free_text = "Nous sommes une association à but non lucratif, nos <a href='/service/hosting'>services</a> sont ouverts à tous et sans aucune publicité."
+open = "Ouvert"
+open_text = "Nous publions nos <a href='https://github.com/OlympeNetwork'>codes sources</a> et nos <a href='https://projets.olympe.in'>travaux</a>. Des outils et une API 
+sont disponibles pour les <a href='/developers'>développeurs</a>."
+innovation = "Innovant"
+innovation_text = "Nous utilisons les dernières <a href='/service/infrastructure'>technologies</a> et nous concentrons avant tout sur la <a href='/status'>disponibilité</a> des services."
+app = "Applications PHP et services"
+app_text = "Depuis plus de 6 ans, l'association Olympe fournit un <a href='/service/hosting'>service d'hébergement</a> gratuit et sans publicité. D'une offre PHP/MySQL basique, nous avons progressivement
+développé la plateforme et proposons aujourd'hui d'autres types de <a href='/service/offer'>technologies</a>.<br />
+<br />En plus de l'espace d'hébergement, nous fournissons la <a href='/service/offer'>gestion complète</a> des noms de domaines (sous-domaines, enregistrements DNS...), des comptes mails POP/IMAP (redirections, alias...), 
+des calendriers et agendas partagés."
+
+manage = "Fonctionnalités étendues"
+manage_text = "Nous propulsons une <a href='/doc/cloud'>application cloud</a> permettant la synchronisation, le stockage et le partage de fichiers. Cette solution comprend une interface de visualisation des fichiers
+(téléchargement, édition, galeries de photos...), ainsi qu'une fonction de récuparation des fichiers supprimés.
+<br /><br />
+Notre plateforme est entièrement autofinancée et maintenue par une <a href='/about/team'>équipe de bénévoles</a>, vous pouvez <a href='/about/help'>nous aider</a> à supporter les charges
+liées au service. Si vous avez des questions ou que vous désirez prendre part au projet, n'hésitez pas à <a href='/about/contact'>nous contacter</a>."
+signup_now = "S'inscrire maintenant"
+
+help = "Une question ? N'hésitez pas à nous <a href='/about/contact'>contacter</a>."
+panel = "Panel"
+logged = "Identifié en tant que"
+conditions = "J'accepte les <a href='/on/documents/Olympe-CGS-FR.pdf'>conditions d'utilisation</a>."
+hosted = "Qui sont les personnes et les organisations hébergées sur Olympe ?"
+directory = "Consultez notre annuaire"

@@ -1,0 +1,20 @@
+[EN]
+search = "Search"
+connectors = "Connectors"
+free = "FREE"
+users = "users"
+
+BUSINESS = "Business"
+COMMUNICATION = "Communication"
+EDUCATION = "Education"
+ENTERTAINMENT = "Entertainment"
+INDUSTRY = "Industry"
+LIFESTYLE = "Lifestyle"
+NEWS = "News"
+PRODUCTIVITY = "Productivity"
+SOCIAL = "Social"
+STORAGE = "Storage"
+TECHNOLOGY = "Technology"
+UTILITIES = "Utilities"
+
+[FR]

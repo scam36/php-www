@@ -1,0 +1,17 @@
+[EN]
+
+
+[FR]
+title = "Bases de données"
+intro_text = "Nous améliorons nos services quotidiennement, certains types de bases de données seront disponibles très bientôt."
+available = "Versions disponibles"
+service = "Service"
+name = "Nom"
+info = "Information"
+version = "Version"
+soon = "Bientôt disponible"
+tutorials = "Tutoriaux"
+db = "Base de données relationnelle"
+key = "Stockage clé/valeur"
+queue = "Gestionnaire de queues de messages"
+back = "Retour"

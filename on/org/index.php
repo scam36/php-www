@@ -16,7 +16,7 @@ $content = "
 			<div style=\"float: left; width: 520px;\">
 				<h2 class=\"dark\">{$lang['conferences']}</h2>
 				<p>{$lang['conferences_text']}</p>
-				<p>{$lang['conferences_text2']}</p>
+				{$lang['conferences_text2']}
 			</div>
 			<div style=\"float: right; width: 480px; text-align: right;\">
 				<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/api.png\" style=\"float: left; display: block; padding: 10px; border: 1px solid #d1d1d1; border-radius: 3px;\" />

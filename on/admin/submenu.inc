@@ -11,6 +11,7 @@ $menu = array(
 	array('text'=>"menu_grants", 'icon'=>"iKey", 'link'=>"/admin/grants"),
 	array('text'=>"menu_quotas", 'icon'=>"iChart8", 'link'=>"/admin/quotas"),
 	array('text'=>"menu_stats", 'icon'=>"iChart8", 'link'=>"/admin/stats"),
+	array('text'=>"menu_blog", 'icon'=>"iChart8", 'link'=>"/admin/blog"),
 	array('text'=>"menu_settings", 'icon'=>"iChart8", 'link'=>"/admin/settings")
 );
 

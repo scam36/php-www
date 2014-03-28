@@ -6,6 +6,6 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-api::send('self/busit/connector/setrate', array('id'=>$_GET['id'], 'rating'=>$_GET['rating']));
+api::send('self/site/setrate', array('id'=>$_GET['id'], 'rating'=>$_GET['rating']));
 
 ?>

@@ -29,7 +29,7 @@ $(function()
 		number: 500,
 		width: 150,
 		readOnly: true,
-		path: '/busit/images/icons',
+		path: '/on/images/icons',
 		score: function() {
 			return $(this).attr('data-score');
 		},
@@ -82,7 +82,7 @@ function success()
 
 function rate(id, rate)
 {
-	var json = $.getJSON("/store/ajax_rate?id=" + id + "&rating=" + rate, function(data)
+	var json = $.getJSON("/directory/ajax_rate?id=" + id + "&rating=" + rate, function(data)
 	{ 
 		success();
 	});

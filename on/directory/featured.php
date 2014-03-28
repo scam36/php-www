@@ -28,7 +28,7 @@ foreach( $featured as $f )
 							<span class=\"name\">{$f['title']}</span>
 							<span class=\"editor\">{$f['user']}</span>
 							<br />
-							<div class=\"star\" data-score=\"{$f['score']}\" data-id=\"{$f['id']}\"></div>
+							<div class=\"star\" data-score=\"{$f['rating']['rating']}}\" data-id=\"{$f['id']}\"></div>
 						</div>
 					</div>
 				</a>

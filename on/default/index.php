@@ -138,7 +138,7 @@ $content .= "
 				<br />
 			</div>
 			<script>
-				$(\"#stats\").text('loading...');
+				$(\"#stats\").html(\"<img src='/{$GLOBALS['CONFIG']['SITE']}/images/anim_loading_16x16.gif' />\");
 				$(\"#stats\").load(\"/default/stats\");
 			
 				function showLogin()

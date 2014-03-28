@@ -6,10 +6,10 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$connectors = api::send('site/list', array('order'=>'connector_instances', 'start'=>0, 'limit'=>24), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
+$connectors = api::send('site/list', array('directory'=>1, 'ordered'=>'site_score', 'start'=>0, 'limit'=>24), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 
 $content = "
-		<div class=\"store\">
+		<div class=\"directory\">
 			<div class=\"container\">
 				<h1 class=\"dark\">{$lang['top']}</h1>
 				<br />
@@ -18,17 +18,16 @@ $content = "
 foreach( $connectors as $c )
 {
 	$content .= "
-				<a href=\"/store/connector?id={$c['connector_id']}\">
-					<div class=\"connector\" >
-						<div class=\"image\" style=\"background: url('/{$GLOBALS['CONFIG']['SITE']}/images/connectors/{$c['connector_id']}_100.png') no-repeat center center;\">
-							<div class=\"hover\"></div>
+				<a href=\"/directory/site?id={$c['id']}\">
+					<div class=\"site\" >
+						<div class=\"thumbshot\">
+							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$c['url']}\" />
 						</div>
 						<div class=\"text\">
-							<span class=\"name\">{$c['connector_name']}</span>
-							<span class=\"editor\">{$c['user_firstname']} {$c['user_lastname']}</span>
+							<span class=\"name\">{$c['title']}</span>
+							<span class=\"editor\">{$c['user']}</span>
 							<br />
-							<span class=\"users\"><span class=\"number\">{$c['users']['count']}</span> {$lang['users']}</span>
-							<span class=\"price\">".($c['connector_use_price']==0?"{$lang['free']}":"{$c['connector_use_price']} BIC")."</span>
+							<div class=\"star\" data-score=\"{$c['rating']['rating']}}\" data-id=\"{$c['id']}\"></div>
 						</div>
 					</div>
 				</a>

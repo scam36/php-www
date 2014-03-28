@@ -47,21 +47,12 @@ div.directory a.action:hover {
 	background-color: #f8f8f8;
 }
 
-div.directory a.action.bug {
-	background-image: url('../images/illu/bug.png');
-}
-
-div.directory a.action.bug:hover {
-	color: #3f9fe0;
-	background-image: url('../images/illu/bug_hover.png');
-}
-
 div.directory a.action.report {
 	background-image: url('../images/illu/report.png');
 }
 
 div.directory a.action.report:hover {
-	color: #3f9fe0;
+	color: #eb792b;
 	background-image: url('../images/illu/report_hover.png');
 }
 
@@ -162,7 +153,7 @@ span.price {
 	color: #b3c833;
 }
 
-span.tax {
+span.category {
 	display: block;
 	float: left;
 	font-size: 12px;

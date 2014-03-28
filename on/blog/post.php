@@ -11,7 +11,9 @@ $news = $news[0];
 
 $month = date('F', $news['date']);
 $month_translate = $lang[$month];
-	
+
+$lang['TITLE'] = $lang['olympe'] . $news['title'];
+
 $content = "
 			<div class=\"head-light\">
 				<div class=\"container\" style=\"text-align: center;\">

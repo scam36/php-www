@@ -13,7 +13,7 @@ $now = time();
 
 // Last 24 hours
 $dayago = mktime(date('H')+1, 0, 0, date('n'), date('j'), date('Y'))-(3600*24);
-$logs = api::send('self/site/response', array('group' => 'HOUR', 'from' => $dayago, 'to' => $now, 'start' => 0, 'limit' => 1000));
+$logs = api::send('self/site/response', array('site'=>$_GET['id'], 'group' => 'HOUR', 'from' => $dayago, 'to' => $now, 'start' => 0, 'limit' => 1000));
 $data_day = array();
 $current = $dayago;
 for( $i = 1; $i <= 24; $i++ )
@@ -31,7 +31,7 @@ for( $i = 1; $i <= 24; $i++ )
 
 // Last month
 $monthago = mktime(date('H'), 0, 0, date('n'), date('j')+1, date('Y'))-(3600*24*30);
-$logs = api::send('self/site/response', array('group' => 'DAY', 'from' => $monthago, 'to' => $now, 'start' => 0, 'limit' => 1000));
+$logs = api::send('self/site/response', array('site'=>$_GET['id'], 'group' => 'DAY', 'from' => $monthago, 'to' => $now, 'start' => 0, 'limit' => 1000));
 $data_month = array();
 $current = $monthago;
 for( $i = 1; $i <= 30; $i++ )
@@ -49,7 +49,7 @@ for( $i = 1; $i <= 30; $i++ )
 
 // Last year
 $yearago = mktime(date('H'), 0, 0, date('n')+1, date('j'), date('Y'))-(3600*24*365);
-$logs = api::send('self/site/response', array('group' => 'MONTH', 'from' => $yearago, 'to' => $now, 'start' => 0, 'limit' => 1000));
+$logs = api::send('self/site/response', array('site'=>$_GET['id'], 'group' => 'MONTH', 'from' => $yearago, 'to' => $now, 'start' => 0, 'limit' => 1000));
 $data_year = array();
 $current = $yearago;
 for( $i = 1; $i <= 12; $i++ )

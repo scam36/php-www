@@ -6,10 +6,11 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-api::send('quota/user/update', array('user'=>$_GET['user'], 'quota'=>$_GET['quota'], 'max'=>$_GET['max'], 'used'=>$_GET['used']));
+api::send('quota/user/update', array('user'=>$_POST['user'], 'quota'=>$_POST['quota'], 'max'=>$_POST['max']));
+
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	template::redirect('/admin/user/detail?id='.$_GET['user']);
+	template::redirect('/admin/users/detail?id='.$_POST['user']);
 
 ?>

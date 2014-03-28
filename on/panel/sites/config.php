@@ -109,15 +109,6 @@ $content .= "
 						<a href=\"http://{$site['name']}.olympe.in\">{$site['name']}.olympe.in</a>
 					</span>
 				</div>
-				<div class=\"info\" style=\"border-bottom: 1px solid #e5e5e5;\">
-					<span style=\"float: left; display: block; width: 200px; font-size: 15px; height: 30px; padding: 10px; \">
-						<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/folder.png\" alt=\"\" style=\"float: left; display: block;\" />
-						<span style=\"float: left; display: block; padding: 4px 5px 5px 10px; color: #de5711;\">{$lang['folder']}</span>
-					</span>
-					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 18px; background-color: #f9f9f9; height: 37px;\">
-						/dns/in/olympe/{$site['name']}
-					</span>
-				</div>
 				<br /><br />
 				<h2 class=\"dark\">{$lang['response']}</h2>
 				<div id=\"chart1\" style=\"margin-bottom: 20px;\"></div>

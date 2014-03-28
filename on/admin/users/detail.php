@@ -50,7 +50,7 @@ if( security::hasGrant('SITE_SELECT') )
 							<td><a href=\"http://{$s['hostname']}\">{$s['hostname']}</a></td>
 							<td>{$s['size']} {$lang['mb']}</td>
 							<td style=\"width: 50px; text-align: center;\">
-								<a href=\"/admin/sites/delete?id={$s['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+								<a href=\"/admin/sites/del_action?user={$_GET['id']}&site={$s['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 							</td>
 						</tr>";
 	}
@@ -81,7 +81,7 @@ if( security::hasGrant('DATABASE_SELECT') )
 							<td>{$d['name']}</td>
 							<td>{$d['size']} {$lang['mb']}</td>
 							<td style=\"width: 50px; text-align: center;\">
-								<a href=\"/admin/databases/delete?id={$d['name']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+								<a href=\"/admin/databases/del_action?user={$_GET['id']}&database={$d['name']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 							</td>
 						</tr>";
 	}
@@ -90,22 +90,50 @@ if( security::hasGrant('DATABASE_SELECT') )
 $content .= "
 					</table>
 					<br /><br />
+					<h2 class=\"dark\">{$lang['domains']}</h2>
+					<table>
+						<tr>
+							<th>{$lang['domain']}</th>
+							<th>{$lang['arecord']}</th>
+							<th>{$lang['target']}</th>
+							<th style=\"width: 50px; text-align: center;\">{$lang['actions']}</th>
+						</tr>
 ";
+		
+if( security::hasGrant('DOMAIN_SELECT') )
+{
+	$domains = api::send('domain/list', array('user'=>$_GET['id']));
+	
+	foreach( $domains as $d )
+	{		
+		$content .= "
+						<tr>
+							<td>{$d['hostname']}</td>
+							<td>{$d['aRecord']}</td>
+							<td>".($d['destination']?"{$d['destination']}":"{$d['homeDirectory']}")."</td>
+							<td style=\"width: 50px; text-align: center;\">
+								<a href=\"/admin/domains/del_action?user={$_GET['id']}&domain={$d['hostname']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+							</td>
+						</tr>";
+	}
+}
+
+$content .= "
+					</table>
+					<br /><br />
+					<h2 class=\"dark\">{$lang['tokens']}</h2>
+					<table>
+						<tr>
+							<th>{$lang['tokenname']}</th>
+							<th>{$lang['tokenvalue']}</th>
+							<th style=\"width: 100px; text-align: center;\">{$lang['actions']}</th>
+						</tr>
+	";
 
 if( security::hasGrant('TOKEN_SELECT') )
 {
 	$tokens = api::send('token/list', array('user'=>$_GET['id']));
 	
-	$content .= "
-				<h2 class=\"dark\">{$lang['tokens']}</h2>
-				<table>
-					<tr>
-						<th>{$lang['tokenname']}</th>
-						<th>{$lang['tokenvalue']}</th>
-						<th style=\"width: 100px; text-align: center;\">{$lang['actions']}</th>
-					</tr>
-	";
-
 	foreach( $tokens as $t )
 	{
 		$content .= "
@@ -178,7 +206,7 @@ if( security::hasGrant('QUOTA_USER_SELECT') )
 							<span class=\"quota\"><span style='font-weight: bold;'>{$u['used']}</span> {$lang['of']} {$u['max']}</span>
 						</td>
 						<td style=\"width: 50px; text-align: center;\">
-							<a href=\"#\" onclick=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"{$lang['update']}\" /></a>
+							<a href=\"#\" onclick=\"$('#user2').val('{$user['id']}'); $('#quota').val('{$u['name']}'); $('#max').val('{$u['max']}'); $('#quotachange').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/settings.png\" alt=\"{$lang['update']}\" /></a>
 						</td>
 					</tr>
 		";
@@ -291,6 +319,23 @@ $content .= "
 			</div>
 			<div class=\"clear\"></div><br />
 		</div>
+		<div id=\"quotachange\" class=\"floatingdialog\">
+			<h3 class=\"center\">{$lang['quota']}</h3>
+			<p style=\"text-align: center;\">{$lang['quota_text']}</p>
+			<div class=\"form-small\">		
+				<form action=\"/admin/users/set_quota_action\" method=\"post\" class=\"center\">
+					<input id=\"user2\" type=\"hidden\" value=\"\" name=\"user\" />
+					<input id=\"quota\" type=\"hidden\" value=\"\" name=\"quota\" />
+					<fieldset>
+						<input id=\"max\" type=\"text\" name=\"max\" value=\"\" />
+						<span class=\"help-block\">{$lang['max_help']}</span>
+					</fieldset>
+					<fieldset autofocus>	
+						<input type=\"submit\" value=\"{$lang['update']}\" />
+					</fieldset>
+				</form>
+			</div>
+		</div>
 		<div id=\"delete\" class=\"floatingdialog\">
 			<h3 class=\"center\">{$lang['delete']}</h3>
 			<p style=\"text-align: center;\">{$lang['delete_text']}</p>
@@ -305,6 +350,7 @@ $content .= "
 		</div>
 		<script>
 			newFlexibleDialog('delete', 550);
+			newFlexibleDialog('quotachange', 550);
 		</script>	
 ";
 

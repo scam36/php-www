@@ -4,16 +4,17 @@
 [FR]
 title = "Olympe en action"
 conferences = "Conférences"
-conferences_text = "L'association Olympe développe progressivement ses travaux de recherche, à la fois dans le domaine des nouvelles technologies mais également en science sociale appliquée aux nouveaux modes de communication. Certains de nos membres ont la 
+conferences_text = "L'association Olympe développe progressivement ses travaux de recherche, à la fois dans le domaine des nouvelles technologies mais également en science sociale appliquée aux nouveaux modes de communication. <br /><br />Certains de nos membres ont la 
 possibilité d'intervenir lors de salons ou dans le cadre de séminaires/débats, sur les thématiques suivantes :"
 conferences_text2 = "<span style='font-weight: bold;'>Généraliste</span>
+<br /><br />
 <ul class='styled'>
 	<li>L'hébergement de sites web (enjeux, contrôle des données, liberté...)</li>
 	<li>La fracture numérique (disparité, accessibilité, infrastructure...)</li>
 	<li>Les réseaux sociaux (notion de communauté, partage...)</li>
 </ul><br />
 <span style='font-weight: bold;'>Technique</span>
-<br />
+<br /><br />
 <ul class='styled'>
 	<li>Sécurité de l’hébergement de données</li>
 	<li>Infrastructures « cloud » Open Source</li>

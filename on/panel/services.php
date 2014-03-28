@@ -20,13 +20,13 @@ $content = "
 				<div style=\"float: left; width: 510px;\">
 					<h2 class=\"dark\">{$lang['stats']}</h2>
 					<p>{$lang['stats_text']}</p>
-					<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/piwik.png\" style=\"display: block; padding: 10px; border: 1px solid #d1d1d1; border-radius: 3px; margin-left: 20px;\" />
+					<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/panel/piwik.png\" style=\"display: block; padding: 10px; border: 1px solid #d1d1d1; border-radius: 3px; margin-left: 20px;\" />
 					<p>{$lang['stats_text2']}</p>
 				</div>
 				<div style=\"float: right; width: 510px;\">
 					<h2 class=\"dark\">{$lang['cloud']}</h2>
 					<p>{$lang['cloud_text']}</p>
-					<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/owncloud.png\" style=\"display: block; padding: 10px; border: 1px solid #d1d1d1; border-radius: 3px; margin-left: 20px;\" />
+					<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/panel/owncloud.png\" style=\"display: block; padding: 10px; border: 1px solid #d1d1d1; border-radius: 3px; margin-left: 20px;\" />
 					<p>{$lang['cloud_text2']}</p>
 			
 				</div>

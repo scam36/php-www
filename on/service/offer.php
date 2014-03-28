@@ -65,7 +65,7 @@ $content = "
 				</table>
 			</div>
 			<div style=\"width: 500px; float: right;\">
-				<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/apps.png\" alt=\"\" />
+				<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/pages/apps.png\" alt=\"\" />
 			</div>
 			<div class=\"clear\"></div><br />
 			<div class=\"separator light\"></div>

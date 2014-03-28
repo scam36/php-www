@@ -95,7 +95,7 @@ $content .= "
 							<span class=\"circle\"></span>
 						</div>
 						<div class=\"terminal-text\">
-							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/panel-1.png\" alt=\"map\" style=\"display: block; padding: 15px 0 0 50px;\" />
+							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/pages/panel-1.png\" alt=\"map\" style=\"display: block; padding: 15px 0 0 50px;\" />
 						</div>
 					</div>
 				</div>
@@ -108,7 +108,7 @@ $content .= "
 							<span class=\"circle\"></span>
 						</div>
 						<div class=\"terminal-text\">
-							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/service.png\" alt=\"map\" style=\"display: block; padding: 10px 0 0 10px;\" />
+							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/pages/service.png\" alt=\"map\" style=\"display: block; padding: 10px 0 0 10px;\" />
 						</div>
 					</div>
 				</div>

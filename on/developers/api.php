@@ -18,7 +18,7 @@ $content = "
 				<p>{$lang['intro']}</p>
 			</div>
 			<div style=\"float: right; width: 480px; text-align: right;\">
-				<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/createdomain.png\" style=\"float: left; display: block; padding: 10px; border: 1px solid #d1d1d1; border-radius: 3px;\" />
+				<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/pages/createdomain.png\" style=\"float: left; display: block; padding: 10px; border: 1px solid #d1d1d1; border-radius: 3px;\" />
 			</div>
 			<div class=\"clear\"></div>			
 			<p><span style=\"font-weight: bold;\">{$lang['steps']}</span></p>

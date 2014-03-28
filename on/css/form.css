@@ -44,7 +44,7 @@ input:focus, select:focus, textarea:focus {
 	outline: 0;
 }
 
-input:focus {
+input:focus,textarea:focus {
 	border-bottom: 1px solid #ee974a;
 }
 

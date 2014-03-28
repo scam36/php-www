@@ -9,17 +9,71 @@ if( !defined('PROPER_START') )
 $site = api::send('self/site/list', array('id'=>$_GET['id']));
 $site = $site[0];
 
+$now = time();
+
+// Last 24 hours
+$dayago = mktime(date('H')+1, 0, 0, date('n'), date('j'), date('Y'))-(3600*24);
+$logs = api::send('self/site/response', array('group' => 'HOUR', 'from' => $dayago, 'to' => $now, 'start' => 0, 'limit' => 1000));
+$data_day = array();
+$current = $dayago;
+for( $i = 1; $i <= 24; $i++ )
+{
+	$next = $current+3600;
+	$data_day[$current]['average'] = 0;
+	$data_day[$current]['date'] = date($lang['dateformathour'], $current);
+	foreach( $logs as $l )
+	{
+		if( $l['HOUR'] == date('H', $current) )
+			$data_day[$current]['average'] = $l['average'];
+	}
+	$current = $next;
+}
+
+// Last month
+$monthago = mktime(date('H'), 0, 0, date('n'), date('j')+1, date('Y'))-(3600*24*30);
+$logs = api::send('self/site/response', array('group' => 'DAY', 'from' => $monthago, 'to' => $now, 'start' => 0, 'limit' => 1000));
+$data_month = array();
+$current = $monthago;
+for( $i = 1; $i <= 30; $i++ )
+{
+	$next = $current+(3600*24);
+	$data_month[$current]['average'] = 0;
+	$data_month[$current]['date'] = date($lang['dateformat'], $current);
+	foreach( $logs as $l )
+	{
+		if( $l['DAY'] == date('d', $current) )
+			$data_month[$current]['average'] = $l['average'];
+	}
+	$current = $next;
+}
+
+// Last year
+$yearago = mktime(date('H'), 0, 0, date('n')+1, date('j'), date('Y'))-(3600*24*365);
+$logs = api::send('self/site/response', array('group' => 'MONTH', 'from' => $yearago, 'to' => $now, 'start' => 0, 'limit' => 1000));
+$data_year = array();
+$current = $yearago;
+for( $i = 1; $i <= 12; $i++ )
+{
+	$next = $current+(3600*24*30.3);
+	$data_year[$current]['average'] = 0;
+	$data_year[$current]['date'] = date($lang['dateformatmonth'], $current);
+	foreach( $logs as $l )
+	{
+		if( $l['MONTH'] == date('n', $current) )
+			$data_year[$current]['average'] = $l['average'];
+	}
+	$current = $next;
+}
+
 $content .= "
 	<div class=\"panel\">
 		<div class=\"top\">
 			<div class=\"left\" style=\"width: 500px;\">
+				<img style=\"width: 100px; border: 1px solid #cecece; padding: 5px; border-radius: 3px; text-align: right; float: left; margin-right: 20px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$site['hostname']}\" />
 				<span style=\"font-size: 38px; display: block; margin-bottom: 15px;\">{$site['hostname']}</span>
-				<span style=\"font-size: 18px; color: #5ac940; display: block; margin-bottom: 10px;\">{$lang['disk']} {$site['size']} {$lang['mb']}</span>
+				<span style=\"font-size: 18px; color: #9a9a9a; display: block; margin-bottom: 10px;\">{$lang['disk']} {$site['size']} {$lang['mb']}</span>
 			</div>
 			<div class=\"right\" style=\"width: 600px; float: right; text-align: right;\">
-				<a class=\"action settings big\" href=\"#\" onclick=\"\">
-					{$lang['settings']}
-				</a>
 				<a class=\"action pass big\" href=\"#\" onclick=\"$('#changepassword').dialog('open'); return false;\">
 					{$lang['password']}
 				</a>
@@ -46,34 +100,73 @@ $content .= "
 					</span>
 					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 18px; background-color: #f9f9f9; height: 37px;\">{$site['name']}</span>
 				</div>
+				<div class=\"info\" style=\"border-bottom: 1px solid #e5e5e5;\">
+					<span style=\"float: left; display: block; width: 200px; font-size: 15px; height: 30px; padding: 10px; \">
+						<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/link.png\" alt=\"\" style=\"float: left; display: block;\" />
+						<span style=\"float: left; display: block; padding: 4px 5px 5px 10px; color: #de5711;\">{$lang['url']}</span>
+					</span>
+					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 18px; background-color: #f9f9f9; height: 37px;\">
+						<a href=\"http://{$site['name']}.olympe.in\">{$site['name']}.olympe.in</a>
+					</span>
+				</div>
+				<div class=\"info\" style=\"border-bottom: 1px solid #e5e5e5;\">
+					<span style=\"float: left; display: block; width: 200px; font-size: 15px; height: 30px; padding: 10px; \">
+						<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/folder.png\" alt=\"\" style=\"float: left; display: block;\" />
+						<span style=\"float: left; display: block; padding: 4px 5px 5px 10px; color: #de5711;\">{$lang['folder']}</span>
+					</span>
+					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 18px; background-color: #f9f9f9; height: 37px;\">
+						/dns/in/olympe/{$site['name']}
+					</span>
+				</div>
 				<br /><br />
-				<h2 class=\"dark\">{$lang['urls']}</h2>
-				<div class=\"info\" style=\"border-bottom: 1px solid #e5e5e5;\">
-					<span style=\"float: left; display: block; width: 200px; font-size: 15px; height: 30px; padding: 10px; \">
-						<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/link.png\" alt=\"\" style=\"float: left; display: block;\" />
-						<span style=\"float: left; display: block; padding: 4px 5px 5px 10px; color: #de5711;\">{$lang['main']}</span>
-					</span>
-					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 18px; background-color: #f9f9f9; height: 37px;\"><a href=\"http://{$site['name']}.olympe.in\">{$site['name']}.olympe.in</a></span>
-				</div>
-				<div class=\"info\" style=\"border-bottom: 1px solid #e5e5e5;\">
-					<span style=\"float: left; display: block; width: 200px; font-size: 15px; height: 30px; padding: 10px; \">
-						<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/link.png\" alt=\"\" style=\"float: left; display: block;\" />
-						<span style=\"float: left; display: block; padding: 4px 5px 5px 10px; color: #de5711;\">{$lang['redirect']}</span>
-					</span>
-					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 18px; background-color: #f9f9f9; height: 37px;\"><a href=\"http://{$site['name']}.olympe-network.com\">{$site['name']}.olympe-network.com</a></span>
-				</div>
-				<div class=\"info\" style=\"border-bottom: 1px solid #e5e5e5;\">
-					<span style=\"float: left; display: block; width: 200px; font-size: 15px; height: 30px; padding: 10px; \">
-						<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/link.png\" alt=\"\" style=\"float: left; display: block;\" />
-						<span style=\"float: left; display: block; padding: 4px 5px 5px 10px; color: #de5711;\">{$lang['redirect']}</span>
-					</span>
-					<span style=\"float: right; display: block; width: 390px; text-align: center; padding: 13px 0 0 0; font-size: 18px; background-color: #f9f9f9; height: 37px;\"><a href=\"http://{$site['name']}.o-n.fr\">{$site['name']}.o-n.fr</a></span>
-				</div>
+				<h2 class=\"dark\">{$lang['response']}</h2>
+				<div id=\"chart1\" style=\"margin-bottom: 20px;\"></div>
+				<div id=\"chart2\" style=\"margin-bottom: 20px;\"></div>
 			</div>
 			<div class=\"right border\" style=\"width: 340px; padding-left: 60px; margin-left: 40px; margin-top: 5px;\">
-				<h2 class=\"dark\">{$lang['view']}</h2>
-				<img style=\"border: 1px solid #cecece; padding: 10px; border-radius: 3px;  text-align: right; float: right;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$site['hostname']}\" />
-				<div class=\"clear\"></div><br /><br />
+				<h2 class=\"dark\">{$lang['directory']}</h2>
+				<form action=\"/panel/sites/config_action\" method=\"post\">	
+					<input type=\"hidden\" name=\"id\" value=\"{$site['id']}\" />
+					<fieldset>
+						<input type=\"text\" name=\"title\" value=\"{$site['title']}\" style=\"width: 300px;\" />
+						<span class=\"help-block\">{$lang['title_help']}</span>
+					</fieldset>
+					<fieldset>
+						<textarea name=\"description\" style=\"width: 300px; height: 200px;\">{$site['description']}</textarea>						
+						<span class=\"help-block\">{$lang['description_help']}</span>
+					</fieldset>
+					<fieldset>
+						<select name=\"category\" style=\"width: 320px;\">
+							<option ".($site['category']==1?"selected":"")." value=\"1\">{$lang['CAT_1']}</option>
+							<option ".($site['category']==2?"selected":"")." value=\"2\">{$lang['CAT_2']}</option>
+							<option ".($site['category']==3?"selected":"")." value=\"3\">{$lang['CAT_3']}</option>
+							<option ".($site['category']==4?"selected":"")." value=\"4\">{$lang['CAT_4']}</option>
+							<option ".($site['category']==5?"selected":"")." value=\"5\">{$lang['CAT_5']}</option>
+							<option ".($site['category']==6?"selected":"")." value=\"6\">{$lang['CAT_6']}</option>
+							<option ".($site['category']==7?"selected":"")." value=\"7\">{$lang['CAT_7']}</option>
+							<option ".($site['category']==8?"selected":"")." value=\"8\">{$lang['CAT_8']}</option>
+							<option ".($site['category']==9?"selected":"")." value=\"9\">{$lang['CAT_9']}</option>
+							<option ".($site['category']==10?"selected":"")." value=\"10\">{$lang['CAT_10']}</option>
+							<option ".($site['category']==11?"selected":"")." value=\"11\">{$lang['CAT_11']}</option>
+							<option ".($site['category']==12?"selected":"")." value=\"12\">{$lang['CAT_12']}</option>
+							<option ".($site['category']==13?"selected":"")." value=\"13\">{$lang['CAT_13']}</option>
+							<option ".($site['category']==14?"selected":"")." value=\"14\">{$lang['CAT_14']}</option>
+							<option ".($site['category']==15?"selected":"")." value=\"15\">{$lang['CAT_15']}</option>
+							<option ".($site['category']==16?"selected":"")." value=\"16\">{$lang['CAT_16']}</option>
+							<option ".($site['category']==17?"selected":"")." value=\"17\">{$lang['CAT_17']}</option>
+							<option ".($site['category']==18?"selected":"")." value=\"18\">{$lang['CAT_18']}</option>
+							<option ".($site['category']==19?"selected":"")." value=\"19\">{$lang['CAT_19']}</option>
+							<option ".($site['category']==20?"selected":"")." value=\"20\">{$lang['CAT_20']}</option>
+						</select>
+						<span class=\"help-block\">{$lang['category_help']}</span>
+					</fieldset>
+					<fieldset>
+						<input type=\"checkbox\" name=\"directory\" value=\"1\" ".($site['directory']==1?"checked":"")." > {$lang['directory_help']}
+					</fieldset>					
+					<fieldset>	
+						<input autofocus type=\"submit\" value=\"{$lang['update']}\" />
+					</fieldset>
+				</form>
 			</div>
 			<div class=\"clear\"></div><br />
 		</div>
@@ -110,39 +203,163 @@ $content .= "
 			</form>
 		</div>
 	</div>
-	<div id=\"settings\" class=\"floatingdialog\">
-		<h3 class=\"center\">{$lang['settings']}</h3>
-		<p style=\"text-align: center;\">{$lang['settings_text']}</p>
-		<div class=\"form-small\">		
-			<form action=\"/panel/site/config_action\" method=\"post\" class=\"center\">	
-				<input type=\"hidden\" name=\"id\" value=\"{$site['id']}\" />
-				<fieldset>
-					<input type=\"text\" name=\"description\" value=\"".($site['description']?"{$site['description']}":"{$lang['desc']}")."\" style=\"width: 504px;\" />
-					<span class=\"help-block\">{$lang['desc_help']}</span>
-				</fieldset>
-				<fieldset>
-					<select name=\"category\" style=\"width: 520px;\">
-						<option ".($site['category']==1?"selected":"")." value=\"1\">{$lang['CAT_1']}</option>
-						<option ".($site['category']==2?"selected":"")." value=\"2\">{$lang['CAT_2']}</option>
-						<option ".($site['category']==3?"selected":"")." value=\"3\">{$lang['CAT_3']}</option>
-						<option ".($site['category']==4?"selected":"")." value=\"4\">{$lang['CAT_4']}</option>
-						<option ".($site['category']==5?"selected":"")." value=\"5\">{$lang['CAT_5']}</option>
-						<option ".($site['category']==6?"selected":"")." value=\"6\">{$lang['CAT_6']}</option>
-						<option ".($site['category']==7?"selected":"")." value=\"7\">{$lang['CAT_7']}</option>
-						<option ".($site['category']==8?"selected":"")." value=\"8\">{$lang['CAT_8']}</option>
-					</select>
-					<span class=\"help-block\">{$lang['cat_help']}</span>
-				</fieldset>
-				<fieldset>	
-					<input autofocus type=\"submit\" value=\"{$lang['update']}\" />
-				</fieldset>
-			</form>
-		</div>
-	</div>
-	<script>
+	<script type=\"text/javascript\">
 		newFlexibleDialog('settings', 550);
 		newFlexibleDialog('changepassword', 550);
 		newFlexibleDialog('delete', 550);
+		
+		$(function()
+		{
+			var dataSourceDay = [";
+
+foreach( $data_day as $key => $value )
+{
+	$content .= "
+			{ hour: '".date($lang['dateformathour'], $key)."', responsetime: {$value['average']} },
+	";
+}
+
+$content .= "
+			];
+			
+			var dataSourceMonth = [";
+
+foreach( $data_month as $key => $value )
+{
+	$content .= "
+			{ day: '".date($lang['dateformat'], $key)."', responsetime: {$value['average']} },
+	";
+}
+
+$content .= "
+			];
+
+			var dataSourceYear = [";
+
+foreach( $data_year as $key => $value )
+{
+	$content .= "
+			{ month: '".date($lang['dateformatmonth'], $key)."', responsetime: {$value['average']} },
+	";
+}
+
+$content .= "
+			];
+			
+			$(\"#chart1\").dxChart({
+				dataSource: dataSourceDay,
+				commonSeriesSettings: {
+					argumentField: \"hour\"
+				},
+				series: [
+					{ valueField: \"responsetime\", name: \"{$lang['responsetime']}\", type: 'bar', 'color': '#de5711' }
+				],
+				argumentAxis:{
+					grid:{
+						visible: true
+					}
+				},
+				tooltip:{
+					enabled: true,
+					font: { size: 15 }
+				},
+				title: {
+					text: '{$lang['chart1_title']}',
+					font: { size: 15 }
+				},
+				legend: {
+					verticalAlignment: \"top\",
+					horizontalAlignment: \"right\"
+				},
+				size: {
+					width: 700,
+					height: 200
+				},
+				commonPaneSettings: {
+					border:{
+						visible: true,
+						right: false
+					}       
+				}
+			});
+
+			$(\"#chart2\").dxChart({
+				dataSource: dataSourceMonth,
+				commonSeriesSettings: {
+					argumentField: \"day\"
+				},
+				series: [
+					{ valueField: \"responsetime\", name: \"{$lang['responsetime']}\", type: 'line', 'color': '#de5711' }
+				],
+				argumentAxis:{
+					grid:{
+						visible: true
+					}
+				},
+				tooltip:{
+					enabled: true,
+					font: { size: 15 }
+				},
+				title: {
+					text: '{$lang['chart2_title']}',
+					font: { size: 15 }
+				},
+				legend: {
+					verticalAlignment: \"top\",
+					horizontalAlignment: \"right\"
+				},
+				size: {
+					width: 700,
+					height: 200
+				},
+				commonPaneSettings: {
+					border:{
+						visible: true,
+						right: false
+					}       
+				}
+			});
+			
+			$(\"#chart3\").dxChart({
+				dataSource: dataSourceYear,
+				commonSeriesSettings: {
+					argumentField: \"month\"
+				},
+				series: [
+					{ valueField: \"responsetime\", name: \"{$lang['responsetime']}\", type: 'splineArea', 'color': '#75b5d6' }
+				],
+				argumentAxis:{
+					grid:{
+						visible: true
+					},
+					label: {
+						overlappingBehavior: { mode: 'rotate', rotationAngle: 50 }
+					}
+				},
+				tooltip:{
+					enabled: true,
+					font: { size: 15 }
+				},
+				title: {
+					text: '{$lang['chart3_title']}',
+					font: { size: 15 }
+				},
+				legend: {
+					verticalAlignment: \"top\",
+					horizontalAlignment: \"right\"
+				},
+				size: {
+					width: 800,
+					height: 200
+				},
+				commonPaneSettings: {
+					border:{
+						visible: true,
+						right: false
+					}       
+				}
+			});
+		});
 	</script>
 	";
 

@@ -22,6 +22,25 @@ $content = "
 		</div>	
 		<div class=\"content\">
 			<div style=\"float: left; width: 500px;\">
+				<h2 class=\"dark\">{$lang['dns']}</h2>
+				<table>
+					<tr>
+						<th>{$lang['serv']}</th>
+						<th>{$lang['host']}</th>
+						<th>{$lang['ip']}</th>
+					</tr>
+					<tr>
+						<td>{$lang['ns1']}</td>
+						<td>ns1.olympe.in</td>
+						<td>178.32.167.243</td>
+					</tr>
+					<tr>
+						<td>{$lang['ns2']}</td>
+						<td>ns2.olympe.in</td>
+						<td>178.32.65.67</td>
+					</tr>
+				</table>
+				<br /><br />
 				<h2 class=\"dark\">{$lang['addresses']}</h2>
 				<table>
 					<tr>
@@ -49,51 +68,8 @@ $content = "
 						<td><a href=\"https://stats.olympe.in\">https://stats.olympe.in</a></td>
 					</tr>				
 				</table>
-				<br /><br />
-				<h2 class=\"dark\">{$lang['contact']}</h2>
-				<table>
-					<tr>
-						<th>{$lang['service']}</th>
-						<th>{$lang['address']}</th>
-					</tr>
-					<tr>
-						<td>{$lang['status']}</td>
-						<td><a href=\"https://www.olympe.in/status\">https://www.olympe.in/status</a></td>
-					</tr>
-					<tr>
-						<td>{$lang['community']}</td>
-						<td><a href=\"https://community.olympe.in\">https://community.olympe.in</a></td>
-					</tr>
-					<tr>
-						<td>{$lang['incident']}</td>
-						<td><a href=\"mailto:hosting@olympe.in\">hosting@olympe.in</a></td>
-					</tr>
-					<tr>
-						<td>{$lang['doc']}</td>
-						<td><a href=\"https://www.olympe.in/doc\">https://www.olympe.in/doc</a></td>
-					</tr>			
-				</table>
 			</div>
 			<div style=\"float: right; width: 500px;\">
-				<h2 class=\"dark\">{$lang['dns']}</h2>
-				<table>
-					<tr>
-						<th>{$lang['serv']}</th>
-						<th>{$lang['host']}</th>
-						<th>{$lang['ip']}</th>
-					</tr>
-					<tr>
-						<td>{$lang['ns1']}</td>
-						<td>ns1.olympe.in</td>
-						<td>178.32.167.243</td>
-					</tr>
-					<tr>
-						<td>{$lang['ns2']}</td>
-						<td>ns2.olympe.in</td>
-						<td>178.32.65.67</td>
-					</tr>
-				</table>
-				<br /><br />
 				<h2 class=\"dark\">{$lang['connection']}</h2>
 				<table>
 					<tr>
@@ -118,7 +94,17 @@ $content = "
 					</tr>
 					<tr>
 						<td>{$lang['mysql']}</td>
-						<td>sql.olympe.in</td>
+						<td>sql1.olympe.in</td>
+						<td>3306</td>
+					</tr>
+					<tr>
+						<td>{$lang['mysql2']}</td>
+						<td>sql2.olympe.in</td>
+						<td>3306</td>
+					</tr>
+					<tr>
+						<td>{$lang['mysql3']}</td>
+						<td>sql3.olympe.in</td>
 						<td>3306</td>
 					</tr>
 					<tr>

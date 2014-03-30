@@ -9,6 +9,11 @@ if( !defined('PROPER_START') )
 $database = api::send('self/database/list', array('database'=>$_GET['database']));
 $database = $database[0];
 
+$percent = round($database['stats'][$database['server']]*100/6000);
+
+if( $percent > 100 )
+	$percent = 100;
+
 $content .= "
 	<div class=\"panel\">
 		<div class=\"top\">
@@ -16,7 +21,7 @@ $content .= "
 				<h1 class=\"dark\">{$lang['database']} {$database['name']}</h1>
 			</div>
 			<div class=\"right\" style=\"width: 400px;\">
-				<a class=\"button classic\" href=\"#\" onclick=\"$('#database').val('{$database['name']}'); $('#delete').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
+				<a class=\"button classic\" href=\"#\" onclick=\"$('#delete').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
 					<span style=\"display: block; padding-top: 3px;\">{$lang['delete']}</span>
 				</a>
 			</div>
@@ -61,6 +66,61 @@ $content .= "
 					</fieldset>
 				</form>
 			</div>
+			<div class=\"clear\"></div>
+			<br /><br />
+			<h2 class=\"dark\">{$lang['connection']}</h2>
+			<table>
+				<tr>
+					<th style=\"text-align: center; width: 40px;\">#</th>
+					<th>{$lang['server']}</th>
+					<th>{$lang['username']}</th>
+					<th>{$lang['password']}</th>
+					<th>{$lang['database']}</th>
+					<th>{$lang['load']}</th>
+					<th style=\"width: 50px;\">{$lang['actions']}</th>
+				</tr>
+				<tr>
+					<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/server.png\" /></td>
+					<td>{$database['server']}</td>
+					<td>{$database['name']}</td>
+					<td>**********</td>
+					<td>{$database['name']}</td>
+					<td>
+						<div class=\"fillgraph\" style=\"margin-top: 10px;\">
+							<small style=\"width: {$percent}%;\"></small>
+						</div>
+						<span class=\"quota\"><span style='font-weight: bold;'>{$database['stats'][$database['server']]}</span> {$lang['databases']}</span>
+					</td>
+					<td style=\"width: 50px; text-align: center;\">
+						<a href=\"#\" title=\"\" onclick=\"$('#migrate').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
+					</td>
+				</tr>
+			</table>
+			<br /><br />
+		</div>
+	</div>
+	<div id=\"migrate\" class=\"floatingdialog\">
+		<br />
+		<h3 class=\"center\">{$lang['migrate']}</h3>
+		<p style=\"text-align: center;\">{$lang['migrate_text']}</p>
+		<div class=\"form-small\">		
+			<form action=\"/panel/databases/migrate_action\" method=\"post\" class=\"center\">
+				<input type=\"hidden\" value=\"{$database['name']}\" name=\"database\" />
+				<fieldset>
+					<select name=\"server\" style=\"width: 420px;\">
+						<option value=\"sql1.olympe.in\" style=\"color: ".($database['stats']['sql1.olympe.in']>6000?"red":"green").";\">sql1.olympe.in ({$database['stats']['sql1.olympe.in']} {$lang['databases']})</option>
+						<option value=\"sql2.olympe.in\" style=\"color: ".($database['stats']['sql2.olympe.in']>6000?"red":"green").";\">sql2.olympe.in ({$database['stats']['sql2.olympe.in']} {$lang['databases']})</option>
+					</select>
+					<span class=\"help-block\">{$lang['server_help']}</span>
+				</fieldset>
+					<fieldset>
+						<input style=\"width: 400px;\" class=\"auto\" type=\"password\" value=\"{$lang['password']}\" name=\"password\" onfocus=\"this.value = this.value=='{$lang['password']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['password']}' : this.value; this.value=='{$lang['password']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+						<span class=\"help-block\">{$lang['password_help']}</span>
+					</fieldset>	
+				<fieldset autofocus>	
+					<input type=\"submit\" value=\"{$lang['migrate_now']}\" />
+				</fieldset>
+			</form>
 		</div>
 	</div>
 	<div id=\"delete\" class=\"floatingdialog\">
@@ -68,7 +128,7 @@ $content .= "
 		<p style=\"text-align: center;\">{$lang['delete_text']}</p>
 		<div class=\"form-small\">		
 			<form action=\"/panel/databases/del_action\" method=\"post\" class=\"center\">
-				<input id=\"database\" type=\"hidden\" value=\"\" name=\"database\" />
+				<input type=\"hidden\" value=\"{$database['name']}\" name=\"database\" />
 				<fieldset autofocus>	
 					<input type=\"submit\" value=\"{$lang['delete_now']}\" />
 				</fieldset>
@@ -76,6 +136,7 @@ $content .= "
 		</div>
 	</div>
 	<script>
+		newFlexibleDialog('migrate', 550);
 		newFlexibleDialog('delete', 550);
 	</script>	
 	";

@@ -103,8 +103,7 @@ $content = "
 					</div>
 				</div>
 				<div class=\"clear\"></div><br />
-				<p>* {$lang['explain']}</p>
-				<br /><br />
+				<br />
 				<h2 class=\"dark\">{$lang['sizes']}</h2>
 				<table>
 					<tr>
@@ -115,7 +114,7 @@ $content = "
 						<th>{$lang['size']}</th>
 					</tr>
 					<tr>
-						<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/ftp.png\" style=\"width: 30px;\" /></td>
+						<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/ftp.png\" /></td>
 						<td>{$lang['cloud']}</td>
 						<td>{$lang['cloud_type']}</td>
 						<td>/dns/in/olympe/Users/".security::get('USER')."</td>
@@ -127,7 +126,7 @@ foreach( $sites2 as $s )
 {
 	$content .= "
 					<tr>
-						<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/ipv6.png\" style=\"width: 30px;\" /></td>
+						<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/site.png\" /></td>
 						<td>{$s['hostname']}</td>
 						<td>{$lang['site']}</td>
 						<td>{$s['homeDirectory']}</td>
@@ -140,7 +139,7 @@ foreach( $databases2 as $d )
 {
 	$content .= "
 					<tr>
-						<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-{$d['type']}.png\" style=\"width: 30px;\" /></td>
+						<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/database.png\" /></td>
 						<td>{$d['name']}</td>
 						<td>{$lang['database']} {$d['type']}</td>
 						<td>/databases/{$d['name']}</td>
@@ -157,7 +156,7 @@ foreach( $domains2 as $d )
 	{
 		$content .= "
 					<tr>
-						<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/user.png\" style=\"width: 30px;\" /></td>
+						<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/user.png\" /></td>
 						<td>{$u['mail']}</td>
 						<td>{$lang['user']}</td>
 						<td>{$u['homeDirectory']}</td>

@@ -35,9 +35,11 @@ $content = "
 			<p>{$lang['donation_text']}</p>
 			<br /><br />
 			<div style=\"text-align: center;\">
-				<a class=\"button classic\" href=\"#\" style=\"height: 22px; width: 200px; margin: 0 auto;\">
-					<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['donation']}</span>	
-				</a>
+				<form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\" target=\"_top\" class=\"center\">
+					<input type=\"hidden\" name=\"cmd\" value=\"_s-xclick\">
+					<input type=\"hidden\" name=\"hosted_button_id\" value=\"JMV6525W5SPUN\">
+					<input type=\"submit\" name=\"submit\" alt=\"PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !\" value=\"{$lang['donation']}\">
+				</form>
 			</div>
 			<br /><br />
 		</div>

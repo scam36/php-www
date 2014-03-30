@@ -52,6 +52,12 @@ $content = "
 		<br />
 		<div class=\"sites\">
 			<div class=\"sitescontent\">
+				<div style=\"width: 1080px; padding: 10px; background-color: #ffffff; opacity: 0.6; border-radius: 5px; margin-bottom: 20px;\">
+					<img style=\"display: block; float: left; margin-right: 10px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/donation.png\" />
+					<span style=\"font-size: 18px; display: block; float: left;\">{$lang['help']} <a href=\"/org/help\">{$lang['help_text']}</a> !</span><br /><br />
+					<span style=\"font-size: 12px; color: #ff8827; display: block; float: left; padding-top: 10px;\"\">{$lang['thanks']} <span style=\"font-weight: bold;\">{$lang['thanks2']}</span>.</span>
+					<div class=\"clear\"></div>
+				</div>
 				<div class=\"site newsite\" id=\"newsite\">
 					<div id=\"addsite\">
 						<a href=\"#\" onclick=\"showForm(); return false;\" class=\"button classic\" style=\"margin: 0 auto; margin-top: 97px; padding: 10px 0 0 0; height: 40px; width: 50px; text-align: center;\">

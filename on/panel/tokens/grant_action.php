@@ -7,7 +7,7 @@ if( !defined('PROPER_START') )
 }
 
 // 1) rekvoke all grants that are not selected
-$token = api::send('grant/token/list', array('user'=>$_POST['user'], 'token'=>$_POST['token']));
+$token = api::send('self/token/grant/list', array('token'=>$_POST['token']));
 
 if( !isset($_POST['grant']) || !is_array($_POST['grant']) )
 	$_POST['grant'] = array();
@@ -22,18 +22,18 @@ if( count($token) > 0 )
 	}
 
 	if( count($grants) > 0 )
-		api::send('grant/token/del', array('user'=>$_POST['user'], 'token'=>$_POST['token'], 'grants'=>implode(',', $grants)));
+		api::send('self/token/grant/del', array('token'=>$_POST['token'], 'grants'=>implode(',', $grants)));
 }
 
 // 2) grant selected grants (existing ones will be ignored)
 if( count($_POST['grant']) > 0 )
 {
-	api::send('grant/token/add', array('user'=>$_POST['user'], 'token'=>$_POST['token'], 'grants'=>implode(',', $_POST['grant'])));
+	api::send('self/token/grant/add', array('token'=>$_POST['token'], 'grants'=>implode(',', $_POST['grant'])));
 }
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	template::redirect('/admin/tokens/detail?token=' . $_POST['token'] . '&user=' . $_POST['user']);
+	template::redirect('/panel/tokens/detail?token=' . $_POST['token']);
 
 ?>

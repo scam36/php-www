@@ -23,7 +23,7 @@ $content = "
 				<a class=\"action pass big\" href=\"#\" onclick=\"$('#changepass').dialog('open'); return false;\">
 					{$lang['pass']}
 				</a>
-				<a class=\"action apps big\" href=\"#\">
+				<a class=\"action apps big\" href=\"/panel/tokens\">
 					{$lang['apps']}
 				</a>
 				<a class=\"action delete big\" href=\"#\" onclick=\"$('#delete').dialog('open'); return false;\">

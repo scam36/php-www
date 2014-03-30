@@ -359,6 +359,7 @@ $content .= "
 			</div>
 		</div>
 		<div id=\"newtoken\" class=\"floatingdialog\">
+			<br />
 			<h3 class=\"center\">{$lang['newtoken']}</h3>
 			<p style=\"text-align: center;\">{$lang['newtoken_text']}</p>
 			<div class=\"form-small\">		

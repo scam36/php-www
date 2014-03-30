@@ -271,6 +271,11 @@ h3 {
 	padding: 0;
 }
 
+h3.bordered {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #c5c5c5;
+}
+
 h3.center {
 	text-align: center;
 }
@@ -685,4 +690,15 @@ ul.styled li {
 	margin: 5px 0 5px 0;
 	padding: 0 0 0 5px;
 	line-height: 20px;
+}
+
+ol {
+	list-style: decimal;
+	padding: 0;
+	margin: 0 0 0 15px;
+}
+
+ol li {
+	padding: 0 0 0 0;
+	margin: 0 0 15px 0;
 }

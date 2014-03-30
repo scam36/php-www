@@ -59,7 +59,7 @@ if( $_POST['name'] != $lang['name'] )
 		$template->output($content);
 	}	
 	else if( count($user) == 1 )
-		$template->redirect('/admin/user/detail?id='.$user[0]['id']);
+		$template->redirect('/admin/users/detail?id='.$user[0]['id']);
 	else
 		template::redirect('/admin');
 		

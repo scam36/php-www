@@ -1,24 +1,37 @@
 [EN]
 
-
 [FR]
-title = "Centre d'aide"
-intro = "Débuter sur Olympe"
-info = "Informations utiles"
+title = "Documentation Olympe"
 
-top = "Question très fréquentes"
-first = "Publication d'un premier site"
-first_text = "Créer un site, transférer des données et comprendre le fonctionnement de la plateforme."
-domains = "Sites, domaines et comptes mails"
-domains_text = "Gestion complète des DNS, des sous-domaines et des emails (comptes POP/IMAP, redirections...)."
+index = "Accueil aide"
+started = "Débuter"
+what = "Qu'est-ce que Olympe ?"
+techno = "Technologies utilisées"
+first = "Votre premier site"
+cloud = "Initiation au cloud"
+
+features = "Fonctionnalités"
+sites = "Sites Internet"
+domains = "Noms de domaine"
 databases = "Bases de données"
-databases_text = "Vous pouvez créer des bases de données MySQL, PostgreSQL ou MongoDB."
-services = "Services associés"
-services_text = "Nous proposons de nombreux outils complémentaires permettant d'enrichir votre expérience."
-developers = "Développeurs"
-developers_text = "Nous mettons à disposition des développeurs une API et des outils pour la gestion de l'hébergement."
-community = "Communauté"
-community_text = "Accès à la communauté pour obtenir de l'aide et partager ses connaissances."
+services = "Services cloud"
+
+account = "Compte"
+quota = "Quotas et limites"
+tokens = "Droits d'accès"
+settings = "Paramètres"
+privacy = "Protection des données"
+
+various = "Divers"
+problems = "Problèmes fréquents"
+directory = "Annuaire des sites"
+php = "Erreurs PHP"
+files = "Gestion des fichiers"
+
+faq = "Questions fréquentes"
+questions = "Vous n'avez trouvé aucune réponse à vos questions ?"
+answers = "Essayez le moteur de recherche ou demandez à la <a href='https://community.olympe.in'>communauté</a> !"
+
 question_1 = "Comment transférer les données de mon site ?"
 question_2 = "Quelles sont les adresses des serveurs DNS ?"
 question_3 = "Comment choisir le dossier d'un nom de domaine ?"
@@ -29,3 +42,15 @@ question_7 = "Où sont les statistiques de mon site ?"
 question_8 = "Pourquoi la capture d'écran du panel n'est pas à jour ?"
 question_9 = "Comment Olympe est-il financé ?"
 question_10 = "En quoi Olympe est-il Open Source ?"
+
+answer_1_1 = "A connector is a small programm launched directly on the Bus IT platform that allow you to communicate with <i>something</i>. For instance, the connector <i>Facebook</i> enables you to post messages on your wall and
+receive friend's posts. There are various connectors, and developers can create new ones."
+answer_1_2 = "An instance is a representation of the connector once you have add it to your account. An instance can be configured with your own parameters (for example with your <i>Facebook account</i>)."
+answer_1_legend_1 = "View of connectors in the store."
+answer_1_legend_2 = "View of an instance"
+
+answer_2_1 = "On Bus IT, we have two different valuable elements. Firstly, the connectors. A developer has spent time to create it, so it is his choice make it free or taxed. Most of our connectors are free to use."
+answer_2_2 = "Secondly, the platform itself, as long as we do not display ads or resell personal data we can not provide a totally free unlimited service. By default, you have a free amount of messages by hour. If you need 
+a huge number of messages, you will be blocked until the end of the hour if you have not buy enough credit."
+answer_2_legend_1 = "A connector with a tax of 200 BIC / hit."
+answer_2_legend_2 = "A connector with a tax of 200 BIC / hit."

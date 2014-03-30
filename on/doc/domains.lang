@@ -3,6 +3,7 @@
 
 [FR]
 title = "Noms de domaine"
+intro = "Introduction"
 intro_text = "Les noms de domaines vous permettent d'associer une ou plusieurs adresses supplémentaires aux sites Olympe que vous possédez. 
 Un nom de domaine est composé d'un label et d'une extension, par exemple : <i>toto.com</i>, où <i>toto</i> est le label et <i>com</i> l'extension."
 buy = "Prérequis"

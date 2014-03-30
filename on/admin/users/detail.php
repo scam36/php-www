@@ -18,10 +18,10 @@ $user = $user[0];
 $content = "
 		<div class=\"admin\">
 			<div class=\"top\">
-				<div class=\"left\" style=\"width: 600px; padding-top: 5px;\">
+				<div class=\"left\" style=\"width: 700px; padding-top: 5px;\">
 					<h1 class=\"dark\">{$lang['title']} : {$user['name']}</h1>
 				</div>
-				<div class=\"right\" style=\"width: 400px;\">
+				<div class=\"right\" style=\"width: 300px;\">
 					<a class=\"button classic\" href=\"#\" onclick=\"$('#user').val('{$user['id']}'); $('#delete').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
 						<span style=\"display: block; padding-top: 3px;\">{$lang['delete']}</span>
 					</a>
@@ -330,6 +330,7 @@ $content .= "
 			<div class=\"clear\"></div><br />
 		</div>
 		<div id=\"quotachange\" class=\"floatingdialog\">
+			<br />
 			<h3 class=\"center\">{$lang['quota']}</h3>
 			<p style=\"text-align: center;\">{$lang['quota_text']}</p>
 			<div class=\"form-small\">		

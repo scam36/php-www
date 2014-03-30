@@ -1,0 +1,27 @@
+[EN]
+
+[FR]
+index = "Accueil aide"
+started = "Débuter"
+what = "Qu'est-ce que Olympe ?"
+techno = "Technologies utilisées"
+first = "Votre premier site"
+cloud = "Initiation au cloud"
+
+features = "Fonctionnalités"
+sites = "Sites Internet"
+domains = "Noms de domaine"
+databases = "Bases de données"
+services = "Services cloud"
+
+account = "Compte"
+quota = "Quotas et limites"
+tokens = "Droits d'accès"
+settings = "Paramètres"
+privacy = "Protection des données"
+
+various = "Divers"
+problems = "Problèmes fréquents"
+directory = "Annuaire des sites"
+php = "Erreurs PHP"
+files = "Gestion des fichiers"

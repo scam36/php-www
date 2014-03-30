@@ -3,7 +3,7 @@
 
 [FR]
 title = "Premiers pas"
-back = "Retour"
+start = "Débuter sur Olympe"
 intro = "Vous venez de terminer votre inscription sur Olympe ? Suivez le guide...<br /><br />
 Pour rappel, votre compte Olympe vous permet d'accéder à un service proposant d'héberger, de base, un site internet et des documents dans le cloud (en savoir plus sur les <a href='/doc/quotas'>quotas et 
 limitations</a>). Ce petit guide à pour but de vous donner toutes les informations essentielles pour bien commencer."

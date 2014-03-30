@@ -6,9 +6,7 @@ if( isset($GLOBALS['lang']) && is_object($GLOBALS['lang']) )
 // initialize the menu
 $menu = array(
 	array('text'=>"menu_intro", 'default'=>true, 'link'=>"/doc"),
-	array('text'=>"menu_concepts", 'link'=>"/doc/concepts"),
-	array('text'=>"menu_databases", 'link'=>"/doc/languages"),
-	array('text'=>"menu_services", 'link'=>"/doc/services"),
+	array('text'=>"menu_first", 'link'=>"/doc/first"),
 	array('text'=>"menu_faq", 'link'=>"/doc/faq"),
 );
 

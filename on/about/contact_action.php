@@ -6,10 +6,14 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
+if( $security->hasAccess('/panel') )
+	$user = security::get('USER');
+
 $message = "
 Name: ".security::encode($_POST['name'])."
 Email: ".security::encode($_POST['email'])."
 Subjet: ".security::encode($_POST['subject'])."
+Compte: {$user}
 
 Message: ".security::encode($_POST['message'])."
 ";

@@ -1,0 +1,22 @@
+[EN]
+
+
+[FR]
+title = "Communication et presse"
+kit = "Kits de logo"
+small = "Logo mini"
+normal = "Logo normal"
+square = "Logo carré"
+big = "Logo haute définition"
+press = "Olympe dans la presse"
+published = "Publié le"
+print = "Kit salon et print"
+flyer = "Le flyer Olympe distribué lors des salons et des évènements de l'association."
+affiche = "L'affiche A3 de de l'association avec le QR code."
+
+article1_title = "Une association offre un service d'hébergement Web gratuit aux pros"
+article1_date = "23 juin 2008"
+article1_extract = "Encore assez peu connu, le réseau Olympe est une association à but non lucratif dont le principal objectif est de fournir [...] un service d'hébergement Web PHP/MySQL gratuit et sans publicité."
+article2_title = "La première base de données dédié au phishing francophone"
+article2_date = "19 octobre 2008"
+article2_extract = "L’association Olympe Network, déjà présente dans de nombreux domaines tels que les actions humanitaires et technologiques, [...] vient de lancer la première base de données intelligente pour combattre le phishing."

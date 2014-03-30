@@ -52,6 +52,7 @@ $content .= "
 						<select disabled name=\"\" style=\"width: 415px;\">
 							<option value=\"\" ".($database['type']=='mysql'?"selected":"")." >MySQL</option>
 							<option value=\"\" ".($database['type']=='pgsql'?"selected":"")." >PostgreSQL</option>
+							<option value=\"\" ".($database['type']=='mongodb'?"selected":"")." >MongoDB</option>
 						</select>
 						<span class=\"help-block\">{$lang['type_help']}</span>
 					</fieldset>

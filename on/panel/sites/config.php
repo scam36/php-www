@@ -152,7 +152,7 @@ $content .= "
 						<span class=\"help-block\">{$lang['category_help']}</span>
 					</fieldset>
 					<fieldset>
-						<input type=\"checkbox\" name=\"directory\" value=\"1\" ".($site['directory']==1?"checked":"")." > {$lang['directory_help']}
+						<input type=\"checkbox\" name=\"directory\" value=\"1\" ".($site['directory']>0?"checked":"")." > {$lang['directory_help']}
 					</fieldset>					
 					<fieldset>	
 						<input autofocus type=\"submit\" value=\"{$lang['update']}\" />

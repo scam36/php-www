@@ -55,8 +55,8 @@ $content .= "
 					<br />
 					<div style=\"background-color: #f2f2f2; width: 360px; height: 120px; padding: 8px 10px 10px 10px;\">
 						<div style=\"float: left; width: 150px; text-align: center;\">
-							<span style=\"font-size: 4em; text-align: center;\">".round($site['rating']['value'], 2)."</span>
-							<div class=\"bigstar\" data-score=\"{$site['rating']['value']}\"></div>
+							<span style=\"font-size: 4em; text-align: center;\">".round($site['rating']['rating'], 2)."</span>
+							<div class=\"bigstar\" data-score=\"{$site['rating']['rating']}\"></div>
 							<img style=\"display: inline-block;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/mini-user.png\" />
 							<span style=\"color: #a6a6a6; font-size: 12px;\">{$site['rating']['count']} {$lang['total']}</span>
 						</div>

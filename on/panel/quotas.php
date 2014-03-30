@@ -6,6 +6,10 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
+$databases2 = api::send('self/database/list');
+$sites2 =  api::send('self/site/list');
+$domains2 = api::send('self/domain/list');
+
 $me = api::send('self/whoami', array('quota'=>true));
 $me = $me[0];
 
@@ -100,6 +104,71 @@ $content = "
 				</div>
 				<div class=\"clear\"></div><br />
 				<p>* {$lang['explain']}</p>
+				<br /><br />
+				<h2 class=\"dark\">{$lang['sizes']}</h2>
+				<table>
+					<tr>
+						<th style=\"text-align: center; width: 40px;\">#</th>
+						<th>{$lang['name']}</th>
+						<th>{$lang['type']}</th>
+						<th>{$lang['path']}</th>
+						<th>{$lang['size']}</th>
+					</tr>
+					<tr>
+						<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/ftp.png\" style=\"width: 30px;\" /></td>
+						<td>{$lang['cloud']}</td>
+						<td>{$lang['cloud_type']}</td>
+						<td>/dns/in/olympe/Users/".security::get('USER')."</td>
+						<td>0 {$lang['mb']}</td>
+					</tr>
+";
+
+foreach( $sites2 as $s )
+{
+	$content .= "
+					<tr>
+						<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/ipv6.png\" style=\"width: 30px;\" /></td>
+						<td>{$s['hostname']}</td>
+						<td>{$lang['site']}</td>
+						<td>{$s['homeDirectory']}</td>
+						<td>{$s['size']} {$lang['mb']}</td>
+					</tr>
+	";
+}
+
+foreach( $databases2 as $d )
+{
+	$content .= "
+					<tr>
+						<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-{$d['type']}.png\" style=\"width: 30px;\" /></td>
+						<td>{$d['name']}</td>
+						<td>{$lang['database']} {$d['type']}</td>
+						<td>/databases/{$d['name']}</td>
+						<td>{$d['size']} {$lang['mb']}</td>
+					</tr>
+	";
+}
+
+foreach( $domains2 as $d )
+{
+	$users = api::send('self/account/list', array('domain'=>$d['hostname']));
+	
+	foreach( $users as $u )
+	{
+		$content .= "
+					<tr>
+						<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/user.png\" style=\"width: 30px;\" /></td>
+						<td>{$u['mail']}</td>
+						<td>{$lang['user']}</td>
+						<td>{$u['homeDirectory']}</td>
+						<td>{$u['size']} {$lang['mb']}</td>
+					</tr>
+		";
+	}
+}
+
+$content .= "
+				</table>
 			</div>
 		</div>
 ";

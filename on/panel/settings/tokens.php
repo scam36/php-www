@@ -36,12 +36,12 @@ foreach( $tokens as $t )
 {	
 	$content .= "
 						<tr>
-							<td style=\"text-align: center; width: 40px;\"><a href=\"/panel/tokens/detail?token={$t['token']}\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/token.png\" /></td>
+							<td style=\"text-align: center; width: 40px;\"><a href=\"/panel/settings/tokens/detail?token={$t['token']}\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/token.png\" /></td>
 							<td><span style=\"font-weight: bold;\">{$t['name']}</span></td>
 							<td><span class=\"lightlarge\">{$t['token']}</a></td>
 							<td>".($t['lease']==0?"{$lang['never']}":date($lang['dateformat'], $t['lease']))."</td>
 							<td style=\"width: 100px; text-align: center;\">
-								<a href=\"/panel/tokens/detail?token={$t['token']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
+								<a href=\"/panel/settings/tokens/detail?token={$t['token']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
 								<a href=\"#\" onclick=\"$('#token').val('{$t['token']}'); $('#delete').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/close.png\" alt=\"\" /></a>
 							</td>
 						</tr>
@@ -60,7 +60,7 @@ $content .= "
 				<h3 class=\"center\">{$lang['new']}</h3>
 				<p style=\"text-align: center;\">{$lang['new_text']}</p>
 				<div class=\"form-small\">		
-					<form action=\"/panel/tokens/add_action\" method=\"post\" class=\"center\">
+					<form action=\"/panel/settings/tokens/add_action\" method=\"post\" class=\"center\">
 						<fieldset>
 							<input class=\"auto\" type=\"text\" value=\"{$lang['name']}\" name=\"name\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
 							<span class=\"help-block\">{$lang['tipname']}</span>
@@ -85,7 +85,7 @@ $content .= "
 				<h3 class=\"center\">{$lang['delete']}</h3>
 				<p style=\"text-align: center;\">{$lang['delete_text']}</p>
 				<div class=\"form-small\">		
-					<form action=\"/panel/tokens/del_action\" method=\"get\" class=\"center\">
+					<form action=\"/panel/settings/tokens/del_action\" method=\"get\" class=\"center\">
 						<input id=\"token\" type=\"hidden\" value=\"\" name=\"token\" />
 						<fieldset autofocus>	
 							<input type=\"submit\" value=\"{$lang['delete_now']}\" />

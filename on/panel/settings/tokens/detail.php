@@ -18,7 +18,7 @@ $content = "
 					<h1 class=\"dark\">{$lang['title']} {$token['name']}</h1>
 				</div>
 				<div class=\"right\" style=\"width: 200px;\">
-					<a class=\"button classic\" href=\"/panel/tokens\" style=\"width: 180px; height: 22px; float: right;\">
+					<a class=\"button classic\" href=\"/panel/settings/tokens\" style=\"width: 180px; height: 22px; float: right;\">
 						<span style=\"display: block; font-size: 18px; padding-top: 3px;\">{$lang['back']}</span>
 					</a>
 				</div>
@@ -33,7 +33,7 @@ $tokengrants = api::send('self/token/grant/list', array('token'=>$_GET['token'])
 $grants = api::send('self/grant/user/list', array('overall'=>true));
 
 $content .= "
-					<form action=\"/panel/tokens/grant_action\" method=\"post\">
+					<form action=\"/panel/settings/tokens/grant_action\" method=\"post\">
 						<table>
 							<tr>
 								<th>{$lang['grantname']}</th>
@@ -78,7 +78,7 @@ if( $token['lease'] > 0 )
 	$tokendate = date($lang['dateformat'], $token['lease']);
 
 $content .= "
-				<form action=\"/panel/tokens/update_action\" method=\"post\">
+				<form action=\"/panel/settings/tokens/update_action\" method=\"post\">
 					<input type=\"hidden\" name=\"token\" value=\"".security::encode($_GET['token'])."\" />
 					<fieldset>
 						<input type=\"text\" name=\"value\" value=\"{$token['token']}\" style=\"width: 400px;\" disabled />

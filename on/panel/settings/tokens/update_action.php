@@ -21,6 +21,6 @@ api::send('self/token/update', $params);
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	template::redirect('/panel/tokens/detail?token=' . $_POST['token']);
+	template::redirect('/panel/settings/tokens/detail?token=' . $_POST['token']);
 
 ?>

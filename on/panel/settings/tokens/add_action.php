@@ -28,6 +28,6 @@ switch( $_POST['type'] )
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	template::redirect('/panel/tokens');
+	template::redirect('/panel/settings/tokens');
 
 ?>

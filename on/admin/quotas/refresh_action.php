@@ -11,6 +11,6 @@ api::send('user/qcompute', array('user'=>$_GET['id']));
 if( isset($_GET['redirect']) )
         template::redirect($_GET['redirect']);
 else
-        $template->redirect('/admin/users/detail?id=' . $_GET['id']);
+        $template->redirect('/admin/users/detail?id=' . $_GET['id'].'#quotas');
 
 ?>

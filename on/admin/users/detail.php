@@ -30,7 +30,7 @@ $content = "
 			<div class=\"clear\"></div><br />
 			<div class=\"container\">
 				<div style=\"width: 700px; float: left;\">
-					<h2 class=\"dark\">{$lang['sites']}</h2>
+					<h2 class=\"dark\" id=\"sites\">{$lang['sites']}</h2>
 					<table>
 						<tr>
 							<th>{$lang['url']}</th>
@@ -59,7 +59,7 @@ if( security::hasGrant('SITE_SELECT') )
 $content .= "
 					</table>
 					<br /><br />
-					<h2 class=\"dark\">{$lang['databases']}</h2>
+					<h2 class=\"dark\" id=\"databases\">{$lang['databases']}</h2>
 					<table>
 						<tr>
 							<th>{$lang['type']}</th>
@@ -90,7 +90,7 @@ if( security::hasGrant('DATABASE_SELECT') )
 $content .= "
 					</table>
 					<br /><br />
-					<h2 class=\"dark\">{$lang['domains']}</h2>
+					<h2 class=\"dark\" id=\"domains\">{$lang['domains']}</h2>
 					<table>
 						<tr>
 							<th>{$lang['domain']}</th>
@@ -121,7 +121,17 @@ if( security::hasGrant('DOMAIN_SELECT') )
 $content .= "
 					</table>
 					<br /><br />
-					<h2 class=\"dark\">{$lang['tokens']}</h2>
+					
+					<div style=\"float: left; width: 300px; padding-top: 5px;\">
+						<h2 class=\"dark\" style=\"padding-top: 7px;\" id=\"tokens\">{$lang['tokens']}</h2>
+					</div>
+					<div style=\"float: right; width: 200px;\">
+						<a class=\"button classic\" href=\"#\" onclick=\"$('#user3').val('{$user['id']}'); $('#newtoken').dialog('open'); return false;\" style=\"width: 22px; height: 22px; float: right;\">
+							<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white.png\" />
+						</a>
+					</div>
+					<div class=\"clear\"></div>
+					<br />
 					<table>
 						<tr>
 							<th>{$lang['tokenname']}</th>
@@ -171,7 +181,7 @@ if( security::hasGrant('QUOTA_USER_SELECT') )
 	$userquotas = api::send('quota/user/list', array('user'=>$_GET['id']));
 
 	$content .= "
-				<h2 class=\"dark\">{$lang['quotas']}</h2>
+				<h2 class=\"dark\" id=\"quotas\">{$lang['quotas']}</h2>
 				<table>
 					<tr>
 						<th style=\"width: 100px;\">{$lang['quotaname']}</th>
@@ -348,9 +358,34 @@ $content .= "
 				</form>
 			</div>
 		</div>
+		<div id=\"newtoken\" class=\"floatingdialog\">
+			<h3 class=\"center\">{$lang['newtoken']}</h3>
+			<p style=\"text-align: center;\">{$lang['newtoken_text']}</p>
+			<div class=\"form-small\">		
+				<form action=\"/admin/tokens/add_action\" method=\"post\" class=\"center\">
+					<input id=\"user3\" type=\"hidden\" value=\"\" name=\"user\" />
+					<fieldset>
+						<input type=\"text\" name=\"name\" />
+						<span class=\"help-block\">{$lang['tokenname_help']}</span>
+					</fieldset>
+					<fieldset>
+						<select name=\"type\">
+							<option value=\"user\">{$lang['user']}</option>
+							<option value=\"admin\">{$lang['admin']}</option>
+							<option value=\"blank\">{$lang['blank']}</option>
+						</select>
+						<span class=\"help-block\">{$lang['tokentype_help']}</span>
+					</fieldset>
+					<fieldset autofocus>	
+						<input type=\"submit\" value=\"{$lang['create']}\" />
+					</fieldset>
+				</form>
+			</div>
+		</div>
 		<script>
 			newFlexibleDialog('delete', 550);
 			newFlexibleDialog('quotachange', 550);
+			newFlexibleDialog('newtoken', 550);
 		</script>	
 ";
 

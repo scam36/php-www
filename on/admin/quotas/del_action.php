@@ -10,6 +10,6 @@ api::send('quota/del', array('id'=>$_GET['id']));
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	template::redirect('/admin/quota');
+	template::redirect('/admin/quotas');
 
 ?>

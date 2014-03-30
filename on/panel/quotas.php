@@ -119,7 +119,7 @@ $content = "
 						<td>{$lang['cloud']}</td>
 						<td>{$lang['cloud_type']}</td>
 						<td>/dns/in/olympe/Users/".security::get('USER')."</td>
-						<td>0 {$lang['mb']}</td>
+						<td><span style=\"font-weight: bold;\">{$me['size']} {$lang['mb']}</span></td>
 					</tr>
 ";
 
@@ -131,7 +131,7 @@ foreach( $sites2 as $s )
 						<td>{$s['hostname']}</td>
 						<td>{$lang['site']}</td>
 						<td>{$s['homeDirectory']}</td>
-						<td>{$s['size']} {$lang['mb']}</td>
+						<td><span style=\"font-weight: bold;\">{$s['size']} {$lang['mb']}</span></td>
 					</tr>
 	";
 }
@@ -144,7 +144,7 @@ foreach( $databases2 as $d )
 						<td>{$d['name']}</td>
 						<td>{$lang['database']} {$d['type']}</td>
 						<td>/databases/{$d['name']}</td>
-						<td>{$d['size']} {$lang['mb']}</td>
+						<td><span style=\"font-weight: bold;\">{$d['size']} {$lang['mb']}</span></td>
 					</tr>
 	";
 }
@@ -161,7 +161,7 @@ foreach( $domains2 as $d )
 						<td>{$u['mail']}</td>
 						<td>{$lang['user']}</td>
 						<td>{$u['homeDirectory']}</td>
-						<td>{$u['size']} {$lang['mb']}</td>
+						<td><span style=\"font-weight: bold;\">{$u['size']} {$lang['mb']}</span></td>
 					</tr>
 		";
 	}

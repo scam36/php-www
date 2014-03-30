@@ -4,7 +4,7 @@
 [FR]
 title = "Infrastructure"
 datacenters = "Datacenters et réseau"
-datacenters_text = "Olympe s'appuie sur ses partenaires <a href='http://www.anotherservice.com'>Another Service</a> (AS 3666) et <a href='http://www.interxion.com'>Interxion</a> pour opérer les salles, le transit et la couche réseau
+datacenters_text = "Olympe s'appuie sur ses partenaires <a href='http://www.anotherservice.com'>Another Service</a> (AS 62260) et <a href='http://www.interxion.com'>Interxion</a> pour opérer les salles, le transit et la couche réseau
 de son infrastructure. Nos serveurs sont situés en France, dans plusieurs centres de données. <br /><br />Grâce aux emplacements géographiques distincts et à la flexibilité de nos fournisseurs notamment sur le routage
 et les annonces BGP, nous avons mis en place une infrastructure résistante aux pannes même en cas de coupure complète d'un site de production.<br /><br />
 Grâce à l'aide d'Interxion, Olympe dispose d'un port gigabit sur le point de peering <a href='https://www.franceix.net'>FranceIX</a>. Cela nous permet d'accroître nos capacités de transits vers 
@@ -21,27 +21,11 @@ soft = "Applicatifs"
 status = "Statut de l'infrastructure"
 data = "Notre matériel"
 paris = "Datacentres parisiens"
-paris_text = "Nous avons deux points de présence à Paris, le premier à <i>Interxion Paris 2</i> et le second à <i>Interxion Paris 7</i>. Nous possédons une boucle fibre noire dédiée à notre infrastructure entre ces deux datacenters."
-paris2 = "Zoom sur Paris 7"
-paris_text2 = "
-<ul class='styled'>
-	<li>Surface : 4500m² d'espace équipé</li>
-	<li>Connectivité : 3 points d'interconnexion Internet dont France-IX, +  de 70 opérateurs Télécom/ISPs</li>
-	<li>Puissance électrique : haute densité jusqu'à 2300W/m²</li>
-	<li>Sécurité : une équipe de sécurité sur site  24/7/365 et de multiples niveaux de sécurité physique</li>
-	<li>Communautés:  accès direct aux partenaires de votre chaîne de valeur (Hubs Financier, Cloud et Digital Media)</li>
-	<li>Service client : multilingue 24/7/365 certifié ISO 27001, BS 25999 et formé ITILv3</li>
-</ul>"
+paris_text = "Nous avons deux points de présence à Paris, le premier à <i>Interxion Paris 2</i> et le second à <i>Interxion Paris 7</i>. Nous éclairons une boucle fibre noire dédiée à notre infrastructure entre ces deux datacenters."
+paris_text2 = "Ces deux datacenters possèdent trois points d'interconnexion dont France-IX et plus de 70 opérateurs Télécom/ISPs. Avec une densité électrique de 2300W/m² et de nombreuses innovations, nous envisageons serinement la croissance
+de nos infrastructures parisiennes."
 marseille = "Datacentres marseillais"
-marseille_text = "A Marseille, nous sommes présents chez Jaguar Network dans le <i>SFR Netcenter</i>."
-marseille2 = "Zoom sur le Netcenter"
-marseille_text2 = "
-<ul class='styled'>
-	<li>Distribution énergie sécurisée (Groupe électrogène , Batteries)</li>
-	<li>Climatisation (redondance N+1)</li>
-	<li>Contrôle d'accès (Agent de sécurité SSIAP2 posté sur site en 24/7*, lecteurs de badges et sas de protection, vidéo surveillance hors salle)</li>
-	<li>Protection Incendie (FM 200, Azote, Cloisons coupe-feu)</li>
-	<li>Salles équipées en faux planchers, faux plafonds et chemins de câbles aériens pour la fibre</li>
-	<li>Production d'eau glacée : 3 groupes froids de 2000KW en N+1</li>
-	<li>Extinction automatique d'incendie (ARGO 55 ou FM200)</li>
-</ul>"
+marseille_text = "A Marseille, nous sommes présents chez Jaguar Network dans deux centres de données, le <i>SFR Netcenter</i> et <i>MRS-01</i>. Nous opérons le routage de notre réseau publique et gérons pleinement la redondance
+entre ces deux sites."
+marseille_text2 = "Centre de données tiers IV, notre implantation historique en Provence et dans la région nous a permis de développer une partie de notre infrastructure système et réseau en collaboration avec des acteurs locaux et des opérateurs
+indépendants."

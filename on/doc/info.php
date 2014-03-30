@@ -123,8 +123,13 @@ $content = "
 					</tr>
 					<tr>
 						<td>{$lang['pgsql']}</td>
-						<td>sql.olympe.in</td>
+						<td>psql.olympe.in</td>
 						<td>5432</td>
+					</tr>
+					<tr>
+						<td>{$lang['mongo']}</td>
+						<td>mongo.olympe.in</td>
+						<td>27017</td>
 					</tr>
 					<tr>
 						<td>{$lang['smtp']}</td>

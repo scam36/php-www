@@ -3,6 +3,7 @@
 
 [FR]
 title = "Bases de données"
+intro = "Lists des services disponibles"
 intro_text = "Nous améliorons nos services quotidiennement, certains types de bases de données seront disponibles très bientôt."
 available = "Versions disponibles"
 service = "Service"

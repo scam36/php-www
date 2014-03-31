@@ -33,8 +33,8 @@ $content = "
 							<ol>
 								<li><a href=\"/doc/what\">{$lang['what']}</a></li>
 								<li><a href=\"/doc/techno\">{$lang['techno']}</a></li>
+								<li><a href=\"/doc/info\">{$lang['infos']}</a></li>
 								<li><a href=\"/doc/first\">{$lang['first']}</a></li>
-								<li><a href=\"/doc/cloud\">{$lang['cloud']}</a></li>
 							</ol>
 						</div>
 						<div style=\"padding-left: 10px; margin: 20px 0 30px 0;\">

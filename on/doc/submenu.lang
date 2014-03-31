@@ -3,10 +3,7 @@
 [FR]
 menu_intro = "Accueil"
 menu_first = "Premiers pas"
-menu_sites = "Sites Internet"
-menu_databases = "Bases de données"
-menu_domains = "Noms de domaine"
-menu_services = "Services"
+menu_infos = "Informations utiles"
 menu_faq = "Questions fréquentes"
 
 ndoc = "Documentation"

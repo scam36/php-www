@@ -10,8 +10,8 @@ $menu = "
 							<ul>
 								<a href=\"/doc/what\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/what', '/'))===0?"active":"")."\">{$lang['what']}</li></a>
 								<a href=\"/doc/techno\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/techno', '/'))===0?"active":"")."\">{$lang['techno']}</li></a>
+								<a href=\"/doc/info\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/info', '/'))===0?"active":"")."\">{$lang['infos']}</li></a>
 								<a href=\"/doc/first\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/first', '/'))===0?"active":"")."\">{$lang['first']}</li></a>
-								<a href=\"/doc/cloud\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/cloud', '/'))===0?"active":"")."\">{$lang['cloud']}</li></a>
 							</ul>
 							<li style=\"cursor: auto;\">{$lang['features']}</li>
 							<ul>

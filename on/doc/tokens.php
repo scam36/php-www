@@ -25,34 +25,13 @@ $content = "
 			<div class=\"right big\">
 				<h3>{$lang['intro']}</h3>
 				<p>{$lang['intro_text']}</p>
+				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/23.png\" alt=\"23\" />
 				<br />
-				<h3>{$lang['default']}</h3>
-				<table>
-					<tr>
-						<th>{$lang['name']}</th>
-						<th>{$lang['max']}</th>
-					</tr>
-					<tr>
-						<td>{$lang['sites']}</td>
-						<td>1</td>					
-					</tr>
-					<tr>
-						<td>{$lang['databases']}</td>
-						<td>3</td>
-					</tr>
-					<tr>
-						<td>{$lang['disk']}</td>
-						<td>500 {$lang['mb']}</td>
-					</tr>	
-					<tr>
-						<td>{$lang['sent']}</td>
-						<td>100</td>
-					</tr>
-				</table>
-				<br /><br />
-				<h3>{$lang['overview']}</h3>
-				<p>{$lang['overview_text']}</p>
-				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/26.png\" alt=\"26\" />
+				<h3>{$lang['create']}</h3>
+				<p>{$lang['create_text']}</p>
+				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/24.png\" alt=\"24\" />
+				<p>{$lang['create_text2']}</p>
+				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/25.png\" alt=\"25\" />
 			</div>
 			<div class=\"clear\"></div><br /><br />
 		</div>

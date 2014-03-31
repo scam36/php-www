@@ -4,7 +4,7 @@
 [FR]
 title = "Sites Internet"
 intro = "Introduction"
-intro_text = "Les sites Internet sont les espaces d'hébergement Olympe. Vous pouvez créer plusieurs sites Internet à partir du même compte utilisateur. Les sites se distinguent par une adresse de la forme <i>nom_du_sit.olympe.ine</i>."
+intro_text = "Les sites Internet sont les espaces d'hébergement Olympe. Vous pouvez créer plusieurs sites Internet à partir du même compte utilisateur. Les sites se distinguent par une adresse de la forme <i>nom_du_site.olympe.in</i>."
 create = "Créer un site"
 create_text = "Pour créer un site, il suffit de vous rendre sur l'<a href='/panel'>accueil</a> votre panel."
 create_text2 = "Puis de remplir le formulaire :"

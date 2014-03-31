@@ -60,7 +60,7 @@ $content = "
 						<div style=\"padding-left: 10px; margin: 20px 0 30px 0;\">
 							<h3 class=\"grey bordered\">{$lang['various']}</h3>
 							<ol>
-								<li><a href=\"/doc/problems\">{$lang['problems']}</a></li>
+								<li><a href=\"/doc/faq\">{$lang['faq']}</a></li>
 								<li><a href=\"/doc/limit\">{$lang['directory']}</a></li>
 								<li><a href=\"/doc/php\">{$lang['php']}</a></li>
 								<li><a href=\"/doc/files\">{$lang['files']}</a></li>	
@@ -139,38 +139,53 @@ $content = "
 							</div>
 							<div id=\"answer-3\" class=\"answer\">
 								<div style=\"position: absolute; right: 0; top: 0;\"><a href=\"#\" onclick=\"showQuestions(3); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a></div>
-								<p>{$lang['answer_3_1']}</p>
-								<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/free.png\" alt=\"connectors\" />
-								<span class=\"legend\">{$lang['answer_3_legend_1']}</span>
-								<p>{$lang['answer_3_2']}</p>
+								<p>{$lang['dir']}</p>
 							</div>
 							<div id=\"answer-4\" class=\"answer\">
 								<div style=\"position: absolute; right: 0; top: 0;\"><a href=\"#\" onclick=\"showQuestions(4); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a></div>
-								qsdqsdqsdqs dqd qsd qsd qsd
+								<p>{$lang['phperrors']}</p>
 							</div>
 							<div id=\"answer-5\" class=\"answer\">
 								<div style=\"position: absolute; right: 0; top: 0;\"><a href=\"#\" onclick=\"showQuestions(5); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a></div>
-								qsdqsdqsdqs dqd qsd qsd qsd
+								<p>{$lang['access']}</p>
 							</div>
 							<div id=\"answer-6\" class=\"answer\">
 								<div style=\"position: absolute; right: 0; top: 0;\"><a href=\"#\" onclick=\"showQuestions(6); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a></div>
-								qsdqsdqsdqs dqd qsd qsd qsd
+								<p>{$lang['admindb']}</p>
+								<br />
+								<table>
+									<tr>
+										<th>{$lang['service']}</th>
+										<th>{$lang['desc']}</th>
+										<th>{$lang['address']}</th>
+									</tr>
+									<tr>
+										<td>PHPMyAdmin</td>
+										<td>{$lang['mysql']}</td>
+										<td><a href=\"https://pma.olympe.in\">https://pma.olympe.in</a></td>
+									</tr>
+									<tr>
+										<td>PHPPgAdmin</td>
+										<td>{$lang['pgsql']}</td>
+										<td><a href=\"https://pma.olympe.in\">https://ppa.olympe.in</a></td>
+									</tr>
+								</table>
 							</div>
 							<div id=\"answer-7\" class=\"answer\">
 								<div style=\"position: absolute; right: 0; top: 0;\"><a href=\"#\" onclick=\"showQuestions(7); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a></div>
-								qsdqsdqsdqs dqd qsd qsd qsd
+								<p>{$lang['statswhere']}</p>
 							</div>
 							<div id=\"answer-8\" class=\"answer\">
 								<div style=\"position: absolute; right: 0; top: 0;\"><a href=\"#\" onclick=\"showQuestions(8); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a></div>
-								qsdqsdqsdqs dqd qsd qsd qsd
+								<p>{$lang['capture']}</p>
 							</div>
 							<div id=\"answer-9\" class=\"answer\">
 								<div style=\"position: absolute; right: 0; top: 0;\"><a href=\"#\" onclick=\"showQuestions(9); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a></div>
-								qsdqsdqsdqs dqd qsd qsd qsd
+								<p>{$lang['finance']}</p>
 							</div>
 							<div id=\"answer-10\" class=\"answer\">
 								<div style=\"position: absolute; right: 0; top: 0;\"><a href=\"#\" onclick=\"showQuestions(10); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a></div>
-								qsdqsdqsdqs dqd qsd qsd qsd
+								<p>{$lang['opensource']}</p>
 							</div>
 						</div>
 					</div>

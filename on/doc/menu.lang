@@ -21,7 +21,7 @@ quota = "Quotas et limites"
 tokens = "Droits d'accès"
 
 various = "Divers"
-problems = "Problèmes fréquents"
+faq = "Questions fréquentes"
 directory = "Annuaire des sites"
 php = "Erreurs PHP"
 files = "Gestion des fichiers"

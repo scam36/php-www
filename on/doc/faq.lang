@@ -1,0 +1,46 @@
+[EN]
+
+[FR]
+title = "Questions fréquentes"
+
+popular = "Populaires"
+question_1 = "Comment transférer les données de mon site ?"
+question_2 = "Quelles sont les adresses des serveurs DNS ?"
+question_3 = "Comment choisir le dossier d'un domaine ?"
+question_4 = "Comment afficher les erreurs PHP ?"
+question_5 = "Quels sont les accès à ma base de données ?"
+question_6 = "Comment administrer mes bases de données ?"
+question_7 = "Où sont les statistiques de mon site ?"
+question_8 = "Pourquoi la capture d'écran n'est pas à jour ?"
+question_9 = "Comment Olympe est-il financé ?"
+question_10 = "En quoi Olympe est-il Open Source ?"
+
+transfer = "Vous pouvez transférer les données de votre site en vous connectant à notre infrastructure en FTP ou en SFTP."
+type = "Type d'accès"
+hostname = "Adresse du serveur"
+port = "Port"
+user = "Nom d'utilisateur"
+name = "nom de votre site"
+dns = "Afin que votre nom de domaine soit pleinement fonctionnel sur notre plateforme, vous devez modifier les paramètres DNS de votre domaine chez votre <i>registrar</i> avec les informations ci-dessous."
+serv = "Serveur"
+ip = "Adresse IP"
+ns1 = "Primaire"
+ns2 = "Secondaire"
+host = "Nom d'hôte"
+dir = "Le dossier cible de votre nom de domaine correspond à l'endroit où celui-ci sera dirigé. Si vous choisissez de laisser vide, alors le domaine pointera vers <i>http://votre_site.olympe.in</i>. Si vous choisissez <i>toto</i>, il pointera alors
+vers <i>http://votre_site.olympe.in/toto</i>."
+phperrors = "Les erreurs PHP ne s'affichent pas par défaut. Vous pouvez évidemment catcher les exceptions mais si vous ne pouvez pas ou ne savez pas le faire, un petit <a href='/doc/php'>tutoriel</a> vous permettra d'obtenir facilement les erreurs 
+PHP de site."
+access = "Les accès à votre base de données sont indiqués dans la vue de votre <a href='/panel/databases'>base de données</a> au sein de votre panel. Le nom d'utilisateur et le nom de la base sont les mêmes."
+admindb = "Pour administrer vos bases de données, vous avez à votre disposition plusieurs outils."
+mysql = "Administration des bases MySQL"
+pgsql = "Administration des bases PostgreSQL"
+service = "Service"
+desc = "Description"
+address = "Adresse"
+capture = "Les captures d'écran des sites Internet sont actualisées tous les trente jours. Il suffit donc d'être patient ;)"
+statswhere = "Les statistiques de votre site sont disponibles sur notre <a href='https://stats.olympe.in'>Piwik</a>, pour savoir comment les configurer, vous pouvez consulter <a href='/doc/stats'>cet article</a>."
+finance = "Olympe est entièrement autofinancé, son infrastructure et les serveurs qu'elle possède sont maintenu grâce à l'aide des <a href='/about/partners'>partenaires</a> et de l'ensemble de l'<a href='/about/team'>équipe</a>."
+opensource = "Olympe est investi dans l'Open Source via de <a href='/org'>multiples initiatives</a> mais également dans sa démarche de développement et d'administration système. Nous publions l'ensemble des <a href='/developers/tools'>outils</a> 
+que nous avons créés dans le cadre du service."
+host = "Nom d'hôte"

@@ -22,15 +22,15 @@ $content = "
 					{$menu}
 				</div>					
 			</div>
-			<div class=\"right big\">	
+			<div class=\"right big\">
 				<h3>{$lang['intro']}</h3>
 				<p>{$lang['intro_text']}</p>
 				<br />
-				<h3>{$lang['stats']}</h3>
-				<p>{$lang['stats_text']}</p>
-				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/11.png\" alt=\"11\" />
-				<p>{$lang['stats_text2']}</p>
-				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/12.png\" alt=\"12\" />
+				<h3>{$lang['update']}</h3>
+				<p>{$lang['update_text']}</p>
+				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/15.png\" alt=\"1\" />
+				<p>{$lang['update_text2']}</p>
+				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/27.png\" alt=\"27\" />
 			</div>
 			<div class=\"clear\"></div><br /><br />
 		</div>

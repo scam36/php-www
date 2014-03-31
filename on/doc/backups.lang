@@ -1,0 +1,9 @@
+[EN]
+
+
+[FR]
+title = "Sauvegardes"
+intro = "Introduction"
+intro_text = "Depuis votre panel, vous pouvez accéder aux sauvegardes de votre site dans la <a href='/panel/backups'>rubrique</a> correspondante."
+backups = "Télécharger les archives"
+backups_text = "Pour télécharger une archive, il suffit de sélectionner celle que vous désirez."

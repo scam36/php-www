@@ -8,6 +8,12 @@ if( !defined('PROPER_START') )
 
 require_once('on/doc/menu.php');
 
+if( $_GET['keyword'] )
+{
+	$search = new search(__DIR__);
+	$results = $search->find($_GET['keyword']);
+}
+
 $content = "
 		<div class=\"head-light\">
 			<div class=\"container\">
@@ -23,19 +29,33 @@ $content = "
 				</div>					
 			</div>
 			<div class=\"right big\">	
-				<h3>{$lang['intro']}</h3>
-				<p>{$lang['intro_text']}</p>
+				<h3>{$lang['result']} \"".security::encode($_GET['keyword'])."\"</h3>
 				<br />
-				<h3>{$lang['cloud']}</h3>
-				<p>{$lang['cloud_text']}</p>
-				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/13.png\" alt=\"13\" />
-				<p>{$lang['cloud_text2']}</p>
-				<br />
-				<h3>{$lang['client']}</h3>
-				<p>{$lang['client_text']}</p>
-				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/22.png\" alt=\"22\" />
+				
+";
+
+if( count($results) > 0 )
+{
+	$content .= "<ul class=\"search\">";
+	
+	foreach( $results as $key => $value )
+	{
+		$content .= "
+					<li>
+						<h2 class=\"dark\" style=\"margin-bottom: 5px;\">{$value['title']}</h2>
+						<a href=\"/doc/{$key}\">https://www.olympe.in/doc/{$key}</a><br />
+						<p>{$value['content']}</p>
+					</li>
+		";
+	}
+	$content .= "</ul>";
+}
+else
+	$content .= "<span style=\"font-size: 16px;\">{$lang['noresult']}</span>";
+
+$content .= "
 			</div>
-			<div class=\"clear\"></div><br /><br />
+			<div class=\"clear\">/div><br /><br />
 		</div>
 ";
 

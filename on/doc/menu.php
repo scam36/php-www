@@ -31,8 +31,8 @@ $menu = "
 							<ul>
 								<a href=\"/doc/faq\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/faq', '/'))===0?"active":"")."\">{$lang['faq']}</li></a>
 								<a href=\"/doc/directory\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/directory', '/'))===0?"active":"")."\">{$lang['directory']}</li></a>
+								<a href=\"/doc/backups\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/backups', '/'))===0?"active":"")."\">{$lang['backups']}</li></a>
 								<a href=\"/doc/php\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/php', '/'))===0?"active":"")."\">{$lang['php']}</li></a>
-								<a href=\"/doc/files\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/files', '/'))===0?"active":"")."\">{$lang['files']}</li></a>
 							</ul>	
 						</ul>
 ";

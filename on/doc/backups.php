@@ -26,11 +26,11 @@ $content = "
 				<h3>{$lang['intro']}</h3>
 				<p>{$lang['intro_text']}</p>
 				<br />
-				<h3>{$lang['stats']}</h3>
-				<p>{$lang['stats_text']}</p>
-				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/11.png\" alt=\"11\" />
-				<p>{$lang['stats_text2']}</p>
-				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/12.png\" alt=\"12\" />
+				<h3>{$lang['backups']}</h3>
+				<p>{$lang['backups_text']}</p>
+				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/28.png\" alt=\"28\" />
+				<p>{$lang['backups_text']}</p>
+				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/29.png\" alt=\"29\" />
 			</div>
 			<div class=\"clear\"></div><br /><br />
 		</div>

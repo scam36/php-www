@@ -50,6 +50,10 @@ $content = "
 							<th>{$lang['address']}</th>
 						</tr>
 						<tr>
+							<td>PHP Info</td>
+							<td><a href=\"https://phpinfo.olympe.in\">https://phpinfo.olympe.in</a></td>
+						</tr>
+						<tr>
 							<td>{$lang['webmail']}</td>
 							<td><a href=\"https://webmail.olympe.in\">https://webmail.olympe.in</a></td>
 						</tr>

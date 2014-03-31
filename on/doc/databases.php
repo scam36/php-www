@@ -24,52 +24,15 @@ $content = "
 			</div>
 			<div class=\"right big\">
 				<h3>{$lang['intro']}</h3>
-				<p class=\"large\">{$lang['intro_text']}</p>
+				<p>{$lang['intro_text']}</p>
 				<br />
-				<table>
-					<tr>
-						<th>{$lang['service']}</th>
-						<th>{$lang['name']}</th>
-						<th>{$lang['info']}</th>
-						<th>{$lang['version']}</th>
-					</tr>
-					<tr>
-						<td style=\"text-align: center;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-mysql.png\" style=\"width: 40px;\" alt=\"MySQL\"></td>
-						<td>MySQL</td>
-						<td>{$lang['db']}</td>
-						<td>5.5</td>
-					</tr>
-					<tr>
-						<td style=\"text-align: center;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-pgsql.png\" style=\"width: 40px;\" alt=\"PostgeSQL\"></td>
-						<td>PostgreSQL</td>
-						<td>{$lang['db']}</td>
-						<td>9.3</td>
-					</tr>
-					<tr>
-						<td style=\"text-align: center;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-mongodb.png\" style=\"width: 40px;\" alt=\"MongoDB\"></td>
-						<td>MongoDB</td>
-						<td>{$lang['key']}</td>
-						<td>{$lang['soon']}</td>
-					</tr>	
-					<tr>
-						<td style=\"text-align: center;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-redis.png\" style=\"width: 40px;\" alt=\"Redis\"></td>
-						<td>Redis</td>
-						<td>{$lang['key']}</td>
-						<td>{$lang['soon']}</td>
-					</tr>	
-					<tr>
-						<td style=\"text-align: center;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-memcached.png\" style=\"width: 40px;\" alt=\"Memcached\"></td>
-						<td>MemCached</td>
-						<td>{$lang['key']}</td>
-						<td>{$lang['soon']}</td>
-					</tr>
-					<tr>
-						<td style=\"text-align: center;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-rabbitmq.png\" style=\"width: 40px;\" alt=\"RabbitMQ\"></td>
-						<td>RabbitMQ</td>
-						<td>{$lang['queue']}</td>
-						<td>{$lang['soon']}</td>
-					</tr>	
-				</table>
+				<h3>{$lang['create']}</h3>
+				<p>{$lang['create_text']}</p>
+				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/16.png\" alt=\"16\" />
+				<p>{$lang['create_text2']}</p>
+				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/17.png\" alt=\"17\" />
+				<p>{$lang['create_text3']}</p>
+				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/18.png\" alt=\"18\" />
 			</div>
 			<div class=\"clear\"></div><br /><br />
 		</div>

@@ -38,12 +38,12 @@ $content = "
 							</ol>
 						</div>
 						<div style=\"padding-left: 10px; margin: 20px 0 30px 0;\">
-							<h3 class=\"grey bordered\">{$lang['account']}</h3>
+							<h3 class=\"grey bordered\">{$lang['services']}</h3>
 							<ol>
+								<li><a href=\"/doc/cloud\">{$lang['cloud']}</a></li>
+								<li><a href=\"/doc/stats\">{$lang['stats']}</a></li>
 								<li><a href=\"/doc/quotas\">{$lang['quota']}</a></li>
 								<li><a href=\"/doc/tokens\">{$lang['tokens']}</a></li>
-								<li><a href=\"/doc/settings\">{$lang['settings']}</a></li>
-								<li><a href=\"/doc/privacy\">{$lang['privacy']}</a></li>
 							</ol>
 						</div>
 					</div>
@@ -54,7 +54,7 @@ $content = "
 								<li><a href=\"/doc/sites\">{$lang['sites']}</a></li>
 								<li><a href=\"/doc/domains\">{$lang['domains']}</a></li>
 								<li><a href=\"/doc/databases\">{$lang['databases']}</a></li>
-								<li><a href=\"/doc/services\">{$lang['services']}</a></li>	
+								<li><a href=\"/doc/mails\">{$lang['mails']}</a></li>	
 							</ol>	
 						</div>
 						<div style=\"padding-left: 10px; margin: 20px 0 30px 0;\">

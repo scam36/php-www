@@ -18,14 +18,14 @@ $menu = "
 								<a href=\"/doc/sites\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/sites', '/'))===0?"active":"")."\">{$lang['sites']}</li></a>
 								<a href=\"/doc/domains\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/domains', '/'))===0?"active":"")."\">{$lang['domains']}</li></a>
 								<a href=\"/doc/databases\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/databases', '/'))===0?"active":"")."\">{$lang['databases']}</li></a>
-								<a href=\"/doc/services\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/services', '/'))===0?"active":"")."\">{$lang['services']}</li></a>
+								<a href=\"/doc/mails\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/mails', '/'))===0?"active":"")."\">{$lang['mails']}</li></a>
 							</ul>
-							<li style=\"cursor: auto;\">{$lang['account']}</li>
+							<li style=\"cursor: auto;\">{$lang['services']}</li>
 							<ul>
+								<a href=\"/doc/cloud\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/cloud', '/'))===0?"active":"")."\">{$lang['cloud']}</li></a>
+								<a href=\"/doc/stats\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/stats', '/'))===0?"active":"")."\">{$lang['stats']}</li></a>
 								<a href=\"/doc/quotas\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/quotas', '/'))===0?"active":"")."\">{$lang['quota']}</li></a>
 								<a href=\"/doc/tokens\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/tokens', '/'))===0?"active":"")."\">{$lang['tokens']}</li></a>
-								<a href=\"/doc/settings\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/settings', '/'))===0?"active":"")."\">{$lang['settings']}</li></a>
-								<a href=\"/doc/privacy\"><li class=\"".(strpos(rtrim($GLOBALS['CONFIG']['PAGE'], '/'), rtrim('/doc/privacy', '/'))===0?"active":"")."\">{$lang['privacy']}</li></a>
 							</ul>							
 							<li style=\"cursor: auto;\">{$lang['various']}</li>
 							<ul>

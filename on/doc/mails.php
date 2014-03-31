@@ -15,7 +15,7 @@ $content = "
 				<form id=\"searchform\" action=\"/doc/search\" method=\"post\"><input type=\"submit\" style=\"display: none;\" /><input class=\"auto\" style=\"width: 380px; font-size: 15px; float: right;\" type=\"text\" id=\"search\" value=\"{$GLOBALS['lang']['search']}\" onfocus=\"this.value = this.value=='{$GLOBALS['lang']['search']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$GLOBALS['lang']['search']}' : this.value; this.value=='{$GLOBALS['lang']['search']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" /></form>
 				<div class=\"clear\"></div>
 			</div>
-		</div>	
+		</div>
 		<div class=\"content\">		
 			<div class=\"left small\">
 				<div class=\"sidemenu\">
@@ -25,12 +25,14 @@ $content = "
 			<div class=\"right big\">
 				<h3>{$lang['intro']}</h3>
 				<p>{$lang['intro_text']}</p>
-				<p>{$lang['intro_text2']}</p>
 				<br />
-				<h3>{$lang['who']}</h3>
-				<p>{$lang['who_text']}</p>
-				<p>{$lang['who_text2']}</p>
-				<br />
+				<h3>{$lang['create']}</h3>
+				<p>{$lang['create_text']}</p>
+				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/19.png\" alt=\"19\" />
+				<p>{$lang['create_text2']}</p>
+				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/20.png\" alt=\"20\" />
+				<p>{$lang['create_text3']}</p>
+				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/21.png\" alt=\"21\" />
 			</div>
 			<div class=\"clear\"></div><br /><br />
 		</div>

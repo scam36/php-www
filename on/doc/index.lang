@@ -3,24 +3,23 @@
 [FR]
 title = "Documentation Olympe"
 
-index = "Accueil aide"
 started = "Débuter"
 what = "Qu'est-ce que Olympe ?"
 techno = "Technologies utilisées"
+infos = "Informations utiles"
 first = "Votre premier site"
-cloud = "Initiation au cloud"
 
 features = "Fonctionnalités"
 sites = "Sites Internet"
 domains = "Noms de domaine"
 databases = "Bases de données"
-services = "Services"
+mails = "Comptes mails"
 
-account = "Compte"
+services = "Services"
+cloud = "Application cloud"
+stats = "Statistiques"
 quota = "Quotas et limites"
 tokens = "Droits d'accès"
-settings = "Paramètres"
-privacy = "Protection des données"
 
 various = "Divers"
 problems = "Problèmes fréquents"

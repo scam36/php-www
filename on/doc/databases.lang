@@ -3,16 +3,10 @@
 
 [FR]
 title = "Bases de données"
-intro = "Lists des services disponibles"
-intro_text = "Nous améliorons nos services quotidiennement, certains types de bases de données seront disponibles très bientôt."
-available = "Versions disponibles"
-service = "Service"
-name = "Nom"
-info = "Information"
-version = "Version"
-soon = "Bientôt disponible"
-tutorials = "Tutoriaux"
-db = "Base de données relationnelle"
-key = "Stockage clé/valeur"
-queue = "Gestionnaire de queues de messages"
-back = "Retour"
+intro = "Introduction"
+intro_text = "Les bases de données vous permettent de stocker des informations de manière indépendante et ensuite de pouvoir les réutiliser sur votre site. Olympe supporte de <a href='/doc/techno'>nombreux moteurs</a> de bases de données."
+create = "Créer une base de données"
+create_text = "Pour créer une base de données, il faut vous rendre dans la <a href='/panel/databases'>rubrique correspondante</a> de votre panel :"
+create_text2 = "Puis remplir le formulaire en sélectionnant le type de base de données désiré :"
+create_text3 = "Une fois la base de données créée, vous pouvez l'utiliser. Certaines bases de données, notamment <i>MySQL</i> peuvent être migrées d'un cluster à un autre en fonction de la charge et des performances, vous avez le choix de changer de cluster
+si vous le désirez."

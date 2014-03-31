@@ -85,6 +85,7 @@ $content = "
 		</div>
 	</div>
 	<div id=\"changepass\" class=\"floatingdialog\">
+		<br />
 		<h3 class=\"center\">{$lang['changepass']}</h3>
 		<p style=\"text-align: center;\">{$lang['changepass_text']}</p>
 		<div class=\"form-small\">		

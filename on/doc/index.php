@@ -91,19 +91,51 @@ $content = "
 							</div>
 							<div id=\"answer-1\" class=\"answer\">
 								<div style=\"position: absolute; right: 0; top: 0;\"><a href=\"#\" onclick=\"showQuestions(1); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a></div>
-								<p>{$lang['answer_1_1']}</p>
-								<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/connectors.png\" alt=\"connectors\" />
-								<span class=\"legend\">{$lang['answer_1_legend_1']}</span>
-								<p>{$lang['answer_1_2']}</p>
-								<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/instance.png\" alt=\"instance\" />
-								<span class=\"legend\">{$lang['answer_1_legend_2']}</span>
+								<p>{$lang['transfer']}</p>
+								<br />
+								<table>
+									<tr>
+										<th>{$lang['type']}</th>
+										<th>{$lang['hostname']}</th>
+										<th>{$lang['port']}</th>
+										<th>{$lang['user']}</th>
+									</tr>
+									<tr>	
+										<td>FTP</td>
+										<td>ftp.olympe.in</td>
+										<td>21</td>
+										<td><i>{$lang['name']}</i></td>
+									</tr>
+									<tr>	
+										<td>SFTP</td>
+										<td>ftp.olympe.in</td>
+										<td>22</td>
+										<td><i>{$lang['name']}</i></td>
+									</tr>
+								</table>
+								<br /><br />
 							</div>
 							<div id=\"answer-2\" class=\"answer\">
 								<div style=\"position: absolute; right: 0; top: 0;\"><a href=\"#\" onclick=\"showQuestions(2); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a></div>
-								<p>{$lang['answer_2_1']}</p>
-								<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/tax.png\" alt=\"connectors\" />
-								<span class=\"legend\">{$lang['answer_2_legend_1']}</span>
-								<p>{$lang['answer_2_2']}</p>
+								<p>{$lang['dns']}</p>
+								<br />
+								<table>
+									<tr>
+										<th>{$lang['serv']}</th>
+										<th>{$lang['host']}</th>
+										<th>{$lang['ip']}</th>
+									</tr>
+									<tr>
+										<td>{$lang['ns1']}</td>
+										<td>ns1.olympe.in</td>
+										<td>178.32.167.243</td>
+									</tr>
+									<tr>
+										<td>{$lang['ns2']}</td>
+										<td>ns2.olympe.in</td>
+										<td>178.32.65.67</td>
+									</tr>
+								</table>
 							</div>
 							<div id=\"answer-3\" class=\"answer\">
 								<div style=\"position: absolute; right: 0; top: 0;\"><a href=\"#\" onclick=\"showQuestions(3); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a></div>

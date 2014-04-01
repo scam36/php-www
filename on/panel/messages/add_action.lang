@@ -1,0 +1,12 @@
+[EN]
+
+[FR]
+error = "L'un des champs n'est pas correct !"
+type = "Type de demande :"
+quota = "Augmentation de quota"
+select = "Type de quota :"
+disk = "Espace disque"
+sites = "Nombre de sites"
+dbs = "Nombre de bases de données"
+domains = "Nombre de domaines"
+request = "Quota demandé :"

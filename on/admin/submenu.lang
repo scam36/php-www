@@ -2,7 +2,7 @@
 
 [FR]
 menu_home = "Accueil"
-menu_messages = "Messages"
+menu_messages = "Demandes"
 menu_groups = "Groupes"
 menu_grants = "Privilèges"
 menu_quotas = "Quotas"

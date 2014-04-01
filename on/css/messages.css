@@ -1,0 +1,50 @@
+div.topic {
+
+}
+
+div.topic div.message {
+	border: 1px solid #b7b7b7;
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+div.topic div.message div.toppart {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #b7b7b7;
+}
+
+div.topic div.message div.toppart div.messageid {
+	float: left;
+	width: 100px;
+	margin: 0;
+	padding: 15px 20px 10px 20px;
+	font-size: 15px;
+	color: #159038;
+}
+
+div.topic div.message div.toppart div.date {
+	float: left;
+	padding: 15px 20px 10px 20px;
+	color: #959595;
+	font-size: 15px;
+}
+
+div.topic div.message div.toppart div.icons {
+	float: right;
+	padding: 10px 10px 10px 20px;
+}
+
+div.topic div.message div.meta {
+	float: left;
+	width: 100px;
+	margin: 0;
+	padding: 25px 20px 10px 20px;
+}
+
+div.topic div.message div.text {
+	float: left;
+	width: 700px;
+	margin: 0 0 0 0;
+	padding: 10px 20px 10px 20px;
+}

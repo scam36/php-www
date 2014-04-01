@@ -33,6 +33,7 @@ $content = "
 					<h2 class=\"dark\" id=\"sites\">{$lang['sites']}</h2>
 					<table>
 						<tr>
+							<th style=\"width: 60px; text-align: center;\">{$lang['id']}</th>
 							<th>{$lang['url']}</th>
 							<th>{$lang['size']}</th>
 							<th style=\"width: 50px; text-align: center;\">{$lang['actions']}</th>
@@ -47,6 +48,7 @@ if( security::hasGrant('SITE_SELECT') )
 	{		
 		$content .= "
 						<tr>
+							<td style=\"width: 60px; text-align: center;\">{$s['id']}</td>
 							<td><a href=\"http://{$s['hostname']}\">{$s['hostname']}</a></td>
 							<td>{$s['size']} {$lang['mb']}</td>
 							<td style=\"width: 50px; text-align: center;\">
@@ -59,6 +61,73 @@ if( security::hasGrant('SITE_SELECT') )
 $content .= "
 					</table>
 					<br /><br />
+					<h2 class=\"dark\" id=\"domains\">{$lang['domains']}</h2>
+					<table>
+						<tr>
+							<th style=\"width: 60px; text-align: center;\">{$lang['id']}</th>
+							<th>{$lang['domain']}</th>
+							<th>{$lang['arecord']}</th>
+							<th>{$lang['target']}</th>
+							<th style=\"width: 50px; text-align: center;\">{$lang['actions']}</th>
+						</tr>
+";
+		
+if( security::hasGrant('DOMAIN_SELECT') )
+{
+	$domains = api::send('domain/list', array('user'=>$_GET['id']));
+	
+	foreach( $domains as $d )
+	{		
+		$content .= "
+						<tr>
+							<td style=\"width: 60px; text-align: center;\">{$d['id']}</td>
+							<td>{$d['hostname']}</td>
+							<td>{$d['aRecord']}</td>
+							<td>".($d['destination']?"{$d['destination']}":"{$d['homeDirectory']}")."</td>
+							<td style=\"width: 50px; text-align: center;\">
+								<a href=\"/admin/domains/del_action?user={$_GET['id']}&domain={$d['hostname']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+							</td>
+						</tr>";
+	}
+}
+
+$content .= "
+					</table>
+					<br /><br />
+					<h2 class=\"dark\" id=\"domains\">{$lang['accounts']}</h2>
+					<table>
+						<tr>
+							<th style=\"width: 60px; text-align: center;\">{$lang['id']}</th>
+							<th>{$lang['name']}</th>
+							<th>{$lang['size']}</th>
+							<th style=\"width: 50px; text-align: center;\">{$lang['actions']}</th>
+						</tr>
+";
+		
+if( security::hasGrant('ACCOUNT_SELECT') )
+{
+	foreach( $domains as $d )
+	{		
+		$accounts = api::send('account/list', array('user'=> $user['id'], 'domain'=>$d['hostname']));
+	
+		foreach( $accounts as $a )
+		{
+			$content .= "
+						<tr>
+							<td style=\"width: 60px; text-align: center;\">{$a['id']}</td>
+							<td>{$a['mail']}</td>
+							<td>{$a['size']} {$lang['mb']}</td>
+							<td style=\"width: 50px; text-align: center;\">
+								<a href=\"/admin/account/del_action?user={$_GET['id']}&domain={$d['hostname']}&account={$a['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+							</td>
+						</tr>";
+		}
+	}
+}
+
+$content .= "
+					</table>
+					<br /><br />		
 					<h2 class=\"dark\" id=\"databases\">{$lang['databases']}</h2>
 					<table>
 						<tr>
@@ -89,39 +158,7 @@ if( security::hasGrant('DATABASE_SELECT') )
 
 $content .= "
 					</table>
-					<br /><br />
-					<h2 class=\"dark\" id=\"domains\">{$lang['domains']}</h2>
-					<table>
-						<tr>
-							<th>{$lang['domain']}</th>
-							<th>{$lang['arecord']}</th>
-							<th>{$lang['target']}</th>
-							<th style=\"width: 50px; text-align: center;\">{$lang['actions']}</th>
-						</tr>
-";
-		
-if( security::hasGrant('DOMAIN_SELECT') )
-{
-	$domains = api::send('domain/list', array('user'=>$_GET['id']));
-	
-	foreach( $domains as $d )
-	{		
-		$content .= "
-						<tr>
-							<td>{$d['hostname']}</td>
-							<td>{$d['aRecord']}</td>
-							<td>".($d['destination']?"{$d['destination']}":"{$d['homeDirectory']}")."</td>
-							<td style=\"width: 50px; text-align: center;\">
-								<a href=\"/admin/domains/del_action?user={$_GET['id']}&domain={$d['hostname']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
-							</td>
-						</tr>";
-	}
-}
-
-$content .= "
-					</table>
-					<br /><br />
-					
+					<br /><br />					
 					<div style=\"float: left; width: 300px; padding-top: 5px;\">
 						<h2 class=\"dark\" style=\"padding-top: 7px;\" id=\"tokens\">{$lang['tokens']}</h2>
 					</div>
@@ -380,7 +417,7 @@ foreach( $databases as $d )
 
 foreach( $domains as $d )
 {
-	$users = api::send('account/list', array('domain'=>$d['hostname']));
+	$users = api::send('account/list', array('user'=> $user['id'], 'domain'=>$d['hostname']));
 	
 	foreach( $users as $u )
 	{

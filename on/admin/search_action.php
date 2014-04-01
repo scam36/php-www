@@ -123,17 +123,27 @@ else if( $_POST['email'] != $lang['email'] )
 }
 else if( $_POST['site'] != $lang['site'] )
 {
-	$site = api::send('site/select', array('site'=>$_POST['site']));
-	if( count($site) == 0 )
-			template::redirect('/admin');
+	try
+	{
+		$site = api::send('site/select', array('site'=>$_POST['site']));
+	}
+	catch(Exception $e )
+	{
+		template::redirect('/admin?error=site');
+	}
 
 	$template->redirect('/admin/users/detail?id='.$site[0]['user']['id']);
 }
 else if( $_POST['domain'] != $lang['domain'] )
 {
-	$domain = api::send('domain/select', array('domain'=>$_POST['domain']));
-	if( count($domain) == 0 )
-			template::redirect('/admin');
+	try
+	{
+		$domain = api::send('domain/select', array('domain'=>$_POST['domain']));
+	}
+	catch(Exception $e )
+	{	
+		template::redirect('/admin?error=domain');
+	}
 
 	$template->redirect('/admin/users/detail?id='.$domain[0]['user']['id']);
 }

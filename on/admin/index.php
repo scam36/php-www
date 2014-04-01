@@ -8,8 +8,7 @@ if( !defined('PROPER_START') )
 
 $users = api::send('user/list', array('limit' => 10, 'order'=>'user_date', 'order_type'=>'DESC'));
 $overquotas = api::send('quota/nearlimit', array('quota'=>'BYTES'));
-//$messages = api::send('message/list', array('unanswered'=>1));
-$messages = array();
+$messages = api::send('message/list', array('topic'=>1, 'status'=>1));
 
 $content = "
 	<div class=\"admin\">
@@ -51,7 +50,6 @@ $content = "
 				<table>
 					<tr>
 						<th style=\"width: 40px; text-align: center;\">#</th>
-						<th>{$lang['type']}</th>
 						<th>{$lang['desc']}</th>
 						<th>{$lang['date']}</th>						
 					</tr>
@@ -62,8 +60,7 @@ foreach( $messages as $m )
 	$content .= "
 					<tr>
 						<td style=\"width: 40px; text-align: center;\"><img style=\"width: 30px; height: 30px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user_id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user_id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></td>
-						<td>".$lang[$m['type']]."</td>
-						<td><a href=\"/admin/message/detail?id={$m['id']}\">{$m['title']}</a></td>
+						<td><a href=\"/admin/messages/detail?id={$m['id']}\">{$m['title']}</a></td>
 						<td>".date('Y-m-d H:i', $m['date'])."</td>
 					</tr>
 	";

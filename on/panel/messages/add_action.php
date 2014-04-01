@@ -23,7 +23,7 @@ else
 
 $params = array();
 $params['content'] = bbcode::encode($message);
-$params['type'] = $_POST['type'];
+$params['type'] = 1;
 if( $_POST['title'] )
 	$params['title'] = $_POST['title'];
 if( $_POST['parent'] )

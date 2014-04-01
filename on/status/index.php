@@ -9,26 +9,33 @@ if( !defined('PROPER_START') )
 $fh = fopen("http://api.uptimerobot.com/getMonitors?apiKey={$GLOBALS['CONFIG']['UPTIME_TOKEN']}&format=json&customUptimeRatio=7-30-365&logs=1", 'r');
 $response = stream_get_contents($fh);
 fclose($fh);
-
 $response = json_decode(str_replace(array('jsonUptimeRobotApi(', ')'), array('', ''), $response), true);
 
 foreach( $response['monitors']['monitor'] as $m )
 {
-	if( $m['id'] == '776006440' )
+	if( $m['id'] == '776120035' )
 	{
 		$expl = explode('-', $m['customuptimeratio']);
 		$up7 = $expl[0];
 		$up30 = $expl[1];
 		$up365 = $expl[2];
-		
+		$status = $m['status'];
 		$logs = $m['log'];
 	}
 }
 
+
+require_once 'on/status/vendor/autoload.php';
+
+$client = new Redmine\Client('https://projets.olympe.in', 'admin', $GLOBALS['CONFIG']['REDMINE_TOKEN']);
+$issues = $client->api('issue')->all(array('project_id' => 'infrastructure'));
+
+print_r($issues);
+
 $content = "
-		<div class=\"head\" style=\"background-color: #7bbb51; background-image: url('/{$GLOBALS['CONFIG']['SITE']}/images/dotgrid-black.png'); margin-bottom: 0;\">
+		<div class=\"head\" style=\"background-color: ".($status!=2?"#ca0101":"#7bbb51")."; background-image: url('/{$GLOBALS['CONFIG']['SITE']}/images/dotgrid-black.png'); margin-bottom: 0;\">
 			<br />
-			<h1>{$lang['online']}</h1>
+			<h1>".($status!=2?"{$lang['offline']}":"{$lang['online']}")."</h1>
 			<h2 style=\"margin: 15px 0 15px 0; color: #ffffff;\">".date('M d Y H:i')."</h2>
 			<div style=\"width: 800px; margin: 0 auto; color: #ffffff; text-align: center; font-size: 14px; line-height: 20px;\">
 				{$lang['monitor']}
@@ -53,6 +60,42 @@ $content = "
 		</div>
 		<div class=\"clear\"></div>		
 		<div class=\"content\">
+			<h3>{$lang['issues']}</h3>
+			<table>
+				<tr>
+					<th>#</th>
+					<th>{$lang['type']}</th>
+					<th>{$lang['category']}</th>
+					<th>{$lang['title']}</th>
+					<th>{$lang['date']}</th>
+					<th>{$lang['status']}</th>
+					<th>{$lang['updated']}</th>
+				</tr>
+";
+
+if( count($issues) > 0 )
+{
+	foreach( $issues['issues'] as $i )
+	{
+		$content .= "
+				<tr>
+					<td></td>
+					<td>".$lang['tracker_' . $i['tracker']['id']]."</td>
+					<td>{$lang['']}</td>
+					<td><a href=\"https://projets.olympe.in/issues/{$i['id']}\">{$i['subject']}</a></td>
+					<td>".date($lang['dateformatsimple'], strtotime($i['start_date']))."</td>
+					<td>".$lang['status_' . $i['status']['id']]."</td>
+					<td>".date($lang['dateformat'], strtotime($i['updated_on']))."</td>
+				</tr>
+		";
+	}
+}
+
+
+
+$content .= "
+			</table>
+			<br /><br />
 			<div style=\"float: left; width: 500px;\">
 				<h4>{$lang['last7days']}</h4>
 				<br />

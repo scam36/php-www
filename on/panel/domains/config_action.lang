@@ -2,3 +2,4 @@
 
 [FR]
 success = "Les paramètres du nom de domaine ont bien été mis à jour."
+error = "L'un des champs n'est pas correctement formaté."

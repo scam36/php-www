@@ -1,5 +1,17 @@
 [EN]
+title = "Web hosting platform"
+free = "Free and open"
+free_text = "Notre plateforme repose sur une architecture intégrant les <a href='/service/infrastructure'>dernières technologies</a>. Elle est maintenue par une <a href='/about/team'>équipe de bénévole</a> et 
+enrichie par une <a href='https://community.olympe.in'>communauté</a> de webmasters.<br /><br />
+Les services d'hébergement de l'association sont gratuits et sans publicité, ouverts à tous et accessibles n'importe où dans le monde. Nous avons développés des <a href='/about/partners'>partenariats</a> nous permettant
+de disposer d'équipements et d'applications performants."
 
+offer = "Le service"
+offer_text = "Nous nous efforçons de faire évoluer notre <a href='/service/offer'>offre</a> avec les technologies les plus répandues. Les applicatifs sont mis à jour très régulièrement afin d'assurer 
+la présence des dernières fonctionnalités pour l'ensemble des utilisateurs.<br /><br />Un espace d'hébergement comprend des bases de données, la gestion des domaines et des comptes mails. Chaque compte 
+dispose également d'un espace d'<a href='/doc/cloud'>applications cloud</a> lui permettant de gérer un espace de stockage, des agendas et contacts partagés etc..."
+
+offers = "Voir l'offre"
 
 [FR]
 title = "Plateforme d'hébergement"

@@ -11,6 +11,7 @@ confirm_title = "Confirmation"
 groups = "Groups granted"
 action = "Actions"
 groupname = "Group name"
+update = "Update"
 
 [FR]
 title = "Détails du privilège"
@@ -25,3 +26,4 @@ confirm_title = "Confirmation"
 groups = "Groupes concernés"
 actions = "Actions"
 groupname = "Nom de groupe"
+update = "Modifier"

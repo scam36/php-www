@@ -181,7 +181,16 @@ if( security::hasGrant('QUOTA_USER_SELECT') )
 	$userquotas = api::send('quota/user/list', array('user'=>$_GET['id']));
 
 	$content .= "
-				<h2 class=\"dark\" id=\"quotas\">{$lang['quotas']}</h2>
+				<div style=\"float: left; width: 300px; padding-top: 5px;\">
+					<h2 class=\"dark\" style=\"padding-top: 7px;\" id=\"tokens\">{$lang['quotas']}</h2>
+				</div>
+				<div style=\"float: right; width: 200px;\">
+					<a class=\"button classic\" href=\"/admin/quotas/refresh_action?id={$user['id']}\" style=\"width: 22px; height: 22px; float: right;\">
+						<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/refresh-white.png\" />
+					</a>
+				</div>
+				<div class=\"clear\"></div>
+				<br />
 				<table>
 					<tr>
 						<th style=\"width: 100px;\">{$lang['quotaname']}</th>
@@ -225,9 +234,6 @@ if( security::hasGrant('QUOTA_USER_SELECT') )
 	$content .= "
 				</table>
 				<br />
-				<a class=\"button classic\" href=\"/admin/quotas/refresh_action?id={$user['id']}\" style=\"width: 180px;\">
-					<span style=\"display: block; padding-top: 3px;\">{$lang['refresh']}</span>
-				</a>
 	";
 }
 
@@ -327,7 +333,71 @@ if( security::hasGrant('GROUP_USER_SELECT') )
 
 $content .= "
 			</div>
-			<div class=\"clear\"></div><br />
+			<div class=\"clear\"></div><br /><br />
+			<h2 class=\"dark\">{$lang['sizes']}</h2>
+			<table>
+				<tr>
+					<th style=\"text-align: center; width: 40px;\">#</th>
+					<th>{$lang['name']}</th>
+					<th>{$lang['type']}</th>
+					<th>{$lang['path']}</th>
+					<th>{$lang['size']}</th>
+				</tr>
+				<tr>
+					<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/ftp.png\" /></td>
+					<td>{$lang['cloud']}</td>
+					<td>{$lang['cloud_type']}</td>
+					<td>/dns/in/olympe/Users/{$user['name']}</td>
+					<td><span style=\"font-weight: bold;\">{$user['size']} {$lang['mb']}</span></td>
+				</tr>
+";
+
+foreach( $sites as $s )
+{
+	$content .= "
+				<tr>
+					<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/site.png\" /></td>
+					<td>{$s['hostname']}</td>
+					<td>{$lang['site']}</td>
+					<td>{$s['homeDirectory']}</td>
+					<td><span style=\"font-weight: bold;\">{$s['size']} {$lang['mb']}</span></td>
+				</tr>
+	";
+}
+
+foreach( $databases as $d )
+{
+	$content .= "
+				<tr>
+					<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/database.png\" /></td>
+					<td>{$d['name']}</td>
+					<td>{$lang['database2']} {$d['type']}</td>
+					<td>/databases/{$d['name']}</td>
+					<td><span style=\"font-weight: bold;\">{$d['size']} {$lang['mb']}</span></td>
+				</tr>
+	";
+}
+
+foreach( $domains as $d )
+{
+	$users = api::send('account/list', array('domain'=>$d['hostname']));
+	
+	foreach( $users as $u )
+	{
+		$content .= "
+				<tr>
+					<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/user.png\" /></td>
+					<td>{$u['mail']}</td>
+					<td>{$lang['account']}</td>
+					<td>{$u['homeDirectory']}</td>
+					<td><span style=\"font-weight: bold;\">{$u['size']} {$lang['mb']}</span></td>
+				</tr>
+		";
+	}
+}
+
+$content .= "
+			</table>
 		</div>
 		<div id=\"quotachange\" class=\"floatingdialog\">
 			<br />

@@ -6,10 +6,10 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$grants = api::send('grant/list');
+$quotas = api::send('quota/list');
 
 $content = "
-		<div class=\"admin\">
+	<div class=\"admin\">
 			<div class=\"top\">
 				<div class=\"left\" style=\"padding-top: 5px;\">
 					<h1 class=\"dark\">{$lang['title']}</h1>
@@ -30,18 +30,18 @@ $content = "
 					</tr>
 ";
 
-foreach( $grants as $g )
+foreach( $quotas as $q )
 {
 	$content .= "
 					<tr>
-						<td>{$g['name']}</td>
+						<td>{$q['name']}</td>
 						<td style=\"width: 100px; text-align: center;\">
-							<a href=\"/admin/grants/detail?id={$g['id']}\" title=\"{$lang['manage']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/preview.png\" alt=\"{$lang['manage']}\" /></a>";
+";
 
-	if( security::hasGrant('GRANT_DELETE') )
+	if( security::hasGrant('QUOTA_DELETE') )
 	{
 		$content .= "
-											<a href=\"/admin/grants/del_action?id={$g['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/close.png\" alt=\"{$lang['delete']}\" /></a>";
+						<a href=\"/admin/quotas/del_action?id={$q['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/close.png\" alt=\"{$lang['delete']}\" /></a>";
 	}
 	
 	$content .= "
@@ -53,16 +53,16 @@ $content .= "
 				</table>
 			</div>
 		</div>
-		";
+";
 					
-if( security::hasGrant('GRANT_INSERT') )
+if( security::hasGrant('QUOTA_INSERT') )
 {
 	$content .= "
 		<div id=\"new\" class=\"floatingdialog\">
 			<h3 class=\"center\">{$lang['add']}</h3>
 			<p style=\"text-align: center;\">{$lang['add_text']}</p>
 			<div class=\"form-small\">		
-				<form action=\"/admin/grants/add_action\" method=\"post\" class=\"center\">
+				<form action=\"/admin/quotas/add_action\" method=\"post\" class=\"center\">
 					<fieldset>
 						<input class=\"auto\" type=\"text\" value=\"{$lang['name']}\" name=\"name\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
 						<span class=\"help-block\">{$lang['name_help']}</span>

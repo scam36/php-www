@@ -7,6 +7,7 @@ if( !defined('PROPER_START') )
 }
 
 api::send('quota/add', array('name'=>$_POST['name']));
+
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else

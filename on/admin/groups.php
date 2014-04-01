@@ -21,7 +21,7 @@ $content = "
 					</a>
 				</div>
 			</div>
-			<div class=\"clear\"></div><br />
+			<div class=\"clear\"></div>
 			<div class=\"content\">
 				<table>
 					<tr>
@@ -61,15 +61,16 @@ if( security::hasGrant('GROUP_INSERT') )
 			<h3 class=\"center\">{$lang['add']}</h3>
 			<p style=\"text-align: center;\">{$lang['add_text']}</p>
 			<div class=\"form-small\">		
-			<form action=\"/admin/grant/add_action\" method=\"post\" class=\"center\">
-				<fieldset>
-					<input class=\"auto\" type=\"text\" value=\"{$lang['name']}\" name=\"name\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
-					<span class=\"help-block\">{$lang['name_help']}</span>
-				</fieldset>
-				<fieldset>	
-					<input autofocus type=\"submit\" value=\"{$lang['create']}\" />
-				</fieldset>
-			</form>
+				<form action=\"/admin/groups/add_action\" method=\"post\" class=\"center\">
+					<fieldset>
+						<input class=\"auto\" type=\"text\" value=\"{$lang['name']}\" name=\"name\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+						<span class=\"help-block\">{$lang['name_help']}</span>
+					</fieldset>
+					<fieldset>	
+						<input autofocus type=\"submit\" value=\"{$lang['create']}\" />
+					</fieldset>
+				</form>
+			</div>
 		</div>";
 }
 

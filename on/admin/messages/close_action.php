@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-api::send('self/message/update', array('id'=>$_GET['id'], 'status'=>3));
+api::send('message/update', array('id'=>$_GET['id'], 'status'=>3));
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);

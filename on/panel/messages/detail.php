@@ -51,7 +51,7 @@ foreach( $messages as $m )
 						<div class=\"icons\">
 		";
 	
-		if( $m['user']['id'] == security::get('USER') )
+		if( $m['user']['name'] == security::get('USER') )
 		{
 			$content .= "
 							<a href=\"#\" onclick=\"showEdit('{$m['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" /></a>

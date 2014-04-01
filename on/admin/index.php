@@ -59,7 +59,7 @@ foreach( $messages as $m )
 {
 	$content .= "
 					<tr>
-						<td style=\"width: 40px; text-align: center;\"><img style=\"width: 30px; height: 30px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user_id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user_id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></td>
+						<td style=\"width: 40px; text-align: center;\"><img style=\"width: 30px; height: 30px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></td>
 						<td><a href=\"/admin/messages/detail?id={$m['id']}\">{$m['title']}</a></td>
 						<td>".date('Y-m-d H:i', $m['date'])."</td>
 					</tr>

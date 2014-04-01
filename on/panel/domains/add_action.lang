@@ -2,4 +2,4 @@
 
 [FR]
 folder = "dossier de destination"
-error = "Le format du nom de domaine ou de dossier est incorrect."
+error = "Le format du nom de domaine ou de dossier est incorrect ou votre <a href='/panel/quotas'>quota</a> est atteint."

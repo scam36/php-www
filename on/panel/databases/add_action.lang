@@ -2,4 +2,4 @@
 
 [FR]
 success = "La description a bien été modifiée."
-error = "Votre description est trop longue !"
+error = "Votre description est trop longue ou votre <a href='/panel/quotas'>quota</a> est atteint."

@@ -1,4 +1,4 @@
 [EN]
 
 [FR]
-error = "Le nom du site n'est pas correctement formaté (uniquement minuscules et chiffres)."
+error = "Le nom du site n'est pas correctement formaté (uniquement minuscules et chiffres) ou votre <a href='/panel/quotas'>quota</a> est atteint."

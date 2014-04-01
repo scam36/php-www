@@ -18,7 +18,8 @@ catch( Exception $e )
 }
 
 if( !$message['id'] || !$_GET['id'] )
-
+	template::redirect('/admin/messages');
+	
 $content .= "
 	<div class=\"panel\">
 		<div class=\"top\">

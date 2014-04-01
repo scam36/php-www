@@ -11,6 +11,6 @@ api::send('self/message/update', array('id'=>$_POST['id'], 'content'=>bbcode::en
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
 else
-	$template->redirect('/panel/messages/detail?id='.security::encode($_POST['parent']));
+	$template->redirect('/admin/messages/detail?id='.security::encode($_POST['parent']));
 
 ?>

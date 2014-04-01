@@ -106,6 +106,26 @@ $content .= "
 			<a class=\"button classic\" href=\"#\" onclick=\"$('#reply').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
 				<span style=\"display: block; padding-top: 3px;\">{$lang['reply']}</span>
 			</a>
+";
+
+if( $message['status'] != 3 )
+{
+	$content .= "
+			<a class=\"button classic\" href=\"#\" onclick=\"$('#close').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right; margin-right: 20px;\">
+				<span style=\"display: block; padding-top: 3px;\">{$lang['close']}</span>
+			</a>
+	";
+}
+else
+{
+	$content .= "
+			<a class=\"button classic\" href=\"/admin/messages/open_action?id={$message['id']}\" style=\"width: 180px; height: 22px; float: right; margin-right: 20px;\">
+				<span style=\"display: block; padding-top: 3px;\">{$lang['open']}</span>
+			</a>
+	";
+}
+
+$content .= "
 		</div>
 		<div class=\"clear\"></div><br /><br />
 	</div>
@@ -139,9 +159,23 @@ $content .= "
 			</form>
 		</div>
 	</div>
+	<div id=\"close\" class=\"floatingdialog\">
+		<br />
+		<h3 class=\"center\">{$lang['close']}</h3>
+		<p style=\"text-align: center;\">{$lang['close_text']}</p>
+		<div class=\"form-small\">		
+			<form action=\"/admin/messages/close_action\" method=\"get\" class=\"center\">
+				<input type=\"hidden\" value=\"{$message['id']}\" name=\"id\" />
+				<fieldset>	
+					<input autofocus type=\"submit\" value=\"{$lang['close_now']}\" />
+				</fieldset>
+			</form>
+		</div>
+	</div>
 	<script>
 		newFlexibleDialog('reply', 550);
 		newFlexibleDialog('delete', 550);
+		newFlexibleDialog('close', 550);
 		var status = 0;
 		function showEdit(id)
 		{

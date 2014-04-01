@@ -49,8 +49,17 @@ foreach( $messages as $m )
 							".date($lang['dateformat'], $m['date'])."
 						</div>
 						<div class=\"icons\">
+		";
+	
+		if( $m['user']['id'] == security::get('USER') )
+		{
+			$content .= "
 							<a href=\"#\" onclick=\"showEdit('{$m['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" /></a>
 							<a href=\"#\" onclick=\"$('#id').val('{$m['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+			";
+		}
+		
+		$content .= "
 						</div>
 						<div class=\"clear\"></div>
 					</div>

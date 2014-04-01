@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-api::send('self/message/update', array('id'=>$_POST['id'], 'content'=>bbcode::encode($_POST['content'])));
+api::send('message/update', array('id'=>$_POST['id'], 'content'=>bbcode::encode($_POST['content'])));
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);

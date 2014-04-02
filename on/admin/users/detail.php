@@ -295,7 +295,7 @@ if( security::hasGrant('USER_SELECT') )
 						<span class=\"help-block\">{$lang['confirm_help']}</span>
 					</fieldset>
 					<fieldset>
-						<input style=\"width: 300px;\" type=\"text\" name=\"lastname\" value=\"".date($lang['dateformat'], $user['date'])."\" disabled />
+						<input style=\"width: 300px;\" type=\"text\" name=\"date\" value=\"".date($lang['dateformat'], $user['date'])."\" disabled />
 						<span class=\"help-block\">{$lang['date_help']}</span>
 					</fieldset>
 					<fieldset>

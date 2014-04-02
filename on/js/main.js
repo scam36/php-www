@@ -8,6 +8,7 @@ $(function()
 	newFlexibleDialog('register', 500);
 	newFlexibleDialog('message', 250);
 	newFlexibleDialog('changepass', 350);
+	newFlexibleDialog('cookie', 700);
 	
 	// CONNECTOR RATING //
 	$('.star').raty(

@@ -56,7 +56,8 @@ foreach( $messages as $m )
 					</div>
 					<div class=\"meta\">
 						<a href=\"/admin/users/detail?id={$m['user']['id']}\"><img style=\"width: 80px; display: block;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a>
-						<br />{$m['user']['name']}
+						<br />
+						{$m['user']['name']}
 					</div>
 					<div class=\"text\">
 						<form action=\"/admin/messages/update_action\" method=\"post\">
@@ -88,6 +89,7 @@ $content .= "
 					</div>
 					<div class=\"meta\">
 						<img style=\"width: 80px; display: block;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
+						<br />
 						{$message['user']['name']}
 					</div>
 					<div class=\"text\">

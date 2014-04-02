@@ -88,7 +88,7 @@ $content .= "
 						<div class=\"clear\"></div>
 					</div>
 					<div class=\"meta\">
-						<img style=\"width: 80px; display: block;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" />
+						<a href=\"/admin/users/detail?id={$message['user']['id']}\"><img style=\"width: 80px; display: block;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$message['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a>
 						<br />
 						{$message['user']['name']}
 					</div>

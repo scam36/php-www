@@ -219,7 +219,7 @@ if( security::hasGrant('QUOTA_USER_SELECT') )
 
 	$content .= "
 				<div style=\"float: left; width: 300px; padding-top: 5px;\">
-					<h2 class=\"dark\" style=\"padding-top: 7px;\" id=\"tokens\">{$lang['quotas']}</h2>
+					<h2 class=\"dark\" style=\"padding-top: 7px;\" id=\"tokens\">{$lang['quotas']} (".date($lang['dateformat'], $user['last']).")</h2>
 				</div>
 				<div style=\"float: right; width: 200px;\">
 					<a class=\"button classic\" href=\"/admin/quotas/refresh_action?id={$user['id']}\" style=\"width: 22px; height: 22px; float: right;\">
@@ -293,6 +293,10 @@ if( security::hasGrant('USER_SELECT') )
 					<fieldset>
 						<input style=\"width: 300px;\" type=\"password\" name=\"confirm\" />
 						<span class=\"help-block\">{$lang['confirm_help']}</span>
+					</fieldset>
+					<fieldset>
+						<input style=\"width: 300px;\" type=\"text\" name=\"lastname\" value=\"".date($lang['dateformat'], $user['date'])."\" disabled />
+						<span class=\"help-block\">{$lang['date_help']}</span>
 					</fieldset>
 					<fieldset>
 						<input style=\"width: 300px;\" type=\"text\" name=\"email\" value=\"{$user['email']}\" />

@@ -1,5 +1,5 @@
 7tags.com
-.mailexpire.com
+mailexpire.com
 0clickemail.com
 99experts.com
 ak.mintemail.com

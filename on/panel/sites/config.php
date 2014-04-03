@@ -68,14 +68,17 @@ for( $i = 1; $i <= 12; $i++ )
 $content .= "
 	<div class=\"panel\">
 		<div class=\"top\">
-			<div class=\"left\" style=\"width: 600px;\">
+			<div class=\"left\" style=\"width: 500px;\">
 				<img style=\"width: 100px; height: 100px; border: 1px solid #cecece; padding: 5px; border-radius: 3px; text-align: right; float: left; margin-right: 20px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/sites/?url={$site['hostname']}\" />
 				<span style=\"font-size: 38px; display: block; margin-bottom: 15px;\">{$site['hostname']}</span>
 				<span style=\"font-size: 18px; color: #9a9a9a; display: block; margin-bottom: 10px;\">{$lang['disk']} {$site['size']} {$lang['mb']}</span>
 			</div>
-			<div class=\"right\" style=\"width: 400px; float: right; text-align: right;\">
+			<div class=\"right\" style=\"width: 600px; float: right; text-align: right;\">
 				<a class=\"action pass big\" href=\"#\" onclick=\"$('#changepassword').dialog('open'); return false;\">
 					{$lang['password']}
+				</a>
+				<a class=\"action download big\" href=\"#\" onclick=\"$('#download').dialog('open'); return false;\">
+					{$lang['download']}
 				</a>
 				<a class=\"action delete big\" href=\"#\" onclick=\"$('#delete').dialog('open'); return false;\">
 					{$lang['delete']}
@@ -174,6 +177,19 @@ $content .= "
 			</form>
 		</div>
 	</div>
+	<div id=\"download\" class=\"floatingdialog\">
+		<br />
+		<h3 class=\"center\">{$lang['backup']}</h3>
+		<p style=\"text-align: center;\">{$lang['backup_text']}</p>
+		<div class=\"form-small\">		
+			<form action=\"/panel/backups/add_action\" method=\"get\" class=\"center\">
+				<input id=\"id\" type=\"hidden\" value=\"{$site['id']}\" name=\"site\" />
+				<fieldset autofocus>	
+					<input type=\"submit\" value=\"{$lang['backup_now']}\" />
+				</fieldset>
+			</form>
+		</div>
+	</div>
 	<div id=\"changepassword\" class=\"floatingdialog\">
 		<h3 class=\"center\">{$lang['changepassword']}</h3>
 		<p style=\"text-align: center;\">{$lang['changepassword_text']}</p>
@@ -198,6 +214,7 @@ $content .= "
 		newFlexibleDialog('settings', 550);
 		newFlexibleDialog('changepassword', 550);
 		newFlexibleDialog('delete', 550);
+		newFlexibleDialog('download', 550);
 		
 		$(function()
 		{

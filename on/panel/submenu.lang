@@ -7,6 +7,7 @@ pservices = "Services"
 pquotas = "Quotas"
 pmessages = "Requests"
 psettings = "Settings"
+pbackups = "Backups"
 
 [FR]
 phome = "Accueil"
@@ -17,4 +18,6 @@ pservices = "Services"
 pquotas = "Quotas"
 pmessages = "Demandes"
 psettings = "Paramètres"
+pbackups = "Sauvegardes"
+
 

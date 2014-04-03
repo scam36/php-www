@@ -379,6 +379,15 @@ div.panel a.action.pass:hover {
 	background-image: url('../images/illu/pass_hover.png');
 }
 
+div.panel a.action.download {
+	background-image: url('../images/illu/backup.png');
+}
+
+div.panel a.action.download:hover {
+	color: #eb782b;
+	background-image: url('../images/illu/backup_hover.png');
+}
+
 div.panel a.action.bill {
 	background-image: url('../images/illu/bill.png');
 }

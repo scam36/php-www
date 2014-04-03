@@ -77,7 +77,7 @@ $content .= "
 					<th>{$lang['password']}</th>
 					<th>{$lang['database']}</th>
 					<th>{$lang['load']}</th>
-					<th style=\"width: 100px;  text-align: center;\">{$lang['actions']}</th>
+					<th style=\"width: 50px;\">{$lang['actions']}</th>
 				</tr>
 				<tr>
 					<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/server.png\" /></td>
@@ -91,9 +91,8 @@ $content .= "
 						</div>
 						<span class=\"quota\"><span style='font-weight: bold;'>{$database['stats'][$database['server']]}</span> {$lang['databases']}</span>
 					</td>
-					<td style=\"width: 100px; text-align: center;\">
+					<td style=\"width: 50px; text-align: center;\">
 						<a href=\"#\" title=\"\" onclick=\"$('#migrate').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
-						<a href=\"#\" title=\"\" onclick=\"$('#download').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/download2.png\" alt=\"\" /></a>
 					</td>
 				</tr>
 			</table>
@@ -136,22 +135,8 @@ $content .= "
 			</form>
 		</div>
 	</div>
-	<div id=\"download\" class=\"floatingdialog\">
-		<br />
-		<h3 class=\"center\">{$lang['backup']}</h3>
-		<p style=\"text-align: center;\">{$lang['backup_text']}</p>
-		<div class=\"form-small\">		
-			<form action=\"/panel/backups/add_action\" method=\"get\" class=\"center\">
-				<input type=\"hidden\" value=\"{$database['name']}\" name=\"database\" />
-				<fieldset autofocus>	
-					<input type=\"submit\" value=\"{$lang['backup_now']}\" />
-				</fieldset>
-			</form>
-		</div>
-	</div>
 	<script>
 		newFlexibleDialog('migrate', 550);
-		newFlexibleDialog('download', 550);
 		newFlexibleDialog('delete', 550);
 	</script>	
 	";

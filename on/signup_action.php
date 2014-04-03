@@ -5,13 +5,25 @@ if( !defined('PROPER_START') )
 	header("HTTP/1.0 403 Forbidden");
 	exit;
 }
-	
+
+$banned = array();
+$handle = fopen(__DIR__ . '/banned.txt', 'r');
+if( $handle )
+{
+	while( ($line = fgets($handle)) !== false )
+		$banned[] = $line;
+}
+
 if( isset($_POST['antispam']) && $_POST['antispam'] == $_SESSION['ANTISPAM'] && $_POST['conditions'] == 1 )
 {
 	try
 	{
 		unset($_SESSION['ANTISPAM']);
 		$_SESSION['JOIN_EMAIL'] = $_POST['email'];
+		$parts = explode('@', $_POST['email']);
+		
+		if( in_array($parts[1], $banned) )
+			throw new SiteException('Invalid or missing arguments', 400, 'Parameter email is on a spammer domain');
 		
 		$result = api::send('registration/add', array('auth'=>'', 'email'=>$_POST['email']), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 

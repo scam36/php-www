@@ -7,6 +7,7 @@ if( !defined('PROPER_START') )
 }
 
 $domains = api::send('self/domain/list');
+$sites = api::send('self/site/list');
 
 $content = "
 			<div class=\"panel\">
@@ -90,6 +91,10 @@ $content .= "
 			</div>
 			<div id=\"new\" class=\"floatingdialog\">
 				<h3 class=\"center\">{$lang['new']}</h3>
+";
+if( count($sites) > 0 )
+{
+	$content .= "
 				<p style=\"text-align: center;\">{$lang['new_text']}</p>
 				<div class=\"form-small\">		
 					<form action=\"/panel/domains/add_action\" method=\"post\" class=\"center\">
@@ -99,15 +104,13 @@ $content .= "
 						</fieldset>
 						<fieldset>
 							<select name=\"subdomain\">";
-$sites = api::send('self/site/list');
-
-foreach( $sites as $s )
-{
-	$content .= "
+	foreach( $sites as $s )
+	{
+		$content .= "
 								<option value=\"{$s['name']}\">{$s['hostname']}</option>";
-}
+	}
 
-$content .= "							
+	$content .= "							
 							</select>
 							<span class=\"help-block\">{$lang['tipsite']}</span>
 						</fieldset>
@@ -120,6 +123,16 @@ $content .= "
 						</fieldset>
 					</form>
 				</div>
+	";
+}
+else
+{
+	$content .= "
+				<p style=\"text-align: center;\">{$lang['nosite']}</p>
+	";
+}
+
+$content.= "
 			</div>
 			<div id=\"delete\" class=\"floatingdialog\">
 				<h3 class=\"center\">{$lang['delete']}</h3>

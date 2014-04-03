@@ -4,7 +4,7 @@ welcome = "Welcome on Olympe !"
 welcome_text = "Create your first website here.<br />
 After the creation, it will show here."
 of = "of"
-tipsite = "Will be accessible on <i>nom</i>.olympe.in."
+tipsite = "Will be accessible on <i>name</i>.olympe.in."
 newsite = "Create new website"
 newsite_text = "A website is a hosting space for your application."
 created = "created the"

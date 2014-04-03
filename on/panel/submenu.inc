@@ -11,8 +11,8 @@ $menu = array(
 	array('text'=>"pmails", 'link'=>"/panel/users"),
 	array('text'=>"pservices", 'link'=>"/panel/services"),
 	array('text'=>"pquotas", 'link'=>"/panel/quotas"),
-	array('text'=>"pmessages", 'link'=>"/panel/messages"),
 	array('text'=>"pbackups", 'link'=>"/panel/backups"),
+	array('text'=>"pmessages", 'link'=>"/panel/messages"),
 	array('text'=>"psettings", 'link'=>"/panel/settings")
 );
 

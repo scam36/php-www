@@ -68,7 +68,7 @@ if( count($logs) > 0 )
 		
 		$content .= "
 						<tr>
-							<td><a href=\"/admin/users/detail?id={$l['user']['id']}\"><img style=\"width: 30px; height: 30px; float: left; margin-right: 10px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$l['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a><a style=\"display: block; float: left; padding-top: 6px;\" href=\"/admin/detail?id={$l['user']['id']}\">{$l['user']['name']}</a></td>
+							<td><a href=\"/admin/users/detail?id={$l['user']['id']}\"><img style=\"width: 30px; height: 30px; float: left; margin-right: 10px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$l['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a><a style=\"display: block; float: left; padding-top: 6px;\" href=\"/admin/users/detail?id={$l['user']['id']}\">{$l['user']['name']}</a></td>
 							<td>{$l['method']}</td>
 							<td>".date($lang['dateformat'], $l['date'])."</a></td>
 							<td>{$l['ip']}</td>

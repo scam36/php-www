@@ -10,7 +10,7 @@ try
 {
 	$message = api::send('self/message/list', array('id'=>$_GET['id']));
 	$message = $message[0];
-	$messages = api::send('self/message/list', array('parent'=>$_GET['id']));
+	$messages = api::send('message/list', array('parent'=>$_GET['id']), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 }
 catch( Exception $e )
 {

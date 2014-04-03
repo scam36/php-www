@@ -43,7 +43,7 @@ if( count($news) > 0 )
 		
 		$content .= "
 						<tr>
-							<td style=\"text-align: center; width: 40px;\"><a href=\"/admin/messages/detail?id={$m['id']}\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/issue.png\" /></a></td>
+							<td style=\"text-align: center; width: 40px;\"><a href=\"/admin/blog/detail?id={$n['id']}\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/issue.png\" /></a></td>
 							<td>{$n['title']}</td>
 							<td><img style=\"width: 30px; height: 30px; float: left; margin-right: 10px;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/team/{$n['author']}.png\" /><span style=\"display: block; float: left; padding-top: 6px;\">".$lang['author_' . $n['author']]."</span></td>
 							<td>".date($lang['dateformat'], $n['date'])."</a></td>

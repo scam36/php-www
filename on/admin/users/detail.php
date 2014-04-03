@@ -439,6 +439,25 @@ foreach( $domains as $d )
 
 $content .= "
 			</table>
+			<br /><br />
+			<div class=\"comments\">
+				<h1 class=\"dark thin\">{$lang['comments']}</h1>
+				<br />
+				<div id=\"disqus_thread\"></div>
+				<script type=\"text/javascript\">
+					/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+					var disqus_developer = 0; // developer mode
+					var disqus_shortname = 'olympeadmin'; // required: replace example with your forum shortname
+					var disqus_identifier = 'User - {$user['name']}';
+					var disqus_url = 'https://www.olympe.in/admin/users/detail?id={$user['id']}';
+					/* * * DON'T EDIT BELOW THIS LINE * * */
+					(function() {
+						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+						dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+					})();
+				</script>
+			</div>
 		</div>
 		<div id=\"quotachange\" class=\"floatingdialog\">
 			<br />

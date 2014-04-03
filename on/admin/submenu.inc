@@ -12,7 +12,7 @@ $menu = array(
 	array('text'=>"menu_quotas", 'icon'=>"iChart8", 'link'=>"/admin/quotas"),
 	array('text'=>"menu_stats", 'icon'=>"iChart8", 'link'=>"/admin/stats"),
 	array('text'=>"menu_blog", 'icon'=>"iChart8", 'link'=>"/admin/blog"),
-	array('text'=>"menu_settings", 'icon'=>"iChart8", 'link'=>"/admin/settings")
+	array('text'=>"menu_logs", 'icon'=>"iChart8", 'link'=>"/admin/logs")
 );
 
 return $menu;

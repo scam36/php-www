@@ -29,3 +29,6 @@ migrate_text = "Pour migrer votre base, vous devez renseigner votre mot de passe
 server_help = "Le serveur de votre base de données."
 password_help = "Mot de passe de cette base"
 migrate_now = "Migrer"
+backup = "Sauvegarde"
+backup_text = "Voulez-vous créer une sauvegarde de cette base de données ?"
+backup_now = "Confirmer"

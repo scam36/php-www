@@ -26,11 +26,19 @@ $content = "
 				<h3>{$lang['intro']}</h3>
 				<p>{$lang['intro_text']}</p>
 				<br />
-				<h3>{$lang['backups']}</h3>
-				<p>{$lang['backups_text']}</p>
+				<h3>{$lang['backup_site']}</h3>
+				<p>{$lang['backup_site_text']}</p>
 				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/28.png\" alt=\"28\" />
-				<p>{$lang['backups_text']}</p>
+				<p>{$lang['backup_site_text2']}</p>
+				<br />
+				<h3>{$lang['backup_database']}</h3>
+				<p>{$lang['backup_database_text']}</p>			
 				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/29.png\" alt=\"29\" />
+				<p>{$lang['backup_database_text2']}</p>
+				<br />
+				<h3>{$lang['backups']}</h3>
+				<p>{$lang['backups_text']}</p>	
+				<img class=\"doc\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/doc/30.png\" alt=\"30\" />
 			</div>
 			<div class=\"clear\"></div><br /><br />
 		</div>

@@ -112,7 +112,6 @@ $content .= "
 							(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 						})();
 					</script>
-					
 				</div>
 				<div class=\"clear\"><br /></div>
 			</div>

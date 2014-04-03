@@ -12,6 +12,6 @@ domains = "Nombre de domaines"
 request = "Quota demandé :"
 
 subject = "Une réponse vous attend"
-content = "<p style='margin: 20px 0'>Un administrateur a répondu à votre demande sur la plateforme d'hébergement <a href='https://www.olympe.in'>https://www.olympe.in</a>.</p>
-<p style='margin: 20px 0'>Vous pouvez y accéder en cliquant sur le lien suivant :<br /><a href='https://www.olympe.in/panel/messages/detail?id={ID}'>https://www.olympe.in/panel/messages/detail?id={ID}</a>.</p>
+content = "<p style='margin: 20px 0'>Un administrateur a répondu à votre demande sur la plateforme d'hébergement <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a>.</p>
+<p style='margin: 20px 0'>Vous pouvez y accéder en cliquant sur le lien suivant :<br /><a style='color: #de5711;' href='https://www.olympe.in/panel/messages/detail?id={ID}'>https://www.olympe.in/panel/messages/detail?id={ID}</a>.</p>
 <p style='margin: 20px 0'>Bonne continuation sur Olympe !</p>"

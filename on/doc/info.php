@@ -67,7 +67,7 @@ $content = "
 						</tr>
 						<tr>
 							<td>{$lang['ppa']}</td>
-							<td><a href=\"https://pma.olympe.in\">https://ppa.olympe.in</a></td>
+							<td><a href=\"https://ppa.olympe.in\">https://ppa.olympe.in</a></td>
 						</tr>
 						<tr>
 							<td>{$lang['stats']}</td>

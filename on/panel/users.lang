@@ -1,4 +1,15 @@
 [EN]
+title = "Mailbox accounts"
+domain = "Domain"
+arecord = "A record"
+home = "Folder"
+users = "Mailbox accounts"
+groups = "Groups"
+user = "accounts"
+group = "groups"
+actions = "Actions"
+nodomain = "You currently have no domain."
+doc = "Documentation"
 
 [FR]
 title = "Comptes mails"

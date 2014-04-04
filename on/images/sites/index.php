@@ -1,6 +1,6 @@
 <?php
 
-$url = str_replace(array('..', '\\', '|', '*', ' '), array('', '', '', '', ''), $_GET['url']);
+$url = str_replace(array('..', '\\', '|', '*', ' ', 'http://'), array('', '', '', '', '', ''), $_GET['url']);
 $file = $url.'.png';
 
 if( file_exists($file) )
@@ -11,7 +11,7 @@ if( file_exists($file) )
 	
 	if( $mod <= $current-(3600*24*30) || $size < 10 )
 	{
-		$address = 'http://api.snapito.com/?delay=0&freshness=0&size=sc&fast=false&timestamp=false&type=PNG&url=' . $url;
+		$address = 'http://172.16.1.200:3000?url=' . $url;
 		$content = file_get_contents($address);
 		if( $content )
 			file_put_contents($file, $content);
@@ -21,7 +21,7 @@ if( file_exists($file) )
 }
 else
 {
-	$address = 'http://api.snapito.com/?delay=0&freshness=0&size=sc&fast=false&timestamp=false&type=PNG&url=' . $url;
+	$address = 'http://172.16.1.200:3000?url=' . $url;
 	$content = file_get_contents($address);
 	if( $content )
 		file_put_contents($file, $content);

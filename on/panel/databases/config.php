@@ -92,7 +92,11 @@ $content .= "
 						<span class=\"quota\"><span style='font-weight: bold;'>{$database['stats'][$database['server']]}</span> {$lang['databases']}</span>
 					</td>
 					<td style=\"width: 100px; text-align: center;\">
-						<a href=\"#\" title=\"\" onclick=\"$('#migrate').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
+";
+if( $database['type'] == 'mysql' )
+	$content .= "						<a href=\"#\" title=\"\" onclick=\"$('#migrate').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>";
+	
+$content .= "
 						<a href=\"#\" title=\"\" onclick=\"$('#download').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/download2.png\" alt=\"\" /></a>
 					</td>
 				</tr>

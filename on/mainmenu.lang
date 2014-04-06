@@ -1,4 +1,14 @@
 [EN]
+mhosting = "Hosting"
+mcommunity = "Community"
+mblog = "Blog"
+mdoc = "Documentation"
+mlogin = "Login"
+msignup = "Sign up"
+mpanel = "Panel"
+mlogout = "Logout"
+mactions = "Actions"
+madmin = "Admin"
 
 [FR]
 mhosting = "Hébergement"

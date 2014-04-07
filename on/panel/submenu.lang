@@ -1,5 +1,5 @@
 [EN]
-phome = "Home"
+phome = "Sites"
 pdomains = "Domains"
 pdatabases = "Databases"
 pmails = "Mail accounts"
@@ -10,7 +10,7 @@ psettings = "Settings"
 pbackups = "Backups"
 
 [FR]
-phome = "Accueil"
+phome = "Sites"
 pdomains = "Domaines"
 pdatabases = "Bases de données"
 pmails = "Comptes mails"

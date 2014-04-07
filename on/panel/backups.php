@@ -7,8 +7,6 @@ if( !defined('PROPER_START') )
 }
 
 $backups = api::send('self/backup/list');
-$sites = api::send('self/site/list');
-$databases = api::send('self/database/list');
 
 $content = "
 			<div class=\"panel\">
@@ -64,51 +62,6 @@ else
 $content .= "
 				</div>
 			</div>
-			<div id=\"new\" class=\"floatingdialog\">
-				<h3 class=\"center\">{$lang['new']}</h3>
-";
-if( count($sites) > 0 )
-{
-	$content .= "
-				<p style=\"text-align: center;\">{$lang['new_text']}</p>
-				<div class=\"form-small\">		
-					<form action=\"/panel/domains/add_action\" method=\"post\" class=\"center\">
-						<fieldset>
-							<input class=\"auto\" type=\"text\" value=\"{$lang['name']}\" name=\"domain\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
-							<span class=\"help-block\">{$lang['tipname']}</span>
-						</fieldset>
-						<fieldset>
-							<select name=\"subdomain\">";
-	foreach( $sites as $s )
-	{
-		$content .= "
-								<option value=\"{$s['name']}\">{$s['hostname']}</option>";
-	}
-
-	$content .= "							
-							</select>
-							<span class=\"help-block\">{$lang['tipsite']}</span>
-						</fieldset>
-						<fieldset>
-							<input class=\"auto\" type=\"text\" value=\"{$lang['folder']}\" name=\"dir\" onfocus=\"this.value = this.value=='{$lang['folder']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['folder']}' : this.value; this.value=='{$lang['folder']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
-							<span class=\"help-block\">{$lang['foldertip']}</span>
-						</fieldset>
-						<fieldset autofocus>
-							<input type=\"submit\" value=\"{$lang['create']}\" />
-						</fieldset>
-					</form>
-				</div>
-	";
-}
-else
-{
-	$content .= "
-				<p style=\"text-align: center;\">{$lang['nosite']}</p>
-	";
-}
-
-$content.= "
-			</div>
 			<div id=\"delete\" class=\"floatingdialog\">
 				<h3 class=\"center\">{$lang['delete']}</h3>
 				<p style=\"text-align: center;\">{$lang['delete_text']}</p>
@@ -122,7 +75,6 @@ $content.= "
 				</div>
 			</div>
 			<script>
-				newFlexibleDialog('new', 550);
 				newFlexibleDialog('delete', 550);
 			</script>
 ";

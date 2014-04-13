@@ -55,7 +55,7 @@ else
 
 $content .= "
 			</div>
-			<div class=\"clear\">/div><br /><br />
+			<div class=\"clear\"></div><br /><br />
 		</div>
 ";
 

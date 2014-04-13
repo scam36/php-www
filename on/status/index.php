@@ -24,7 +24,6 @@ foreach( $response['monitors']['monitor'] as $m )
 	}
 }
 
-
 require_once 'on/status/vendor/autoload.php';
 
 $client = new Redmine\Client('https://projets.olympe.in', 'admin', $GLOBALS['CONFIG']['REDMINE_TOKEN']);

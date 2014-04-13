@@ -3,16 +3,18 @@
 
 [FR]
 title = "Notre équipe"
+yann = "Ingénieur<br />Co-fondateur"
+sam = "Ingénieur<br />Co-fondateur"
+simon = "Ingénieur<br />Co-fondateur"
+bruno = "Ingénieur<br />Administrateur"
+gaetan = "Ingénieur<br />Administrateur"
+thomas = "Etudiant<br />Développeur"
+herve = "Etudiant<br />Modérateur / support"
+gael = "Ingénieur<br />Développeur / administrateur"
 
-yann = "Ingénieur système et réseau diplômé de l'Ecole Centrale Marseille, Yann Autissier travaille au sein de la société <a href='http://www.anotherservice.com'>Another Service</a>, où il participe au développement de 
-l'infrastructure d'hébergement. Yann est l'un des co-fondateurs de l'association Olympe, il s'occupe notamment du maintien de l'architecture et des services. Investi dans la promotion du libre et de 
-l'open-source, Yann est également le trésorier de l'association <a href='http://www.libertis.org'>Libertis</a>, regroupant les SSLL de la région PACA."
-sam = "Ingénieur réseau et sécurité, analyste stratégique (géopolitique de l'information, gestion des risques...), Samuel Hassine est dîplomé de l'Institut d'Etudes Politiques d'Aix-en-Provence et 
-de l'Université Paris VI. Il est l'un des co-fondateurs d'Olympe et s'occupe de la mise en oeuvre de la plateforme d'hébergement et du développement du panel et de l'API."
-simon = "Simon Uyttendaele, diplômé en Réseaux et Télécomunications et titulaire d'un master en Intelligence Artificielle, se charge du développement 'nouvelle génération' des applications. 
-Il conforte Olympe au niveau de la sécurité et de la tracabilité des opérations effectuées sur le réseau, afin de répondre de manière claire et rapide à toute éventualité."
-bruno = "Bruno a rejoint l'équipe Olympe en juillet 2008. Autodidacte en informatique et passionné par les nouvelles technologies, il met a disposition ses multiples compétences au profit de tous.
-Administrateur Système et Réseaux, il oeuvre à tous les niveaux de support sur la plateforme. De la surveillance de l'infrastructure à l'aide et conseil aux utilisateurs. Il s'occupe aussi de la surveillance des sites hébergés pour 
-prémunir Olympe des sites malveillants."
-gaetan = "Diplômé en Réseaux et Télécommunications, Gaëtan Parisse travaille comme responsable informatique en suivant une formation master en gestion de projets et management des systèmes d'information. Toujours à l'affut de nouvelles 
-technologies et de nouveaux défis, il a rejoint l'équipe Olympe pour contribuer au projet, partager et aider les utilisateurs."
+hiring = "Nous recrutons !"
+hiring_text = "Olympe recherche actuellement de nouveaux membres pour son équipe d'administration et de développement. Il s'agit bien entendu de travail bénévole et à distance, mais si vous êtes intéressés par les technologies d'infrastructure,
+le développement web ou les interactions communautaires, vous pouvez nous <a href='/about/contact'>contacter</a> en nous expliquant votre démarche.
+<br /><br />En tant que membre de l'équipe, vous devenez pleinement adhérent à l'association Olympe et de ce fait vous avez la possibilité d'aller représenter l'association lors de salons ou de conférences."
+contact = "Contactez-nous"
+help = "Rejoignez notre équipe"

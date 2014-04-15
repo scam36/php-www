@@ -24,7 +24,7 @@ if( file_exists($file) )
 }
 else
 {
-	$address = 'http://172.16.1.200:3000?url=' . $url;
+	$address = 'http://172.16.1.200:3000?width=200&height=150&url=' . $url;
 	$content = file_get_contents($address);
 	if( $content )
 		file_put_contents($file, $content);

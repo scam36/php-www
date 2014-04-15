@@ -22,8 +22,8 @@ $content = "
 				</div>
 				<div class=\"right small border\">
 					<h4>{$lang['follow']}</h4>
-					<p><a href=\"http://twitter.com/olympe_fr\">Twitter</a></p>
-					<p><a href=\"http://www.facebook.com/olympe.fr\">Facebook</a></p>
+					<p><a href=\"http://twitter.com/OlympeNet\">Twitter</a></p>
+					<p><a href=\"http://www.facebook.com/olympe.org\">Facebook</a></p>
 					<p><a href=\"http://www.linkedin.com/company/711968\">LinkedIn</a></p>
 					<p><a href=\"/blog\">{$lang['news']}</a></p>
 					<br />

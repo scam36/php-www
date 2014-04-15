@@ -44,7 +44,7 @@ if( file_exists($file) )
 	
 	if( $mod <= $current-(3600*24*30) || $size < 10 )
 	{
-		$address = 'http://172.16.1.200:3000?url=' . $url . '&clipRect={"top":0,"left":0,"width":1024,"height":600}';
+		$address = 'http://172.16.1.200:3000?url=' . $url . '&clipRect={"top":0,"left":0,"width":1024,"height":768}';
 		$content = file_get_contents($address);
 		$thumb = resize($content);
 		
@@ -53,7 +53,7 @@ if( file_exists($file) )
 }
 else
 {
-	$address = 'http://172.16.1.200:3000?url=' . $url . '&clipRect={"top":0,"left":0,"width":1024,"height":600}';
+	$address = 'http://172.16.1.200:3000?url=' . $url . '&clipRect={"top":0,"left":0,"width":1024,"height":768}';
 	$content = file_get_contents($address);
 	$thumb = resize($content);
 		

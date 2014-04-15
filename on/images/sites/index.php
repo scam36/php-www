@@ -23,7 +23,7 @@ function resize($content)
 		imageAlphaBlending($source, true);
 		imageSaveAlpha($source, true);
 		
-		$thumb = imagecreatetruecolor($newwidth, $newheight);
+		$thumb = imagecreatetruecolor($thumb_w, $thumb_h);
 		imageAlphaBlending($thumb, true);
 		imageSaveAlpha($thumb, true);
 		$trans_colour = imagecolorallocatealpha($thumb, 0, 0, 0, 127);

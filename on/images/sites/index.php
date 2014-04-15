@@ -3,8 +3,6 @@
 if( $_SERVER["HTTP_HOST"] == 'localhost' || $_SERVER["HTTP_HOST"] == '127.0.0.1' || $_SERVER["HTTP_HOST"] == 'local.olympe.in' )
 	exit();
 
-
-
 $url = str_replace(array('..', '\\', '|', '*', ' ', 'http://'), array('', '', '', '', '', ''), $_GET['url']);
 $file = $url.'.png';
 
@@ -22,13 +20,13 @@ function resize($content)
 		$newheight = $height * $percent;
 
 		$thumb = imagecreatetruecolor($newwidth, $newheight);
-		$source = imagecreatefromjpeg($filename);
+		$source = imagecreatefrompng($filename);
 
-		$newimage = imagecopyresized($thumb, $source, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
+		imagecopyresized($thumb, $source, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);		
 		unlink($filename);
+		
+		return imagepng($thumb);
 	}
-	
-	return $newimage;
 }
 
 if( file_exists($file) )

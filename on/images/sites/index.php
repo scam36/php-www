@@ -25,7 +25,7 @@ function resize($content)
 		imagecopyresized($thumb, $source, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);		
 		unlink($filename);
 		
-		return imagepng($thumb);
+		return $thumb;
 	}
 }
 
@@ -39,18 +39,18 @@ if( file_exists($file) )
 	{
 		$address = 'http://172.16.1.200:3000?url=' . $url . '&clipRect={"top":0,"left":0,"width":1024,"height":600}';
 		$content = file_get_contents($address);
-		$content = resize($content);
+		$thumb = resize($content);
 		
-		file_put_contents($file, $content);
+		imagepng($thumb, $file);
 	}
 }
 else
 {
 	$address = 'http://172.16.1.200:3000?url=' . $url . '&clipRect={"top":0,"left":0,"width":1024,"height":600}';
 	$content = file_get_contents($address);
-	$content = resize($content);
+	$thumb = resize($content);
 		
-	file_put_contents($file, $content);
+	imagepng($thumb, $file);
 }
 
 header("content-type: image/png");

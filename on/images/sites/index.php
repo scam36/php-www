@@ -16,13 +16,20 @@ function resize($content)
 		file_put_contents($filename, $content);
 			
 		list($width, $height) = getimagesize($filename);
-		$newwidth = $width * $percent;
-		$newheight = $height * $percent;
+		$thumb_w = $width * $percent;
+		$thumb_h = $height * $percent;
 
-		$thumb = imagecreatetruecolor($newwidth, $newheight);
 		$source = imagecreatefrompng($filename);
-
-		imagecopyresized($thumb, $source, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);		
+		imageAlphaBlending($source, true);
+		imageSaveAlpha($source, true);
+		
+		$thumb = imagecreatetruecolor($newwidth, $newheight);
+		imageAlphaBlending($thumb, true);
+		imageSaveAlpha($thumb, true);
+		$trans_colour = imagecolorallocatealpha($thumb, 0, 0, 0, 127);
+		imagefill($thumb, 0, 0, $trans_colour);
+		
+		imagecopyresampled($thumb, $source, 0, 0, 0, 0, $thumb_w, $thumb_h, $width, $height);
 		unlink($filename);
 		
 		return $thumb;

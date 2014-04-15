@@ -12,7 +12,7 @@ function resize($content)
 	
 	if( $content )
 	{
-		$filename = '/tmp' . md5(time());
+		$filename = '/tmp/' . md5(time());
 		file_put_contents($filename, $content);
 			
 		list($width, $height) = getimagesize($filename);

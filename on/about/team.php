@@ -8,8 +8,8 @@ if( !defined('PROPER_START') )
 
 $content = "
 			<div class=\"head-light\">
-				<div class=\"container\">
-					<h1 class=\"dark\">{$lang['title']}</h1>
+				<div class=\"container\" style=\"text-align: center;\">
+					<h1 class=\"dark\" style=\"text-align: center;\">{$lang['title']}</h1>
 				</div>
 			</div>	
 			<div class=\"content\">

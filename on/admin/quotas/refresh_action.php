@@ -6,7 +6,7 @@ if( !defined('PROPER_START') )
         exit;
 }
 
-api::send('user/qcompute', array('user'=>$_GET['id']));
+api::send('user/qcompute', array('user'=>$_GET['id'], 'force'=>1));
 
 if( isset($_GET['redirect']) )
         template::redirect($_GET['redirect']);

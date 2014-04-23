@@ -514,7 +514,7 @@ $content .= "
 			$(function() {
 				$('#admincomment').focus(function() {
 						var currentVal = $(this).val(),
-							adminName = ". security::get('USER') .",
+							adminName = '". security::get('USER') ."',
 							today = new Date(),
 							dd = today.getDate(),
 							mm = today.getMonth() + 1,

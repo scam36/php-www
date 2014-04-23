@@ -125,9 +125,7 @@ $content .= "
 				</div>
 			</div>
 			<br />
-			<a class=\"button classic\" href=\"#\" onclick=\"$('#reply').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
-				<span style=\"display: block; padding-top: 3px;\">{$lang['reply']}</span>
-			</a>
+			".$replyButton."
 		</div>
 		<div class=\"clear\"></div><br /><br />
 	</div>

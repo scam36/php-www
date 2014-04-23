@@ -1,4 +1,16 @@
 [EN]
+title = "Request"
+reply = "Replyyyyy"
+dateformat = "d/m/Y H:i:s"
+delete = "Delete"
+delete_text = "Are you sure you want to delete this message ?"
+delete_now = "Confirm"
+reply = "Reply"
+content_help = "Your message"
+send = "Send"
+update = "Edit"
+noreply = "This request is closed, you can't reply anymore. Please open a new request if necessary."
+closed = "Closed request"
 
 [FR]
 title = "Demande"
@@ -11,3 +23,5 @@ reply = "Répondre"
 content_help = "Votre message"
 send = "Envoyer"
 update = "Modifier"
+noreply = "Cette demande a été fermée, vous ne pouvez donc plus y répondre. Merci d'ouvrir une nouvelle demande en cas de nécessité."
+closed = "Demande fermée"

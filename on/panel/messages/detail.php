@@ -19,6 +19,18 @@ catch( Exception $e )
 
 if( !$message['id'] || !$_GET['id'] )
 	template::redirect('/admin/messages');
+
+	
+if($message['status']==3) $replyButton = "
+		<a class=\"button classic\" href=\"#\" onclick=\"$('#noreply').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
+			<span style=\"display: block; padding-top: 3px;\">{$lang['closed']}</span>
+		</a>
+";
+else $replyButton = "
+		<a class=\"button classic\" href=\"#\" onclick=\"$('#reply').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
+			<span style=\"display: block; padding-top: 3px;\">{$lang['reply']}</span>
+		</a>
+";
 	
 $content .= "
 	<div class=\"panel\">
@@ -27,11 +39,8 @@ $content .= "
 				<h3>{$message['title']}</h3> 
 			</div>
 			
-			{$message['status']}
 			<div class=\"right\" style=\"width: 400px; float: right; text-align: right;\">
-				<a class=\"button classic\" href=\"#\" onclick=\"$('#reply').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
-					<span style=\"display: block; padding-top: 3px;\">{$lang['reply']}</span>
-				</a>
+				".$replyButton."
 			</div>
 			<div class=\"clear\"></div><br /><br />
 		</div>
@@ -139,6 +148,11 @@ $content .= "
 			</form>
 		</div>
 	</div>
+	<div id=\"noreply\" class=\"floatingdialog\">
+		<br />
+		<h3 class=\"center\">{$lang['reply']}</h3>
+		<p style=\"text-align: center;\">{$lang['noreply']}</p>
+	</div>
 	<div id=\"delete\" class=\"floatingdialog\">
 		<h3 class=\"center\">{$lang['delete']}</h3>
 		<p style=\"text-align: center;\">{$lang['delete_text']}</p>
@@ -155,6 +169,7 @@ $content .= "
 	<script>
 		newFlexibleDialog('reply', 550);
 		newFlexibleDialog('delete', 550);
+		newFlexibleDialog('noreply', 550);
 		var status = 0;
 		function showEdit(id)
 		{

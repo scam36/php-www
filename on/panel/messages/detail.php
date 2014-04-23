@@ -62,7 +62,7 @@ foreach( $messages as $m )
 						<div class=\"icons\">
 		";
 	
-		if( $m['user']['name'] == security::get('USER') )
+		if( $m['user']['name'] == security::get('USER') && ($message['status']!=3) )
 		{
 			$content .= "
 							<a href=\"#\" onclick=\"showEdit('{$m['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" /></a>

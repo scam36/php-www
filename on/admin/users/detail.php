@@ -515,6 +515,7 @@ $content .= "
 				$('#admincomment').focus(function() {
 						var currentVal = $(a).val(),
 							adminName = ". security::get('USER') .",
+							space = '\n',
 							today = new Date(),
 							dd = today.getDate(),
 							mm = today.getMonth() + 1,
@@ -524,7 +525,7 @@ $content .= "
 						if (mm < 10) mm = '0' + mm;
 						today = dd + '/' + mm + '/' + yyyy;
 						
-						$(a).val(currentVal + '\n'+ adminName +' ('+today+') -');
+						$(a).val(currentVal + space + adminName +' ('+today+') -');
 				});
 			});
 			

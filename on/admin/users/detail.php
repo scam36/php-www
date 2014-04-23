@@ -513,7 +513,7 @@ $content .= "
 			newFlexibleDialog('newtoken', 550);
 			$(function() {
 				$('#admincomment').focus(function() {
-						var currentVal = $(a).val(),
+						var currentVal = $(this).val(),
 							adminName = ". security::get('USER') .",
 							today = new Date(),
 							dd = today.getDate(),
@@ -524,7 +524,7 @@ $content .= "
 						if (mm < 10) mm = '0' + mm;
 						today = dd + '/' + mm + '/' + yyyy;
 						
-						$(a).val(currentVal + adminName +' ('+today+') -');
+						$(this).val(currentVal + adminName +' ('+today+') -');
 				});
 			});
 			

@@ -102,8 +102,17 @@ $content .= "
 							".date($lang['dateformat'], $message['date'])."
 						</div>
 						<div class=\"icons\">
+";
+
+if( $message['status']!=3 )
+{
+	$content .= "
 							<a href=\"#\" onclick=\"showEdit('{$message['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" /></a>
 							<a href=\"#\" onclick=\"$('#id').val('{$message['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+	";
+}
+
+$content .= "
 						</div>
 						<div class=\"clear\"></div>
 					</div>

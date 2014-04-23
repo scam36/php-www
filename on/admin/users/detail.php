@@ -33,7 +33,7 @@ $content = "
 				<h2 class=\"dark\">Commentaires</h2>
 				<form action=\"/admin/users/update_action\" method=\"post\">
 					<input type=\"hidden\" name=\"id\" value=\"{$user['id']}\" />
-					<textarea style=\"width:100%;\">A venir...</textarea>
+					<textarea style=\"width:100%;\" onfocus=\"newComment(this)\">A venir...</textarea>
 					<input type=\"submit\" value=\"Modifier\" style=\"float: right;\">
 				</form>
 				<br />

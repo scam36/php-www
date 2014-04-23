@@ -1,5 +1,20 @@
 [EN]
+title = "Our team"
+yann = "Engineer<br />Co-founder"
+sam = "Engineer<br />Co-founder"
+simon = "Engineer<br />Co-founder"
+bruno = "Engineer<br />Administrator"
+gaetan = "Engineer<br />Administrator"
+thomas = "Student<br />Administrator / Developer"
+herve = "Student<br />Administrator / Support"
+gael = "Engineer<br />Administrator / Developer"
 
+hiring = "We're hiring !"
+hiring_text = "Olympe is currently searching for new staff members. Of course, this is a volunteer and remote work, but if you are interested in infrastructure technologies,
+developing, or the community management, you could <a href='/about/contact'>contact us</a> and explain us your wish. 
+<br /><br />As a staff member, you become a fully adherent to the association Olympe, and by the way you could represent the association during conferences or meetings."
+contact = "Contact us"
+help = "Join our team"
 
 [FR]
 title = "Notre équipe"

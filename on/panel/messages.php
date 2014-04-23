@@ -15,7 +15,7 @@ $content = "
 						<h1 class=\"dark\">{$lang['title']}</h1>
 					</div>
 					<div class=\"right\">
-						<a class=\"button classic\" href=\"#\" onclick=\"$('#new').dialog('open');\" style=\"width: 180px; height: 22px; float: right;\">
+						<a class=\"button classic\" href=\"#\" onclick=\"$('#preinfo').dialog('open');\" style=\"width: 180px; height: 22px; float: right;\">
 							<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white.png\" />
 							<span style=\"display: block; padding-top: 3px;\">{$lang['add']}</span>
 						</a>
@@ -72,6 +72,17 @@ $content .= "
 					</a>
 				</div>
 			</div>
+			
+			<div id=\"preinfo\" class=\"floatingdialog\">
+				<h3 class=\"center\">{$lang['new_info_title']}</h3>
+				<p style=\"text-align: justify;\">{$lang['new_info_contain']}</p>
+				<br />
+				<a style=\"width: 180px; height: 22px; margin:auto;\" onclick=\"$('#preinfo').dialog('close'); $('#new').dialog('open');\" href=\"#\" class=\"button classic\">
+					<img src=\"/on/images/plus-white.png\" style=\"float: left;\" />
+					<span style=\"display: block; padding-top: 3px;\">{$lang['continue']}</span>
+				</a>
+			</div>
+			
 			<div id=\"new\" class=\"floatingdialog\">
 				<h3 class=\"center\">{$lang['new']}</h3>
 				<div class=\"form-small\">		
@@ -94,7 +105,7 @@ $content .= "
 							<span class=\"help-block\">{$lang['title_help']}</span>
 						</fieldset>
 						<fieldset>
-							<textarea class=\"auto\" style=\"width: 400px; height: 150px;\" name=\"content\" onfocus=\"this.value = this.value=='{$lang['content']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['content']}' : this.value; this.value=='{$lang['content']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\">{$lang['content']}</textarea>
+							<textarea class=\"auto\" style=\"width: 400px; height: 100px;\" name=\"content\" onfocus=\"this.value = this.value=='{$lang['content']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['content']}' : this.value; this.value=='{$lang['content']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\">{$lang['content']}</textarea>
 							<span class=\"help-block\">{$lang['content_help']}</span>
 						</fieldset>
 						<fieldset autofocus>

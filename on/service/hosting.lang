@@ -1,17 +1,15 @@
 [EN]
 title = "Web hosting platform"
 free = "Free and open"
-free_text = "Notre plateforme repose sur une architecture intégrant les <a href='/service/infrastructure'>dernières technologies</a>. Elle est maintenue par une <a href='/about/team'>équipe de bénévole</a> et 
-enrichie par une <a href='https://community.olympe.in'>communauté</a> de webmasters.<br /><br />
-Les services d'hébergement de l'association sont gratuits et sans publicité, ouverts à tous et accessibles n'importe où dans le monde. Nous avons développés des <a href='/about/partners'>partenariats</a> nous permettant
-de disposer d'équipements et d'applications performants."
+free_text = "Our platform is based on an architecture including the <a href='/service/infrastructure'>latest technologies</a>. It's supported by a <a href='/about/team'>team of volunteers</a> and 
+enriched by a <a href='https://community.olympe.in'>community</a> of webmasters.<br /><br />
+The hosting services are free and without advertising, accessible anywhere in the world. We have developed <a href='/about/partners'>partnerships</a> which provide us equipments and efficient applications."
 
-offer = "Le service"
-offer_text = "Nous nous efforçons de faire évoluer notre <a href='/service/offer'>offre</a> avec les technologies les plus répandues. Les applicatifs sont mis à jour très régulièrement afin d'assurer 
-la présence des dernières fonctionnalités pour l'ensemble des utilisateurs.<br /><br />Un espace d'hébergement comprend des bases de données, la gestion des domaines et des comptes mails. Chaque compte 
-dispose également d'un espace d'<a href='/doc/cloud'>applications cloud</a> lui permettant de gérer un espace de stockage, des agendas et contacts partagés etc..."
+offer = "Service"
+offer_text = We strive to develop our <a href='/service/offer'>offer</a> with the most prevalent technologies. The regular updates ensure the presence of the latest features for all users. <br /><br />
+The hosting space includes database, domain names and email accounts management. Each account also has space on our <a href='/doc/cloud'>Cloud application</a> providing a files storage space, shared calendars and contacts, etc."
 
-offers = "Voir l'offre"
+offers = "See the offer"
 
 [FR]
 title = "Plateforme d'hébergement"

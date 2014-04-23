@@ -1,8 +1,20 @@
 [EN]
+menu_overview = "Overview"
+menu_hosting = "Hosting"
+menu_offer = "Offer"
+menu_infrastructure = "Infrastructure"
+menu_tos = "Terms of Use"
+
+[ES]
+menu_overview = "Ojeada"
+menu_hosting = "Hosting"
+menu_offer = "Oferta"
+menu_infrastructure = "Infraestructura"
+menu_tos = "Condiciones Generales de Utilización"
 
 [FR]
 menu_overview = "Aperçu"
 menu_hosting = "Hébergement"
 menu_offer = "Offre"
 menu_infrastructure = "Infrastructure"
-menu_tos = "Charte d'utilisation"
+menu_tos = "Conditions générales d'utilisation"

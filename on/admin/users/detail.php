@@ -33,7 +33,7 @@ $content = "
 				<h2 class=\"dark\">Commentaires</h2>
 				<form action=\"/admin/users/update_action\" method=\"post\">
 					<input type=\"hidden\" name=\"id\" value=\"{$user['id']}\" />
-					<textarea style=\"width:100%;\" onfocus=\"newComment(this)\">A venir...</textarea>
+					<textarea style=\"width:100%;\" id=\"admincomment\">A venir...</textarea>
 					<input type=\"submit\" value=\"Modifier\" style=\"float: right;\">
 				</form>
 				<br />
@@ -511,21 +511,23 @@ $content .= "
 			newFlexibleDialog('delete', 550);
 			newFlexibleDialog('quotachange', 550);
 			newFlexibleDialog('newtoken', 550);
+			$(function() {
+				$('#admincomment').focus(function() {
+						var currentVal = $(a).val(),
+							adminName = ". security::get('USER') .",
+							today = new Date(),
+							dd = today.getDate(),
+							mm = today.getMonth() + 1,
+							yyyy = today.getFullYear();
+						
+						if (dd < 10) dd = '0' + dd;
+						if (mm < 10) mm = '0' + mm;
+						today = dd + '/' + mm + '/' + yyyy;
+						
+						$(a).val(currentVal + '\n'+ adminName +' ('+today+') -');
+				});
+			});
 			
-			function newComment(a) {
-				var currentVal = $(a).val(),
-					adminName = ". security::get('USER') .",
-					today = new Date(),
-					dd = today.getDate(),
-					mm = today.getMonth() + 1,
-					yyyy = today.getFullYear();
-				
-				if (dd < 10) {dd = '0' + dd}
-				if (mm < 10) {mm = '0' + mm}
-				today = dd + '/' + mm + '/' + yyyy;
-				
-				$(a).val(currentVal + '\n'+ adminName +' ('+today+') -');
-			}
 		</script>	
 ";
 

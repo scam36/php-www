@@ -78,8 +78,7 @@ $content .= "
 				<p style=\"text-align: justify;\">{$lang['new_info_contain']}</p>
 				<br />
 				<a style=\"width: 180px; height: 22px; margin:auto;\" onclick=\"$('#preinfo').dialog('close'); $('#new').dialog('open');\" href=\"#\" class=\"button classic\">
-					<img src=\"/on/images/plus-white.png\" style=\"float: left;\" />
-					<span style=\"display: block; padding-top: 3px;\">{$lang['continue']}</span>
+					<span style=\"display: block; padding-top: 3px; font-size:18px;\">{$lang['continue']}</span>
 				</a>
 			</div>
 			

@@ -511,6 +511,21 @@ $content .= "
 			newFlexibleDialog('delete', 550);
 			newFlexibleDialog('quotachange', 550);
 			newFlexibleDialog('newtoken', 550);
+			
+			function newComment(a) {
+				var currentVal = $(a).val(),
+					adminName = ". security::get('USER') .",
+					today = new Date(),
+					dd = today.getDate(),
+					mm = today.getMonth() + 1,
+					yyyy = today.getFullYear();
+				
+				if (dd < 10) {dd = '0' + dd}
+				if (mm < 10) {mm = '0' + mm}
+				today = dd + '/' + mm + '/' + yyyy;
+				
+				$(a).val(currentVal + '\n'+ adminName +' ('+today+') -');
+			}
 		</script>	
 ";
 

@@ -129,6 +129,7 @@ $content .= "
 			<script>
 				newFlexibleDialog('new', 700);
 				newFlexibleDialog('delete', 550);
+				newFlexibleDialog('preinfo', 700);
 			</script>
 ";
 

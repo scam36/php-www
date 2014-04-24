@@ -48,7 +48,14 @@ if( count($messages) > 0 )
 							<td>".$lang['status_' . $m['status']]."</td>
 							<td style=\"width: 100px; text-align: center;\">
 								<a href=\"/panel/messages/detail?id={$m['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/preview.png\" alt=\"\" /></a>
+		";
+		
+		if($m['status']!=3) {						
+			$content .= "
 								<a href=\"#\" onclick=\"$('#id').val('{$m['id']}'); $('#delete').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/close.png\" alt=\"\" /></a>
+			";
+		}
+		$content .= "
 							</td>
 						</tr>
 		";

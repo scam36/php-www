@@ -1,4 +1,6 @@
 [EN]
+success = "Domain name settings have been successfully updated."
+error = "One of the fields is not well filled."
 
 [FR]
 success = "Les paramètres du nom de domaine ont bien été mis à jour."

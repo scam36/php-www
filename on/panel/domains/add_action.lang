@@ -1,4 +1,6 @@
 [EN]
+folder = "Folder"
+error = "Domain name format or folder format is wrong, or your <a href='/panel/quotas'>quota</a> is reached."
 
 [FR]
 folder = "dossier de destination"

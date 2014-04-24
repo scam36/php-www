@@ -1,4 +1,7 @@
 [EN]
+success = "Tu mensaje ha sido enviado. Gracias por su interés."
+
+[ES]
 success = "Your message has been succesfully sent. Thanks for your interest in Olympe!"
 
 [FR]

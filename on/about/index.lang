@@ -1,5 +1,4 @@
 [EN]
-
 title = "About Olympe"
 
 intro = "Who are we?"
@@ -26,8 +25,30 @@ legal_text = "<i>Organization number (France)</i>: 20070028<br />
 <i>Secretary</i>: Thomas Brugmans<br />
 <i>Treasurer</i>: Yann Autissier"
 
-[FR]
+[ES]
+title = "Acerca de Olympe"
 
+intro = "¿Quiénes somos?"
+intro_text = "<strong>Olympe</strong> es una asociación sin fines de lucro, cuyo el objetivo principal es trabajar por un mejor <strong>acceso a las nuevas tecnologías de la información</strong>.
+Olympe reduce los gastos de la publicación en Internet, con un servicio de <a href='/service/hosting'>web hosting</a> gratuito.
+<br /><br />
+Llevamos varios proyectos (servicios, plataformas, desarrollos innovadores...) y <a href='/org'>acciones</a> (de formación, de ayuda...). Deseamos desarrollar nuestras actividades
+y escuchamos las necesidades tanto individuales como colectivas. No dudes en <a href='/about/contact'>contactarnos</a> si crees que puedes ser útil en nuestros ámbitos de competencia."
+
+data = "Política de privacidad"
+data_text = "Los datos recogidos en nuestro sitio son sólo debidos al registro voluntario de sus datos personales, por ejemplo, con la suscripción a nuestros servicios, listas de correo, foro, usando el formulario de contacto o otros sistemas automatizados de gestión de datos. Sus datos no se transfieren a cualquier empresa comercial o otra organización. Por eso, Olympe ha sido declarado a la CNIL : n°<strong>1215047</strong> y <strong>1237057</strong>."
+
+follow = "Siguenos"
+news = "Actualidad"
+behind = "En el principio..."
+behind_text = "La asociación Olympe fue fundada en 2007. Sus servicios son desarrollados y mantenidos por un equipo de voluntarios."
+legal = "Información legal"
+legal_text = "<i>N° de la asociación</i> : 20070028<br />
+<i>Presidente</i> : Samuel Hassine<br />
+<i>Secretario</i> : Thomas Brugmans<br />
+<i>Tesorero</i> : Yann Autissier"
+
+[FR]
 title = "A propos d'Olympe"
 
 intro = "Qui sommes-nous ?"

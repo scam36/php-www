@@ -1,8 +1,7 @@
 [EN]
-
 title = "Contact us"
 send = "Send us a message"
-send_text = "You have a problem with the usage of our services? Please use the <a href='https://community.olympe.in'>community</a> to ask your question, we do not answer to technical support requests.
+send_text = "You have a problem with the usage of our services? Please use the <a href='https://community.olympe.in'>community</a> to ask your question, we do not answer to technical support requests by email.
 <br /><br /> If you need more information about our services or simply want be in touch with us, you can fill the following form."
 infos = "Informations"
 meet = "Meet us"
@@ -16,8 +15,24 @@ follow = "Follow us"
 news = "News"
 account = "Olympe account (if any)"
 
-[FR]
+[ES]
+title = "Contactarnos"
+send = "Envianos a mensaje"
+send_text = "Tienes un problema con el uso de nuestros servicios ? Por favor, use el <a href='https://community.olympe.in'>foro</a> para postear tu pregunta. No respondemos a las preguntas recibidas por email.
+<br /><br />Si necesitas más informaciónes sobre nuestros servicios o si simplemente quieres contactarnos, puede rellenar el siguiente formulario."
+infos = "Informaciónes"
+meet = "Encuéntranos"
+meet_text = "Olympe es una asociación sin fines de lucro, el domicilio se encuentra in Paris, France."
+name = "Nombre"
+email = "Email"
+subject = "Objeto"
+message = "Mensaje"
+send_now = "Enviar"
+follow = "Siguenos"
+news = "Actualidad"
+account = "Olympe cuenta (si estás registrado)"
 
+[FR]
 title = "Contactez nous"
 send = "Envoyez-nous un message"
 send_text = "Vous rencontrez un problème avec l'utilisation de la plateforme ? Merci d'utiliser la <a href='https://community.olympe.in'>communauté</a>, nous ne répondons pas aux mails de support technique.

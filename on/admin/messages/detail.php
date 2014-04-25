@@ -25,6 +25,7 @@ $content .= "
 		<div class=\"top\">
 			<div class=\"left\" style=\"width: 600px;\">
 				<h3>{$message['title']}</h3>
+				<h2 class=\"dark\">".$lang['status_' . $message['status']]."</h2>
 			</div>
 			<div class=\"right\" style=\"width: 400px; float: right; text-align: right;\">
 				<a class=\"button classic\" href=\"#\" onclick=\"$('#reply').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">

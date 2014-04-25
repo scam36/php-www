@@ -32,7 +32,7 @@ $content .= "
 					<span style=\"display: block; padding-top: 3px;\">{$lang['reply']}</span>
 				</a>
 			</div>
-			<div class=\"clear\"></div><br /><br />
+			<div class=\"clear\"></div>
 		</div>
 		<div class=\"container\">
 			<div class=\"topic\">

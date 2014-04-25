@@ -8,6 +8,15 @@ by = "by"
 DATEFORMAT = "M d, Y"
 
 [FR]
+title = "Blog del equipo"
+
+rss = "Suscribir"
+follow = "Seguir"
+read = "Leer más"
+by = "por"
+DATEFORMAT = "d M, Y"
+
+[FR]
 title = "Blog de l'équipe"
 
 rss = "S'abonner"

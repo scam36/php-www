@@ -1,4 +1,32 @@
 [EN]
+title = "Blog administration"
+add = "Create an article"
+title2 = "Title"
+author = "Author"
+date = "Date"
+lang = "Language"
+actions = "Actions"
+dateformat = "d/m/Y H:i:s"
+delete = "Delete"
+delete_text = "Are you sure you want to delete this article ?"
+delete_now = "Confirm"
+
+author_1 = "Yann Autissier"
+author_2 = "Bruno Million"
+author_3 = "Samuel Hassine"
+author_4 = "Simon Uyttendaele"
+lang_FR = "French"
+lang_EN = "English"
+
+title_help = "Article title"
+desc_help = "Article headlines"
+desc = "Description"
+content_help = "Content of the article"
+content = "Article"
+author_help = "Author"
+lang_help = "Language of the article"
+new = "New article"
+create = "Create"
 
 [FR]
 title = "Gestion du blog"

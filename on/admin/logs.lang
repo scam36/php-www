@@ -1,10 +1,22 @@
 [EN]
+title = "Platform logs"
+search = "Search"
+delete = "Delete"
+delete_text = "You can not delete the logs."
+
+user = "User"
+method = "Method"
+params = "Settings"
+date = "Date"
+ip = "IP adress"
+actions = "Actions"
+dateformat = "d/m/Y H:i:s"
 
 [FR]
 title = "Logs de la plateforme"
 search = "Rechercher"
 delete = "Supprimer"
-delete_text = "Vous ne poouvez pas supprimer des logs."
+delete_text = "Vous ne pouvez pas supprimer des logs."
 
 user = "Utilisateur"
 method = "Méthode"

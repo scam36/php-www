@@ -244,7 +244,7 @@ if( security::hasGrant('MESSAGE_SELECT') )
 	{
 		$content .= "
 						<tr>
-							<td>{$m['title']}</td>
+							<td><a href=\"/admin/messages/detail?id={$m['id']}\" title=\"\">{$m['title']}</a></td>
 							<td>".date($lang['dateformat'], $m['date'])."</a></td>
 							<td>".$lang['status_' . $m['status']]."</td>
 							<td style=\"width: 50px; text-align: center;\">

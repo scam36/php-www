@@ -223,6 +223,41 @@ if( security::hasGrant('TOKEN_SELECT') )
 				</table>";
 }
 
+$content .= "
+				<br /><br />					
+				<h2 class=\"dark\" id=\"databases\">{$lang['messages']}</h2>
+				<table>
+					<tr>
+						<th>{$lang['subject']}</th>
+						<th>{$lang['date']}</th>
+						<th>{$lang['status']}</th>
+						<th style=\"width: 50px; text-align: center;\">{$lang['actions']}</th>
+					</tr>
+	";
+
+
+if( security::hasGrant('MESSAGE_SELECT') )
+{
+	$messages = api::send('message/list', array('user'=>$_GET['id'], 'topic'=>1));
+	
+	foreach( $messages as $m )
+	{
+		$content .= "
+						<tr>
+							<td>{$m['title']}</td>
+							<td>".date($lang['dateformat'], $m['date'])."</a></td>
+							<td>".$lang['status_' . $m['status']]."</td>
+							<td style=\"width: 50px; text-align: center;\">
+								<a href=\"/admin/messages/detail?id={$m['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/preview.png\" alt=\"\" /></a>
+							</td>
+						</tr>
+		";
+	}
+
+	$content .= "
+				</table>";
+}
+
 $content .= "<br /><br />";
 
 if( security::hasGrant('QUOTA_USER_SELECT') )

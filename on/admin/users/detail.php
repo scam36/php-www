@@ -23,25 +23,32 @@ $content = "
 				</div>
 				<div class=\"right\" style=\"width: 300px;\">
 					<a class=\"button classic\" href=\"#\" onclick=\"$('#user').val('{$user['id']}'); $('#delete').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
-						<span style=\"display: block; padding-top: 3px;\">{$lang['delete']}</span>
+						<span style=\"display: block; padding-top: 3px;\">{$lang['delete_user']}</span>
 					</a>
 				</div>
 			</div>
 			<div class=\"clear\"></div><br />
 			
-			<div class=\"comments\">
-				<h2 class=\"dark\">Commentaires</h2>
-				<form action=\"/admin/users/update_action\" method=\"post\">
-					<input type=\"hidden\" name=\"id\" value=\"{$user['id']}\" />
-					<textarea style=\"width:100%;\" id=\"admincomment\">A venir...</textarea>
-					<input type=\"submit\" value=\"Modifier\" style=\"float: right;\">
-				</form>
-				<br />
-			</div>
-			<div class=\"clear\"></div>
-			
 			<div class=\"container\">
 				<div style=\"width: 700px; float: left;\">
+				
+				
+					<div class=\"comments\">
+						<div style=\"float: left; width: 300px; padding-top: 5px;\">
+							<h2 class=\"dark\" style=\"padding-top: 7px;\" id=\"comments\">{$lang['comments']}</h2>
+						</div>
+						<div style=\"float: right; width: 200px;\">
+							<input type=\"submit\" value=\"Modifier\" style=\"width: 100px; float: right;\">
+						</div>
+						<div class=\"clear\"></div>
+						<form action=\"/admin/users/update_action\" method=\"post\">
+							<input type=\"hidden\" name=\"id\" value=\"{$user['id']}\" />
+							<textarea style=\"width:98%;\" id=\"admincomment\">A venir...</textarea>
+						</form>
+						<br />
+					</div>
+					<br />
+				
 					<h2 class=\"dark\" id=\"sites\">{$lang['sites']}</h2>
 					<table>
 						<tr>
@@ -64,9 +71,44 @@ if( security::hasGrant('SITE_SELECT') )
 							<td><a href=\"http://{$s['hostname']}\">{$s['hostname']}</a></td>
 							<td>{$s['size']} {$lang['mb']}</td>
 							<td style=\"width: 50px; text-align: center;\">
-								<a href=\"/admin/sites/del_action?user={$_GET['id']}&site={$s['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+								<a href=\"#\" onclick=\"$('#user6').val('{$user['id']}'); $('#site_id').val('{$s['id']}'); $('#deletesite').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 							</td>
 						</tr>";
+	}
+}
+
+$content .= "
+					</table>
+					<br /><br />
+					<h2 class=\"dark\" id=\"backups\">{$lang['backups']}</h2>
+					<table>
+						<tr>
+							
+							<th>{$lang['type']}</th>
+							<th>{$lang['name']}</th>
+							<th>{$lang['date']}</th>
+							<th style=\"width: 100px; text-align: center;\">{$lang['actions']}</th>
+						</tr>
+";
+		
+if( security::hasGrant('BACKUP_SELECT') )
+{
+	$backups = api::send('backup/list', array('user'=>$_GET['id']));
+	
+	foreach( $backups as $b )
+	{		
+		$content .= "
+						<tr>
+							
+							<td>".$lang['type_' . $b['type']]."</td>
+							<td>{$b['title']}</td>
+							<td>".date($lang['dateformat'], $b['date'])."</td>
+							<td style=\"width: 100px; text-align: center;\">
+								<a href=\"{$b['url']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/download2.png\" alt=\"\" /></a>
+								<a href=\"#\" onclick=\"$('#user5').val('{$user['id']}'); $('#backup_id').val('{$b['id']}'); $('#deletebackup').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+							</td>
+						</tr>
+		";
 	}
 }
 
@@ -97,7 +139,7 @@ if( security::hasGrant('DOMAIN_SELECT') )
 							<td>{$d['aRecord']}</td>
 							<td>".($d['destination']?"{$d['destination']}":"{$d['homeDirectory']}")."</td>
 							<td style=\"width: 50px; text-align: center;\">
-								<a href=\"/admin/domains/del_action?user={$_GET['id']}&domain={$d['hostname']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+								<a href=\"#\" onclick=\"$('#user8').val('{$user['id']}'); $('#domain_id').val('{$d['id']}'); $('#deletedomain').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 							</td>
 						</tr>";
 	}
@@ -106,7 +148,7 @@ if( security::hasGrant('DOMAIN_SELECT') )
 $content .= "
 					</table>
 					<br /><br />
-					<h2 class=\"dark\" id=\"domains\">{$lang['accounts']}</h2>
+					<h2 class=\"dark\" id=\"accounts\">{$lang['accounts']}</h2>
 					<table>
 						<tr>
 							<th style=\"width: 60px; text-align: center;\">{$lang['id']}</th>
@@ -130,7 +172,7 @@ if( security::hasGrant('ACCOUNT_SELECT') )
 							<td>{$a['mail']}</td>
 							<td>{$a['size']} {$lang['mb']}</td>
 							<td style=\"width: 50px; text-align: center;\">
-								<a href=\"/admin/account/del_action?user={$_GET['id']}&domain={$d['hostname']}&account={$a['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+								<a href=\"#\" onclick=\"$('#user9').val('{$user['id']}'); $('#domain').val('{$d['hostname']}'); $('#account_id').val('{$a['id']}'); $('#deletemail').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 							</td>
 						</tr>";
 		}
@@ -162,7 +204,7 @@ if( security::hasGrant('DATABASE_SELECT') )
 							<td>{$d['name']}</td>
 							<td>{$d['size']} {$lang['mb']}</td>
 							<td style=\"width: 50px; text-align: center;\">
-								<a href=\"/admin/databases/del_action?user={$_GET['id']}&database={$d['name']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+								<a href=\"#\" onclick=\"$('#user7').val('{$user['id']}'); $('#db_id').val('{$d['name']}'); $('#deletedatabase').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 							</td>
 						</tr>";
 	}
@@ -176,7 +218,7 @@ $content .= "
 					</div>
 					<div style=\"float: right; width: 200px;\">
 						<a class=\"button classic\" href=\"#\" onclick=\"$('#user3').val('{$user['id']}'); $('#newtoken').dialog('open'); return false;\" style=\"width: 22px; height: 22px; float: right;\">
-							<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white.png\" />
+							<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white.png\" alt=\"\" />
 						</a>
 					</div>
 					<div class=\"clear\"></div>
@@ -225,7 +267,7 @@ if( security::hasGrant('TOKEN_SELECT') )
 
 $content .= "
 				<br /><br />					
-				<h2 class=\"dark\" id=\"databases\">{$lang['messages']}</h2>
+				<h2 class=\"dark\" id=\"messages\">{$lang['messages']}</h2>
 				<table>
 					<tr>
 						<th>{$lang['subject']}</th>
@@ -245,7 +287,7 @@ if( security::hasGrant('MESSAGE_SELECT') )
 		$content .= "
 						<tr>
 							<td><a href=\"/admin/messages/detail?id={$m['id']}\" title=\"\">{$m['title']}</a></td>
-							<td>".date($lang['dateformat'], $m['date'])."</a></td>
+							<td>".date($lang['dateformat'], $m['date'])."</td>
 							<td>".$lang['status_' . $m['status']]."</td>
 							<td style=\"width: 50px; text-align: center;\">
 								<a href=\"/admin/messages/detail?id={$m['id']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/preview.png\" alt=\"\" /></a>
@@ -266,11 +308,11 @@ if( security::hasGrant('QUOTA_USER_SELECT') )
 
 	$content .= "
 				<div style=\"float: left; width: 300px; padding-top: 5px;\">
-					<h2 class=\"dark\" style=\"padding-top: 7px;\" id=\"tokens\">{$lang['quotas']} (".date($lang['dateformat'], $user['last']).")</h2>
+					<h2 class=\"dark\" style=\"padding-top: 7px;\" id=\"quotas\">{$lang['quotas']} (".date($lang['dateformat'], $user['last']).")</h2>
 				</div>
 				<div style=\"float: right; width: 200px;\">
 					<a class=\"button classic\" href=\"/admin/quotas/refresh_action?id={$user['id']}\" style=\"width: 22px; height: 22px; float: right;\">
-						<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/refresh-white.png\" />
+						<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/refresh-white.png\" alt=\"\" />
 					</a>
 				</div>
 				<div class=\"clear\"></div>
@@ -405,7 +447,7 @@ if( security::hasGrant('GROUP_USER_SELECT') )
 		$content .= "
 						<tr>
 							<td>{$g['name']}</td>
-							<td align=\"center\">
+							<td class=\"center\">
 								<input type=\"checkbox\" name=\"group[]\" value=\"{$g['id']}\" {$disabled} {$checked} />
 							</td>
 						</tr>";
@@ -506,12 +548,78 @@ $content .= "
 			</div>
 		</div>
 		<div id=\"delete\" class=\"floatingdialog\">
-			<h3 class=\"center\">{$lang['delete']}</h3>
-			<p style=\"text-align: center;\">{$lang['delete_text']}</p>
+			<h3 class=\"center\">{$lang['delete_user']}</h3>
+			<p style=\"text-align: center;\">{$lang['delete_user_text']}</p>
 			<div class=\"form-small\">		
 				<form action=\"/admin/users/del_action\" method=\"post\" class=\"center\">
 					<input id=\"user\" type=\"hidden\" value=\"\" name=\"user\" />
 					<fieldset autofocus>	
+						<input type=\"submit\" value=\"{$lang['delete_now']}\" />
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<div id=\"deletebackup\" class=\"floatingdialog\">
+			<h3 class=\"center\">{$lang['delete_backup']}</h3>
+			<p style=\"text-align: center;\">{$lang['delete_backup_text']}</p>
+			<div class=\"form-small\">		
+				<form action=\"/admin/backups/del_action\" method=\"post\" class=\"center\">
+					<input id=\"user5\" type=\"hidden\" value=\"{$user['id']}\" name=\"user\" />
+					<input id=\"backup_id\" type=\"hidden\" value=\"\" name=\"id\" />
+					<fieldset autofocus>	
+						<input type=\"submit\" value=\"{$lang['delete_now']}\" />
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<div id=\"deletesite\" class=\"floatingdialog\">
+			<h3 class=\"center\">{$lang['delete_site']}</h3>
+			<p style=\"text-align: center;\">{$lang['delete_site_text']}</p>
+			<div class=\"form-small\">		
+				<form action=\"/admin/sites/del_action\" method=\"post\" class=\"center\">
+					<input id=\"user6\" type=\"hidden\" value=\"\" name=\"user\" />
+					<input id=\"site_id\" type=\"hidden\" value=\"\" name=\"site\" />
+					<fieldset autofocus>
+						<input type=\"submit\" value=\"{$lang['delete_now']}\" />
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<div id=\"deletedatabase\" class=\"floatingdialog\">
+			<h3 class=\"center\">{$lang['delete_bdd']}</h3>
+			<p style=\"text-align: center;\">{$lang['delete_bdd_text']}</p>
+			<div class=\"form-small\">		
+				<form action=\"/admin/databases/del_action\" method=\"post\" class=\"center\">
+					<input id=\"user7\" type=\"hidden\" value=\"\" name=\"user\" />
+					<input id=\"db_id\" type=\"hidden\" value=\"\" name=\"database\" />
+					<fieldset autofocus>
+						<input type=\"submit\" value=\"{$lang['delete_now']}\" />
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<div id=\"deletedomain\" class=\"floatingdialog\">
+			<h3 class=\"center\">{$lang['delete_domain']}</h3>
+			<p style=\"text-align: center;\">{$lang['delete_domain_text']}</p>
+			<div class=\"form-small\">		
+				<form action=\"/admin/domains/del_action\" method=\"post\" class=\"center\">
+					<input id=\"user8\" type=\"hidden\" value=\"\" name=\"user\" />
+					<input id=\"domain_id\" type=\"hidden\" value=\"\" name=\"domain\" />
+					<fieldset autofocus>
+						<input type=\"submit\" value=\"{$lang['delete_now']}\" />
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<div id=\"deletemail\" class=\"floatingdialog\">
+			<h3 class=\"center\">{$lang['delete_mail']}</h3>
+			<p style=\"text-align: center;\">{$lang['delete_mail_text']}</p>
+			<div class=\"form-small\">		
+				<form action=\"/admin/accounts/del_action\" method=\"post\" class=\"center\">
+					<input id=\"user9\" type=\"hidden\" value=\"\" name=\"user\" />
+					<input id=\"domain\" type=\"hidden\" value=\"\" name=\"domain\" />
+					<input id=\"account_id\" type=\"hidden\" value=\"\" name=\"account\" />
+					<fieldset autofocus>
 						<input type=\"submit\" value=\"{$lang['delete_now']}\" />
 					</fieldset>
 				</form>
@@ -544,6 +652,11 @@ $content .= "
 		</div>
 		<script>
 			newFlexibleDialog('delete', 550);
+			newFlexibleDialog('deletebackup', 550);
+			newFlexibleDialog('deletesite', 550);
+			newFlexibleDialog('deletedatabase', 550);
+			newFlexibleDialog('deletedomain', 550);
+			newFlexibleDialog('deletemail', 550);
 			newFlexibleDialog('quotachange', 550);
 			newFlexibleDialog('newtoken', 550);
 			$(function() {
@@ -559,7 +672,8 @@ $content .= "
 						if (mm < 10) mm = '0' + mm;
 						today = dd + '/' + mm + '/' + yyyy;
 						
-						$(this).val(currentVal + adminName +' ('+today+') -');
+						if(! $(this).hasClass('editing')) $(this).val(currentVal + '\\n' + adminName +' ('+today+') -');
+						$(this).addClass('editing');
 				});
 			});
 			

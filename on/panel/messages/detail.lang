@@ -1,6 +1,6 @@
 [EN]
 title = "Request"
-reply = "Replyyyyy"
+reply = "Reply"
 dateformat = "d/m/Y H:i:s"
 delete = "Delete"
 delete_text = "Are you sure you want to delete this message ?"

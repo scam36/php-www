@@ -44,6 +44,10 @@ iframe {
 	overflow: hidden;
 }
 
+.center {
+	text-align: center;
+}
+
 @font-face {
 	font-family: "BentonSans";
 	src: url('/on/fonts/bentonsans-book.eot');

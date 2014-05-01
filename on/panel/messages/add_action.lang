@@ -1,4 +1,24 @@
 [EN]
+error = "A field isn't well filled"
+type = "Request"
+quota = "Quota increase"
+select = "Quota type :"
+disk = "Disk space"
+sites = "Site number"
+dbs = "Dabatase number"
+domains = "Domain name number"
+request = "Wished quota :"
+
+[ES]
+error = "El formulario está mal completado."
+type = "Solicitud :"
+quota = "Aumento de cuota"
+select = "Typo de cuota :"
+disk = "Espacia en disco"
+sites = "Sitios"
+dbs = "Bases de datos"
+domains = "Nombres de dominio"
+request = "Cuota solicitada :"
 
 [FR]
 error = "L'un des champs n'est pas correct !"

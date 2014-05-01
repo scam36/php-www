@@ -17,7 +17,7 @@ account = "Olympe account (if any)"
 
 [ES]
 title = "Contactarnos"
-send = "Envianos a mensaje"
+send = "Envianos un mensaje"
 send_text = "Tienes un problema con el uso de nuestros servicios ? Por favor, use el <a href='https://community.olympe.in'>foro</a> para postear tu pregunta. No respondemos a las preguntas recibidas por email.
 <br /><br />Si necesitas más informaciónes sobre nuestros servicios o si simplemente quieres contactarnos, puede rellenar el siguiente formulario."
 infos = "Informaciónes"

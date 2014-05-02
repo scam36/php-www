@@ -18,7 +18,7 @@ Nous avons ensuite des colonnes duplicables comprenant des firewalls <a href='ht
 (proxy) et les briques de traitement."
 
 soft = "Applicatifs"
-status = "Status de l'infrastructure"
+status = "Statut de l'infrastructure"
 data = "Notre matériel"
 paris = "Datacentres parisiens"
 paris_text = "Nous avons deux points de présence à Paris, le premier à <i>Interxion Paris 2</i> et le second à <i>Interxion Paris 7</i>. Nous éclairons une boucle fibre noire dédiée à notre infrastructure entre ces deux datacenters."

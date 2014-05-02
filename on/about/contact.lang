@@ -35,7 +35,7 @@ account = "Olympe cuenta (si estás registrado)"
 [FR]
 title = "Contactez nous"
 send = "Envoyez-nous un message"
-send_text = "Vous rencontrez un problème avec l'utilisation de la plateforme ? Vous ne trouvez pas la réponse dans la <a href='https://www.olympe.in/doc' target='_blank'>documentation</a> ?<br /> Alors, merci d'utiliser la <a href='https://community.olympe.in'>communauté</a>, nous ne répondons pas aux mails de support technique.
+send_text = "Vous rencontrez un problème avec l'utilisation de la plateforme ? Merci d'utiliser la <a href='https://community.olympe.in'>communauté</a>, nous ne répondons pas aux mails de support technique.
 <br /><br /> Si vous avez besoin de plus d'informations à propos de nos services ou que vous désirez simplement entrer en contact avec nous, remplissez le formulaire suivant."
 infos = "Informations"
 meet = "Nous rencontrer"

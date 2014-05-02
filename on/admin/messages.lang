@@ -63,7 +63,7 @@ type = "Type de demande"
 date = "Date"
 dateformat = "d/m/Y"
 subject = "Sujet de la demande"
-status = "Status"
+status = "Statut"
 actions = "Actions"
 status_1 = "<span style='color: #d44343; font-weight: bold; font-size: 17px;'>En attente</span>"
 status_2 = "<span style='color: #298b22; font-weight: bold; font-size: 17px;'>Répondu</span>"
@@ -71,4 +71,3 @@ status_3 = "<span style='color: #5b64e5; font-weight: bold; font-size: 17px;'>Fe
 new_info_title = "Informations préalables"
 new_info_contain = "<u>Si votre demande <b> ne concerne pas</b> une augmentation de quota</u> : cette interface ne doit être utilisée <b>que</b> pour solliciter une augmentation de <a href='/panel/quotas'>vos quotas</a>. Aucune assistance ne sera fournie via cette interface : merci de poster votre question sur <a href='https://community.olympe.in'>le support</a>, le cas échéant.<br /><br /><u>Si votre demande concerne une augmentation de quota</u> : conformément aux <a href='/on/documents/Olympe-CGS-FR.pdf' target='_blank'>Conditions générales d'utilisation</a>, il est nécessaire de présenter votre projet pour <b>toute augmentation de quota</b> (site, domaine, espace disque...). Pour cela, il vous faut indiquer les informations qui peuvent nous permettre d'<b>apprécier de l'opportunité de votre demande</b> (<i>exemple : l'intérêt de votre site, le sujet qu'il traite, le public auquel il se destine, etc.</i>) Si vous sollicitez une augmentation du nombre de site, pensez également à présenter le(s) site(s) que vous avez déjà réalisé."
 continue = "Poursuivre"
-

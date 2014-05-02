@@ -1,7 +1,7 @@
 [EN]
 title = "Contact us"
 send = "Send us a message"
-send_text = "You have a problem with the usage of our services? Please use the <a href='https://community.olympe.in'>community</a> to ask your question, we do not answer to technical support requests by email.
+send_text = "You have a problem with the usage of our services ? You can not find the answer in the <a href='https://www.olympe.in/doc' target='_blank'>documentation</a> ?<br /> Please use the <a href='https://community.olympe.in'>community</a> to ask your question, we do not answer to technical support requests by email.
 <br /><br /> If you need more information about our services or simply want be in touch with us, you can fill the following form."
 infos = "Informations"
 meet = "Meet us"
@@ -18,7 +18,7 @@ account = "Olympe account (if any)"
 [ES]
 title = "Contactarnos"
 send = "Envianos un mensaje"
-send_text = "Tienes un problema con el uso de nuestros servicios ? Por favor, use el <a href='https://community.olympe.in'>foro</a> para postear tu pregunta. No respondemos a las preguntas recibidas por email.
+send_text = "Tienes un problema con el uso de nuestros servicios ? No has encontrado la respuesta en la <a href='/doc'>documentación</a> ?<br />Por favor, use el <a href='https://community.olympe.in'>foro</a> para postear tu pregunta. No respondemos a las preguntas recibidas por email.
 <br /><br />Si necesitas más informaciónes sobre nuestros servicios o si simplemente quieres contactarnos, puede rellenar el siguiente formulario."
 infos = "Informaciónes"
 meet = "Encuéntranos"
@@ -35,7 +35,7 @@ account = "Olympe cuenta (si estás registrado)"
 [FR]
 title = "Contactez nous"
 send = "Envoyez-nous un message"
-send_text = "Vous rencontrez un problème avec l'utilisation de la plateforme ? Merci d'utiliser la <a href='https://community.olympe.in'>communauté</a>, nous ne répondons pas aux mails de support technique.
+send_text = "Vous rencontrez un problème avec l'utilisation de la plateforme ? Vous ne trouvez pas la réponse dans la <a href='https://www.olympe.in/doc' target='_blank'>documentation</a> ?<br /> Merci d'utiliser la <a href='https://community.olympe.in'>communauté</a>, nous ne répondons pas aux mails de support technique.
 <br /><br /> Si vous avez besoin de plus d'informations à propos de nos services ou que vous désirez simplement entrer en contact avec nous, remplissez le formulaire suivant."
 infos = "Informations"
 meet = "Nous rencontrer"

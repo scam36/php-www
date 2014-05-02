@@ -34,18 +34,21 @@ $content = "
 				
 				
 					<div class=\"comments\">
-						<div style=\"float: left; width: 300px; padding-top: 5px;\">
-							<h2 class=\"dark\" style=\"padding-top: 7px;\" id=\"comments\">{$lang['comments']}</h2>
-						</div>
-						<div style=\"float: right; width: 200px;\">
-							<input type=\"submit\" value=\"Modifier\" style=\"width: 100px; float: right;\">
-						</div>
-						<div class=\"clear\"></div>
 						<form action=\"/admin/users/update_action\" method=\"post\">
+							<div style=\"float: left; width: 300px; padding-top: 5px;\">
+								<h2 class=\"dark\" style=\"padding-top: 7px;\" id=\"comments\">{$lang['comments']}</h2>
+							</div>
+							<div style=\"float: right; width: 200px;\">
+								<input type=\"submit\" value=\"{$lang['update']}\" style=\"width: 100px; float: right;\">
+							</div>
+							<div class=\"clear\"></div>
+							
+							<input type=\"hidden\" name=\"action\" value=\"comment\" />
 							<input type=\"hidden\" name=\"id\" value=\"{$user['id']}\" />
 							<textarea style=\"width:98%;\" id=\"admincomment\">A venir...</textarea>
+							
+							<br />
 						</form>
-						<br />
 					</div>
 					<br />
 				
@@ -104,7 +107,7 @@ if( security::hasGrant('BACKUP_SELECT') )
 							<td>{$b['title']}</td>
 							<td>".date($lang['dateformat'], $b['date'])."</td>
 							<td style=\"width: 100px; text-align: center;\">
-								<a href=\"{$b['url']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/download2.png\" alt=\"\" /></a>
+								<a href=\"{$b['url']}\" title=\"\" target=\"_blank\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/download2.png\" alt=\"\" /></a>
 								<a href=\"#\" onclick=\"$('#user5').val('{$user['id']}'); $('#backup_id').val('{$b['id']}'); $('#deletebackup').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 							</td>
 						</tr>

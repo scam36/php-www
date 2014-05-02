@@ -71,7 +71,7 @@ if( security::hasGrant('SITE_SELECT') )
 		$content .= "
 						<tr>
 							<td style=\"width: 60px; text-align: center;\">{$s['id']}</td>
-							<td><a href=\"http://{$s['hostname']}\">{$s['hostname']}</a></td>
+							<td><a target=\"_blank\" href=\"http://{$s['hostname']}\">{$s['hostname']}</a></td>
 							<td>{$s['size']} {$lang['mb']}</td>
 							<td style=\"width: 50px; text-align: center;\">
 								<a href=\"#\" onclick=\"$('#user6').val('{$user['id']}'); $('#site_id').val('{$s['id']}'); $('#deletesite').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>

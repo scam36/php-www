@@ -532,7 +532,7 @@ foreach( $domains as $d )
 $content .= "
 			</table>
 		</div>
-		<div id=\"quotachange\" class=\"floatingdialog\">
+		<div id=\"quotachange\" class=\"floatingdialog delete-link\">
 			<br />
 			<h3 class=\"center\">{$lang['quota']}</h3>
 			<p style=\"text-align: center;\">{$lang['quota_text']}</p>
@@ -550,7 +550,7 @@ $content .= "
 				</form>
 			</div>
 		</div>
-		<div id=\"delete\" class=\"floatingdialog\">
+		<div id=\"delete\" class=\"floatingdialog delete-link\">
 			<h3 class=\"center\">{$lang['delete_user']}</h3>
 			<p style=\"text-align: center;\">{$lang['delete_user_text']}</p>
 			<div class=\"form-small\">		
@@ -562,7 +562,7 @@ $content .= "
 				</form>
 			</div>
 		</div>
-		<div id=\"deletebackup\" class=\"floatingdialog\">
+		<div id=\"deletebackup\" class=\"floatingdialog delete-link\">
 			<h3 class=\"center\">{$lang['delete_backup']}</h3>
 			<p style=\"text-align: center;\">{$lang['delete_backup_text']}</p>
 			<div class=\"form-small\">		
@@ -575,7 +575,7 @@ $content .= "
 				</form>
 			</div>
 		</div>
-		<div id=\"deletesite\" class=\"floatingdialog\">
+		<div id=\"deletesite\" class=\"floatingdialog delete-link\">
 			<h3 class=\"center\">{$lang['delete_site']}</h3>
 			<p style=\"text-align: center;\">{$lang['delete_site_text']}</p>
 			<div class=\"form-small\">		
@@ -588,7 +588,7 @@ $content .= "
 				</form>
 			</div>
 		</div>
-		<div id=\"deletedatabase\" class=\"floatingdialog\">
+		<div id=\"deletedatabase\" class=\"floatingdialog delete-link\">
 			<h3 class=\"center\">{$lang['delete_bdd']}</h3>
 			<p style=\"text-align: center;\">{$lang['delete_bdd_text']}</p>
 			<div class=\"form-small\">		
@@ -601,7 +601,7 @@ $content .= "
 				</form>
 			</div>
 		</div>
-		<div id=\"deletedomain\" class=\"floatingdialog\">
+		<div id=\"deletedomain\" class=\"floatingdialog delete-link\">
 			<h3 class=\"center\">{$lang['delete_domain']}</h3>
 			<p style=\"text-align: center;\">{$lang['delete_domain_text']}</p>
 			<div class=\"form-small\">		
@@ -614,7 +614,7 @@ $content .= "
 				</form>
 			</div>
 		</div>
-		<div id=\"deletemail\" class=\"floatingdialog\">
+		<div id=\"deletemail\" class=\"floatingdialog delete-link\">
 			<h3 class=\"center\">{$lang['delete_mail']}</h3>
 			<p style=\"text-align: center;\">{$lang['delete_mail_text']}</p>
 			<div class=\"form-small\">		
@@ -628,7 +628,7 @@ $content .= "
 				</form>
 			</div>
 		</div>
-		<div id=\"newtoken\" class=\"floatingdialog\">
+		<div id=\"newtoken\" class=\"floatingdialog delete-link\">
 			<br />
 			<h3 class=\"center\">{$lang['newtoken']}</h3>
 			<p style=\"text-align: center;\">{$lang['newtoken_text']}</p>

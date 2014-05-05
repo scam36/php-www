@@ -4,6 +4,7 @@ menu_hosting = "Hosting"
 menu_offer = "Offer"
 menu_infrastructure = "Infrastructure"
 menu_tos = "Terms of Use"
+menu_report = "Report an abuse"
 
 [ES]
 menu_overview = "Ojeada"
@@ -11,6 +12,7 @@ menu_hosting = "Hosting"
 menu_offer = "Oferta"
 menu_infrastructure = "Infraestructura"
 menu_tos = "Condiciones Generales de Utilización"
+menu_report = "Contenido inapropiado"
 
 [FR]
 menu_overview = "Aperçu"
@@ -18,3 +20,4 @@ menu_hosting = "Hébergement"
 menu_offer = "Offre"
 menu_infrastructure = "Infrastructure"
 menu_tos = "Conditions générales d'utilisation"
+menu_report = "Signaler un abus"

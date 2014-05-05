@@ -36,6 +36,11 @@ $content = "
 					</form>
 				</div>
 				<div class=\"right border\">
+					<a style=\"width: 250px; height: 22px; margin-bottom: 20px;\" onclick=\"$('#report').dialog('open');\" href=\"#\" class=\"button classic\">
+						<img src=\"/on/images/warning.png\" style=\"float: left; height:98%;\" alt=\"\" />
+						<span style=\"display: block; padding-top: 3px;\">{$lang['report']}</span>
+					</a>
+				
 					<h4>{$lang['infos']}</h4>
 					<p>Paris, France</p>
 					<p><a href=\"mailto: contact@olympe.in\">contact@olympe.in</a></p>
@@ -50,7 +55,26 @@ $content = "
 				<div class=\"clear\"></div>
 				<br /><br />
 			</div>
+			
+			<div id=\"report\" class=\"floatingdialog\">
+				<h3 class=\"center\">{$lang['report']}</h3>
+				<p style=\"text-align: justify; font-size:13px; line-height:20px;\">{$lang['report_text']}</p>
+			</div>
+			<script>
+				newFlexibleDialog('report', 800);
+			</script>
 ";
+
+if( isset($_GET['report']) )
+{
+	$content .= "<script type=\"text/javascript\">
+					$(document).ready(function() {
+						$(\"#report\").dialog(\"open\");
+						$(\".ui-dialog-titlebar\").hide();
+					});
+				</script>
+	";
+}
 
 /* ========================== OUTPUT PAGE ========================== */
 $template->output($content);

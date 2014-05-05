@@ -21,9 +21,12 @@ $content = "
 				<div class=\"left\" style=\"width: 700px; padding-top: 5px;\">
 					<h1 class=\"dark\">{$lang['title']} : {$user['name']}</h1>
 				</div>
-				<div class=\"right\" style=\"width: 300px;\">
+				<div class=\"right\" style=\"width: 360px;\">
 					<a class=\"button classic\" href=\"#\" onclick=\"$('#user').val('{$user['id']}'); $('#delete').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
 						<span style=\"display: block; padding-top: 3px;\">{$lang['delete_user']}</span>
+					</a>
+					<a class=\"button classic\" href=\"#\" onclick=\"$('#user10').val('{$user['id']}'); $('#email').dialog('open'); return false;\" style=\"width: 80px; height: 22px; float: right; margin-right: 15px;\">
+						<span style=\"display: block; padding-top: 3px;\">{$lang['email_help']}</span>
 					</a>
 				</div>
 			</div>
@@ -653,6 +656,20 @@ $content .= "
 				</form>
 			</div>
 		</div>
+		<div id=\"email\" class=\"floatingdialog delete-link\">
+			<br />
+			<h3 class=\"center\">{$lang['send_mail']}</h3>
+			<div class=\"form-small\">		
+				<form action=\"/admin/users/mail_action\" method=\"post\" class=\"center\">
+					<input id=\"user10\" type=\"hidden\" value=\"\" name=\"user\" />
+					<input type=\"text\" name=\"mail_title\" placeholder=\"{$lang['send_mail_title']}\" value=\"\" style=\"text-align: left; width: 500px;\"/>
+					<textarea name=\"mail\" placeholder=\"{$lang['send_mail_text']}\" style=\"width: 500px; height: 220px; text-align: left;\"></textarea>
+					<fieldset autofocus>	
+						<input type=\"submit\" value=\"{$lang['send']}\" />
+					</fieldset>
+				</form>
+			</div>
+		</div>
 		<script>
 			newFlexibleDialog('delete', 550);
 			newFlexibleDialog('deletebackup', 550);
@@ -662,6 +679,7 @@ $content .= "
 			newFlexibleDialog('deletemail', 550);
 			newFlexibleDialog('quotachange', 550);
 			newFlexibleDialog('newtoken', 550);
+			newFlexibleDialog('email', 700);
 			$(function() {
 				$('#admincomment').focus(function() {
 						var currentVal = $(this).val(),

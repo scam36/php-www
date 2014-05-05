@@ -169,3 +169,8 @@ status_3 = "<span style='color: #5b64e5; font-weight: bold; font-size: 17px;'>Fe
 backups = "Sauvegardes effectuées" 
 type_database = "Base de données"
 type_site = "Site internet"
+
+send_mail = "Envoyer un email à l'utilisateur"
+send_mail_title = "Titre du mail"
+send_mail_text = "Message"
+send = "Envoyer"

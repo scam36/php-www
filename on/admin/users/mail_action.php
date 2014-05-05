@@ -9,7 +9,7 @@ if( !defined('PROPER_START') )
 $user = api::send('user/list', array('id'=>$_POST['user']));
 $user = $user[0];
 
-$mail = $_POST['mail'];
+$mail = nl2br($_POST['mail']);
 $subject = $_POST['mail_title'];
 	
 $email = str_replace(array('{USER}'), array($user['name']), $mail);

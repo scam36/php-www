@@ -6,6 +6,18 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
+if( isset($_GET['cookie']) && $_GET['cookie']=='remove' ) {
+	if (isset($_SERVER['HTTP_COOKIE'])) {
+		$cookies = explode(';', $_SERVER['HTTP_COOKIE']);
+		foreach($cookies as $cookie) {
+			$parts = explode('=', $cookie);
+			$name = trim($parts[0]);
+			setcookie($name, '', time()-1000);
+			setcookie($name, '', time()-1000, '/');
+		}
+	}
+}
+
 $content = "
 			<div class=\"head-light\">
 				<div class=\"container\">
@@ -36,7 +48,26 @@ $content = "
 				<div class=\"clear\"></div>
 				<br /><br />
 			</div>
+			
+			<div id=\"cookie\" class=\"floatingdialog delete-link\">
+				<h3 class=\"center\">{$lang['cookie']}</h3>
+				<p style=\"text-align: center;\">{$lang['cookie_explain']}</p>
+				<a href=\"/about?cookie=remove\"><input type=\"button\" id=\"no_cookie\" style=\"margin:auto;\" value=\"{$lang['cookie_no']}\" /></a>
+			</div>
 ";
+
+if( isset($_GET['cookie']) &&  $_GET['cookie']!='remove' )
+{
+	$content .= "<script type=\"text/javascript\">
+					newFlexibleDialog('cookie', 800);
+
+					$(document).ready(function() {
+						$(\"#cookie\").dialog(\"open\");
+						$(\".ui-dialog-titlebar\").hide();
+					});
+				</script>
+	";
+}
 
 /* ========================== OUTPUT PAGE ========================== */
 $template->output($content);

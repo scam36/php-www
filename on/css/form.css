@@ -53,10 +53,18 @@ input[type=button]:focus, input[type=image]:focus, input[type=submit]:focus {
 }
 
 input.auto {
-	color: #4C4C4C;
+	color: #CCC;
 }
 
 textarea.auto {
+	color: #CCC;
+}
+
+input.auto[placeholder] {
+	color: #4C4C4C;
+}
+
+textarea.auto[placeholder] {
 	color: #4C4C4C;
 }
 

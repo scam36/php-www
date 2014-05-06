@@ -84,6 +84,11 @@ backups = "Backups"
 type_database = "Database"
 type_site = "Web site"
 
+send_mail = "Send an email to the user"
+send_mail_title = "Subject"
+send_mail_text = "Message"
+send = "Send"
+
 [FR]
 title = "Détails de l'utilisateur"
 infos = "Informations"

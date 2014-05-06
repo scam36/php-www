@@ -693,7 +693,13 @@ $content .= "
 						if (mm < 10) mm = '0' + mm;
 						today = dd + '/' + mm + '/' + yyyy;
 						
-						if(! $(this).hasClass('editing')) $(this).val(currentVal + '\\n' + adminName +' ('+today+') -');
+						if(! $(this).hasClass('editing')) {
+							if(currentVal != '') {
+								$(this).val(currentVal + '\\n' + adminName +' ('+today+') -');
+							} else {
+								$(this).val(adminName +' ('+today+') -');
+							}
+						}
 						$(this).addClass('editing');
 				});
 			});

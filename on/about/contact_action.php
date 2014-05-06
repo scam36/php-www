@@ -8,6 +8,9 @@ if( !defined('PROPER_START') )
 
 if( $security->hasAccess('/panel') )
 	$user = security::get('USER');
+else {
+	$user = security::encode($_POST['account']);
+}
 
 $message = "
 Name: ".security::encode($_POST['name'])."

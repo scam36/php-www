@@ -6,6 +6,9 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
+if( $security->hasAccess('/panel') )
+	$user = security::get('USER');
+
 $content = "
 			<div class=\"head-light\">
 				<div class=\"container\">
@@ -21,6 +24,17 @@ $content = "
 						<fieldset>
 							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"name\" value=\"{$lang['name']}\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
 						</fieldset>
+		";
+		
+if(!$user) {
+	$content .= "
+						<fieldset>
+							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"account\" value=\"{$lang['account']}\" onfocus=\"this.value = this.value=='{$lang['account']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['account']}' : this.value; this.value=='{$lang['account']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+						</fieldset>
+	";
+}
+
+$content .= "		
 						<fieldset>
 							<input class=\"auto\" style=\"width: 300px;\"type=\"text\" name=\"email\" value=\"{$lang['email']}\" onfocus=\"this.value = this.value=='{$lang['email']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['email']}' : this.value; this.value=='{$lang['email']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
 						</fieldset>

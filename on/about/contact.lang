@@ -31,6 +31,7 @@ We remind you that, according to this law, the fact to flag any content or activ
 <li style='padding-left: 10px; padding-bottom: 10px; line-height: 20px;'>the copy of the correspondence sent to the activities' author or publisher, requesting interruption, withdrawal or modification, 
 or justification that they could not be contacted.</li>
 </ul>"
+email_wrong = "Your email address format is wrong."
 
 [ES]
 title = "Contactarnos"
@@ -66,6 +67,7 @@ Recordamos que, en acuerdo con esta ley, el hecho de presentar cualquier conteni
 <li style='padding-left: 10px; padding-bottom: 10px; line-height: 20px;'>la copia de la correspondencia enviada a el autor o el editor de las actividades ilícitas, para solicitar su interrupción, retirada
 o modificación, o la justificación de lo que el autor o el editor no pudieron ser contactados.</li>
 </ul>"
+email_wrong = "Su formato de dirección email es erróneo."
 
 [FR]
 title = "Contactez nous"
@@ -84,6 +86,7 @@ send_now = "Envoyer"
 follow = "Nous suivre"
 news = "Actualité"
 account = "Compte Olympe (si existant)"
+email_wrong = "Le format de votre adresse email est incorrect."
 
 report = "Signaler un contenu illicite"
 report_text = "Conformément à la loi n°2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, vous avez la possibilité de <strong>nous informer de tout contenu, hébergé par Olympe, 

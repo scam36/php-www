@@ -20,29 +20,29 @@ $content = "
 					<h4>{$lang['send']}</h4>
 					<p>{$lang['send_text']}</p>
 					<br />
-					<form action=\"/about/contact_action\" method=\"post\">
+					<form action=\"/about/contact_action\" method=\"post\" id=\"contact\">
 						<fieldset>
-							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"name\" value=\"{$lang['name']}\" onfocus=\"this.value = this.value=='{$lang['name']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['name']}' : this.value; this.value=='{$lang['name']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"name\" placeholder=\"{$lang['name']}\" />
 						</fieldset>
 		";
 		
 if(!$user) {
 	$content .= "
 						<fieldset>
-							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"account\" value=\"{$lang['account']}\" onfocus=\"this.value = this.value=='{$lang['account']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['account']}' : this.value; this.value=='{$lang['account']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"account\" placeholder=\"{$lang['account']}\" />
 						</fieldset>
 	";
 }
 
 $content .= "		
 						<fieldset>
-							<input class=\"auto\" style=\"width: 300px;\"type=\"text\" name=\"email\" value=\"{$lang['email']}\" onfocus=\"this.value = this.value=='{$lang['email']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['email']}' : this.value; this.value=='{$lang['email']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+							<input class=\"auto\" style=\"width: 300px;\"type=\"text\" name=\"email\" id=\"email\" placeholder=\"{$lang['email']}\" />
 						</fieldset>
 						<fieldset>
-							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"subject\" value=\"{$lang['subject']}\" onfocus=\"this.value = this.value=='{$lang['subject']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['subject']}' : this.value; this.value=='{$lang['subject']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\" />
+							<input class=\"auto\" style=\"width: 300px;\" type=\"text\" name=\"subject\" placeholder=\"{$lang['subject']}\" />
 						</fieldset>
 						<fieldset>
-							<textarea class=\"auto\" style=\"width: 300px;\" rows=\"10\" name=\"message\" onfocus=\"this.value = this.value=='{$lang['message']}' ? '' : this.value; this.style.color='#4c4c4c';\" onfocusout=\"this.value = this.value == '' ? this.value = '{$lang['message']}' : this.value; this.value=='{$lang['message']}' ? this.style.color='#cccccc' : this.style.color='#4c4c4c'\">{$lang['message']}</textarea>
+							<textarea class=\"auto\" style=\"width: 300px;\" rows=\"10\" name=\"message\" placeholder=\"{$lang['message']}\"></textarea>
 						</fieldset>
 						<fieldset>
 							<input type=\"submit\" value=\"{$lang['send_now']}\" />
@@ -74,8 +74,24 @@ $content .= "
 				<h3 class=\"center\">{$lang['report']}</h3>
 				<p style=\"text-align: justify; font-size:13px; line-height:20px;\">{$lang['report_text']}</p>
 			</div>
+			<div id=\"email_check\" class=\"floatingdialog center\">
+				<img src=\"/on/images/icons/notifications/error.png\">
+				<br>
+				<p>{$lang['email_wrong']}</p>
+			</div>
 			<script>
 				newFlexibleDialog('report', 800);
+				newFlexibleDialog('email_check', 250);
+				
+				$('form#contact').submit(function() {
+					var input = $('#email', this);
+					var re = new RegExp('^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$', 'i');
+					var is_email = re.test(input.val());
+					if(!is_email) { 
+						$('#email_check').dialog('open');
+						return false; 
+					}
+				});
 			</script>
 ";
 

@@ -64,8 +64,8 @@ $content = "
 						<td style=\"text-align: center;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-pgsql.png\" style=\"width: 40px;\" alt=\"PostgeSQL\"></td>
 						<td>PostgreSQL</td>
 						<td>{$lang['db']}</td>
-						<td>9.3</td>
-						<td><a href=\"http://www.postgresql.com\">http://www.postgresql.com</a></td>
+						<td>9.3.x</td>
+						<td><a href=\"http://www.postgresql.org\">http://www.postgresql.org</a></td>
 					</tr>
 					<tr>
 						<td style=\"text-align: center;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-mongodb.png\" style=\"width: 40px;\" alt=\"MongoDB\"></td>
@@ -110,7 +110,7 @@ $content = "
 						<td style=\"text-align: center;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/services/icon-pma.png\" style=\"width: 40px;\" alt=\"PHPMyAdmin\"></td>
 						<td>PHPMyAdmin</td>
 						<td>{$lang['pma']}</td>
-						<td>4.1.12</td>
+						<td>4.1.x</td>
 						<td><a href=\"http://www.phpmyadmin.net\">http://www.phpmyadmin.net</a></td>
 					</tr>
 					<tr>

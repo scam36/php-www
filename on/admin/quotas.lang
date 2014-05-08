@@ -1,6 +1,6 @@
 [EN]
 title = "Quota management"
-quota = "Quotas"
+quotas = "Quotas"
 name = "Name"
 action = "Actions"
 manage = "Manage"
@@ -13,7 +13,7 @@ create = "Create"
 
 [FR]
 title = "Gestion des quotas"
-qoutas = "Quotas"
+quotas = "Quotas"
 name = "Nom"
 action = "Actions"
 manage = "Gérer"

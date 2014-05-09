@@ -6,21 +6,49 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$logs = api::send('log/list', array());
+if(isset($_POST['action']) && $_POST['action']=='search') {
+	$user = security::encode($_POST['user']);
+	$logs = api::send('log/list', array('user'=>$user));
+} else {
+	$display = 'display:none';
+	$logs = api::send('log/list', array());
+}
+
 
 $content = "
 			<div class=\"panel\">
 				<div class=\"top\">
-					<div class=\"left\" style=\"padding-top: 5px;\">
+					<div class=\"left\" style=\"padding-top: 5px; width: 700px;\">
+					
+		";
+		
+if($search == 1) {
+	$content .= "
+						<h1 class=\"dark\">{$lang['title']} - <strong>". $user ."</strong></h1>
+			";
+} else {
+	$content .= "
 						<h1 class=\"dark\">{$lang['title']}</h1>
+			";
+}
+	$content .= "
 					</div>
 					<div class=\"right\">
-						<a class=\"button classic\" href=\"#\" onclick=\"$('#new').dialog('open');\" style=\"width: 180px; height: 22px; float: right;\">
+						<a class=\"button classic\" href=\"#\" onclick=\"$('#searchlogs').slideToggle('fast');\" style=\"width: 180px; height: 22px; float: right;\">
 							<span style=\"display: block; padding-top: 3px;\">{$lang['search']}</span>
 						</a>
 					</div>
 				</div>
 				<div class=\"clear\"></div><br />
+				<div id=\"searchlogs\" class=\"container\" style=\"{$display};\">
+					<form action=\"\" method=\"post\">
+						<fieldset>
+							<input type=\"text\" name=\"user\" placeholder=\"{$lang['user']}\" value=\"{$user}\" style=\"width: 300px; display: inline-block;\" />
+							<input type=\"hidden\" name=\"action\" value=\"search\" />
+							<input type=\"submit\" value=\"Ok\" style=\"width: 50px; display: inline-block;\" />
+						</fieldset>
+					</form>
+				</div>
 				<div class=\"container\">
 ";
 

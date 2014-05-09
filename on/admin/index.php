@@ -101,9 +101,9 @@ foreach( $overquotas as $o )
 
 $content .= "
 
-				<tr>
-				<td colspan=\"4\" style=\"text-align:right;\"><a href=\"/admin/overquota\">{$lang['more']}</a></td>
-				</tr>
+					<tr>
+						<td colspan=\"4\" style=\"text-align:right;\"><a href=\"/admin/overquota\">{$lang['more']}</a></td>
+					</tr>
 				</table>
 			</div>
 			<div style=\"width: 700px; float: right;\">
@@ -130,6 +130,9 @@ foreach( $users as $u )
 }
 
 $content .= "
+					<tr>
+						<td colspan=\"4\" style=\"text-align:right;\"><a href=\"/admin/registrations\">{$lang['more']}</a></td>
+					</tr>
 				</table>
 			</div>
 

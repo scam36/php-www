@@ -74,7 +74,7 @@ if( security::hasGrant('SITE_SELECT') )
 		$content .= "
 						<tr>
 							<td style=\"width: 60px; text-align: center;\">{$s['id']}</td>
-							<td><a target=\"_blank\" href=\"http://{$s['hostname']}\">{$s['hostname']}</a></td>
+							<td><a href=\"http://{$s['hostname']}\">{$s['hostname']}</a></td>
 							<td>{$s['size']} {$lang['mb']}</td>
 							<td style=\"width: 50px; text-align: center;\">
 								<a href=\"#\" onclick=\"$('#user6').val('{$user['id']}'); $('#site_id').val('{$s['id']}'); $('#deletesite').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
@@ -110,7 +110,7 @@ if( security::hasGrant('BACKUP_SELECT') )
 							<td>{$b['title']}</td>
 							<td>".date($lang['dateformat'], $b['date'])."</td>
 							<td style=\"width: 100px; text-align: center;\">
-								<a href=\"{$b['url']}\" title=\"\" target=\"_blank\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/download2.png\" alt=\"\" /></a>
+								<a href=\"{$b['url']}\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/download2.png\" alt=\"\" /></a>
 								<a href=\"#\" onclick=\"$('#user5').val('{$user['id']}'); $('#backup_id').val('{$b['id']}'); $('#deletebackup').dialog('open'); return false;\" title=\"\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
 							</td>
 						</tr>

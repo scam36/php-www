@@ -116,12 +116,12 @@ $content = "
 									<tr>
 										<td>PHPMyAdmin</td>
 										<td>{$lang['mysql']}</td>
-										<td><a href=\"https://pma.olympe.in\" target=\"_blank\">https://pma.olympe.in</a></td>
+										<td><a href=\"https://pma.olympe.in\">https://pma.olympe.in</a></td>
 									</tr>
 									<tr>
 										<td>PHPPgAdmin</td>
 										<td>{$lang['pgsql']}</td>
-										<td><a href=\"https://ppa.olympe.in\" target=\"_blank\">https://ppa.olympe.in</a></td>
+										<td><a href=\"https://ppa.olympe.in\">https://ppa.olympe.in</a></td>
 									</tr>
 								</table>
 							</div>

@@ -54,14 +54,24 @@ $content = "
 						<th>{$lang['date']}</th>						
 					</tr>
 ";
-
-foreach( $messages as $m )
+if( count($messages) > 0 )
 {
-	$content .= "
+	foreach( $messages as $m )
+	{
+		$content .= "
 					<tr>
 						<td style=\"width: 40px; text-align: center;\"><a href=\"/admin/users/detail?id={$m['user']['id']}\"><img style=\"width: 30px; height: 30px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a></td>
 						<td><a href=\"/admin/messages/detail?id={$m['id']}\">{$m['title']}</a></td>
 						<td>".date('Y-m-d H:i', $m['date'])."</td>
+					</tr>
+		";
+	}
+}
+else
+{
+	$content .= "
+					<tr>
+						<td colspan=\"3\" class=\"center\">{$lang['nomessage']}</td>
 					</tr>
 	";
 }

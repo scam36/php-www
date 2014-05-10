@@ -90,6 +90,7 @@ $content .= "
 						<fieldset>
 							<select name=\"author\">
 								<option value=\"1\">Yann Autissier</option>
+								<option value=\"2\">Bruno Million</option>
 								<option value=\"3\">Samuel Hassine</option>
 								<option value=\"4\">Simon Uyttendaele</option>
 							</select>

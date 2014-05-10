@@ -14,14 +14,14 @@ open_text = "All our <a href='https://github.com/OlympeNetwork'>source codes</a>
 innovation = "Innovative"
 innovation_text = "We provide the last <a href='/service/infrastructure'>technologies</a>, focusing on quality and <a href='/status'>availability</a> of the services."
 app = "PHP applications and services"
-app_text = "For more than six years now, the Olympe organization provides a an ad-free<a href='/service/hosting'>web hosting service</a>. At the very beginning, we used to a single basic offer with PHP/MySQL only. Then our team has increased the platform capability and now we propose many
+app_text = "For more than six years now, the Olympe organization provides a ad-free<a href='/service/hosting'>web hosting service</a>. At the very beginning, we used to a single basic offer with PHP/MySQL only. Then our team has increased the platform capability and now we propose many
 other <a href='/service/offer'>technologies</a> (PostgreSQL, MongoDB...).<br />
 <br />More than a simple disk space, we provide also a <a href='/service/offer'>full domain names management</a> (subdomains, DNS records...), POP/IMAP mail accounts (redirections, aliases...), shared calendars and more."
 
 manage = "Extended features"
-manage_text = "For each account, a <a href='/doc/cloud'>cloud application</a> is available, for file synchronization, sharing and storage. This tool includes a web interface for online file editing, and even data recovery.
+manage_text = "For each account, a <a href='/doc/cloud'>cloud application</a> is available, for file synchronization, sharing and storage. This tool includes a web interface for on-line file editing, and even data recovery.
 <br /><br />
-Our platform is fully self-funded and maintened by a <a href='/about/team'>volunteer team</a>, you are welcome to <a href='/org/help'>help us</a> raise funds fo the project and participate to the charges. For any
+Our platform is fully self-funded and maintained by a <a href='/about/team'>volunteer team</a>, you are welcome to <a href='/org/help'>help us</a> raise funds for the project and participate to the charges. For any
 question or if you wish to help, please <a href='/about/contact'>contact us</a>, our team will be please do greet you."
 signup_now = "Register now"
 

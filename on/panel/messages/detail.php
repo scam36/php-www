@@ -10,7 +10,7 @@ try
 {
 	$message = api::send('self/message/list', array('id'=>$_GET['id']));
 	$message = $message[0];
-	$messages = api::send('self/message/list', array('parent'=>$_GET['id']));
+	$messages = api::send('message/list', array('parent'=>$_GET['id']), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 }
 catch( Exception $e )
 {
@@ -19,17 +19,28 @@ catch( Exception $e )
 
 if( !$message['id'] || !$_GET['id'] )
 	template::redirect('/admin/messages');
+
+	
+if($message['status']==3) $replyButton = "
+		<a class=\"button classic\" href=\"#\" onclick=\"$('#noreply').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
+			<span style=\"display: block; padding-top: 3px;\">{$lang['closed']}</span>
+		</a>
+";
+else $replyButton = "
+		<a class=\"button classic\" href=\"#\" onclick=\"$('#reply').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
+			<span style=\"display: block; padding-top: 3px;\">{$lang['reply']}</span>
+		</a>
+";
 	
 $content .= "
 	<div class=\"panel\">
 		<div class=\"top\">
 			<div class=\"left\" style=\"width: 600px;\">
-				<h3>{$message['title']}</h3>
+				<h3>{$message['title']}</h3> 
 			</div>
+			
 			<div class=\"right\" style=\"width: 400px; float: right; text-align: right;\">
-				<a class=\"button classic\" href=\"#\" onclick=\"$('#reply').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
-					<span style=\"display: block; padding-top: 3px;\">{$lang['reply']}</span>
-				</a>
+				".$replyButton."
 			</div>
 			<div class=\"clear\"></div><br /><br />
 		</div>
@@ -51,7 +62,7 @@ foreach( $messages as $m )
 						<div class=\"icons\">
 		";
 	
-		if( $m['user']['name'] == security::get('USER') )
+		if( $m['user']['name'] == security::get('USER') && ($message['status']!=3) )
 		{
 			$content .= "
 							<a href=\"#\" onclick=\"showEdit('{$m['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" /></a>
@@ -91,8 +102,17 @@ $content .= "
 							".date($lang['dateformat'], $message['date'])."
 						</div>
 						<div class=\"icons\">
+";
+
+if( $message['status']!=3 )
+{
+	$content .= "
 							<a href=\"#\" onclick=\"showEdit('{$message['id']}'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/pencil.png\" alt=\"\" /></a>
 							<a href=\"#\" onclick=\"$('#id').val('{$message['id']}'); $('#delete').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/small/close.png\" alt=\"\" /></a>
+	";
+}
+
+$content .= "
 						</div>
 						<div class=\"clear\"></div>
 					</div>
@@ -114,9 +134,7 @@ $content .= "
 				</div>
 			</div>
 			<br />
-			<a class=\"button classic\" href=\"#\" onclick=\"$('#reply').dialog('open'); return false;\" style=\"width: 180px; height: 22px; float: right;\">
-				<span style=\"display: block; padding-top: 3px;\">{$lang['reply']}</span>
-			</a>
+			".$replyButton."
 		</div>
 		<div class=\"clear\"></div><br /><br />
 	</div>
@@ -137,6 +155,11 @@ $content .= "
 			</form>
 		</div>
 	</div>
+	<div id=\"noreply\" class=\"floatingdialog\">
+		<br />
+		<h3 class=\"center\">{$lang['reply']}</h3>
+		<p style=\"text-align: center;\">{$lang['noreply']}</p>
+	</div>
 	<div id=\"delete\" class=\"floatingdialog\">
 		<h3 class=\"center\">{$lang['delete']}</h3>
 		<p style=\"text-align: center;\">{$lang['delete_text']}</p>
@@ -153,6 +176,7 @@ $content .= "
 	<script>
 		newFlexibleDialog('reply', 550);
 		newFlexibleDialog('delete', 550);
+		newFlexibleDialog('noreply', 550);
 		var status = 0;
 		function showEdit(id)
 		{

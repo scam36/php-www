@@ -1,4 +1,16 @@
 [EN]
+title = "Statistics"
+users = "Registrations"
+user = "users"
+sites = "web sites"
+domains = "domain names"
+databases = "databases"
+dateformat = "d-M"
+dateformathour = "H:i"
+dateformatmonth = "M"
+chart1_title = "Registrations of the last 24 hours"
+chart2_title = "Registrations of the last month"
+chart3_title = "Registrations of the last year"
 
 [FR]
 title = "Statistiques"

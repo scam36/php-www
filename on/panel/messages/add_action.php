@@ -41,6 +41,8 @@ catch( Exception $e )
 
 if( isset($_GET['redirect']) )
 	template::redirect($_GET['redirect']);
+else if( $_POST['parent'] )
+		$template->redirect('/panel/messages/detail?id=' . security::encode($_POST['parent']));
 else
 	$template->redirect('/panel/messages');
 

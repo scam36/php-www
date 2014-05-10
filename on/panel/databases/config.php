@@ -74,7 +74,6 @@ $content .= "
 					<th style=\"text-align: center; width: 40px;\">#</th>
 					<th>{$lang['server']}</th>
 					<th>{$lang['username']}</th>
-					<th>{$lang['password']}</th>
 					<th>{$lang['database']}</th>
 					<th>{$lang['load']}</th>
 					<th style=\"width: 100px;  text-align: center;\">{$lang['actions']}</th>
@@ -83,7 +82,6 @@ $content .= "
 					<td style=\"text-align: center; width: 40px;\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/server.png\" /></td>
 					<td>{$database['server']}</td>
 					<td>{$database['name']}</td>
-					<td>**********</td>
 					<td>{$database['name']}</td>
 					<td>
 						<div class=\"fillgraph\" style=\"margin-top: 10px;\">
@@ -92,7 +90,11 @@ $content .= "
 						<span class=\"quota\"><span style='font-weight: bold;'>{$database['stats'][$database['server']]}</span> {$lang['databases']}</span>
 					</td>
 					<td style=\"width: 100px; text-align: center;\">
-						<a href=\"#\" title=\"\" onclick=\"$('#migrate').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>
+";
+if( $database['type'] == 'mysql' )
+	$content .= "						<a href=\"#\" title=\"\" onclick=\"$('#migrate').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/settings.png\" alt=\"\" /></a>";
+	
+$content .= "
 						<a href=\"#\" title=\"\" onclick=\"$('#download').dialog('open'); return false;\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/download2.png\" alt=\"\" /></a>
 					</td>
 				</tr>

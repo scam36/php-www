@@ -1,4 +1,18 @@
 [EN]
+menu_overview = "Overview"
+menu_contact = "Contact"
+menu_team = "Team"
+menu_partners = "Partners"
+menu_legal = "Legal"
+menu_reference = "References"
+
+[ES]
+menu_overview = "Ojeada"
+menu_contact = "Contactarnos"
+menu_team = "Equipo"
+menu_partners = "Afiliados"
+menu_legal = "Condiciones"
+menu_reference = "Referencias"
 
 [FR]
 menu_overview = "Aperçu"

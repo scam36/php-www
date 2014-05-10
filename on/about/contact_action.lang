@@ -1,5 +1,14 @@
 [EN]
+success = "Tu mensaje ha sido enviado. Gracias por su interés."
+empty_field = "Your message could not be sent: one or more field(s) are empty."
+email_wrong = "Your email address format is wrong."
+
+[ES]
 success = "Your message has been succesfully sent. Thanks for your interest in Olympe!"
+empty_field = "Su mensaje no se pudo enviar: algunos campos están vacíos."
+email_wrong = "Su formato de dirección email es erróneo."
 
 [FR]
 success = "Votre message a bien été envoyé. Merci de votre intérêt pour Olympe !"
+empty_field = "Votre message n'a pu être envoyé : un ou plusieurs champs sont vides."
+email_wrong = "Le format de votre adresse email est incorrect."

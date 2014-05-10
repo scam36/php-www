@@ -103,7 +103,7 @@ $content .= "
 						/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 						var disqus_developer = 0; // developer mode
 						var disqus_shortname = 'olympe'; // required: replace example with your forum shortname
-						var disqus_identifier = 'Site - {$site['title']}';
+						var disqus_identifier = 'Site - {$site['id']}';
 						var disqus_url = 'https://www.olympe.in/directory/site?id={$site['id']}';
 						/* * * DON'T EDIT BELOW THIS LINE * * */
 						(function() {

@@ -4,6 +4,12 @@ databases = "databases and"
 sites = "websites"
 domains = "domains."
 
+[ES]
+users = "usuarios"
+databases = "bases de datos y"
+sites = "sitios web"
+domains = "nombre de dominios."
+
 [FR]
 users = "utilisateurs"
 databases = "bases de données et"

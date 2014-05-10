@@ -1,4 +1,18 @@
 [EN]
+title = "Backups"
+type = "Backup type"
+name = "Name"
+date = "Date"
+actions = "Actions"
+
+dateformat = "d/m/Y H:i:s"
+doc = "Documentation"
+delete = "Delete"
+delete_text = "Are you sure you want to delete this backup?"
+delete_now = "Confirm"
+type_database = "Databases"
+type_site = "Web site"
+nobackup = "You have no backup."
 
 [FR]
 title = "Sauvegardes"

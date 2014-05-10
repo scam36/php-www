@@ -1,0 +1,15 @@
+[EN]
+title = "Last 50 users"
+username = "User"
+email = "Email"
+date = "Date"
+ip = "IP"
+dateformat = "Y-m-d H:i:s"
+
+[FR]
+title = "50 derniers inscrits"
+username = "Utilisateur"
+email = "Email"
+date = "Date"
+ip = "IP"
+dateformat = "d/m/Y à H:i:s"

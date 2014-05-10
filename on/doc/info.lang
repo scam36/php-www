@@ -1,5 +1,15 @@
 [EN]
 
+ftp = "FTP"
+ssh = "SSH"
+git = "GIT"
+sftp = "SFTP"
+mongo = "MongoDB"
+mysql = "MySQL 1"
+mysql2 = "MySQL 2"
+mysql3 = "MysQL 3"
+pgsql = "PostgreSQL"
+
 
 [FR]
 title = "Informations utiles"

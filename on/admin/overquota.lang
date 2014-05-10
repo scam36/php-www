@@ -1,0 +1,15 @@
+[EN]
+title = "Top 50 Overquota"
+quotas = "Quotas"
+disk = "In use"
+max = "Max"
+lastupdate = "Last Update"
+dateformat = "Y-d-m H:i:s"
+
+[FR]
+title = "Top 50 Overquota"
+quotas = "Quotas"
+disk = "Utilisé"
+max = "Max"
+lastupdate = "Date de dernière mise à jour"
+dateformat = "d/m/Y à H:i:s"

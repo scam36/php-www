@@ -42,6 +42,7 @@ $content .= "
 						<option ".($news['author']==1?"selected":"")." value=\"1\">Yann Autissier</option>
 						<option ".($news['author']==3?"selected":"")." value=\"3\">Samuel Hassine</option>
 						<option ".($news['author']==4?"selected":"")." value=\"4\">Simon Uyttendaele</option>
+						<option ".($news['author']==5?"selected":"")." value=\"5\">Bruno Million</option>
 					</select>
 					<span class=\"help-block\">{$lang['author_help']}</span>
 				</fieldset>

@@ -1,4 +1,23 @@
 [EN]
+title = "Quotas"
+more = "Ask more"
+gb = "Gb"
+mb = "Mb"
+disk = "Disk space"
+databases = "Databases"
+sites = "Web sites"
+mails = "Sent emails (H24)"
+of = "of"
+cloud = "Cloud"
+cloud_type = "File storage"
+sizes = "Disk space use"
+name = "Service name"
+type = "Type"
+path = "Path"
+size = "Size"
+database = "Database"
+site = "Web site"
+user = "Email account"
 
 [FR]
 title = "Quotas et limitations"

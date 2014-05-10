@@ -1,5 +1,4 @@
 [EN]
-
 subject = "Olympe account recovery"
 content = "<p style='margin: 20px 0'>You have requested the recovery of your account on the <a style='color: #de5711;' href='https://www.olympe.in'>Olympe platform</a>.</p>
 	<p style='margin: 20px 0'>In order to choose a new password, you have to click on the following link. Be careful, this link is only valid during <strong>6 hours</strong>!</p>
@@ -7,8 +6,15 @@ content = "<p style='margin: 20px 0'>You have requested the recovery of your acc
 
 success = "You request is a success. An email with a a recovery link has been sent to your address."
 
-[FR]
+[ES]
+subject = "Recuperación de cuenta"
+content = "<p style='margin: 20px 0'>Has solicitado la recuperación de su cuenta en la <a style='color: #de5711;' href='https://www.olympe.in'>plataforma Olympe</a>.</p>
+	<p style='margin: 20px 0'>Para elegir una contraseña nueva, tienes que hacer clic en el siguiente enlace. Ten cuidado, este enlace es válido sólo durante <strong>6 horas</strong>.</p>
+	<p style='margin: 20px 0'>Modificar su contraseña : <a style='color: #de5711;' href='https://www.olympe.in/change_password?user={USER}&token={TOKEN}'>https://www.olympe.in/change_password?user={USER}&token={TOKEN}</a></p>"
 
+success = "Su petición ha sido tomada en cuenta. Un email que contiene un enlace de recuperación te ha sido enviado."
+
+[FR]
 subject = "Récupération de compte Olympe"
 content = "<p style='margin: 20px 0'>Vous avez effectué une demande de récupération sur la <a style='color: #de5711;' href='https://www.olympe.in'>plateforme Olympe</a>.</p>
 	<p style='margin: 20px 0'>Afin de choisir un nouveau mot de passe, merci de bien vouloir cliquer sur le lien suivant. Attention, ce lien n'est valide que pendant <strong>6 heures</strong> !</p>

@@ -1,4 +1,14 @@
 [EN]
+title = "Token details"
+grants = "Privileges"
+grantname = "Privilege name"
+granted = "Granted"
+tokeninfo = "Token informations"
+tokenname = "Name"
+tokenlease = "End"
+update = "Update"
+tokentoken = "Token ID"
+back = "Back to the user"
 
 [FR]
 title = "Détails du token"

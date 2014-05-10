@@ -1,4 +1,16 @@
 [EN]
+title = "Results"
+user = "Users"
+name = "Name"
+actions = "Actions"
+email = "Email"
+manage = "Manage"
+ip = "IP"
+date = "Registration"
+name = "User"
+email = "Email"
+site = "Site name"
+domain = "Domain name"
 
 [FR]
 title = "Résultats de recherche"

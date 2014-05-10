@@ -97,7 +97,7 @@ $content .= "
 							<span class=\"circle\"></span>
 						</div>
 						<div class=\"terminal-text\">
-							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/pages/panel-1.png\" alt=\"map\" style=\"display: block; padding: 15px 0 0 50px;\" />
+							<a href=\"/service/hosting\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/pages/panel-1.png\" alt=\"map\" style=\"display: block; padding: 15px 0 0 50px;\" /></a>
 						</div>
 					</div>
 				</div>
@@ -110,7 +110,7 @@ $content .= "
 							<span class=\"circle\"></span>
 						</div>
 						<div class=\"terminal-text\">
-							<img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/pages/service.png\" alt=\"map\" style=\"display: block; padding: 10px 0 0 10px;\" />
+							<a href=\"/service/offer\"><img src=\"/{$GLOBALS['CONFIG']['SITE']}/images/pages/service.png\" alt=\"map\" style=\"display: block; padding: 10px 0 0 10px;\" /></a>
 						</div>
 					</div>
 				</div>

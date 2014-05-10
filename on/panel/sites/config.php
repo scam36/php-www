@@ -116,6 +116,7 @@ $content .= "
 				<h2 class=\"dark\">{$lang['response']}</h2>
 				<div id=\"chart1\" style=\"margin-bottom: 20px;\"></div>
 				<div id=\"chart2\" style=\"margin-bottom: 20px;\"></div>
+				<p>{$lang['note']}</p>
 			</div>
 			<div class=\"right border\" style=\"width: 340px; padding-left: 60px; margin-left: 40px; margin-top: 5px;\">
 				<h2 class=\"dark\">{$lang['directory']}</h2>
@@ -267,6 +268,12 @@ $content .= "
 						visible: true
 					}
 				},
+				valueAxis: {
+					label: {
+						customizeText: function() {
+							return this.valueText + 'ms'
+						}
+				}},
 				tooltip:{
 					enabled: true,
 					font: { size: 15 }
@@ -277,10 +284,11 @@ $content .= "
 				},
 				legend: {
 					verticalAlignment: \"top\",
-					horizontalAlignment: \"right\"
+					horizontalAlignment: \"right\",
+					visible: false
 				},
 				size: {
-					width: 700,
+					width: 650,
 					height: 200
 				},
 				commonPaneSettings: {
@@ -304,6 +312,12 @@ $content .= "
 						visible: true
 					}
 				},
+				valueAxis: {
+					label: {
+						customizeText: function() {
+							return this.valueText + 'ms'
+						}
+				}},
 				tooltip:{
 					enabled: true,
 					font: { size: 15 }
@@ -314,10 +328,11 @@ $content .= "
 				},
 				legend: {
 					verticalAlignment: \"top\",
-					horizontalAlignment: \"right\"
+					horizontalAlignment: \"right\",
+					visible: false
 				},
 				size: {
-					width: 700,
+					width: 650,
 					height: 200
 				},
 				commonPaneSettings: {
@@ -344,6 +359,12 @@ $content .= "
 						overlappingBehavior: { mode: 'rotate', rotationAngle: 50 }
 					}
 				},
+				valueAxis: {
+					label: {
+						customizeText: function() {
+							return this.valueText + 'ms'
+						}
+				}},
 				tooltip:{
 					enabled: true,
 					font: { size: 15 }
@@ -354,10 +375,11 @@ $content .= "
 				},
 				legend: {
 					verticalAlignment: \"top\",
-					horizontalAlignment: \"right\"
+					horizontalAlignment: \"right\",
+					visible: false
 				},
 				size: {
-					width: 800,
+					width: 650,
 					height: 200
 				},
 				commonPaneSettings: {

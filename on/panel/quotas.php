@@ -66,7 +66,7 @@ $content = "
 					</a>		
 				</div>
 			</div>
-			<div class=\"clear\"></div><br /><br />
+			<div class=\"clear\"></div><br />
 			<div class=\"container\">
 				<div style=\"float: left; width: 500px;\">
 					<span style=\"block; float: left; padding-top: 7px; font-size: 18px; color: #878787;\">{$lang['disk']}</span>

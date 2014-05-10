@@ -406,6 +406,10 @@ if( security::hasGrant('USER_SELECT') )
 						<span class=\"help-block\">{$lang['lastname_help']}</span>
 					</fieldset>
 					<fieldset>
+						<input style=\"width: 300px;\" type=\"text\" name=\"language\" placeholder=\"{$lang['lang_NO']}\" value=\"{$lang['lang_'.$user['language']]}\" disabled />
+						<span class=\"help-block\">{$lang['language_help']}</span>
+					</fieldset>
+					<fieldset>
 						<input type=\"submit\" value=\"{$lang['update']}\" />
 					</fieldset>
 				</form>";

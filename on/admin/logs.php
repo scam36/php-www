@@ -34,7 +34,8 @@ if($search == 1) {
 	$content .= "
 					</div>
 					<div class=\"right\">
-						<a class=\"button classic\" href=\"#\" onclick=\"$('#searchlogs').slideToggle('fast');\" style=\"width: 180px; height: 22px; float: right;\">
+						<a class=\"button classic\" href=\"#\" onclick=\"$('#searchlogs').slideToggle('fast');\" style=\"width: 130px; height: 22px; float: right;\">
+							<img style=\"float: left; height: 98%;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/search.png\" />
 							<span style=\"display: block; padding-top: 3px;\">{$lang['search']}</span>
 						</a>
 					</div>

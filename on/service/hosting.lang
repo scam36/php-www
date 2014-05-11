@@ -1,15 +1,15 @@
 [EN]
 title = "Web hosting platform"
-free = "Free and open"
-free_text = "Our platform is based on an architecture including the <a href='/service/infrastructure'>latest technologies</a>. It's supported by a <a href='/about/team'>team of volunteers</a> and 
-enriched by a <a href='https://community.olympe.in'>community</a> of webmasters.<br /><br />
-The hosting services are free and without advertising, accessible anywhere in the world. We have developed <a href='/about/partners'>partnerships</a> which provide us equipments and efficient applications."
+free = "Free and open-source"
+free_text = "We run our platform with the  <a href='/service/infrastructure'>latest technologies</a>. A great <a href='/about/team'>volunteer team</a> insures the maintenance and 
+is enriched by a <a href='https://community.olympe.in'>community</a> of webmasters.<br /><br />
+The hosting services are free of charge for you, always ad-free, and available online 7 days a week. We have developed a strong <a href='/about/partners'>partnership</a> to provide us up-to-date equipment and powerful applications."
 
 offer = "Service"
-offer_text = "We strive to develop our <a href='/service/offer'>offer</a> with the most prevalent technologies. The regular updates ensure the presence of the latest features for all users. <br /><br />
-The hosting space includes database, domain names and email accounts management. Each account also has space on our <a href='/doc/cloud'>Cloud application</a> providing a files storage space, shared calendars and contacts, etc."
+offer_text = "Everyday we work on developping our <a href='/service/offer'>offer</a> with the most common and reliable technologies. We always keep the system update, so that all Olympe users benefit from our latest features. <br /><br />
+The offer includes database, domain names and email accounts management. Each account has also a <a href='/doc/cloud'>Cloud interface</a> for sharing files, calendars, contacts, etc."
 
-offers = "See the offer"
+offers = "Discover our offer"
 
 [FR]
 title = "Plateforme d'hébergement"

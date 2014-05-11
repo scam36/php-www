@@ -27,18 +27,8 @@ $content = "
 ";
 
 $i = 0;
-if( security::hasGrant('QUOTA_USER_SELECT') )
-{
 foreach( $overquotas as $o )
 {
-	$user = api::send('user/list', array('id'=>$o['id']));
-	$user = $user[0];
-	
-	$size = $user['size'];
-	$size = $o['quotas']['used']-$size;
-	
-	if ( $size >= $o['quotas']['max'] )  
-	{
 	$content .= "
 				<tr>
 					<td style=\"width: 40px; text-align: center;\"><a href=\"/admin/users/detail?id={$o['id']}\"><img style=\"width: 30px; height: 30px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$o['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$o['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a></td>
@@ -53,12 +43,9 @@ foreach( $overquotas as $o )
 	";
 
 	$i++;
-	}
 	
-		//if( $o['quotas']['used'] <= "4000" )
-		if ( $i > 49 )
+	if ( $i > 49 )
 		break;
-}
 }
 
 $content .= "

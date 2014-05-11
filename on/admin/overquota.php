@@ -33,11 +33,11 @@ foreach( $overquotas as $o )
 				<tr>
 					<td style=\"width: 40px; text-align: center;\"><a href=\"/admin/users/detail?id={$o['id']}\"><img style=\"width: 30px; height: 30px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$o['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$o['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a></td>
 					<td><a href=\"/admin/users/detail?id={$o['id']}\">{$o['name']}</a></td>
-					<td>{$size}</td>
+					<td>{$o['quotas']['used']}</td>
 					<td>{$o['quotas']['max']}</td>
-					<td>".date($lang['dateformat'], $user['last'])."</td>
+					<td>".date($lang['dateformat'], $o['last'])."</td>
 					<td style=\"width: 50px; text-align: center;\">
-						<a href=\"/admin/overquota/refresh_action?id={$user['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/refresh4.png\" alt=\"\" /></a>
+						<a href=\"/admin/overquota/refresh_action?id={$o['id']}\"><img class=\"link\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/icons/large/refresh4.png\" alt=\"\" /></a>
 					</td>
 				</tr>
 	";

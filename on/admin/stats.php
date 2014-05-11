@@ -65,6 +65,21 @@ $sites = api::send('site/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERN
 $dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 $domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 
+switch( translator::getLanguage() )
+{
+	case 'FR':
+		$users['count'] = number_format($users['count'], 0, ',', ' ');
+		$sites['count'] = number_format($sites['count'], 0, ',', ' ');
+		$dbs['count'] = number_format($dbs['count'], 0, ',', ' ');
+		$domains['count'] = number_format($domains['count'], 0, ',', ' ');
+	break;
+	default:
+		$users['count'] = number_format($users['count']);
+		$sites['count'] = number_format($sites['count']);
+		$dbs['count'] = number_format($dbs['count']);
+		$domains['count'] = number_format($domains['count']);
+}
+
 $content = "
 	<div class=\"panel\">
 		<div class=\"content\" style=\"margin-top: 0;\">

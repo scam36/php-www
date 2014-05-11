@@ -22,7 +22,7 @@ manage = "Extended features"
 manage_text = "For each account, a <a href='/doc/cloud'>cloud application</a> is available, for file synchronization, sharing and storage. This tool includes a web interface for online file editing, and even data recovery.
 <br /><br />
 Our platform is fully self-funded and maintained by a <a href='/about/team'>volunteer team</a>, you are welcome to <a href='/org/help'>help us</a> raise funds for the project and participate to the charges. For any
-question or if you wish to help, please <a href='/about/contact'>contact us</a>, our team will be please do greet you."
+question or if you wish to help, please <a href='/about/contact'>contact us</a>, our team will be pleased to greet you."
 signup_now = "Register now"
 
 help = "A question? Please <a href='/about/contact'>contact us</a>."

@@ -6,7 +6,14 @@ if( !defined('PROPER_START') )
 	exit;
 }
 
-$messages = api::send('message/list', array('topic'=>1));
+if(isset($_POST['action']) && $_POST['action']=='search') {
+	$user = security::encode($_POST['user']);
+	$logs = api::send('log/list', array('user'=>$user));
+	$messages = api::send('message/list', array('topic'=>1, 'user'=>$user));
+} else {
+	$display = 'display:none';
+	$messages = api::send('message/list', array('topic'=>1));
+}
 
 $content = "
 			<div class=\"panel\">
@@ -14,14 +21,27 @@ $content = "
 					<div class=\"left\" style=\"padding-top: 5px;\">
 						<h1 class=\"dark\">{$lang['title']}</h1>
 					</div>
-					<div class=\"right\">
+					<div class=\"right\" style=\"width: 450px;\">
 						<a class=\"button classic\" href=\"#\" onclick=\"$('#new').dialog('open');\" style=\"width: 180px; height: 22px; float: right;\">
 							<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white.png\" />
 							<span style=\"display: block; padding-top: 3px;\">{$lang['add']}</span>
 						</a>
+						<a class=\"button classic\" href=\"#\" onclick=\"$('#searchrequest').slideToggle('fast');\" style=\"height: 22px; float: right; width: 130px; margin-right: 20px;\">
+							<img style=\"float: left; height: 98%;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/search.png\" />
+							<span style=\"display: block; padding-top: 3px;\">{$lang['search']}</span>
+						</a>
 					</div>
 				</div>
 				<div class=\"clear\"></div><br />
+				<div id=\"searchrequest\" class=\"container\" style=\"{$display};\">
+					<form action=\"\" method=\"post\">
+						<fieldset>
+							<input type=\"text\" name=\"user\" placeholder=\"{$lang['user']}\" value=\"{$user}\" style=\"width: 300px; display: inline-block;\" />
+							<input type=\"hidden\" name=\"action\" value=\"search\" />
+							<input type=\"submit\" value=\"Ok\" style=\"width: 50px; display: inline-block;\" />
+						</fieldset>
+					</form>
+				</div>
 				<div class=\"container\">
 ";
 

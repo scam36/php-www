@@ -66,7 +66,7 @@ $dbs = api::send('database/list', array('count'=>1), $GLOBALS['CONFIG']['API_USE
 $domains = api::send('domain/list', array('count'=>1), $GLOBALS['CONFIG']['API_USERNAME'].':'.$GLOBALS['CONFIG']['API_PASSWORD']);
 
 $content = "
-	<div class=\"admin\">
+	<div class=\"panel\">
 		<div class=\"content\" style=\"margin-top: 0;\">
 			<h1 class=\"dark\" style=\"text-align: center;\">{$lang['title']}</h1>
 			<br />

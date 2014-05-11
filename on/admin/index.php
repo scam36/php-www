@@ -17,7 +17,7 @@ $content = "
 				<h1 class=\"dark\">{$lang['title']}</h1>
 			</div>
 			<div class=\"right\">
-				<a class=\"button classic\" href=\"#\" onclick=\"$('#new').dialog('open');\" style=\"width: 180px; height: 22px; float: right;\">
+				<a class=\"button classic\" href=\"#\" onclick=\"$('#adduser').dialog('open');\" style=\"width: 180px; height: 22px; float: right;\">
 					<img style=\"float: left;\" src=\"/{$GLOBALS['CONFIG']['SITE']}/images/plus-white.png\" />
 					<span style=\"display: block; padding-top: 3px;\">{$lang['add']}</span>
 				</a>
@@ -54,14 +54,24 @@ $content = "
 						<th>{$lang['date']}</th>						
 					</tr>
 ";
-
-foreach( $messages as $m )
+if( count($messages) > 0 )
 {
-	$content .= "
+	foreach( $messages as $m )
+	{
+		$content .= "
 					<tr>
 						<td style=\"width: 40px; text-align: center;\"><a href=\"/admin/users/detail?id={$m['user']['id']}\"><img style=\"width: 30px; height: 30px;\" src=\"".(file_exists("{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png")?"/{$GLOBALS['CONFIG']['SITE']}/images/users/{$m['user']['id']}.png":"/{$GLOBALS['CONFIG']['SITE']}/images/users/user.png")."\" /></a></td>
 						<td><a href=\"/admin/messages/detail?id={$m['id']}\">{$m['title']}</a></td>
 						<td>".date('Y-m-d H:i', $m['date'])."</td>
+					</tr>
+		";
+	}
+}
+else
+{
+	$content .= "
+					<tr>
+						<td colspan=\"3\" class=\"center\">{$lang['nomessage']}</td>
 					</tr>
 	";
 }
@@ -139,7 +149,39 @@ $content .= "
 			<div class=\"clear\"></div>
 		</div>
 	</div>
+	<div id=\"adduser\" class=\"floatingdialog delete-link\">
+		<br />
+		<h3 class=\"center\">{$lang['add']}</h3>
+		<span id=\"adduser_error\" class=\"help-block center\" style=\"color: #bc0000;display:none;\">{$lang['add_error']}<hr /></span>
+		<div class=\"form-small\">		
+			<form action=\"/admin/create_action\" method=\"post\" class=\"center\">
+				<input type=\"text\" name=\"user\" placeholder=\"{$lang['username']}\" />
+				<span class=\"help-block\">Minuscules et chiffres seulement.</span>
+				<input type=\"text\" name=\"email\" placeholder=\"{$lang['email']}\" />
+				<input type=\"password\" name=\"password\" placeholder=\"{$lang['password']}\" />
+				<fieldset autofocus>
+					<br />
+					<input type=\"submit\" value=\"{$lang['add']}\" />
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<script>
+		newFlexibleDialog('adduser', 550);
+	</script>
 ";
+
+if( isset($_GET['enew']) )
+{
+	$content .= "<script type=\"text/javascript\">
+					$(document).ready(function() {
+						$(\"#adduser\").dialog(\"open\");
+						$(\"#adduser_error\").show();
+						$(\".ui-dialog-titlebar\").hide();
+					});
+				</script>
+	";
+}
 
 /* ========================== OUTPUT PAGE ========================== */
 $template->output($content);

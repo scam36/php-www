@@ -1,6 +1,6 @@
 [EN]
 title = "Solidarity and innovation"
-subtitle = "Free hosting service without ads and web applications."
+subtitle = "Free hosting service without ad and web applications."
 signup = "Register"
 login_now = "or login"
 username = "Username"
@@ -8,30 +8,29 @@ password = "Password"
 login = "Login"
 email = "Email"
 free = "Free"
-free_text = "We are a non-profit organization, our <a href='/service/hosting'>services</a> are open to everyone and without any ads."
+free_text = "Our non-profit organization is open-source, open to anyone, and our <a href='/service/hosting'>services</a> are ad-free."
 open = "Open"
-open_text = "We release all our <a href='https://github.com/OlympeNetwork'>source codes</a> and <a href='https://projets.olympe.in'>projects</a>. An API and many tools are available for <a href='/developers'>developers</a>."
+open_text = "All our <a href='https://github.com/OlympeNetwork'>source codes</a> and <a href='https://projets.olympe.in'>projects</a> are open source and released on Github. A powerful API and many other tools are available for <a href='/developers'>developers</a>."
 innovation = "Innovative"
 innovation_text = "We provide the last <a href='/service/infrastructure'>technologies</a>, focusing on quality and <a href='/status'>availability</a> of the services."
 app = "PHP applications and services"
-app_text = "Since more than 6 years, the Olympe organization provides a free <a href='/service/hosting'>web hosting service</a> without any ads. From a basic offer with PHP/MySQL, we developed the platform and now are able to propose many
+app_text = "For more than six years now, the Olympe organization provides an ad-free<a href='/service/hosting'>web hosting service</a>. At the very beginning, we used to a single basic offer with PHP/MySQL only. Then our team has increased the platform capability and now we propose many
 other <a href='/service/offer'>technologies</a> (PostgreSQL, MongoDB...).<br />
-<br />Beyond the web hosting space, we also provide the <a href='/service/offer'>full management</a> of domain names (subdomains, DNS records...), POP/IMAP mail accounts (redirections, aliases...), shared calendars and more."
+<br />More than a simple disk space, we provide also a <a href='/service/offer'>full domain names management</a> (subdomains, DNS records...), POP/IMAP mail accounts (redirections, aliases...), shared calendars and more."
 
 manage = "Extended features"
-manage_text = "We provide a <a href='/doc/cloud'>cloud application</a> allowing file synchronization, sharing and folders storage. This tool includes a web interface for online file vizualisation (download, modification, image galleries...), and 
-function for recovery of deleted files.
+manage_text = "For each account, a <a href='/doc/cloud'>cloud application</a> is available, for file synchronization, sharing and storage. This tool includes a web interface for online file editing, and even data recovery.
 <br /><br />
-Our platform is fully self-financed and maintened by <a href='/about/team'>team of volunteers</a>, you can <a href='/org/help'>help us</a> to fund up the project and pay the charges of the services. If you
-have questions or if you wish to participate, do not hesitate to <a href='/about/contact'>contact us</a>."
+Our platform is fully self-funded and maintained by a <a href='/about/team'>volunteer team</a>, you are welcome to <a href='/org/help'>help us</a> raise funds for the project and participate to the charges. For any
+question or if you wish to help, please <a href='/about/contact'>contact us</a>, our team will be please do greet you."
 signup_now = "Register now"
 
-help = "A question? Do not hesitate to <a href='/about/contact'>contact us</a>."
+help = "A question? Please <a href='/about/contact'>contact us</a>."
 panel = "Panel"
 logged = "Login as"
-conditions = "I have read and I agree to the <a href='/on/documents/Olympe-CGS-FR.pdf'>Terms of Use</a>."
-hosted = "Who are the people and the organizations hosted on Olympe?"
-directory = "Check out our directory"
+conditions = "I agree to the <a href='/on/documents/Olympe-CGS-FR.pdf'>Terms of Use</a>."
+hosted = "Want to know our references ?"
+directory = "Search our index"
 
 [ES]
 title = "Solidaridad y Innovación"

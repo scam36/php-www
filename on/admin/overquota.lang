@@ -1,15 +1,17 @@
 [EN]
-title = "Top 50 Overquota"
+title = "Top 50 overquota"
 quotas = "Quotas"
 disk = "In use"
 max = "Max"
-lastupdate = "Last Update"
-dateformat = "Y-d-m H:i:s"
+lastupdate = "Last update"
+dateformat = "Y-d-m at H:i:s"
+actions = "Actions"
 
 [FR]
 title = "Top 50 Overquota"
 quotas = "Quotas"
 disk = "Utilisé"
 max = "Max"
-lastupdate = "Date de dernière mise à jour"
+lastupdate = "Dernière mise à jour"
 dateformat = "d/m/Y à H:i:s"
+actions = "Actions"

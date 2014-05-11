@@ -16,11 +16,11 @@ div.topic div.message div.toppart {
 
 div.topic div.message div.toppart div.messageid {
 	float: left;
-	width: 100px;
+	width: 150px;
 	margin: 0;
 	padding: 15px 20px 10px 20px;
 	font-size: 15px;
-	color: #159038;
+	color: #DE5711;
 }
 
 div.topic div.message div.toppart div.date {
@@ -37,7 +37,7 @@ div.topic div.message div.toppart div.icons {
 
 div.topic div.message div.meta {
 	float: left;
-	width: 100px;
+	width: 150px;
 	margin: 0;
 	padding: 25px 20px 10px 20px;
 }

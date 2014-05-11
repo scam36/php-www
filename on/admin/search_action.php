@@ -13,7 +13,7 @@ if( $_POST['name'] != $lang['name'] )
 	if( count($user) > 1 )
 	{
 		$content = "
-		<div class=\"admin\">
+		<div class=\"panel\">
 			<div class=\"top\">
 				<div class=\"left\" style=\"padding-top: 5px;\">
 					<h1 class=\"dark\">{$lang['title']}</h1>
@@ -71,7 +71,7 @@ else if( $_POST['email'] != $lang['email'] )
 	if( count($user) > 1 )
 	{
 		$content = "
-		<div class=\"admin\">
+		<div class=\"panel\">
 			<div class=\"top\">
 				<div class=\"left\" style=\"padding-top: 5px;\">
 					<h1 class=\"dark\">{$lang['title']}</h1>

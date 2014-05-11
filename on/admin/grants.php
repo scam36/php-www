@@ -9,7 +9,7 @@ if( !defined('PROPER_START') )
 $grants = api::send('grant/list');
 
 $content = "
-		<div class=\"admin\">
+		<div class=\"panel\">
 			<div class=\"top\">
 				<div class=\"left\" style=\"padding-top: 5px;\">
 					<h1 class=\"dark\">{$lang['title']}</h1>
@@ -21,8 +21,8 @@ $content = "
 					</a>
 				</div>
 			</div>
-			<div class=\"clear\"></div>
-			<div class=\"content\">
+			<div class=\"clear\"></div><br />
+			<div class=\"container\">
 				<table>
 					<tr>
 						<th>{$lang['name']}</th>

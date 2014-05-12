@@ -1,17 +1,17 @@
 [EN]
-error = "One field isn't well filled."
-type = "Request purpose :"
+error = "One field is incorrect or data missing."
+type = "Request issue :"
 quota = "Quota increase"
-select = "Quota type :"
+select = "Need for more :"
 disk = "Disk space"
-sites = "Website number"
-dbs = "Database number"
-domains = "Domain name"
-request = "Wished quota :"
+sites = "More web-sites"
+dbs = "More databases"
+domains = "More domains"
+request = "Quota increase request :"
 
-subject = "Olympe - You have a new answer"
-content = "<p style='margin: 20px 0'>An administrator responded to your request on the hosting platform <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a>. Please, read it : a response may be expected from you.</p>
-<p style='margin: 20px 0'>You can see it clicking on the following link :<br /><a style='color: #de5711;' href='https://www.olympe.in/panel/messages/detail?id={ID}'>https://www.olympe.in/panel/messages/detail?id={ID}</a>.</p>"
+subject = "Olympe - You have a new reply"
+content = "<p style='margin: 20px 0'>An administrator has replied to your demand on the hosting platform <a style='color: #de5711;' href='https://www.olympe.in'>Olympe</a>. Please, view it : a reply from your part might be necessary.</p>
+<p style='margin: 20px 0'>You can view the message clicking on the following link :<br /><a style='color: #de5711;' href='https://www.olympe.in/panel/messages/detail?id={ID}'>https://www.olympe.in/panel/messages/detail?id={ID}</a>.</p>"
 
 [FR]
 error = "L'un des champs n'est pas correct !"

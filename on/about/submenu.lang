@@ -1,5 +1,9 @@
 [EN]
-
+menu_overview = "Overview"
+menu_contact = "Contact"
+menu_team = "Team"
+menu_partners = "Partners"
+menu_reference = "References"
 [FR]
 menu_overview = "Aperçu"
 menu_contact = "Contact"

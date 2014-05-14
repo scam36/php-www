@@ -1,5 +1,8 @@
 [EN]
-
+menu_home = "Developpers"
+menu_api = "Management API"
+menu_tools = "Existing tools"
+menu_sources = "Source codes"
 [FR]
 menu_home = "Développeurs"
 menu_api = "API de gestion"

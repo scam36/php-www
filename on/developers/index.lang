@@ -1,5 +1,14 @@
 [EN]
+title = "Olympe for developpers"
+api = "management API"
+api_text = "Our team has developped an <a href='/developers/api'>API REST</a> (JSON, XML or HTML output) to complete our engagement in open-source computing. This API allows to fully manage Olympe accounts, 
+create databases or websites, add DNS... <br /><br />Thus you can automate creation or informatio tasks (ie real-time quota display). 
+Dare to ask your questions to the <a href='https://community.olympe.in'>community</a> to know more about our API."
 
+sources = "Tools, panel and source codes"
+sources_text = "Olympe is engaged and promotes open-source computing. The <a href='/developers/tools'>tools</a> we have developped (PHP modules, API, scripts...) 
+are totaly open-source. You can contribute to their enhancement. <br /><br />Moreover, this actual website & its panel are published on our 
+<a href='https://github.com/OlympeNetwork'>Github account</a>. There you can propose new scripts or improve the existing ones."
 
 [FR]
 title = "Olympe pour les développeurs"

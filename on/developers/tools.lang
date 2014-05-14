@@ -1,5 +1,19 @@
 [EN]
 
+itle = "Panel and developed tools"
+panel_text = "In order to ease constribution and customization, the panel's codes are open-source, open to modification. This helps checking the procedures' stability and security issues. Moreover it allows users to code new scripts to increase the panel's functionality. These are HTML/PHP (Javascript) pages that request the <a href='https://api.olympe.in'>API</a>. The API's code is also open to contribution for new functions if necessary."
+
+modules = "PHP modules"
+modules_text = "For Olympe's needs -security first- we had to code two brand new PHP extensions (suPHP and Override). The first allows to chown the PHP process ( CGI or Fast-CGI) with the script's owner ID, in real-time. The second allows to replace any built-in PHP procedure with a customized PHP function. (quota on <i>mail()</i>, 
+check on <i>shell_exec()</i> etc.)."
+
+phpkiller = "PHP Killer"
+phpkiller_text = "PHP Killer is a JAVA program that checks PHP CGI routines, thus keeps the plaform fluid. A clock checks execution times, memory and CPU taken by routines. In case of failure, a white/grey/black list adjusts the cripts reliability, thus prevent from errors or abuse."
+
+ftpfilter = "FTP Filter"
+ftpfilter_text = "Recently improved to allow SFTP logs, 'FTP filter' is a JAVA program that checks logs of uploads on the platform, and then check files with some rules that are written in the configuration file. 'FTP filter' removes the most common viruses and phishing, it also send warnings in case of unusual behaviour."
+
+access = "To codes"
 
 [FR]
 title = "Panel et outils développés"
